@@ -1,0 +1,1506 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IOC Blocklist · SOC Threat Brief</title>
+  <style>
+    :root {
+      --ink: #10211d; --muted: #66736d; --paper: #eef2ec; --panel: #fffdf8;
+      --line: #d0d8d1; --teal: #006d68; --navy: #102d35; --orange: #d95d2b;
+      --shadow: 0 14px 38px rgba(16,33,29,.10);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background:
+      radial-gradient(circle at 90% 4%, rgba(0,109,104,.11), transparent 24%),
+      linear-gradient(rgba(16,33,29,.035) 1px, transparent 1px),
+      var(--paper); background-size: auto, 30px 30px;
+      font-family: "Avenir Next", "Hiragino Sans", "Yu Gothic", sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1280px, calc(100% - 32px)); margin: 0 auto; }
+    header { margin-top: 14px; padding: 16px 18px; color: #f6f4ea;
+      border-radius: 14px; background: linear-gradient(125deg, #0d2828, #123b39 58%, #112c35);
+      box-shadow: var(--shadow); }
+    .top, .stats, .filters {
+      display: flex; align-items: center;
+    }
+    .top { justify-content: space-between; gap: 16px; }
+    h1 { margin: 0; font: 850 clamp(24px, 4vw, 40px)/1.05 "DIN Alternate", sans-serif; }
+    .nav { display: flex; gap: 8px; flex-wrap: wrap; }
+    .button { padding: 9px 13px; border: 1px solid rgba(255,255,255,.24); border-radius: 999px; font-size: 13px; font-weight: 800; }
+    .button.primary { color: #0b2623; background: #75e0d5; border-color: #75e0d5; }
+    .stats { gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    .stat { min-width: 138px; padding: 10px 12px; border: 1px solid rgba(255,255,255,.16); border-radius: 10px; background: rgba(255,255,255,.06); }
+    .stat b { display: block; font: 900 24px "DIN Alternate", sans-serif; }
+    .stat span { color: #b9cbc5; font-size: 11px; }
+    .toolbar { position: sticky; top: 6px; z-index: 5; padding: 12px; border: 1px solid var(--line); border-radius: 15px; background: rgba(255,253,248,.94); backdrop-filter: blur(12px); box-shadow: var(--shadow); }
+    .filters { display: grid; grid-template-columns: minmax(260px, 2fr) minmax(150px, 1fr) auto; gap: 8px; }
+    input, select, button { min-height: 42px; padding: 0 11px; color: var(--ink); border: 1px solid var(--line); border-radius: 10px; background: #fff; font: inherit; }
+    button { color: #fff; border-color: var(--teal); background: var(--teal); cursor: pointer; font-weight: 800; }
+    .result-count { display: block; margin-top: 8px; color: var(--muted); font: 12px "SFMono-Regular", Consolas, monospace; }
+    .table-wrap { margin: 14px 0 50px; overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); box-shadow: 0 8px 24px rgba(16,33,29,.055); }
+    table { width: 100%; min-width: 980px; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #e3e6df; text-align: left; vertical-align: top; }
+    th { position: sticky; top: 0; z-index: 1; color: #4b5b55; background: #f6f3ea; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    tr:last-child td { border-bottom: 0; }
+    .type-pill { color: var(--teal); font-weight: 900; }
+    .tags { min-width: 220px; }
+    .tag { display: inline-block; margin: 0 4px 4px 0; padding: 4px 7px; border-radius: 999px; color: #3e4844; background: #ebe8df; font-size: 11px; }
+    .article-title a { color: var(--teal); font-weight: 800; }
+    .article-list { display: grid; gap: 5px; min-width: 320px; }
+    .empty { padding: 28px; color: var(--muted); text-align: center; }
+    code { display: block; margin: 14px 0; padding: 12px; overflow-wrap: anywhere; color: #d9fff9; border-radius: 10px; background: var(--navy); font-size: 13px; }
+    .ioc-row code { display: inline; margin: 0; padding: 0; color: #102d35; border-radius: 0; background: transparent; font-size: 12px; }
+    .hidden { display: none; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 20px, 1280px); }
+      header { padding: 14px; }
+      .top { align-items: start; flex-direction: column; }
+      .filters { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="top">
+      <h1>IOC Blocklist Candidates</h1>
+      <nav class="nav"><a class="button primary" href="index.html">Threat brief</a><a class="button" href="iocs.csv">Blocklist CSV</a></nav>
+    </div>
+    <section class="stats">
+      <div class="stat"><b>139</b><span>list rows</span></div>
+      <div class="stat"><b>90</b><span>block candidates</span></div>
+      <div class="stat"><b>3</b><span>indicator types</span></div>
+      <div class="stat"><b>9</b><span>reporting sources</span></div>
+    </section>
+  </header>
+  <main class="wrap">
+    <section class="toolbar">
+      <div class="filters">
+        <input id="search" type="search" placeholder="Search indicator, tag, source, article...">
+        <select id="typeFilter"><option value="">All types</option><option value="Domain">Domain (75)</option>
+<option value="IPv4">IPv4 (59)</option>
+<option value="URL">URL (5)</option></select>
+        <button id="clear" type="button">Reset</button>
+      </div>
+      <span class="result-count" id="resultCount">139 rows</span>
+    </section>
+    <section class="table-wrap">
+      <table>
+        <thead><tr><th>記事公開日</th><th>種類</th><th>インジケータ</th><th>タグ</th><th>情報元サイト名</th><th>記事タイトル</th></tr></thead>
+        <tbody id="iocRows">
+            <tr class="ioc-row" data-type="URL">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">URL</span></td>
+              <td><code>hxxps://webhook[.]site/b156c0b1-3e2f-41b4-a9a3-f492e50a0595</code></td>
+              <td class="tags"><span class="tag">Application Security</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">CVE-2025-54068</span></td>
+              <td>Imperva</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.imperva.com/blog/cve-2025-54068-laravel-livewire-credential-theft-campaign-6000-applications-compromised/" target="_blank" rel="noopener noreferrer">CVE-2025-54068 Laravel Livewire Credential Theft Campaign: 6,000+ Applications Compromised</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="URL">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">URL</span></td>
+              <td><code>hxxp://thomphon[.]com/update[.]msi</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>95[.]85[.]238[.]4</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>94[.]154[.]35[.]25</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>76[.]92[.]245[.]217</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>64[.]188[.]91[.]237</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>62[.]60[.]226[.]159</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>47[.]129[.]100[.]149</code></td>
+              <td class="tags"><span class="tag">Application Security</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">CVE-2025-54068</span></td>
+              <td>Imperva</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.imperva.com/blog/cve-2025-54068-laravel-livewire-credential-theft-campaign-6000-applications-compromised/" target="_blank" rel="noopener noreferrer">CVE-2025-54068 Laravel Livewire Credential Theft Campaign: 6,000+ Applications Compromised</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>45[.]32[.]38[.]160</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>26[.]1[.]1[.]2</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>23[.]245[.]7[.]178</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>209[.]137[.]225[.]101</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>207[.]190[.]37[.]94</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>20[.]9[.]9[.]2</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>20[.]18[.]3[.]1</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>20[.]15[.]5[.]3</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>20[.]15[.]4[.]5</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>20[.]12[.]7[.]2</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>199[.]91[.]221[.]42</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>198[.]13[.]159[.]44</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>196[.]251[.]107[.]130</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>194[.]26[.]192[.]191</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>193[.]156[.]1[.]16</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>193[.]143[.]1[.]16</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>188[.]114[.]96[.]1</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>176[.]124[.]199[.]207</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>176[.]111[.]174[.]140</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>167[.]179[.]79[.]189</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>153[.]186[.]231[.]233</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>144[.]31[.]53[.]78</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>142[.]93[.]242[.]144</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>126[.]51[.]108[.]152</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Zero-Day</span><span class="tag">Threat Actor</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span></td>
+              <td>Google Cloud Threat Intelligence</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/" target="_blank" rel="noopener noreferrer">Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>wbound[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>w3xasv14culvnqj[.]top</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>upscale-kolo[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>upload[.]gofile[.]io</code></td>
+              <td class="tags"><span class="tag">Application Security</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">CVE-2025-54068</span></td>
+              <td>Imperva</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.imperva.com/blog/cve-2025-54068-laravel-livewire-credential-theft-campaign-6000-applications-compromised/" target="_blank" rel="noopener noreferrer">CVE-2025-54068 Laravel Livewire Credential Theft Campaign: 6,000+ Applications Compromised</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>updater-worelos[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>update[.]update-fall[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>upd-domain-goloro[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>sss[.]authorized-logins[.]net</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>sql-updater-service[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>rotoa-upda-lo[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>php[.]authorized-logins[.]net</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>oeannon[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>nano[.]upscale-kolo[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>mueleer[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>mi[.]overlapsnowbound[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>mails[.]updater-worelos[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>mailes[.]upd-domain-goloro[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>mail[.]authorized-logins[.]net</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>human-check[.]top</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>grande-luna[.]top</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>ftps[.]upd-domain-goloro[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>flare[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span></td>
+              <td>Eset Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.welivesecurity.com/en/eset-research/eset-takes-part-operation-endgame-disrupt-amadey-stealc/" target="_blank" rel="noopener noreferrer">ESET takes part in Operation Endgame to disrupt Amadey and Stealc</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>defs[.]updater-worelos[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>cwrtwright[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>cj06y9v4xab[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>carrolc[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>b6w9m2z5x8q1v3k[.]top</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>authorized-logins[.]net</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Detection</span><span class="tag">Ransomware</span></td>
+              <td>Security.com Threat Research</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.security.com/threat-intelligence/new-mistic-backdoor-modelorat" target="_blank" rel="noopener noreferrer">Backdoor.Mistic: New Backdoor May be Linked to Ransomware Access Broker</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/24</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>api[.]telegram[.]org</code></td>
+              <td class="tags"><span class="tag">Application Security</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">CVE-2025-54068</span></td>
+              <td>Imperva</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.imperva.com/blog/cve-2025-54068-laravel-livewire-credential-theft-campaign-6000-applications-compromised/" target="_blank" rel="noopener noreferrer">CVE-2025-54068 Laravel Livewire Credential Theft Campaign: 6,000+ Applications Compromised</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>96[.]9[.]125[.]147</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>83[.]136[.]182[.]237</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>64[.]176[.]50[.]109</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>54[.]67[.]2[.]84</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>52[.]222[.]205[.]45</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>45[.]77[.]155[.]170</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>45[.]191[.]66[.]77</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>38[.]55[.]151[.]63</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Research</span><span class="tag">IOC</span><span class="tag">Malware</span><span class="tag">Endpoint</span></td>
+              <td>SOCRadar Blog</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://socradar.io/blog/whatsapp-vbscript-campaign-manageengine-endpoint/" target="_blank" rel="noopener noreferrer">WhatsApp VBScript Campaign Installs ManageEngine Endpoint Central for Persistent Remote Access</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>38[.]54[.]106[.]11</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>206[.]166[.]251[.]228</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>202[.]61[.]160[.]208</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Research</span><span class="tag">IOC</span><span class="tag">Malware</span><span class="tag">Endpoint</span></td>
+              <td>SOCRadar Blog</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://socradar.io/blog/whatsapp-vbscript-campaign-manageengine-endpoint/" target="_blank" rel="noopener noreferrer">WhatsApp VBScript Campaign Installs ManageEngine Endpoint Central for Persistent Remote Access</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>202[.]61[.]160[.]202</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Research</span><span class="tag">IOC</span><span class="tag">Malware</span><span class="tag">Endpoint</span></td>
+              <td>SOCRadar Blog</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://socradar.io/blog/whatsapp-vbscript-campaign-manageengine-endpoint/" target="_blank" rel="noopener noreferrer">WhatsApp VBScript Campaign Installs ManageEngine Endpoint Central for Persistent Remote Access</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>202[.]61[.]160[.]201</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Research</span><span class="tag">IOC</span><span class="tag">Malware</span><span class="tag">Endpoint</span></td>
+              <td>SOCRadar Blog</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://socradar.io/blog/whatsapp-vbscript-campaign-manageengine-endpoint/" target="_blank" rel="noopener noreferrer">WhatsApp VBScript Campaign Installs ManageEngine Endpoint Central for Persistent Remote Access</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>202[.]61[.]160[.]160</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Research</span><span class="tag">IOC</span><span class="tag">Malware</span><span class="tag">Endpoint</span></td>
+              <td>SOCRadar Blog</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://socradar.io/blog/whatsapp-vbscript-campaign-manageengine-endpoint/" target="_blank" rel="noopener noreferrer">WhatsApp VBScript Campaign Installs ManageEngine Endpoint Central for Persistent Remote Access</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>202[.]61[.]160[.]137</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Research</span><span class="tag">IOC</span><span class="tag">Malware</span><span class="tag">Endpoint</span></td>
+              <td>SOCRadar Blog</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://socradar.io/blog/whatsapp-vbscript-campaign-manageengine-endpoint/" target="_blank" rel="noopener noreferrer">WhatsApp VBScript Campaign Installs ManageEngine Endpoint Central for Persistent Remote Access</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>2[.]56[.]190[.]139</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>173[.]239[.]247[.]32</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>162[.]248[.]74[.]92</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>154[.]223[.]19[.]106</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>149[.]28[.]17[.]188</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>141[.]164[.]60[.]10</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>139[.]59[.]11[.]66</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>124[.]56[.]42[.]75</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>109[.]105[.]193[.]76</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>107[.]191[.]58[.]76</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>104[.]238[.]159[.]149</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>104[.]21[.]91[.]170</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>103[.]151[.]172[.]92</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>wordpress[.]org</code></td>
+              <td class="tags"><span class="tag">Security</span><span class="tag">Malware</span><span class="tag">Threat Intel</span><span class="tag">Supply Chain</span></td>
+              <td>Security Affairs</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://securityaffairs.com/194059/hacking/shapedplugin-supply-chain-attack-backdoors-pro-plugin-updates.html" target="_blank" rel="noopener noreferrer">ShapedPlugin Supply Chain Attack Backdoors Pro Plugin Updates</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>mgardownload[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>m-mgarg[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Exploit</span><span class="tag">Phishing</span><span class="tag">Threat Actor</span><span class="tag">Mobile</span><span class="tag">AI Security</span><span class="tag">Incident Response</span></td>
+              <td>Canon MJ ESET Security</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://eset-info.canon-its.jp/malware_info/special/detail/260623.html" target="_blank" rel="noopener noreferrer">生成AIを悪用した初のAndroidマルウェアPromptSpyの脅威</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/23</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>2faplugin[.]org</code></td>
+              <td class="tags"><span class="tag">Security</span><span class="tag">Malware</span><span class="tag">Threat Intel</span><span class="tag">Supply Chain</span></td>
+              <td>Security Affairs</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://securityaffairs.com/194059/hacking/shapedplugin-supply-chain-attack-backdoors-pro-plugin-updates.html" target="_blank" rel="noopener noreferrer">ShapedPlugin Supply Chain Attack Backdoors Pro Plugin Updates</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="IPv4">
+              <td>2026/06/22</td>
+              <td><span class="type-pill">IPv4</span></td>
+              <td><code>107[.]150[.]106[.]14</code></td>
+              <td class="tags"><span class="tag">Malware</span><span class="tag">Security</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Endpoint</span><span class="tag">Network</span><span class="tag">Detection</span><span class="tag">Incident Response</span></td>
+              <td>Security Affairs</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://securityaffairs.com/193987/security/4300-outdated-routers-hijacked-in-stealthy-spy-infrastructure-by-arystinger-malware.html" target="_blank" rel="noopener noreferrer">4,300+ Outdated Routers Hijacked in Stealthy Spy Infrastructure by AryStinger malware</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/22</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>dataexplore[.]co</code></td>
+              <td class="tags"><span class="tag">Malware</span><span class="tag">Security</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Endpoint</span><span class="tag">Network</span><span class="tag">Detection</span><span class="tag">Incident Response</span></td>
+              <td>Security Affairs</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://securityaffairs.com/193987/security/4300-outdated-routers-hijacked-in-stealthy-spy-infrastructure-by-arystinger-malware.html" target="_blank" rel="noopener noreferrer">4,300+ Outdated Routers Hijacked in Stealthy Spy Infrastructure by AryStinger malware</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/22</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>dataexplore[.]cc</code></td>
+              <td class="tags"><span class="tag">Malware</span><span class="tag">Security</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Endpoint</span><span class="tag">Network</span><span class="tag">Detection</span><span class="tag">Incident Response</span></td>
+              <td>Security Affairs</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://securityaffairs.com/193987/security/4300-outdated-routers-hijacked-in-stealthy-spy-infrastructure-by-arystinger-malware.html" target="_blank" rel="noopener noreferrer">4,300+ Outdated Routers Hijacked in Stealthy Spy Infrastructure by AryStinger malware</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/22</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>ajb8[.]com</code></td>
+              <td class="tags"><span class="tag">Malware</span><span class="tag">Security</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Endpoint</span><span class="tag">Network</span><span class="tag">Detection</span><span class="tag">Incident Response</span></td>
+              <td>Security Affairs</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://securityaffairs.com/193987/security/4300-outdated-routers-hijacked-in-stealthy-spy-infrastructure-by-arystinger-malware.html" target="_blank" rel="noopener noreferrer">4,300+ Outdated Routers Hijacked in Stealthy Spy Infrastructure by AryStinger malware</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>yoauction[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>touristprogram[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>thnikagent[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>plirepsijr74[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>perplexity-platform[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>peowqlauoshau8[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>oaklandwaterdamage[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>mac-guide-tool[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>mac-clean-storage[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>loserrq0j1sha8[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>jetbrains-apps-group[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>jerryshvac[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>isgilan[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>homeinspectionnaperville[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>customroofingcontractors[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>cursor-8ced8a[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>codexgpt[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>claudesktop[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>claudesktop-app[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>claudecode-download[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>claudecode-desktop[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>claudeapp[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>claude-desktop[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>claude-desktop-lm[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>claude-code[.]official-version[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>claude-code-app[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>claude-app-new[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>cladesktop[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>chatgpt-codex[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>chatgpt-codex-lm[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>chatgpt-codex-app[.]gitlab[.]io</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>briskinternet[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>bewqslkslikrtjinfg9[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>bernasibutuwqu2[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>babulikinet[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>alabamarecoverycenter[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>a2abotnet[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="Domain">
+              <td>2026/06/19</td>
+              <td><span class="type-pill">Domain</span></td>
+              <td><code>5x5web[.]com</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span></td>
+              <td>Trend Micro</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.trendmicro.com/ja_jp/research/26/f/claudeai-shared-chat-abused-in-malvertising.html" target="_blank" rel="noopener noreferrer">AIサービス「claude.ai」のチャット共有画面から不正なコマンドを実行させるClickFix型攻撃キャンペーンを分析</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="URL">
+              <td>2026/06/18</td>
+              <td><span class="type-pill">URL</span></td>
+              <td><code>hxxps://api[.]wizzleticks[.]com/claims/scope-schema[.]php?4ManBBdA</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Threat Actor</span><span class="tag">Supply Chain</span><span class="tag">Mobile</span><span class="tag">Android</span><span class="tag">Apple/iOS</span></td>
+              <td>Zscaler</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.zscaler.com/blogs/security-research/smartapesg-launches-okendo-reviews-supply-chain-attack" target="_blank" rel="noopener noreferrer">SmartApeSG Launches Okendo Reviews Supply Chain Attack</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="URL">
+              <td>2026/06/18</td>
+              <td><span class="type-pill">URL</span></td>
+              <td><code>hxxps://api[.]wigetticks[.]com/logout/private-response[.]php?8D1V4th3</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Threat Actor</span><span class="tag">Supply Chain</span><span class="tag">Mobile</span><span class="tag">Android</span><span class="tag">Apple/iOS</span></td>
+              <td>Zscaler</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.zscaler.com/blogs/security-research/smartapesg-launches-okendo-reviews-supply-chain-attack" target="_blank" rel="noopener noreferrer">SmartApeSG Launches Okendo Reviews Supply Chain Attack</a></div></div></td>
+            </tr>
+            
+
+            <tr class="ioc-row" data-type="URL">
+              <td>2026/06/18</td>
+              <td><span class="type-pill">URL</span></td>
+              <td><code>hxxp://cdn-static[.]okendo[.]io/reviews-widget-plus/js/okendo-reviews[.]js</code></td>
+              <td class="tags"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Threat Actor</span><span class="tag">Supply Chain</span><span class="tag">Mobile</span><span class="tag">Android</span><span class="tag">Apple/iOS</span></td>
+              <td>Zscaler</td>
+              <td class="article-title"><div class="article-list"><div><a href="https://www.zscaler.com/blogs/security-research/smartapesg-launches-okendo-reviews-supply-chain-attack" target="_blank" rel="noopener noreferrer">SmartApeSG Launches Okendo Reviews Supply Chain Attack</a></div></div></td>
+            </tr>
+            </tbody>
+      </table>
+    </section>
+  </main>
+  <script>
+    const rows = Array.from(document.querySelectorAll('.ioc-row'));
+    const search = document.getElementById('search');
+    const typeFilter = document.getElementById('typeFilter');
+    const resultCount = document.getElementById('resultCount');
+    function applyFilters() {
+      const query = search.value.trim().toLowerCase();
+      let visible = 0;
+      for (const row of rows) {
+        const match = (!query || row.innerText.toLowerCase().includes(query))
+          && (!typeFilter.value || row.dataset.type === typeFilter.value);
+        row.classList.toggle('hidden', !match);
+        visible += Number(match);
+      }
+      resultCount.textContent = `${visible} row${visible === 1 ? '' : 's'}`;
+    }
+    search.addEventListener('input', applyFilters);
+    typeFilter.addEventListener('change', applyFilters);
+    document.getElementById('clear').addEventListener('click', () => {
+      search.value = ''; typeFilter.value = ''; applyFilters();
+    });
+  </script>
+</body>
+</html>
