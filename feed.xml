@@ -1,12 +1,30 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>SOC Threat Brief</title>
-    <link>index.html</link>
-    <description>Actionable threat intelligence, observed attacks, detection context, and IOC reporting.</description>
+    <link>https://ag3tak0.github.io/SecurityNews-Public</link>
+    <description>Actionable threat intelligence for SOC review.</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 25 Jun 2026 13:10:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 14:24:27 GMT</lastBuildDate>
     <ttl>60</ttl>
+    <atom:link href="https://ag3tak0.github.io/SecurityNews-Public/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>STOCKSTAY Another Day: The Latest Addition to Turla’s Intelligence Gathering Apparatus</title>
+      <link>https://cloud.google.com/blog/topics/threat-intelligence/stockstay-turla-intelligence-gathering/</link>
+      <guid isPermaLink="true">https://cloud.google.com/blog/topics/threat-intelligence/stockstay-turla-intelligence-gathering/</guid>
+      <pubDate>Thu, 25 Jun 2026 14:00:00 GMT</pubDate>
+      <description>Source: Google Cloud Threat Intelligence / Source attributes: United States / Research / Primary / Categories: Threat Intel, Malware, APT, Threat Actor, Cloud, Endpoint, Network, Cryptocurrency, Application Security / Topics: Turla, Microsoft, Malware, APT, Cloud / Priority: Critical (100) / SOC: 100 / Confidence: High (93) / Reasons: EN attack activity, EN detection/analysis, EN targeted/APT/state-backed, EN critical sector, JA attack activity, IOC 43, coherent attack event, target and impact context, detection evidence context, indicator context, critical sector / Summary: Written by: Jordan Jones Introduction Google Threat Intelligence Group (GTIG) has conducted an in-depth analysis of a .NET backdoor, tracked as STOCKSTAY, that has been continually developed and deployed by the Russia-linked threat actor Turla (aka SUMMIT, Secret Blizzard, VENOMOUS BEAR, UAC-0194) since at least December 2022. Turla has deployed STOCKSTAY against government and military organizations in Ukraine, as well as entities with an interest in Italian foreign policy. Used for ongoing cyber espionage, this backdoor shares significant code and functional overlaps with KAZUAR, a successfu</description>
+      <source url="https://cloud.google.com/blog/">Google Cloud Threat Intelligence</source>
+      <category>Threat Intel</category>
+      <category>Malware</category>
+      <category>APT</category>
+      <category>Threat Actor</category>
+      <category>Cloud</category>
+      <category>Endpoint</category>
+      <category>Network</category>
+      <category>Cryptocurrency</category>
+      <category>Application Security</category>
+    </item>
     <item>
       <title>Zero-Day Exploitation of Vulnerability (CVE-2026-20245) in Cisco Catalyst SD-WAN Manager</title>
       <link>https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager/</link>
@@ -156,74 +174,31 @@
       <category>Detection</category>
     </item>
     <item>
-      <title>SmartApeSG Launches Okendo Reviews Supply Chain Attack</title>
-      <link>https://www.zscaler.com/blogs/security-research/smartapesg-launches-okendo-reviews-supply-chain-attack</link>
-      <guid isPermaLink="true">https://www.zscaler.com/blogs/security-research/smartapesg-launches-okendo-reviews-supply-chain-attack</guid>
-      <pubDate>Thu, 18 Jun 2026 14:04:56 GMT</pubDate>
-      <description>Source: Zscaler / Source attributes: United States / Research / Primary / Categories: Threat Intel, Malware, Threat Actor, Supply Chain, Mobile / Topics: Android, Apple/iOS, Supply Chain, Malware / Priority: Critical (91) / SOC: 100 / Confidence: High (88) / Reasons: EN attack activity, EN detection/analysis, IOC 3, coherent attack event, target and impact context, detection evidence context, indicator context / Summary: IntroductionOn May 14, 2026, the Zscaler ThreatLabz team identified unusually high activity associated with the threat actor SmartApeSG to deploy malware. During our examination, we discovered malicious JavaScript code embedded in a legitimate reviews widget found on numerous websites. Our analysis revealed that the affected component was the Okendo Reviews widget, a popular customer review platform used by more than 18,000 brands. Because the Okendo Reviews widget is widely deployed, this compromise enabled downstream exposure across any website that utilized the widget. The widget is typical</description>
-      <source url="https://www.zscaler.com/blogs/security-research">Zscaler</source>
+      <title>Top 10 Dark Web Markets in 2026: List &amp; Threat Analysis</title>
+      <link>https://socradar.io/blog/top-10-dark-web-markets/</link>
+      <guid isPermaLink="true">https://socradar.io/blog/top-10-dark-web-markets/</guid>
+      <pubDate>Mon, 22 Jun 2026 09:20:26 GMT</pubDate>
+      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Malware, Data Breach / Topics: Malware, Data Breach / Priority: Critical (88) / SOC: 95 / Confidence: High (88) / Reasons: EN attack activity, EN detection/analysis, IOC 9, coherent attack event, target and impact context / Summary: Top Dark Web Marketplaces in 2026 Dark Web marketplaces in 2026 are underground platforms where cybercriminals buy and sell stolen data, credentials, stealer logs, payment card records, malware, fraud services, counterfeit documents, drugs, and access to compromised systems. Also known as Dark Web markets or darknet markets, these platforms are increasingly specialized, with some operating […]</description>
+      <source url="https://socradar.io/blog/">SOCRadar Blog</source>
       <category>Threat Intel</category>
+      <category>Research</category>
+      <category>IOC</category>
       <category>Malware</category>
-      <category>Threat Actor</category>
-      <category>Supply Chain</category>
-      <category>Mobile</category>
-    </item>
-    <item>
-      <title>FBI Warns of a Hidden Web Tactic Fueling Phishing and Ransomware</title>
-      <link>https://thecyberexpress.com/fbi-warns-of-malicious-traffic/</link>
-      <guid isPermaLink="true">https://thecyberexpress.com/fbi-warns-of-malicious-traffic/</guid>
-      <pubDate>Fri, 19 Jun 2026 05:58:53 GMT</pubDate>
-      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Threat Intel, Vulnerability, Patch, Malware, Ransomware, Phishing, Threat Actor, Network, Detection, Application Security / Topics: Network Edge, Ransomware, Web Application, Vulnerability, Malware, Phishing / Priority: Critical (90) / SOC: 100 / Confidence: Medium (53) / Reasons: EN attack activity, EN IOC/detection/hunting, EN detection/analysis, EN critical sector, coherent attack event, target and impact context, detection evidence context, indicator context, critical sector / Summary: The FBI Warns of Malicious Traffic Distribution Systems being increasingly used by cybercriminals to redirect internet users to phishing pages, malware downloads, ransomware attacks , and online financial scams. In a newly released Public Service Announcement (PSA), the Federal Bureau of Investigation cautioned that cybercriminals are leveraging Traffic Distribution Systems (TDS) to gain access to victim networks while evading traditional security controls. According to the FBI, TDS technology is designed to route internet traffic to different destinations after users visit websites, click adv</description>
-      <source url="https://thecyberexpress.com/">The Cyber Express</source>
-      <category>Threat Intel</category>
-      <category>Vulnerability</category>
-      <category>Patch</category>
-      <category>Malware</category>
-      <category>Ransomware</category>
-      <category>Phishing</category>
-      <category>Threat Actor</category>
-      <category>Network</category>
-      <category>Detection</category>
-      <category>Application Security</category>
-    </item>
-    <item>
-      <title>Nintendo Confirms Employee Data Exposed in TinyPulse Cyberattack</title>
-      <link>https://thecyberexpress.com/tinypulse-cyberattack-nintendo/</link>
-      <guid isPermaLink="true">https://thecyberexpress.com/tinypulse-cyberattack-nintendo/</guid>
-      <pubDate>Fri, 19 Jun 2026 06:59:51 GMT</pubDate>
-      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Threat Actor, Threat Intel, Data Breach, Network / Topics: Network Edge, Data Breach / Priority: Critical (89) / SOC: 88 / Confidence: Low (43) / Reasons: EN attack activity, EN Japan/Asia relevance, EN critical sector, coherent attack event, target and impact context, uncertain reporting, Japan related, critical sector / Summary: Nintendo of America has confirmed that employee survey data was exposed in the recent TinyPulse cyberattack, although the company emphasized that its own systems were not breached and that no customer or financial information was accessed. The disclosure follows claims by the threat actor Shadowbyt3$, which alleged it had stolen sensitive information linked to Nintendo employees. In a statement addressing the TinyPulse cyberattack , Nintendo said it was aware of an issue involving TinyPulse, a third-party platform used for internal employee surveys. According to the company, the incident was l</description>
-      <source url="https://thecyberexpress.com/">The Cyber Express</source>
-      <category>Threat Actor</category>
-      <category>Threat Intel</category>
       <category>Data Breach</category>
-      <category>Network</category>
     </item>
     <item>
-      <title>4,300+ Outdated Routers Hijacked in Stealthy Spy Infrastructure by AryStinger malware</title>
-      <link>https://securityaffairs.com/193987/security/4300-outdated-routers-hijacked-in-stealthy-spy-infrastructure-by-arystinger-malware.html</link>
-      <guid isPermaLink="true">https://securityaffairs.com/193987/security/4300-outdated-routers-hijacked-in-stealthy-spy-infrastructure-by-arystinger-malware.html</guid>
-      <pubDate>Mon, 22 Jun 2026 08:26:07 GMT</pubDate>
-      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Malware, Security, Threat Intel, Vulnerability, Endpoint, Network, Detection, Incident Response / Topics: Linux, Malware, Vulnerability / Priority: Critical (84) / SOC: 100 / Confidence: Medium (56) / Reasons: EN attack activity, EN IOC/detection/hunting, EN detection/analysis, IOC 4, coherent attack event, indicator context / Summary: AryStinger hijacks outdated routers via old flaws, turning 4,300+ devices into a stealth network for reconnaissance and intrusion support. On March 12, 2026, QiAnXin’s XLab threat detection system flagged a single IP address, 107.150.106.14, spreading a Linux binary through two vulnerabilities that were disclosed in 2013 and 2016 respectively. The binary had zero detections on […]</description>
-      <source url="https://securityaffairs.com/">Security Affairs</source>
-      <category>Malware</category>
-      <category>Security</category>
+      <title>What Is FortiBleed? Your Questions Answered</title>
+      <link>https://socradar.io/blog/what-is-fortibleed/</link>
+      <guid isPermaLink="true">https://socradar.io/blog/what-is-fortibleed/</guid>
+      <pubDate>Fri, 19 Jun 2026 09:36:02 GMT</pubDate>
+      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Threat Actor, Identity, Network / Topics: Fortinet, Network Edge, Identity / Priority: Critical (88) / SOC: 95 / Confidence: High (88) / Reasons: EN attack activity, EN detection/analysis, IOC 9, coherent attack event, target and impact context, detection evidence context / Summary: What Is FortiBleed? Your Questions Answered This is a developing story. Figures and findings are updated as the investigation continues. 1. What is FortiBleed? FortiBleed is an active, large-scale credential theft campaign targeting internet-exposed Fortinet FortiGate firewalls and SSL VPN gateways. The same threat actor has also been observed targeting FortiWeb and MSSQL services as […]</description>
+      <source url="https://socradar.io/blog/">SOCRadar Blog</source>
       <category>Threat Intel</category>
-      <category>Vulnerability</category>
-      <category>Endpoint</category>
-      <category>Network</category>
-      <category>Detection</category>
-      <category>Incident Response</category>
-    </item>
-    <item>
-      <title>DragonForce Hackers Abuse Microsoft Teams Relays to Hide Backdoor.Turn C2 Traffic</title>
-      <link>https://thehackernews.com/2026/06/dragonforce-hackers-abuse-microsoft.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/06/dragonforce-hackers-abuse-microsoft.html</guid>
-      <pubDate>Thu, 18 Jun 2026 13:30:07 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Malware, Ransomware, Threat Actor / Topics: Microsoft, Ransomware, Malware / Priority: Critical (83) / SOC: 100 / Confidence: Medium (48) / Reasons: EN attack activity, EN detection/analysis, JA attack activity, coherent attack event, detection evidence context, indicator context / Summary: Threat actors associated with the DragonForce ransomware have been observed using a custom Go-based remote access trojan (RAT) called Backdoor.Turn to conceal command-and-control (C2) traffic inside Microsoft Teams relay infrastructure. According to findings from Broadcom-owned Symantec and Carbon Black, the backdoor was deployed against a major U.S. services firm. The name of the company was</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Malware</category>
-      <category>Ransomware</category>
+      <category>Research</category>
+      <category>IOC</category>
       <category>Threat Actor</category>
+      <category>Identity</category>
+      <category>Network</category>
     </item>
     <item>
       <title>🏴‍☠️ Stormous has just published a new victim : mlit.com.my UPDATE-FULL DATA DUMP NEW LINK 10GB</title>
@@ -235,22 +210,6 @@
       <category>Ransomware</category>
       <category>Threat Intel</category>
       <category>Network</category>
-    </item>
-    <item>
-      <title>Exploit for CVE-2025-61155</title>
-      <link>https://vulners.com/githubexploit/8FA4E1EF-9BCF-5027-85E0-2F420F5171B6?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=rss</link>
-      <guid isPermaLink="true">https://vulners.com/githubexploit/8FA4E1EF-9BCF-5027-85E0-2F420F5171B6?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=rss</guid>
-      <pubDate>Thu, 25 Jun 2026 13:01:56 GMT</pubDate>
-      <description>Source: Vulners / Source attributes: Global / Vulnerability Database / Aggregator / Categories: Vulnerability, Threat Intel, Exploit, Patch, Ransomware, Supply Chain, Endpoint, Detection / Topics: CVE-2025-61155, Linux, Ransomware, Supply Chain, Vulnerability, Exploit / Priority: Critical (82) / SOC: 90 / Confidence: Low (35) / Reasons: EN attack activity, EN active exploit/PoC/zero-day, EN detection/analysis, coherent attack event, target and impact context / Summary: CVE-2025-61155 — Arbitrary Process Termination in GameDriverX64.sys A signed kernel-mode anti-cheat driver — GameDriverX64.sys, shipped with Tower of Fantasy Hotta Studio / Perfect World — lets any unprivileged local user terminate arbitrary processes, including PPL-protected antivirus/EDR services. It is the kind of primitive ransomware operators reach for, and it is being actively abused in the wild by the Interlock operation as a BYOVD EDR-killer. This repository is a full, reproducible teardown: the security advisory, an original IDA Pro reverse-engineering analysis, a proof of concept, an / Also reported by: Sploitus</description>
-      <source url="https://vulners.com/">Vulners</source>
-      <category>Vulnerability</category>
-      <category>Threat Intel</category>
-      <category>Exploit</category>
-      <category>Patch</category>
-      <category>Ransomware</category>
-      <category>Supply Chain</category>
-      <category>Endpoint</category>
-      <category>Detection</category>
     </item>
     <item>
       <title>136 Critical Vulnerabilities, 212 Organizations, Zero Exploits Required: What Attackers See in Canadian Healthcare</title>
@@ -353,33 +312,24 @@
       <category>Incident Response</category>
     </item>
     <item>
-      <title>What the Latest ShinyHunters Breaches Reveal About Modern Cyberattacks</title>
-      <link>https://www.securityweek.com/what-the-latest-shinyhunters-breaches-reveal-about-modern-cyberattacks/</link>
-      <guid isPermaLink="true">https://www.securityweek.com/what-the-latest-shinyhunters-breaches-reveal-about-modern-cyberattacks/</guid>
-      <pubDate>Mon, 22 Jun 2026 10:30:00 GMT</pubDate>
-      <description>Source: SecurityWeek / Source attributes: United States / News / Secondary / Categories: Threat Intel, Zero-Day, Malware / Topics: Zero-Day, Malware / Priority: High (75) / SOC: 75 / Confidence: Medium (48) / Reasons: EN attack activity, EN active exploit/PoC/zero-day, coherent attack event, detection evidence context / Summary: Groups like ShinyHunters are demonstrating that attackers do not necessarily need malware or zero-day exploits to cause massive damage. The post What the Latest ShinyHunters Breaches Reveal About Modern Cyberattacks appeared first on SecurityWeek .</description>
-      <source url="https://www.securityweek.com/">SecurityWeek</source>
+      <title>CVE-2026-20253: CISA Warns of Actively Exploited Splunk Enterprise RCE</title>
+      <link>https://socradar.io/blog/cve-2026-20253-cisa-splunk-enterprise-rce/</link>
+      <guid isPermaLink="true">https://socradar.io/blog/cve-2026-20253-cisa-splunk-enterprise-rce/</guid>
+      <pubDate>Fri, 19 Jun 2026 15:14:36 GMT</pubDate>
+      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Vulnerability, Network / Topics: CVE-2026-20253, Vulnerability / Priority: High (75) / SOC: 63 / Confidence: High (88) / Reasons: EN active exploit/PoC/zero-day, IOC 9, target and impact context, vulnerability exploitation context / Summary: CVE-2026-20253: CISA Warns of Actively Exploited Splunk Enterprise RCE Splunk Enterprise admins should prioritize patching CVE-2026-20253, a critical vulnerability that allows a network-reachable, unauthenticated attacker to create or truncate arbitrary files on the Splunk server. Under certain conditions, this can be chained into remote code execution (RCE), making exposure the main risk driver. CISA has […] / Also reported by: The HackersNews</description>
+      <source url="https://socradar.io/blog/">SOCRadar Blog</source>
       <category>Threat Intel</category>
-      <category>Zero-Day</category>
-      <category>Malware</category>
-    </item>
-    <item>
-      <title>Law enforcement hits StealC and Amadey malware networks</title>
-      <link>https://www.helpnetsecurity.com/2026/06/24/operation-endgame-stealc-amadey-malware-disrupted/</link>
-      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/06/24/operation-endgame-stealc-amadey-malware-disrupted/</guid>
-      <pubDate>Wed, 24 Jun 2026 15:05:36 GMT</pubDate>
-      <description>Source: Help Net Security / Source attributes: Croatia / News / Secondary / Categories: Threat Intel, Malware, Ransomware / Topics: Microsoft, Ransomware, Malware / Priority: High (72) / SOC: 84 / Confidence: Medium (53) / Reasons: EN attack activity, coherent attack event, target and impact context, indicator context / Summary: Operation Endgame, the largest international law enforcement operation aimed at disrupting ransomware and cybercrime infrastructure across the world, has claimed its latest targets: StealC and Amadey. The notice on disrupted websites (Source: Microsoft) While developed by separate criminal groups, those two malware families work in tandem to compromise devices and harvest sensitive data. Law enforcement and private sector partners, including Microsoft and Proofpoint, coordinated action against the infrastructure delivering both threats. Infrastructure dismantled, millions in … More → The post </description>
-      <source url="https://www.helpnetsecurity.com/">Help Net Security</source>
-      <category>Threat Intel</category>
-      <category>Malware</category>
-      <category>Ransomware</category>
+      <category>Research</category>
+      <category>IOC</category>
+      <category>Vulnerability</category>
+      <category>Network</category>
     </item>
     <item>
       <title>WhatsApp VBScript Campaign Installs ManageEngine Endpoint Central for Persistent Remote Access</title>
       <link>https://socradar.io/blog/whatsapp-vbscript-campaign-manageengine-endpoint/</link>
       <guid isPermaLink="true">https://socradar.io/blog/whatsapp-vbscript-campaign-manageengine-endpoint/</guid>
       <pubDate>Tue, 23 Jun 2026 09:14:57 GMT</pubDate>
-      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Malware, Endpoint / Topics: Malware / Priority: High (72) / SOC: 74 / Confidence: High (86) / Reasons: EN attack activity, IOC 6, coherent attack event / Summary: WhatsApp VBScript Campaign Installs ManageEngine Endpoint Central for Persistent Remote Access A newly reported malware campaign uses WhatsApp direct messages to deliver VBScript (VBS/VBE) attachments that look like routine business documents. If a recipient downloads and then opens the attachment in WhatsApp Desktop or WhatsApp Web, the script starts a staged infection chain that ends […]</description>
+      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Malware, Endpoint / Topics: Malware / Priority: High (74) / SOC: 76 / Confidence: High (88) / Reasons: EN attack activity, IOC 15, coherent attack event / Summary: WhatsApp VBScript Campaign Installs ManageEngine Endpoint Central for Persistent Remote Access A newly reported malware campaign uses WhatsApp direct messages to deliver VBScript (VBS/VBE) attachments that look like routine business documents. If a recipient downloads and then opens the attachment in WhatsApp Desktop or WhatsApp Web, the script starts a staged infection chain that ends […]</description>
       <source url="https://socradar.io/blog/">SOCRadar Blog</source>
       <category>Threat Intel</category>
       <category>Research</category>
@@ -412,42 +362,16 @@
       <category>Ransomware</category>
     </item>
     <item>
-      <title>North Korean Hackers Blamed for Mastra NPM Supply Chain Attack</title>
-      <link>https://www.securityweek.com/north-korean-hackers-blamed-for-mastra-npm-supply-chain-attack/</link>
-      <guid isPermaLink="true">https://www.securityweek.com/north-korean-hackers-blamed-for-mastra-npm-supply-chain-attack/</guid>
-      <pubDate>Mon, 22 Jun 2026 11:10:06 GMT</pubDate>
-      <description>Source: SecurityWeek / Source attributes: United States / News / Secondary / Categories: Threat Intel, Supply Chain, Cryptocurrency / Topics: Supply Chain / Priority: High (70) / SOC: 68 / Confidence: Medium (48) / Reasons: EN attack activity, EN Japan/Asia relevance, coherent attack event, indicator context, Japan related / Summary: A malicious dependency the attackers added to over 140 Mastra packages fetches a payload targeting cryptocurrency extensions. The post North Korean Hackers Blamed for Mastra NPM Supply Chain Attack appeared first on SecurityWeek . / Also reported by: Bleeping Computer, Infosecurity Magazine</description>
-      <source url="https://www.securityweek.com/">SecurityWeek</source>
+      <title>Microsoft Attributes Mastra AI Supply Chain Attack to North Korea</title>
+      <link>https://www.infosecurity-magazine.com/news/mastra-ai-supply-chain-attack/</link>
+      <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/mastra-ai-supply-chain-attack/</guid>
+      <pubDate>Mon, 22 Jun 2026 11:30:00 GMT</pubDate>
+      <description>Source: Infosecurity Magazine / Source attributes: United Kingdom / News / Secondary / Categories: Threat Intel, Threat Actor, Supply Chain, AI Security / Topics: Microsoft, Supply Chain, AI Security / Priority: High (69) / SOC: 69 / Confidence: Low (43) / Reasons: EN attack activity, EN Japan/Asia relevance, coherent attack event, target and impact context, Japan related / Summary: North Korean threat actor Sapphire Sleet has been linked to a supply chain attack targeting Mastra, according to Microsoft security researchers</description>
+      <source url="https://www.infosecurity-magazine.com/">Infosecurity Magazine</source>
       <category>Threat Intel</category>
-      <category>Supply Chain</category>
-      <category>Cryptocurrency</category>
-    </item>
-    <item>
-      <title>Top 10 Dark Web Markets in 2026: List &amp; Threat Analysis</title>
-      <link>https://socradar.io/blog/top-10-dark-web-markets/</link>
-      <guid isPermaLink="true">https://socradar.io/blog/top-10-dark-web-markets/</guid>
-      <pubDate>Mon, 22 Jun 2026 09:20:26 GMT</pubDate>
-      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Malware, Data Breach / Topics: Malware, Data Breach / Priority: High (68) / SOC: 71 / Confidence: High (76) / Reasons: EN attack activity, EN detection/analysis, coherent attack event, target and impact context / Summary: Top Dark Web Marketplaces in 2026 Dark Web marketplaces in 2026 are underground platforms where cybercriminals buy and sell stolen data, credentials, stealer logs, payment card records, malware, fraud services, counterfeit documents, drugs, and access to compromised systems. Also known as Dark Web markets or darknet markets, these platforms are increasingly specialized, with some operating […]</description>
-      <source url="https://socradar.io/blog/">SOCRadar Blog</source>
-      <category>Threat Intel</category>
-      <category>Research</category>
-      <category>IOC</category>
-      <category>Malware</category>
-      <category>Data Breach</category>
-    </item>
-    <item>
-      <title>What Is FortiBleed? Your Questions Answered</title>
-      <link>https://socradar.io/blog/what-is-fortibleed/</link>
-      <guid isPermaLink="true">https://socradar.io/blog/what-is-fortibleed/</guid>
-      <pubDate>Fri, 19 Jun 2026 09:36:02 GMT</pubDate>
-      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Threat Actor, Identity, Network / Topics: Fortinet, Network Edge, Identity / Priority: High (68) / SOC: 71 / Confidence: High (76) / Reasons: EN attack activity, EN detection/analysis, coherent attack event, target and impact context, detection evidence context / Summary: What Is FortiBleed? Your Questions Answered This is a developing story. Figures and findings are updated as the investigation continues. 1. What is FortiBleed? FortiBleed is an active, large-scale credential theft campaign targeting internet-exposed Fortinet FortiGate firewalls and SSL VPN gateways. The same threat actor has also been observed targeting FortiWeb and MSSQL services as […]</description>
-      <source url="https://socradar.io/blog/">SOCRadar Blog</source>
-      <category>Threat Intel</category>
-      <category>Research</category>
-      <category>IOC</category>
       <category>Threat Actor</category>
-      <category>Identity</category>
-      <category>Network</category>
+      <category>Supply Chain</category>
+      <category>AI Security</category>
     </item>
     <item>
       <title>Lost in relocation: analysis of a new loader distributing CASTLESTEALER</title>
@@ -481,11 +405,20 @@
       <category>Identity</category>
     </item>
     <item>
+      <title>Amadey の栄枯盛衰: C2 サーバの長期的な観測から得られた知見</title>
+      <link>https://www.mbsd.jp/research/20260624/amadey-c2/</link>
+      <guid isPermaLink="true">https://www.mbsd.jp/research/20260624/amadey-c2/</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Source: 三井物産セキュアディレクション / Source attributes: Japan / Vendor / Primary / Categories: Threat Intel / Priority: High (67) / SOC: 67 / Confidence: Medium (68) / Reasons: EN attack activity, JA attack activity, JA detection/analysis, indicator context, Japan source</description>
+      <source url="https://www.mbsd.jp/research/">三井物産セキュアディレクション</source>
+      <category>Threat Intel</category>
+    </item>
+    <item>
       <title>Cisco Unified CM Flaw Exploited After PoC Reveals File-Write Path to Root</title>
       <link>https://thehackernews.com/2026/06/cisco-unified-cm-flaw-exploited-after.html</link>
       <guid isPermaLink="true">https://thehackernews.com/2026/06/cisco-unified-cm-flaw-exploited-after.html</guid>
       <pubDate>Wed, 24 Jun 2026 06:50:38 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Threat Actor / Topics: Cisco, Vulnerability, Exploit / Priority: High (67) / SOC: 60 / Confidence: Medium (64) / Reasons: EN active exploit/PoC/zero-day, JA active exploit/PoC/zero-day, coherent attack event, target and impact context / Summary: Threat actors have begun to exploit a recently disclosed critical security flaw impacting Cisco Unified Communications Manager (Unified CM) and Unified Communications Manager Session Management Edition (Unified CM SME). The vulnerability, tracked as CVE-2026-20230 (CVSS score: 8.6), is a case of improper input validation for specific HTTP requests that could allow an unauthenticated, remote / Also reported by: Help Net Security, Security Affairs / Primary source: ssd-disclosure.com https://ssd-disclosure.com/cisco-unified-communications-manager-arbitrary-file-write-to-rce/</description>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Threat Actor / Topics: Cisco, Vulnerability, Exploit / Priority: High (67) / SOC: 60 / Confidence: Medium (64) / Reasons: EN active exploit/PoC/zero-day, JA active exploit/PoC/zero-day, coherent attack event, target and impact context / Summary: Threat actors have begun to exploit a recently disclosed critical security flaw impacting Cisco Unified Communications Manager (Unified CM) and Unified Communications Manager Session Management Edition (Unified CM SME). The vulnerability, tracked as CVE-2026-20230 (CVSS score: 8.6), is a case of improper input validation for specific HTTP requests that could allow an unauthenticated, remote / Also reported by: Security Affairs / Primary source: ssd-disclosure.com https://ssd-disclosure.com/cisco-unified-communications-manager-arbitrary-file-write-to-rce/</description>
       <source url="https://thehackernews.com/">The HackersNews</source>
       <category>Vulnerability</category>
       <category>Exploit</category>
@@ -496,7 +429,7 @@
       <link>https://thehackernews.com/2026/06/whatsapp-vbscript-campaign-uses-fake.html</link>
       <guid isPermaLink="true">https://thehackernews.com/2026/06/whatsapp-vbscript-campaign-uses-fake.html</guid>
       <pubDate>Tue, 23 Jun 2026 05:38:40 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Priority: High (65) / SOC: 57 / Confidence: Medium (64) / Reasons: EN Japan/Asia relevance, coherent attack event, target and impact context, detection evidence context, Japan related / Summary: Direct messages sent via WhatsApp are being used to distribute malicious Visual Basic Script (VBScript) files that lead to the installation of legitimate Remote Monitoring and Management (RMM) software. Per findings from Kaspersky, the active campaign is targeting users of WhatsApp Desktop and WhatsApp Web across Malaysia, Brazil, India, Mexico, Singapore, the U.K., Spain, Taiwan, Australia, / Also reported by: Bleeping Computer / Primary source: Securelist https://securelist.com/whatsapp-vbs-rmm-campaign/120290/</description>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Priority: High (65) / SOC: 57 / Confidence: Medium (64) / Reasons: EN Japan/Asia relevance, coherent attack event, target and impact context, detection evidence context, Japan related / Summary: Direct messages sent via WhatsApp are being used to distribute malicious Visual Basic Script (VBScript) files that lead to the installation of legitimate Remote Monitoring and Management (RMM) software. Per findings from Kaspersky, the active campaign is targeting users of WhatsApp Desktop and WhatsApp Web across Malaysia, Brazil, India, Mexico, Singapore, the U.K., Spain, Taiwan, Australia, / Primary source: Securelist https://securelist.com/whatsapp-vbs-rmm-campaign/120290/</description>
       <source url="https://thehackernews.com/">The HackersNews</source>
     </item>
     <item>
@@ -522,19 +455,6 @@
       <category>Supply Chain</category>
     </item>
     <item>
-      <title>New iPhone BootROM Flaw Enables Hardware-Level Compromise</title>
-      <link>https://thecyberexpress.com/iphone-bootrom-vulnerability/</link>
-      <guid isPermaLink="true">https://thecyberexpress.com/iphone-bootrom-vulnerability/</guid>
-      <pubDate>Fri, 19 Jun 2026 07:21:42 GMT</pubDate>
-      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Vulnerability, Threat Intel, Exploit, Mobile, Network / Topics: Apple/iOS, Network Edge, Vulnerability, Exploit / Priority: High (63) / SOC: 60 / Confidence: Low (43) / Reasons: EN attack activity, EN active exploit/PoC/zero-day, coherent attack event, target and impact context, uncertain reporting / Summary: Security researchers have disclosed a previously unknown iPhone BootROM vulnerability that allows attackers to compromise the boot chain on several Apple devices, including systems powered by A12 and A13 processors as well as Apple Watch S4 and S5 chipsets. The flaw, demonstrated through a proof-of-concept exploit dubbed "usbliter8," combines a hardware weakness in a USB controller with a firmware configuration issue that affects BootROM security. According to the researchers, the iPhone BootROM vulnerability impacts Apple A12, A13, and Apple Watch S4/S5 platforms. While support for A12X and A</description>
-      <source url="https://thecyberexpress.com/">The Cyber Express</source>
-      <category>Vulnerability</category>
-      <category>Threat Intel</category>
-      <category>Exploit</category>
-      <category>Mobile</category>
-      <category>Network</category>
-    </item>
-    <item>
       <title>New Gaslight macOS Malware Uses Prompt Injection to Disrupt AI-Assisted Analysis</title>
       <link>https://thehackernews.com/2026/06/new-gaslight-macos-malware-uses-prompt.html</link>
       <guid isPermaLink="true">https://thehackernews.com/2026/06/new-gaslight-macos-malware-uses-prompt.html</guid>
@@ -546,18 +466,6 @@
       <category>Endpoint</category>
     </item>
     <item>
-      <title>ShapedPlugin Supply Chain Attack Backdoors Pro Plugin Updates</title>
-      <link>https://securityaffairs.com/194059/hacking/shapedplugin-supply-chain-attack-backdoors-pro-plugin-updates.html</link>
-      <guid isPermaLink="true">https://securityaffairs.com/194059/hacking/shapedplugin-supply-chain-attack-backdoors-pro-plugin-updates.html</guid>
-      <pubDate>Tue, 23 Jun 2026 08:22:12 GMT</pubDate>
-      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Security, Malware, Threat Intel, Supply Chain / Topics: Supply Chain, Malware / Priority: High (61) / SOC: 71 / Confidence: Low (44) / Reasons: EN attack activity, IOC 2, coherent attack event, target and impact context, uncertain reporting / Summary: Attackers backdoored ShapedPlugin Pro updates, deploying malware that steals credentials, 2FA secrets, and grants full site access. If you installed a ShapedPlugin Pro plugin between April and June 2026 and kept it updated, your site may be compromised. Not because you did something wrong, but because the vendor’s own build and distribution pipeline was breached. […]</description>
-      <source url="https://securityaffairs.com/">Security Affairs</source>
-      <category>Security</category>
-      <category>Malware</category>
-      <category>Threat Intel</category>
-      <category>Supply Chain</category>
-    </item>
-    <item>
       <title>A closer look at Africa’s evolving cyberthreat landscape</title>
       <link>https://blog.barracuda.com/2026/06/23/africa-evolving-cyberthreat-landscape</link>
       <guid isPermaLink="true">https://blog.barracuda.com/2026/06/23/africa-evolving-cyberthreat-landscape</guid>
@@ -567,26 +475,12 @@
       <category>Threat Intel</category>
     </item>
     <item>
-      <title>Malicious code in ui-core-system (npm)</title>
-      <link>https://vulners.com/ossf/OSSF:MAL-2026-6398?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=rss</link>
-      <guid isPermaLink="true">https://vulners.com/ossf/OSSF:MAL-2026-6398?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=rss</guid>
-      <pubDate>Wed, 24 Jun 2026 14:43:58 GMT</pubDate>
-      <description>Source: Vulners / Source attributes: Global / Vulnerability Database / Aggregator / Categories: Vulnerability, Threat Intel, Malware, Supply Chain / Topics: Supply Chain, Vulnerability, Malware / Priority: High (60) / SOC: 71 / Confidence: Low (40) / Reasons: EN attack activity, IOC 1, coherent attack event, indicator context / Summary: --- -= Per source details. Do not edit below this line.=- Source: ghsa-malware 5354cae05d6dc20a942310d00c7ae19f0cef2e44c9922322a81a950fdd798c6b Any computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it...</description>
-      <source url="https://vulners.com/">Vulners</source>
-      <category>Vulnerability</category>
-      <category>Threat Intel</category>
-      <category>Malware</category>
-      <category>Supply Chain</category>
-    </item>
-    <item>
-      <title>WhatsApp Malware Campaign Hijacks Trust, Installs Legitimate Admin Tools</title>
-      <link>https://securityaffairs.com/194031/malware/whatsapp-malware-campaign-hijacks-trust-installs-legitimate-admin-tools.html</link>
-      <guid isPermaLink="true">https://securityaffairs.com/194031/malware/whatsapp-malware-campaign-hijacks-trust-installs-legitimate-admin-tools.html</guid>
-      <pubDate>Mon, 22 Jun 2026 20:25:55 GMT</pubDate>
-      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Malware, Security, Threat Intel / Topics: Malware / Priority: High (60) / SOC: 68 / Confidence: Medium (48) / Reasons: EN attack activity, EN detection/analysis, coherent attack event, target and impact context / Summary: WhatsApp accounts were hijacked to spread fake debt notices that install remote access software, giving attackers control of victims’ PCs. Kaspersky published a technical analysis this week of an active malware campaign that spreads through WhatsApp messages and ends with a remote management tool silently installed on the victim’s machine. The campaign is still running […]</description>
-      <source url="https://securityaffairs.com/">Security Affairs</source>
-      <category>Malware</category>
-      <category>Security</category>
+      <title>Amadey's Rise and Fall: What Six and a Half Years of C2 Observation Reveal</title>
+      <link>https://www.mbsd.jp/research/20260624/amadey-c2-en/</link>
+      <guid isPermaLink="true">https://www.mbsd.jp/research/20260624/amadey-c2-en/</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Source: 三井物産セキュアディレクション / Source attributes: Japan / Vendor / Primary / Categories: Threat Intel / Priority: High (61) / SOC: 59 / Confidence: Medium (68) / Reasons: EN attack activity, JA attack activity, indicator context, Japan source</description>
+      <source url="https://www.mbsd.jp/research/">三井物産セキュアディレクション</source>
       <category>Threat Intel</category>
     </item>
     <item>
@@ -601,17 +495,6 @@
       <category>Supply Chain</category>
     </item>
     <item>
-      <title>Cybercriminals abused GitHub, YouTube and VirusTotal to push crypto-stealing malware</title>
-      <link>https://www.helpnetsecurity.com/2026/06/19/fake-github-stars-crypto-stealing-malware/</link>
-      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/06/19/fake-github-stars-crypto-stealing-malware/</guid>
-      <pubDate>Fri, 19 Jun 2026 12:11:44 GMT</pubDate>
-      <description>Source: Help Net Security / Source attributes: Croatia / News / Secondary / Categories: Threat Intel, Malware, Cryptocurrency / Topics: Malware / Priority: Medium (58) / SOC: 65 / Confidence: Medium (53) / Reasons: EN attack activity, coherent attack event, target and impact context / Summary: A cryptocurrency-stealing malware campaign used inflated GitHub activity, software reviews, YouTube tutorials and favorable VirusTotal comments to make malicious trading and gambling tools appear trustworthy, Check Point researchers found. According to the researchers, the attackers packaged the malware as tools designed to help users make money. The offerings included cryptocurrency sniper bots and gambling “predictors” that claimed to identify winning opportunities before other traders or forecast the outcome of online betting games. Instead of quick … More → The post Cybercriminals abused G</description>
-      <source url="https://www.helpnetsecurity.com/">Help Net Security</source>
-      <category>Threat Intel</category>
-      <category>Malware</category>
-      <category>Cryptocurrency</category>
-    </item>
-    <item>
       <title>Malicious Edge extension abuses Native Messaging as bridge to malware</title>
       <link>https://www.bleepingcomputer.com/news/security/malicious-edge-extension-abuses-native-messaging-as-bridge-to-malware/</link>
       <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/malicious-edge-extension-abuses-native-messaging-as-bridge-to-malware/</guid>
@@ -621,6 +504,18 @@
       <category>Security</category>
       <category>Malware</category>
       <category>Ransomware</category>
+    </item>
+    <item>
+      <title>Klue Breach: What You Need to Know</title>
+      <link>https://socradar.io/blog/klue-breach-what-to-know/</link>
+      <guid isPermaLink="true">https://socradar.io/blog/klue-breach-what-to-know/</guid>
+      <pubDate>Wed, 24 Jun 2026 11:17:47 GMT</pubDate>
+      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Identity / Topics: Identity / Priority: Medium (58) / SOC: 55 / Confidence: High (82) / Reasons: EN attack activity, IOC 9, target and impact context / Summary: Klue Breach: What You Need to Know The Klue breach shows how stolen OAuth tokens from a trusted SaaS integration can expose Salesforce CRM data. Learn what happened, which companies confirmed impact, what data was exposed, and how defenders should respond. What Happened in the Klue Breach? The Klue breach was a third-party Software-as-a-Service (SaaS) […]</description>
+      <source url="https://socradar.io/blog/">SOCRadar Blog</source>
+      <category>Threat Intel</category>
+      <category>Research</category>
+      <category>IOC</category>
+      <category>Identity</category>
     </item>
     <item>
       <title>Millenium: A RAT Rewritten, A Threat Multiplied</title>
@@ -720,19 +615,6 @@
       <source url="https://www.lac.co.jp/lacwatch">LAC</source>
     </item>
     <item>
-      <title>CVE-2026-20253: CISA Warns of Actively Exploited Splunk Enterprise RCE</title>
-      <link>https://socradar.io/blog/cve-2026-20253-cisa-splunk-enterprise-rce/</link>
-      <guid isPermaLink="true">https://socradar.io/blog/cve-2026-20253-cisa-splunk-enterprise-rce/</guid>
-      <pubDate>Fri, 19 Jun 2026 15:14:36 GMT</pubDate>
-      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Vulnerability, Network / Topics: CVE-2026-20253, Vulnerability / Priority: Medium (55) / SOC: 39 / Confidence: High (76) / Reasons: EN active exploit/PoC/zero-day, target and impact context, vulnerability exploitation context / Summary: CVE-2026-20253: CISA Warns of Actively Exploited Splunk Enterprise RCE Splunk Enterprise admins should prioritize patching CVE-2026-20253, a critical vulnerability that allows a network-reachable, unauthenticated attacker to create or truncate arbitrary files on the Splunk server. Under certain conditions, this can be chained into remote code execution (RCE), making exposure the main risk driver. CISA has […] / Also reported by: The HackersNews</description>
-      <source url="https://socradar.io/blog/">SOCRadar Blog</source>
-      <category>Threat Intel</category>
-      <category>Research</category>
-      <category>IOC</category>
-      <category>Vulnerability</category>
-      <category>Network</category>
-    </item>
-    <item>
       <title>Authorities disrupt Evil Corp’s SocGholish botnet</title>
       <link>https://cyberscoop.com/socgholish-malware-botnet-takedown-evilcorp/</link>
       <guid isPermaLink="true">https://cyberscoop.com/socgholish-malware-botnet-takedown-evilcorp/</guid>
@@ -769,29 +651,15 @@
       <category>Vulnerability</category>
     </item>
     <item>
-      <title>Scammers Use Fake GitHub Stars, VirusTotal Reviews to Spread Crypto Clipper</title>
-      <link>https://hackread.com/scammers-fake-github-virustotal-crypto-clipper/</link>
-      <guid isPermaLink="true">https://hackread.com/scammers-fake-github-virustotal-crypto-clipper/</guid>
-      <pubDate>Mon, 22 Jun 2026 12:47:25 GMT</pubDate>
-      <description>Source: HackRead / Source attributes: Global / News / Secondary / Categories: Malware, Security, Threat Intel, Endpoint, Cryptocurrency / Topics: Microsoft, Malware / Priority: Medium (53) / SOC: 60 / Confidence: Low (43) / Reasons: EN attack activity, coherent attack event, target and impact context / Summary: A multi-platform malware campaign abuses fake trust signals to infect Windows and Mac users with a crypto clipper packed with 15,500 attacker wallets.</description>
-      <source url="https://hackread.com/">HackRead</source>
-      <category>Malware</category>
-      <category>Security</category>
-      <category>Threat Intel</category>
-      <category>Endpoint</category>
-      <category>Cryptocurrency</category>
-    </item>
-    <item>
-      <title>devbridge-autocomplete has XSS in its default formatters: formatGroup and formatResult fail to escape HTML in untrusted inputs</title>
-      <link>https://vulners.com/github/GHSA-HVQH-JW65-WCPQ?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=rss</link>
-      <guid isPermaLink="true">https://vulners.com/github/GHSA-HVQH-JW65-WCPQ?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=rss</guid>
-      <pubDate>Mon, 22 Jun 2026 23:00:50 GMT</pubDate>
-      <description>Source: Vulners / Source attributes: Global / Vulnerability Database / Aggregator / Categories: Vulnerability, Threat Intel, Exploit, Cloud / Topics: Apple/iOS, Web Application, Vulnerability, Exploit, Cloud / Priority: Medium (53) / SOC: 51 / Confidence: Low (29) / Reasons: EN active exploit/PoC/zero-day, EN detection/analysis, JA active exploit/PoC/zero-day, detection evidence context / Summary: Summary The default formatGroup and formatResult functions in devbridge-autocomplete concatenate values into HTML without escaping, allowing XSS when an attacker controls or can taint the suggestion data source. Details 1. formatGroup — category is interpolated raw. src/format.ts: ts function formatGroupsuggestion, category return '' + category + ''; If groupBy is used and the grouping field of any suggestion contains HTML, that HTML is executed. 2. formatResult — early-return branch returns suggestion.value raw. src/format.ts: ts function formatResultsuggestion, currentValue if !currentValue </description>
+      <title>Chrome Ad Blocker with 10M+ Installs Found with Dormant Script Injection Capability</title>
+      <link>https://vulners.com/thn/THN:1613ADFA6FDBFEBD884E352668BB4595?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=rss</link>
+      <guid isPermaLink="true">https://vulners.com/thn/THN:1613ADFA6FDBFEBD884E352668BB4595?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=rss</guid>
+      <pubDate>Thu, 25 Jun 2026 14:12:00 GMT</pubDate>
+      <description>Source: Vulners / Source attributes: Global / Vulnerability Database / Aggregator / Categories: Vulnerability, Threat Intel, Malware / Topics: Vulnerability, Malware / Priority: Medium (53) / SOC: 66 / Confidence: Low (25) / Reasons: EN attack activity, EN detection/analysis, coherent attack event, target and impact context, indicator context, uncertain reporting / Summary: An analysis of a popular Google Chrome ad block extension for YouTube has uncovered the ability to execute arbitrary JavaScript code. According to Island, the extension, named Adblock for YouTube ID: cmedhionkhpnakcndndgjdbohmhepckk, has more than 10 million installs and carries a Featured badge on the Chrome Web Store. The extension description states that it allows users to prevent web page elements like ads, including preroll ads, from being displayed on the video sharing platform, as well as on external sites that load YouTube. While the add-on offers the promised functionality, it also fe</description>
       <source url="https://vulners.com/">Vulners</source>
       <category>Vulnerability</category>
       <category>Threat Intel</category>
-      <category>Exploit</category>
-      <category>Cloud</category>
+      <category>Malware</category>
     </item>
     <item>
       <title>New OXLOADER Loader Uses Malicious Google Ads to Deliver CastleStealer</title>
@@ -802,30 +670,6 @@
       <source url="https://thehackernews.com/">The HackersNews</source>
       <category>Malware</category>
       <category>Threat Actor</category>
-    </item>
-    <item>
-      <title>Klue OAuth breach victim list grows as Icarus hackers claim attack</title>
-      <link>https://www.bleepingcomputer.com/news/security/klue-oauth-breach-victim-list-grows-as-icarus-hackers-claim-attack/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/klue-oauth-breach-victim-list-grows-as-icarus-hackers-claim-attack/</guid>
-      <pubDate>Fri, 19 Jun 2026 22:31:04 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Ransomware, Threat Actor, Identity / Topics: Ransomware, Identity / Priority: Medium (52) / SOC: 57 / Confidence: Medium (48) / Reasons: EN attack activity, coherent attack event, target and impact context / Summary: Market intelligence platform Klue has publicly confirmed a recent security incident that allowed threat actors to steal OAuth tokens used to connect to customers' Salesforce environments, as the new "Icarus" extortion group publicly claims the attack. [...]</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Security</category>
-      <category>Ransomware</category>
-      <category>Threat Actor</category>
-      <category>Identity</category>
-    </item>
-    <item>
-      <title>LastPass confirms data breach in Klue supply chain attack</title>
-      <link>https://www.bleepingcomputer.com/news/security/lastpass-confirms-data-breach-in-klue-supply-chain-attack/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/lastpass-confirms-data-breach-in-klue-supply-chain-attack/</guid>
-      <pubDate>Tue, 23 Jun 2026 13:58:25 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Supply Chain, Identity, Data Breach / Topics: Supply Chain, Identity, Data Breach / Priority: Medium (52) / SOC: 52 / Confidence: Medium (64) / Reasons: EN attack activity, coherent attack event, target and impact context / Summary: LastPass announced that hackers accessed customer data from its Salesforce environment after stealing the company's OAuth tokens in the Klue supply chain attack earlier this month. [...] / Also reported by: Help Net Security / Primary source: blog.lastpass.com https://blog.lastpass.com/posts/klue-supply-chain-incident-and-lastpass-response</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Security</category>
-      <category>Supply Chain</category>
-      <category>Identity</category>
-      <category>Data Breach</category>
     </item>
     <item>
       <title>PixelSmash flaw turns video files into attack tools</title>
@@ -861,7 +705,7 @@
       <link>https://www.malwarebytes.com/blog/news/2026/06/nearly-15000-infected-websites-cleaned-in-socgholish-crackdown</link>
       <guid isPermaLink="true">https://www.malwarebytes.com/blog/news/2026/06/nearly-15000-infected-websites-cleaned-in-socgholish-crackdown</guid>
       <pubDate>Fri, 19 Jun 2026 16:05:53 GMT</pubDate>
-      <description>Source: Malwarebytes / Source attributes: United States / Vendor / Primary / Categories: Malware, Network / Topics: Malware / Priority: Medium (52) / SOC: 49 / Confidence: High (78) / Reasons: EN attack activity, coherent attack event / Summary: Thousands of everyday websites were cleaned as part of a global operation targeting the malware network behind fake browser update scams. / Also reported by: The Cyber Express</description>
+      <description>Source: Malwarebytes / Source attributes: United States / Vendor / Primary / Categories: Malware, Network / Topics: Malware / Priority: Medium (52) / SOC: 49 / Confidence: High (78) / Reasons: EN attack activity, coherent attack event / Summary: Thousands of everyday websites were cleaned as part of a global operation targeting the malware network behind fake browser update scams.</description>
       <source url="https://www.malwarebytes.com/blog">Malwarebytes</source>
       <category>Malware</category>
       <category>Network</category>
@@ -876,18 +720,6 @@
       <category>Phishing</category>
       <category>AI Security</category>
       <category>Detection</category>
-    </item>
-    <item>
-      <title>The Exploit Doesn't Exist. You Can Still Prove It Works Against You</title>
-      <link>https://www.bleepingcomputer.com/news/security/the-exploit-doesnt-exist-you-can-still-prove-it-works-against-you/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/the-exploit-doesnt-exist-you-can-still-prove-it-works-against-you/</guid>
-      <pubDate>Tue, 23 Jun 2026 14:01:11 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Vulnerability, Exploit, Patch / Topics: Vulnerability, Exploit / Priority: Medium (52) / SOC: 43 / Confidence: Medium (48) / Reasons: EN active exploit/PoC/zero-day, coherent attack event, target and impact context / Summary: Attackers can now weaponize newly disclosed vulnerabilities far faster than most organizations can patch them. Picus Security explains how security teams can validate exploitability before a public exploit even exists. [...]</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Security</category>
-      <category>Vulnerability</category>
-      <category>Exploit</category>
-      <category>Patch</category>
     </item>
     <item>
       <title>🏴‍☠️ Aurora has just published a new victim : Corporación Primax S.A.</title>
@@ -907,23 +739,12 @@
       <link>https://hackread.com/cryptobandits-malware-usb-drives-tor-steal-crypto/</link>
       <guid isPermaLink="true">https://hackread.com/cryptobandits-malware-usb-drives-tor-steal-crypto/</guid>
       <pubDate>Tue, 23 Jun 2026 12:02:35 GMT</pubDate>
-      <description>Source: HackRead / Source attributes: Global / News / Secondary / Categories: Malware, Security, Threat Intel, Cryptocurrency / Topics: Microsoft, Malware / Priority: Medium (50) / SOC: 57 / Confidence: Low (43) / Reasons: EN attack activity, coherent attack event, target and impact context / Summary: Microsoft researchers warn of a new dual-action cryptocurrency clipper (CryptoBandits Malware) spreading through USB devices to alter wallet addresses and steal crypto assets.</description>
+      <description>Source: HackRead / Source attributes: Global / News / Secondary / Categories: Security, Malware, Threat Intel, Cryptocurrency / Topics: Microsoft, Malware / Priority: Medium (50) / SOC: 57 / Confidence: Low (43) / Reasons: EN attack activity, coherent attack event, target and impact context / Summary: Microsoft researchers warn of a new dual-action cryptocurrency clipper (CryptoBandits Malware) spreading through USB devices to alter wallet addresses and steal crypto assets.</description>
       <source url="https://hackread.com/">HackRead</source>
-      <category>Malware</category>
       <category>Security</category>
+      <category>Malware</category>
       <category>Threat Intel</category>
       <category>Cryptocurrency</category>
-    </item>
-    <item>
-      <title>Three ‘cybercrime as a service’ operations undercut by Microsoft, law enforcement</title>
-      <link>https://therecord.media/stealc-amadey-socgholish-malware-takedown-europol-microsoft</link>
-      <guid isPermaLink="true">https://therecord.media/stealc-amadey-socgholish-malware-takedown-europol-microsoft</guid>
-      <pubDate>Wed, 24 Jun 2026 20:00:00 GMT</pubDate>
-      <description>Source: The Record / Source attributes: United States / News / Secondary / Categories: Malware, Threat Intel, Supply Chain / Topics: Microsoft, Supply Chain, Malware / Priority: Medium (50) / SOC: 56 / Confidence: Low (43) / Reasons: EN attack activity, coherent attack event, indicator context / Summary: Microsoft touted its latest action against malware infrastructure as a new approach aimed at the full cybercrime "supply chain." Europol said more than 300 servers were targeted.</description>
-      <source url="https://therecord.media/">The Record</source>
-      <category>Malware</category>
-      <category>Threat Intel</category>
-      <category>Supply Chain</category>
     </item>
     <item>
       <title>New macOS ClickFix attack silently mounts DMGs to push infostealer</title>
@@ -948,16 +769,6 @@
       <category>Ransomware</category>
     </item>
     <item>
-      <title>AryStinger botnet infected thousands of D-Link routers worldwide</title>
-      <link>https://www.bleepingcomputer.com/news/security/arystinger-botnet-infected-thousands-of-d-link-routers-worldwide/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/arystinger-botnet-infected-thousands-of-d-link-routers-worldwide/</guid>
-      <pubDate>Sun, 21 Jun 2026 14:14:22 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Malware / Topics: Malware / Priority: Medium (49) / SOC: 55 / Confidence: Low (43) / Reasons: EN attack activity, coherent attack event / Summary: A previously undocumented malware botnet named AryStinger has compromised more than 4,000 outdated routers to turn them into proxies for malicious traffic. [...]</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Security</category>
-      <category>Malware</category>
-    </item>
-    <item>
       <title>Cordyceps CI/CD Flaws Expose 300+ GitHub Repositories to Supply-Chain Attacks</title>
       <link>https://thehackernews.com/2026/06/cordyceps-cicd-flaws-expose-300-github.html</link>
       <guid isPermaLink="true">https://thehackernews.com/2026/06/cordyceps-cicd-flaws-expose-300-github.html</guid>
@@ -965,6 +776,17 @@
       <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Supply Chain / Topics: Microsoft, Supply Chain / Priority: Medium (49) / SOC: 49 / Confidence: Medium (64) / Reasons: EN attack activity, coherent attack event, target and impact context / Summary: Cybersecurity researchers have flagged a new class of CI/CD workflow weakness that allows attackers to hijack workflows and compromise open-source supply chains. The "critical exploitable pattern" has been codenamed Cordyceps by Novee Security. The issue can allow full attacker control of repositories at dozens of the largest organizations worldwide, including Microsoft, Google, Apache, and / Primary source: novee.security https://novee.security/blog/cordyceps/</description>
       <source url="https://thehackernews.com/">The HackersNews</source>
       <category>Supply Chain</category>
+    </item>
+    <item>
+      <title>Evaluating Mexico’s New Cybersecurity Plan</title>
+      <link>https://www.recordedfuture.com/research/mexico-new-cybersecurity-plan-evaluation</link>
+      <guid isPermaLink="true">https://www.recordedfuture.com/research/mexico-new-cybersecurity-plan-evaluation</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Source: Recorded Future / Source attributes: United States / Research / Primary / Categories: Threat Intel, Ransomware, AI Security / Topics: Ransomware, AI Security / Priority: Medium (49) / SOC: 46 / Confidence: High (70) / Reasons: EN attack activity, EN detection/analysis, indicator context / Summary: Explore an analysis of Mexico’s 2025–2030 National Cybersecurity Plan. Discover how Mexico is addressing critical threats like ransomware, organized crime, and AI-driven attacks while preparing its digital infrastructure for the 2026 FIFA World Cup and beyond</description>
+      <source url="https://www.recordedfuture.com/research">Recorded Future</source>
+      <category>Threat Intel</category>
+      <category>Ransomware</category>
+      <category>AI Security</category>
     </item>
     <item>
       <title>KDDI Breach Affects Six Japanese ISPs, Exposes 14.2 Email Credentials</title>
@@ -998,74 +820,14 @@
       <category>Detection</category>
     </item>
     <item>
-      <title>Police raid malware network tied to Russia's Evil Corp hacker group</title>
-      <link>https://therecord.media/socgholish-botnet-disrupted</link>
-      <guid isPermaLink="true">https://therecord.media/socgholish-botnet-disrupted</guid>
-      <pubDate>Fri, 19 Jun 2026 12:57:00 GMT</pubDate>
-      <description>Source: The Record / Source attributes: United States / News / Secondary / Categories: Malware, Threat Intel, Threat Actor, Network / Topics: Malware / Priority: Medium (47) / SOC: 52 / Confidence: Low (43) / Reasons: EN attack activity, coherent attack event / Summary: An international operation targeted the SocGholish botnet, which has been linked to the Russia-based cybercrime group Evil Corp.</description>
-      <source url="https://therecord.media/">The Record</source>
-      <category>Malware</category>
-      <category>Threat Intel</category>
-      <category>Threat Actor</category>
-      <category>Network</category>
-    </item>
-    <item>
-      <title>Klue breach lead to Salesforce data theft, Huntress affected</title>
-      <link>https://www.helpnetsecurity.com/2026/06/19/klue-salesforce-data-breach-huntress/</link>
-      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/06/19/klue-salesforce-data-breach-huntress/</guid>
-      <pubDate>Fri, 19 Jun 2026 12:57:39 GMT</pubDate>
-      <description>Source: Help Net Security / Source attributes: Croatia / News / Secondary / Categories: Threat Intel, Ransomware, Supply Chain, Identity / Topics: Ransomware, Supply Chain, Identity / Priority: Medium (47) / SOC: 51 / Confidence: Medium (47) / Reasons: EN attack activity, target and impact context, detection evidence context / Summary: Cybersecurity vendor Huntress was among multiple companies hit by a breach originating at Klue, a market intelligence platform used to integrate CRM and sales data across various business tools. Huntress published a detailed account of the incident on June 18, framing it as a “security domino effect” that began with one compromised integration credential and cascaded into theft of customer data across several connected platforms, including Salesforce. Attack timeline According to Huntress’s writeup, the attackers … More → The post Klue breach lead to Salesforce data theft, Huntress affected ap</description>
-      <source url="https://www.helpnetsecurity.com/">Help Net Security</source>
-      <category>Threat Intel</category>
-      <category>Ransomware</category>
-      <category>Supply Chain</category>
-      <category>Identity</category>
-    </item>
-    <item>
-      <title>Xsolis Data Breach Impacts 1.4 Million People</title>
-      <link>https://securityaffairs.com/194067/cyber-crime/xsolis-data-breach-impacts-1-4-million-people.html</link>
-      <guid isPermaLink="true">https://securityaffairs.com/194067/cyber-crime/xsolis-data-breach-impacts-1-4-million-people.html</guid>
-      <pubDate>Tue, 23 Jun 2026 10:21:25 GMT</pubDate>
-      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Security, Data Breach, Threat Intel, Malware, Phishing / Topics: Data Breach, Malware, Phishing / Priority: Medium (47) / SOC: 44 / Confidence: Low (42) / Reasons: EN attack activity, EN critical sector, critical sector / Summary: Xsolis disclosed a breach affecting 1.4M people after a phishing attack exposed personal and health data from its hospital clients’ systems. Healthcare tech company Xsolis, Inc. has disclosed a data breach impacting nearly 1.4 million individuals. The Tennessee-based firm provides utilization management and revenue cycle solutions for healthcare providers. The company became aware of an […]</description>
-      <source url="https://securityaffairs.com/">Security Affairs</source>
-      <category>Security</category>
-      <category>Data Breach</category>
-      <category>Threat Intel</category>
-      <category>Malware</category>
+      <title>Next-Gen Phishing Tactics Users Aren’t Ready For | Huntress</title>
+      <link>https://www.huntress.com/blog/advanced-phishing-tradecraft</link>
+      <guid isPermaLink="true">https://www.huntress.com/blog/advanced-phishing-tradecraft</guid>
+      <pubDate>Mon, 22 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Source: huntress / Source attributes: Global / Vendor / Primary / Categories: Phishing, Identity / Topics: Phishing, Identity / Priority: Medium (47) / SOC: 43 / Confidence: High (72) / Reasons: EN attack activity, detection evidence context / Summary: Move past basic credential harvesting. Discover how modern attackers use ClickFix, BitB, and OAuth consent phishing—and how to train your users with Huntress SAT.</description>
+      <source url="https://www.huntress.com/blog/">huntress</source>
       <category>Phishing</category>
-    </item>
-    <item>
-      <title>FortiBleed campaign used custom FortiGate sniffer to steal credentials</title>
-      <link>https://www.bleepingcomputer.com/news/security/fortibleed-campaign-used-custom-fortigate-sniffer-to-steal-credentials/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/fortibleed-campaign-used-custom-fortigate-sniffer-to-steal-credentials/</guid>
-      <pubDate>Mon, 22 Jun 2026 20:01:02 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security / Topics: Fortinet / Priority: Medium (46) / SOC: 49 / Confidence: Medium (48) / Reasons: EN attack activity, coherent attack event, target and impact context / Summary: Security firm SOCRadar says the large-scale FortiBleed campaign targeting Fortinet FortiGate devices used custom sniffers to harvest authentication secrets from compromised firewalls and steal credentials. [...]</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Security</category>
-    </item>
-    <item>
-      <title>Texas Parks &amp; Wildlife Data Breach Affects 3 Million Individuals</title>
-      <link>https://www.securityweek.com/texas-parks-wildlife-data-breach-affects-3-million-individuals/</link>
-      <guid isPermaLink="true">https://www.securityweek.com/texas-parks-wildlife-data-breach-affects-3-million-individuals/</guid>
-      <pubDate>Mon, 22 Jun 2026 05:33:39 GMT</pubDate>
-      <description>Source: SecurityWeek / Source attributes: United States / News / Secondary / Categories: Threat Intel, Data Breach / Topics: Data Breach / Priority: Medium (46) / SOC: 49 / Confidence: Medium (48) / Reasons: EN attack activity, coherent attack event, target and impact context / Summary: Hackers stole personal information after breaching the systems of a third-party license vendor serving TPWD. The post Texas Parks &amp; Wildlife Data Breach Affects 3 Million Individuals appeared first on SecurityWeek . / Also reported by: HackRead, Security Affairs</description>
-      <source url="https://www.securityweek.com/">SecurityWeek</source>
-      <category>Threat Intel</category>
-      <category>Data Breach</category>
-    </item>
-    <item>
-      <title>Inside GentleKiller: The EDR-Killer Powering The Gentlemen</title>
-      <link>https://securityaffairs.com/193941/malware/inside-gentlekiller-the-edr-killer-powering-the-gentlemen.html</link>
-      <guid isPermaLink="true">https://securityaffairs.com/193941/malware/inside-gentlekiller-the-edr-killer-powering-the-gentlemen.html</guid>
-      <pubDate>Sat, 20 Jun 2026 15:30:22 GMT</pubDate>
-      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Malware, Security, Threat Intel, Ransomware, Data Breach, Endpoint / Topics: Ransomware, Malware, Data Breach / Priority: Medium (46) / SOC: 49 / Confidence: Medium (48) / Reasons: EN attack activity, coherent attack event / Summary: The Gentlemen equips affiliates with a centralized EDR-killer suite, rapidly weaponizing BYOVD exploits to disable security tools before ransomware attacks. ESET published a detailed breakdown of The Gentlemen‘s technical infrastructure on June 18, the result of months of incident-level investigation corroborated by the group’s own internal data leak from May 2026. Since emerging in late […]</description>
-      <source url="https://securityaffairs.com/">Security Affairs</source>
-      <category>Malware</category>
-      <category>Security</category>
-      <category>Threat Intel</category>
-      <category>Ransomware</category>
-      <category>Data Breach</category>
-      <category>Endpoint</category>
+      <category>Identity</category>
     </item>
     <item>
       <title>EvilTokens: How “Ghost” Code Threatens US and European Businesses</title>
@@ -1086,6 +848,17 @@
       <description>Source: Cybersecurity Dive / Source attributes: United States / News / Secondary / Categories: Threat Intel / Topics: Fortinet / Priority: Medium (45) / SOC: 49 / Confidence: Low (43) / Reasons: EN attack activity, coherent attack event, target and impact context / Summary: Security researchers warn of a months-long FortiBleed campaign targeting western organizations.</description>
       <source url="https://www.cybersecuritydive.com/">Cybersecurity Dive</source>
       <category>Threat Intel</category>
+    </item>
+    <item>
+      <title>Stealthy new backdoor surfaces in attacks on multiple sectors</title>
+      <link>https://www.helpnetsecurity.com/2026/06/25/mistic-backdoor-woodgnat-attacks/</link>
+      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/06/25/mistic-backdoor-woodgnat-attacks/</guid>
+      <pubDate>Thu, 25 Jun 2026 14:07:46 GMT</pubDate>
+      <description>Source: Help Net Security / Source attributes: Croatia / News / Secondary / Categories: Threat Intel, Malware, Ransomware / Topics: Ransomware, Malware / Priority: Medium (45) / SOC: 48 / Confidence: Medium (47) / Reasons: EN attack activity, target and impact context / Summary: A relatively new backdoor called Mistic has been deployed in multiple attacks since April 2026 targeting organizations in the insurance, education, IT, and professional services sectors, according to Symantec. The malware appears to be associated with Woodgnat, also known as KongTuke, a financially motivated initial access broker (IAB) active since at least May 2024 that has been connected to ransomware operations including Qilin, Interlock, Rhysida, Akira, 8Base, and Black Basta. “Woodgnat reportedly functions primarily as … More → The post Stealthy new backdoor surfaces in attacks on multipl</description>
+      <source url="https://www.helpnetsecurity.com/">Help Net Security</source>
+      <category>Threat Intel</category>
+      <category>Malware</category>
+      <category>Ransomware</category>
     </item>
     <item>
       <title>Linux Process Name Masquerading, (Wed, Jun 24th)</title>
@@ -1122,19 +895,6 @@
       <category>Incident Response</category>
     </item>
     <item>
-      <title>Prinz Eugen ransomware: a deep dive into a new Go-based encryptor</title>
-      <link>https://www.threatdown.com/blog/prinz-eugen-ransomware-a-deep-dive-into-a-new-go-based-encryptor/</link>
-      <guid isPermaLink="true">https://www.threatdown.com/blog/prinz-eugen-ransomware-a-deep-dive-into-a-new-go-based-encryptor/</guid>
-      <pubDate>Thu, 18 Jun 2026 13:29:36 GMT</pubDate>
-      <description>Source: ThreatDown Labs / Source attributes: United States / Research / Primary / Categories: Ransomware, Threat Intel, Malware, Detection, Incident Response / Topics: Ransomware, Malware / Priority: Medium (42) / SOC: 39 / Confidence: Medium (65) / Reasons: EN attack activity, EN detection/analysis / Summary: Prinz Eugen is a new Go-based ransomware family that encrypts files, prioritizes fresh data, and extorts victims out-of-band, leaving a deliberate, anti-forensic footprint.</description>
-      <source url="https://www.threatdown.com/blog/">ThreatDown Labs</source>
-      <category>Ransomware</category>
-      <category>Threat Intel</category>
-      <category>Malware</category>
-      <category>Detection</category>
-      <category>Incident Response</category>
-    </item>
-    <item>
       <title>New GhostShell Hacking Group Targets Ukraine’s Drone Defense Sector</title>
       <link>https://hackread.com/ghostshell-hacking-group-ukraine-drone-defense-sector/</link>
       <guid isPermaLink="true">https://hackread.com/ghostshell-hacking-group-ukraine-drone-defense-sector/</guid>
@@ -1153,30 +913,6 @@
       <source url="https://www.infosecurity-magazine.com/">Infosecurity Magazine</source>
       <category>Threat Intel</category>
       <category>Identity</category>
-    </item>
-    <item>
-      <title>FortiBleed: The Most Detailed Breakdown Yet of an Active Russian Credential-Harvesting Operation</title>
-      <link>https://securityaffairs.com/194004/hacking/fortibleed-the-most-detailed-breakdown-yet-of-an-active-russian-credential-harvesting-operation.html</link>
-      <guid isPermaLink="true">https://securityaffairs.com/194004/hacking/fortibleed-the-most-detailed-breakdown-yet-of-an-active-russian-credential-harvesting-operation.html</guid>
-      <pubDate>Mon, 22 Jun 2026 10:25:33 GMT</pubDate>
-      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Security, Threat Intel, Identity / Topics: Fortinet, Identity / Priority: Low (38) / SOC: 40 / Confidence: Low (42) / Reasons: EN attack activity, target and impact context, detection evidence context / Summary: FortiBleed targeted 430,000+ FortiGate devices, harvesting 110M credentials and enabling breaches through large-scale credential theft. A new threat intelligence report from SOCRadar’s Threat Research Unit (STRU), the team that first identified and named the FortiBleed campaign, goes deeper than anything published so far on what is shaping up to be one of the most significant […]</description>
-      <source url="https://securityaffairs.com/">Security Affairs</source>
-      <category>Security</category>
-      <category>Threat Intel</category>
-      <category>Identity</category>
-    </item>
-    <item>
-      <title>Threat Hunting Beyond Alerts: Finding the Activity Detection Misses</title>
-      <link>https://hackread.com/threat-hunting-alerts-finding-activity-detection-misses/</link>
-      <guid isPermaLink="true">https://hackread.com/threat-hunting-alerts-finding-activity-detection-misses/</guid>
-      <pubDate>Mon, 22 Jun 2026 14:20:08 GMT</pubDate>
-      <description>Source: HackRead / Source attributes: Global / News / Secondary / Categories: Phishing, Threat Intel, Malware, Security, Detection / Topics: Phishing, Malware / Priority: Low (37) / SOC: 40 / Confidence: Low (37) / Reasons: EN IOC/detection/hunting, EN detection/analysis / Summary: Disclosure: This article was provided by ANY.RUN. The information and analysis presented are based on their research and findings.</description>
-      <source url="https://hackread.com/">HackRead</source>
-      <category>Phishing</category>
-      <category>Threat Intel</category>
-      <category>Malware</category>
-      <category>Security</category>
-      <category>Detection</category>
     </item>
     <item>
       <title>In a first, a court takedown goes after two cybercrime tools at once</title>
