@@ -3,32 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>IOC Blocklist · SOC Threat Brief</title>
+  <title>IOC Review · SOC Intelligence Digest</title>
   <style>
     :root {
-      --ink: #10211d; --muted: #66736d; --paper: #eef2ec; --panel: #fffdf8;
-      --line: #d0d8d1; --teal: #006d68; --navy: #102d35; --orange: #d95d2b;
-      --shadow: 0 14px 38px rgba(16,33,29,.10);
+      --ink: #10211d; --muted: #64706b; --paper: #f4f1e9; --panel: #fffdf8;
+      --line: #d6d7cf; --teal: #006d68; --navy: #112c35; --orange: #e05a2a;
+      --shadow: 0 16px 42px rgba(16,33,29,.10);
     }
     * { box-sizing: border-box; }
     body { margin: 0; color: var(--ink); background:
-      radial-gradient(circle at 90% 4%, rgba(0,109,104,.11), transparent 24%),
       linear-gradient(rgba(16,33,29,.035) 1px, transparent 1px),
-      var(--paper); background-size: auto, 30px 30px;
+      linear-gradient(90deg, rgba(16,33,29,.035) 1px, transparent 1px),
+      var(--paper); background-size: 28px 28px;
       font-family: "Avenir Next", "Hiragino Sans", "Yu Gothic", sans-serif; }
     a { color: inherit; text-decoration: none; }
-    .wrap { width: min(1280px, calc(100% - 32px)); margin: 0 auto; }
-    header { margin-top: 14px; padding: 16px 18px; color: #f6f4ea;
-      border-radius: 14px; background: linear-gradient(125deg, #0d2828, #123b39 58%, #112c35);
+    .wrap { width: min(1380px, calc(100% - 36px)); margin: 0 auto; }
+    header { margin-top: 14px; padding: 16px 18px; color: #f7f3e9;
+      border-radius: 14px; background: linear-gradient(125deg, #0c2424 0%, #123b39 62%, #0e2931 100%);
       box-shadow: var(--shadow); }
     .top, .stats, .filters {
       display: flex; align-items: center;
     }
     .top { justify-content: space-between; gap: 16px; }
     h1 { margin: 0; font: 850 clamp(24px, 4vw, 40px)/1.05 "DIN Alternate", sans-serif; }
+    .eyebrow { margin: 0 0 5px; color: #75e0d5; font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+    .lede { max-width: 780px; margin: 8px 0 0; color: #c7d9d4; font-size: 14px; line-height: 1.55; }
     .nav { display: flex; gap: 8px; flex-wrap: wrap; }
-    .button { padding: 9px 13px; border: 1px solid rgba(255,255,255,.24); border-radius: 999px; font-size: 13px; font-weight: 800; }
+    .button { padding: 10px 14px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; color: #f7f3e9; font-size: 13px; font-weight: 800; }
     .button.primary { color: #0b2623; background: #75e0d5; border-color: #75e0d5; }
+    .coverage { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 13px; }
+    .coverage span { padding: 7px 9px; border: 1px solid rgba(255,255,255,.15); border-radius: 999px; background: rgba(255,255,255,.055); color: #b9cbc5; font-size: 11px; }
+    .coverage b { color: #f7f3e9; }
     .stats { gap: 8px; flex-wrap: wrap; margin-top: 12px; }
     .stat { min-width: 138px; padding: 10px 12px; border: 1px solid rgba(255,255,255,.16); border-radius: 10px; background: rgba(255,255,255,.06); }
     .stat b { display: block; font: 900 24px "DIN Alternate", sans-serif; }
@@ -63,9 +68,22 @@
 <body>
   <header class="wrap">
     <div class="top">
-      <h1>IOC Blocklist Candidates</h1>
-      <nav class="nav"><a class="button primary" href="index.html">Threat brief</a><a class="button" href="iocs.csv">Blocklist CSV</a></nav>
+      <div>
+        <p class="eyebrow">SOC Intelligence Digest</p>
+        <h1>IOC Review</h1>
+        <p class="lede">Blocklist candidates and reviewable indicators extracted from the same seven-day intelligence set.</p>
+      </div>
+      <nav class="nav"><a class="button primary" href="index.html">Threat Dashboard</a><a class="button" href="iocs.csv">IOC CSV</a></nav>
     </div>
+    
+      <div class="coverage" aria-label="Publication coverage">
+        <span>Collection window <b>2026/06/18 23:54 - 2026/06/25 23:54 JST</b></span>
+        <span>Article dates <b>2026/06/19 - 2026/06/25 JST</b></span>
+        <span>Retention <b>Last 7 days</b></span>
+        <span>Generated <b>2026/06/25 23:54 JST</b></span>
+        <span>Source articles <b>77</b></span>
+      </div>
+    
     <section class="stats">
       <div class="stat"><b>145</b><span>list rows</span></div>
       <div class="stat"><b>92</b><span>block candidates</span></div>
