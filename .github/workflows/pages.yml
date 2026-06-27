@@ -29,7 +29,14 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p site
-          cp index.html feed.xml threat-intelligence.csv iocs.html iocs.csv blocklist-*.txt README.md .nojekyll site/
+          cp index.html feed.xml iocs.html iocs.csv README.md .nojekyll site/
+          test ! -e threat-intelligence.csv
+          test ! -e blocklist-domains.txt
+          test ! -e blocklist-ipv4.txt
+          test ! -e blocklist-urls.txt
+          test ! -e sources.csv
+          test ! -e ioc-review.csv
+          test ! -e targeted-attacks.xml
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
