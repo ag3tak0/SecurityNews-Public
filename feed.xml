@@ -3,11 +3,76 @@
   <channel>
     <title>SOC Intelligence Digest</title>
     <link>https://ag3tak0.github.io/SecurityNews-Public</link>
-    <description>Seven-day operational threat intelligence and IOC reporting for SOC review. Coverage window: 2026/07/31 12:15 - 2026/08/07 12:15 JST. Article dates: 2026/07/31 - 2026/08/07 JST.</description>
+    <description>Seven-day operational threat intelligence and IOC reporting for SOC review. Coverage window: 2026/08/01 11:22 - 2026/08/08 11:22 JST. Article dates: 2026/08/02 - 2026/08/08 JST.</description>
     <language>ja</language>
-    <lastBuildDate>Fri, 07 Aug 2026 03:15:42 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 02:22:21 GMT</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://ag3tak0.github.io/SecurityNews-Public/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zbtlink製ルータに出荷時組み込まれていたバックドアについてまとめてみた</title>
+      <link>https://piyolog.hatenadiary.jp/entry/2026/08/08/020650</link>
+      <guid isPermaLink="true">https://piyolog.hatenadiary.jp/entry/2026/08/08/020650</guid>
+      <pubDate>Fri, 07 Aug 2026 17:06:50 GMT</pubDate>
+      <description>Source: piyolog / Source attributes: Japan / Vendor / Primary / Categories: Vulnerability, Exploit, Threat Intel, Endpoint, Detection, Incident Response / Topics: Linux, Vulnerability, Exploit / Priority: Critical (100) / SOC: 100 / Confidence: High (88) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, EN attack activity, EN IOC/detection/hunting, EN active exploit/PoC/zero-day, JA attack activity, JA IOC/detection/hunting, JA active exploit/PoC/zero-day, JA detection/analysis, JA Japan/Asia relevance, JA critical sector, active exploitation priority, target and impact context, detection evidence context, indicator context, Japan related, critical sector, primary references 1 / Summary: 2026年8月5日、米国セキュリティ企業のVulnCheckは、中国Zbtlink製ルータの出荷時ファームウェアに遠隔操作用のインプラント「ENDLESSDOORS」が組み込まれていたとする調査結果を公開しました。対象の実装は外部から侵害を受けて仕込まれたものではなく、出荷された時点からベンダ自身によって組み込まれていたとされています。Zbtlinkはこの指摘に対し独自の説明を示しており、VulnCheckの観測と正面から対立しています。ここでは関連する情報をまとめます。 どんな脆弱性が確認されたの? ZbtlinkはShenzhen Zhibotong Electronicsのブランドで、ルータを製造し世界各地への販売向けにホワイトレーベル供給している中国のメーカーである。対象機種には、SIMカードを2枚搭載する5G対応のCPEも含まれる。(出典: 3)CNETの取材に対しVulnCheck CTOのBaines氏は、これらの機器は主に家庭ではなく法人で使われていると説明している。(出典: 14) VulnCheckの解析によれば、インプラントの核となるのは2015年1月14日にGitHubへ公開されて以来更新のないOSSツール「rctl(remote control linux)」である。元のリポジトリは単純なC2のクライアントとサーバの双方を実装しており、サーバはポート700 / Primary source: piyolog https://piyolog.hatenadiary.jp/entry/2026/08/08/020650 / Primary source age: 0 days</description>
+      <source url="https://piyolog.hatenadiary.jp/">piyolog</source>
+      <category>Vulnerability</category>
+      <category>Exploit</category>
+      <category>Threat Intel</category>
+      <category>Endpoint</category>
+      <category>Detection</category>
+      <category>Incident Response</category>
+    </item>
+    <item>
+      <title>ThreatLabz 2026 Report: Frontier AI and Enterprise Readiness</title>
+      <link>https://www.zscaler.com/blogs/security-research/threatlabz-2026-report-frontier-ai-and-enterprise-readiness</link>
+      <guid isPermaLink="true">https://www.zscaler.com/blogs/security-research/threatlabz-2026-report-frontier-ai-and-enterprise-readiness</guid>
+      <pubDate>Fri, 07 Aug 2026 14:06:08 GMT</pubDate>
+      <description>Source: Zscaler / Source attributes: United States / Research / Primary / Categories: Threat Intel, Vulnerability, Zero-Day, Identity, Data Breach, AI Security, Endpoint, Network / Topics: Network Edge, Vulnerability, Zero-Day, Identity, Data Breach, AI Security / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, target and impact context, detection evidence context, vulnerability exploitation context, indicator context, primary references 1 / Summary: The BreachIt was 9:14 AM when the CISO's VPN connection momentarily dropped, something that normally wouldn’t cause any concern. What he couldn't see was that attackers had already exploited a pre-authentication flaw in the VPN appliance itself, gaining access before any login ever occurred. From there, they extracted stored credentials, forged an identity as his Director of Security Operations, and authenticated through a trust chain that never questioned traffic originating from VPN infrastructure.By 9:22, that stolen identity was requesting application access at machine speed, hundreds of g / Primary source: Zscaler https://www.zscaler.com/blogs/security-research/threatlabz-2026-report-frontier-ai-and-enterprise-readiness / Primary source age: 0 days</description>
+      <source url="https://www.zscaler.com/blogs/security-research">Zscaler</source>
+      <category>Threat Intel</category>
+      <category>Vulnerability</category>
+      <category>Zero-Day</category>
+      <category>Identity</category>
+      <category>Data Breach</category>
+      <category>AI Security</category>
+      <category>Endpoint</category>
+      <category>Network</category>
+    </item>
+    <item>
+      <title>Ransomware Threats in Europe H1 2026: A Deep Dive into Regional Attack Patterns and Dominant Threat Actors</title>
+      <link>https://cyble.com/blog/ransomware-threats-in-europe-h1-2026/</link>
+      <guid isPermaLink="true">https://cyble.com/blog/ransomware-threats-in-europe-h1-2026/</guid>
+      <pubDate>Fri, 07 Aug 2026 10:58:31 GMT</pubDate>
+      <description>Source: Cyble / Source attributes: Singapore / Vendor / Primary / Categories: Ransomware, Security, Threat Intel, Vulnerability, Exploit, Zero-Day, Threat Actor, ICS/OT, Data Breach, Network / Topics: Operational Technology, Ransomware, Vulnerability, Exploit, Zero-Day, ICS/OT, Data Breach / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN active exploit/PoC/zero-day, EN Japan/Asia relevance, EN critical sector, campaign priority, coherent attack event, target and impact context, indicator context, Japan related, critical sector, primary references 1 / Summary: Europe faced a ransomware onslaught in the first half of 2026 that sets a troubling precedent for the remainder of the year. According to Cyble Research and Intelligence Labs (CRIL), the region experienced 866 documented ransomware attacks , 51 confirmed data breach incidents , and 7 initial access sales between January and June 2026. These figures represent not just a volume problem, but a fundamental shift in how threat actors are organizing, targeting, and monetizing their operations within European territory. What distinguishes the ransomware threats in Europe from other global regions is  / Primary source: Cyble https://cyble.com/blog/ransomware-threats-in-europe-h1-2026/ / Primary source age: 0 days</description>
+      <source url="https://cyble.com/blog/category/threat-actor/">Cyble</source>
+      <category>Ransomware</category>
+      <category>Security</category>
+      <category>Threat Intel</category>
+      <category>Vulnerability</category>
+      <category>Exploit</category>
+      <category>Zero-Day</category>
+      <category>Threat Actor</category>
+      <category>ICS/OT</category>
+      <category>Data Breach</category>
+      <category>Network</category>
+    </item>
+    <item>
+      <title>Point72 Among Major Hedge Funds Targeted in Cyberattack on Wall Street Through Voice Phishing Campaign</title>
+      <link>https://thecyberexpress.com/point72-cyberattack-on-wall-street/</link>
+      <guid isPermaLink="true">https://thecyberexpress.com/point72-cyberattack-on-wall-street/</guid>
+      <pubDate>Fri, 07 Aug 2026 08:30:52 GMT</pubDate>
+      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Threat Intel, Vulnerability, Ransomware, Phishing, Threat Actor, Data Breach, AI Security, Network, Detection / Topics: Network Edge, Ransomware, Vulnerability, Phishing, Data Breach, AI Security / Priority: Critical (100) / SOC: 100 / Confidence: High (83) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN IOC/detection/hunting, EN critical sector, JA IOC/detection/hunting, campaign priority, coherent attack event, target and impact context, detection evidence context, critical sector, primary references 2 / Summary: A cyberattack on Wall Street recently targeted several leading hedge funds, including Point72 Asset Management, Millennium Management, Two Sigma Investments, and Citadel. The attackers used voice phishing, or "vishing," to trick employees into revealing sensitive information or granting access to internal systems. Cybersecurity experts say such attempts are common because financial institutions store highly sensitive data . However, the latest incidents highlight how cybercriminals are increasingly combining traditional social engineering tactics with artificial intelligence to make impersonat / Primary source: Cyble https://cyble.com/knowledge-hub/what-is-a-cyber-attack/</description>
+      <source url="https://thecyberexpress.com/">The Cyber Express</source>
+      <category>Threat Intel</category>
+      <category>Vulnerability</category>
+      <category>Ransomware</category>
+      <category>Phishing</category>
+      <category>Threat Actor</category>
+      <category>Data Breach</category>
+      <category>AI Security</category>
+      <category>Network</category>
+      <category>Detection</category>
+    </item>
     <item>
       <title>MetaのAIモデルが評価中に行った外部組織への不正アクセスについてまとめてみた</title>
       <link>https://piyolog.hatenadiary.jp/entry/2026/08/07/010001</link>
@@ -27,7 +92,7 @@
       <link>https://cloud.google.com/blog/topics/threat-intelligence/unc6671-targets-financial-services-and-enterprise-cloud-environments/</link>
       <guid isPermaLink="true">https://cloud.google.com/blog/topics/threat-intelligence/unc6671-targets-financial-services-and-enterprise-cloud-environments/</guid>
       <pubDate>Thu, 06 Aug 2026 14:00:00 GMT</pubDate>
-      <description>Source: Google Cloud Threat Intelligence / Source attributes: United States / Research / Primary / Categories: Threat Intel, Ransomware, Phishing, Threat Actor, Cloud, Identity, Data Breach, Mobile, Detection, APT / Topics: UNC6671, Microsoft, Ransomware, Phishing, Cloud, Identity, Data Breach, APT / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, EN detection/analysis, EN critical sector, APT/campaign priority, IOC 88, coherent attack event, target and impact context, indicator context, uncertain reporting, critical sector, primary references 1 / Summary: Written by: Tyler McLellan, Austin Larsen Introduction Google Threat Intelligence Group (GTIG) continues to track UNC6671 actively conducting compromises leading to data theft extortion, despite the alleged announced retirement of the BlackFile extortion brand in May 2026. Telemetry and infrastructure analysis reveal that rather than disbanding, UNC6671 has diversified its operations across multiple extortion fronts including Redact, Pink, Helix, and Falcon. UNC6671 continues to rely on voice phishing (vishing) to target enterprise employees, posing as IT helpdesk staff facilitating mandatory, / Primary source: Google Cloud Threat Intelligence https://cloud.google.com/blog/topics/threat-intelligence/unc6671-targets-financial-services-and-enterprise-cloud-environments/ / Primary source age: 0 days</description>
+      <description>Source: Google Cloud Threat Intelligence / Source attributes: United States / Research / Primary / Categories: Threat Intel, Ransomware, Phishing, Threat Actor, Cloud, Identity, Data Breach, Mobile, Detection, APT / Topics: UNC6671, Microsoft, Ransomware, Phishing, Cloud, Identity, Data Breach, APT / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: APT / targeted campaign (rank 6) / Reference count: 2 / Reasons: focus: APT / targeted campaign, EN attack activity, EN detection/analysis, EN critical sector, APT/campaign priority, IOC 88, coherent attack event, target and impact context, indicator context, uncertain reporting, critical sector, reported by 2 sources, primary references 1 / Summary: Written by: Tyler McLellan, Austin Larsen Introduction Google Threat Intelligence Group (GTIG) continues to track UNC6671 actively conducting compromises leading to data theft extortion, despite the alleged announced retirement of the BlackFile extortion brand in May 2026. Telemetry and infrastructure analysis reveal that rather than disbanding, UNC6671 has diversified its operations across multiple extortion fronts including Redact, Pink, Helix, and Falcon. UNC6671 continues to rely on voice phishing (vishing) to target enterprise employees, posing as IT helpdesk staff facilitating mandatory, / Also reported by: The HackersNews / Primary source: Google Cloud Threat Intelligence https://cloud.google.com/blog/topics/threat-intelligence/unc6671-targets-financial-services-and-enterprise-cloud-environments/ / Primary source age: 0 days</description>
       <source url="https://cloud.google.com/blog/">Google Cloud Threat Intelligence</source>
       <category>Threat Intel</category>
       <category>Ransomware</category>
@@ -232,27 +297,6 @@
       <category>Network</category>
     </item>
     <item>
-      <title>Russian Hackers Exploit Hotel Wi-Fi in New CaptiveCrunch Espionage Campaign</title>
-      <link>https://thecyberexpress.com/captivecrunch-midnight-blizzard/</link>
-      <guid isPermaLink="true">https://thecyberexpress.com/captivecrunch-midnight-blizzard/</guid>
-      <pubDate>Mon, 03 Aug 2026 09:42:22 GMT</pubDate>
-      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Threat Intel, Exploit, Malware, Phishing, APT, Threat Actor, Cloud, Identity, Mobile, AI Security, Endpoint, Network, Detection / Topics: APT29, Active Directory, Android, Cloud Security, Microsoft, Network Edge, Exploit, Malware, Phishing, APT, Cloud, Identity / Priority: Critical (100) / SOC: 100 / Confidence: High (83) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, EN detection/analysis, EN targeted/APT/state-backed, APT/campaign priority, coherent attack event, target and impact context, detection evidence context, indicator context, primary references 2 / Summary: Microsoft Threat Intelligence has uncovered CaptiveCrunch, a cyber espionage campaign linked to Storm-2945, a subgroup of Midnight Blizzard, the Russian state-linked threat actor associated with Russia's Foreign Intelligence Service (SVR). Active since early May 2026, the operation targets business travelers by exploiting hospitality Wi-Fi networks and captive portals in hotels, conference centers, and similar venues. The campaign combines adversary-in-the-middle attacks, phishing, malware deployment, and AI-assisted development to steal credentials and infiltrate enterprise environments. Stor / Primary source: Cyble https://cyble.com/knowledge-hub/what-is-malware/</description>
-      <source url="https://thecyberexpress.com/">The Cyber Express</source>
-      <category>Threat Intel</category>
-      <category>Exploit</category>
-      <category>Malware</category>
-      <category>Phishing</category>
-      <category>APT</category>
-      <category>Threat Actor</category>
-      <category>Cloud</category>
-      <category>Identity</category>
-      <category>Mobile</category>
-      <category>AI Security</category>
-      <category>Endpoint</category>
-      <category>Network</category>
-      <category>Detection</category>
-    </item>
-    <item>
       <title>大阪・関西万博関連ドメインの一部で起きているドロップキャッチについてまとめてみた</title>
       <link>https://piyolog.hatenadiary.jp/entry/2026/08/02/165033</link>
       <guid isPermaLink="true">https://piyolog.hatenadiary.jp/entry/2026/08/02/165033</guid>
@@ -280,32 +324,16 @@
       <category>APT</category>
     </item>
     <item>
-      <title>CaptiveCrunch: Midnight Blizzard targets travelers worldwide for malware delivery and credential theft</title>
-      <link>https://www.microsoft.com/en-us/security/blog/2026/07/31/captivecrunch-midnight-blizzard-targets-travelers-worldwide-for-malware-delivery-and-credential-theft/</link>
-      <guid isPermaLink="true">https://www.microsoft.com/en-us/security/blog/2026/07/31/captivecrunch-midnight-blizzard-targets-travelers-worldwide-for-malware-delivery-and-credential-theft/</guid>
-      <pubDate>Fri, 31 Jul 2026 21:01:37 GMT</pubDate>
-      <description>Source: Microsoft Security Blog / Source attributes: United States / Vendor / Primary / Categories: Malware, Threat Intel, Phishing, Threat Actor, Identity, Endpoint, APT / Topics: APT29, Microsoft, Malware, Phishing, Identity, APT / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, EN detection/analysis, APT/campaign priority, coherent attack event, target and impact context, detection evidence context, primary references 1 / Summary: Storm-2945, a sub-cluster of the Russian threat actor Midnight Blizzard, has been observed compromising the sign-in portals of hospitality-related organizations such as hotels since May 2026 in order to deliver malware to travelers and steal credentials in an operation we call CaptiveCrunch. The post CaptiveCrunch: Midnight Blizzard targets travelers worldwide for malware delivery and credential theft appeared first on Microsoft Security Blog . / Primary source: Microsoft Security Blog https://www.microsoft.com/en-us/security/blog/2026/07/31/captivecrunch-midnight-blizzard-targets-travelers-worldwide-for-malware-delivery-and-credential-theft/ / Primary source age: 0 days</description>
-      <source url="https://www.microsoft.com/en-us/security/blog/">Microsoft Security Blog</source>
+      <title>Inside the keyv npm Compromise: preinstall Malware, Trusted Provenance, and IDE Hooks</title>
+      <link>https://snyk.io/blog/inside-keyv-npm-compromise-preinstall-malware-trusted-provenance-ide-hooks/</link>
+      <guid isPermaLink="true">https://snyk.io/blog/inside-keyv-npm-compromise-preinstall-malware-trusted-provenance-ide-hooks/</guid>
+      <pubDate>Tue, 04 Aug 2026 04:00:00 GMT</pubDate>
+      <description>Source: Snyk / Source attributes: Global / Vendor / Primary / Categories: Application Security, Malware, Supply Chain, Detection / Topics: Supply Chain, Malware / Priority: Critical (100) / SOC: 99 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, IOC 3, linked IOC evidence, coherent attack event, indicator context, primary references 1 / Summary: keyv 6.0.0 and ten related npm releases shipped install-time malware. See affected versions, hashes, detection steps, and safe remediation order. / Primary source: Snyk https://snyk.io/blog/inside-keyv-npm-compromise-preinstall-malware-trusted-provenance-ide-hooks/ / Primary source age: 0 days</description>
+      <source url="https://snyk.io/blog/">Snyk</source>
+      <category>Application Security</category>
       <category>Malware</category>
-      <category>Threat Intel</category>
-      <category>Phishing</category>
-      <category>Threat Actor</category>
-      <category>Identity</category>
-      <category>Endpoint</category>
-      <category>APT</category>
-    </item>
-    <item>
-      <title>PNLD Data Breach Exposes Police and Government Contact Details on Dark Web</title>
-      <link>https://thecyberexpress.com/pnld-data-breach-police-contact-details/</link>
-      <guid isPermaLink="true">https://thecyberexpress.com/pnld-data-breach-police-contact-details/</guid>
-      <pubDate>Tue, 04 Aug 2026 10:13:34 GMT</pubDate>
-      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Threat Intel, Phishing, Data Breach, Network, Incident Response / Topics: Microsoft, Network Edge, Phishing, Data Breach / Priority: Critical (100) / SOC: 98 / Confidence: Medium (69) / Focus: attack campaign / intrusion (rank 5) / Reference count: 2 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, target and impact context, uncertain reporting, critical sector, reported by 2 sources, primary references 1 / Summary: The PNLD data breach has exposed contact information belonging to police officers, government partners, criminal justice professionals and customers after data from the Police National Legal Database (PNLD) was published on the dark web. The data breach at PNLD, identified on July 26, 2026, also affected some users of Ask the Police, raising concerns about targeted phishing attacks. PNLD Data Breach Exposes Police and Contact Details According to PNLD, the compromised data includes names, organizations and work email addresses of police officers, police staff, criminal justice professionals, g / Also reported by: The HackersNews / Primary source: Cyble https://cyble.com/knowledge-hub/what-is-a-data-breach/</description>
-      <source url="https://thecyberexpress.com/">The Cyber Express</source>
-      <category>Threat Intel</category>
-      <category>Phishing</category>
-      <category>Data Breach</category>
-      <category>Network</category>
-      <category>Incident Response</category>
+      <category>Supply Chain</category>
+      <category>Detection</category>
     </item>
     <item>
       <title>Fake Xeno Roblox Cheats Deliver Powerful Java Stealer Through Discord and Forums</title>
@@ -318,16 +346,38 @@
       <category>Threat Intel</category>
     </item>
     <item>
-      <title>The Xcode Assassin Returns: A Deep Dive Into the Latest XCSSET Version</title>
-      <link>https://unit42.paloaltonetworks.com/xcsset-v40-malware-analysis/</link>
-      <guid isPermaLink="true">https://unit42.paloaltonetworks.com/xcsset-v40-malware-analysis/</guid>
-      <pubDate>Fri, 31 Jul 2026 10:00:18 GMT</pubDate>
-      <description>Source: Unit42 / Source attributes: United States / Research / Primary / Categories: Malware, Threat Intel, Identity, Data Breach, AI Security, Endpoint / Topics: Apple/iOS, Malware, Identity, Data Breach, AI Security / Priority: Critical (100) / SOC: 96 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, IOC 95, linked IOC evidence, coherent attack event, primary references 1 / Summary: Analysis of XCSSET v40 reveals a macOS malware targeting developers via Xcode. Unit 42 used advanced pattern matching and AI to decode its logic. The post The Xcode Assassin Returns: A Deep Dive Into the Latest XCSSET Version appeared first on Unit 42 . / Primary source: Unit42 https://unit42.paloaltonetworks.com/xcsset-v40-malware-analysis/ / Primary source age: 0 days</description>
-      <source url="https://unit42.paloaltonetworks.com/">Unit42</source>
+      <title>ClickFix Attacks Deliver macOS Stealer That Can Drain Crypto Wallets</title>
+      <link>https://thehackernews.com/2026/08/clickfix-attacks-deliver-macos-stealer.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/clickfix-attacks-deliver-macos-stealer.html</guid>
+      <pubDate>Fri, 07 Aug 2026 18:29:08 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Malware, Endpoint, Cryptocurrency / Topics: Apple/iOS, Malware / Priority: Critical (100) / SOC: 96 / Confidence: High (83) / Focus: attack campaign / intrusion (rank 5) / Reference count: 2 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, indicator context, reported by 2 sources, primary references 3 / Summary: ClickFix-style attacks are being used to deliver a Go-based malware capable of stealing cryptocurrency assets, as well as browser-stored passwords, Apple iCloud Keychain data, and cached credentials. The macOS-focused infection chain is designed to deliver a shell script that profiles the host and then fetches a macOS malware payload that's compatible with the computer's CPU architecture. " / Also reported by: Bleeping Computer / Primary source: Microsoft Security Blog https://www.microsoft.com/en-us/security/blog/2026/08/05/macos-clickfix-campaign-learned-hide/ / Primary source age: 2 days</description>
+      <source url="https://thehackernews.com/">The HackersNews</source>
       <category>Malware</category>
+      <category>Endpoint</category>
+      <category>Cryptocurrency</category>
+    </item>
+    <item>
+      <title>PNLD Data Breach Exposes Police and Government Contact Details on Dark Web</title>
+      <link>https://thecyberexpress.com/pnld-data-breach-police-contact-details/</link>
+      <guid isPermaLink="true">https://thecyberexpress.com/pnld-data-breach-police-contact-details/</guid>
+      <pubDate>Tue, 04 Aug 2026 10:13:34 GMT</pubDate>
+      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Threat Intel, Phishing, Data Breach, Network, Incident Response / Topics: Microsoft, Network Edge, Phishing, Data Breach / Priority: Critical (100) / SOC: 96 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, target and impact context, uncertain reporting, critical sector, primary references 1 / Summary: The PNLD data breach has exposed contact information belonging to police officers, government partners, criminal justice professionals and customers after data from the Police National Legal Database (PNLD) was published on the dark web. The data breach at PNLD, identified on July 26, 2026, also affected some users of Ask the Police, raising concerns about targeted phishing attacks. PNLD Data Breach Exposes Police and Contact Details According to PNLD, the compromised data includes names, organizations and work email addresses of police officers, police staff, criminal justice professionals, g / Primary source: Cyble https://cyble.com/knowledge-hub/what-is-a-data-breach/</description>
+      <source url="https://thecyberexpress.com/">The Cyber Express</source>
       <category>Threat Intel</category>
-      <category>Identity</category>
+      <category>Phishing</category>
       <category>Data Breach</category>
+      <category>Network</category>
+      <category>Incident Response</category>
+    </item>
+    <item>
+      <title>Nearly 800 Malicious npm Packages Deliver Cross-Platform RAT and Infostealer</title>
+      <link>https://thehackernews.com/2026/08/nearly-800-malicious-npm-packages.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/nearly-800-malicious-npm-packages.html</guid>
+      <pubDate>Fri, 07 Aug 2026 18:48:17 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Malware, Supply Chain, AI Security, Endpoint / Topics: Linux, Microsoft, Supply Chain, Malware, AI Security / Priority: Critical (100) / SOC: 95 / Confidence: High (78) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, indicator context, primary references 2 / Summary: A cluster of nearly 800 malicious packages has been published to the npm registry as part of a new campaign designed to deliver cross-platform malware targeting Windows, Mac, and Linux systems. "These packages appear to use AI slop squatted, or randomly generated typo-squatting package names, but all of them deliver a powerful RAT and infostealer payload," OpenSourceMalware researcher Paul / Primary source: opensourcemalware.com https://opensourcemalware.com/blog/russian-ai-slopsquatting-npm-campaign</description>
+      <source url="https://thehackernews.com/">The HackersNews</source>
+      <category>Malware</category>
+      <category>Supply Chain</category>
       <category>AI Security</category>
       <category>Endpoint</category>
     </item>
@@ -385,18 +435,6 @@
       <category>Cryptocurrency</category>
     </item>
     <item>
-      <title>Inside the keyv npm Compromise: preinstall Malware, Trusted Provenance, and IDE Hooks</title>
-      <link>https://snyk.io/blog/inside-keyv-npm-compromise-preinstall-malware-trusted-provenance-ide-hooks/</link>
-      <guid isPermaLink="true">https://snyk.io/blog/inside-keyv-npm-compromise-preinstall-malware-trusted-provenance-ide-hooks/</guid>
-      <pubDate>Tue, 04 Aug 2026 04:00:00 GMT</pubDate>
-      <description>Source: Snyk / Source attributes: Global / Vendor / Primary / Categories: Application Security, Malware, Supply Chain, Detection / Topics: Supply Chain, Malware / Priority: Critical (100) / SOC: 92 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, IOC 1, coherent attack event, indicator context, primary references 1 / Summary: keyv 6.0.0 and ten related npm releases shipped install-time malware. See affected versions, hashes, detection steps, and safe remediation order. / Primary source: Snyk https://snyk.io/blog/inside-keyv-npm-compromise-preinstall-malware-trusted-provenance-ide-hooks/ / Primary source age: 0 days</description>
-      <source url="https://snyk.io/blog/">Snyk</source>
-      <category>Application Security</category>
-      <category>Malware</category>
-      <category>Supply Chain</category>
-      <category>Detection</category>
-    </item>
-    <item>
       <title>Hackers run khunt post-exploitation toolkit from Oracle database</title>
       <link>https://www.bleepingcomputer.com/news/security/hackers-run-khunt-post-exploitation-toolkit-from-oracle-database/</link>
       <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/hackers-run-khunt-post-exploitation-toolkit-from-oracle-database/</guid>
@@ -423,29 +461,6 @@
       <category>AI Security</category>
     </item>
     <item>
-      <title>VU#243636: VPS.org one-click deployment templates contain multiple vulnerabilities</title>
-      <link>https://kb.cert.org/vuls/id/243636</link>
-      <guid isPermaLink="true">https://kb.cert.org/vuls/id/243636</guid>
-      <pubDate>Fri, 31 Jul 2026 15:15:50 GMT</pubDate>
-      <description>Source: US CERT Vulnerability Notes / Source attributes: United States / CERT / Primary / Categories: Vulnerability, Patch, Cloud, DDoS, Network / Topics: Network Edge, Vulnerability, Cloud / Priority: Critical (100) / SOC: 85 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, compound vulnerability exploit impact detection context, primary references 1 / Summary: Overview VPS.org's one-click deployment templates provision services with default passwords and predefined network bindings instead of generating randomized secrets or applying per-deployment hardening measures. Description VPS.org is a cloud and virtual private server hosting provider that offers a library of templates for quickly provisioning common applications and services. Multiple vulnerabilities exist in the one-click deployment templates feature. These vulnerabilities stem from the same root cause: content is directly instantiated from static templates, using default passwords and stat / Primary source: US CERT Vulnerability Notes https://kb.cert.org/vuls/id/243636 / Primary source age: 0 days</description>
-      <source url="https://www.kb.cert.org/vuls/">US CERT Vulnerability Notes</source>
-      <category>Vulnerability</category>
-      <category>Patch</category>
-      <category>Cloud</category>
-      <category>DDoS</category>
-      <category>Network</category>
-    </item>
-    <item>
-      <title>CISA warns of hackers exploiting Langflow, N-central, Apache Tomcat flaws</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-langflow-n-central-apache-tomcat-flaws/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-langflow-n-central-apache-tomcat-flaws/</guid>
-      <pubDate>Wed, 05 Aug 2026 15:51:33 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Vulnerability / Topics: Vulnerability / Priority: Critical (100) / SOC: 82 / Confidence: High (85) / Focus: attack campaign / intrusion (rank 5) / Reference count: 3 / Reasons: focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, vulnerability exploitation context, indicator context, reported by 3 sources, primary references 3 / Summary: The U.S. Cybersecurity and Infrastructure Security Agency is giving federal agencies three days to mitigate vulnerabilities in IBM Langflow, N-central, and Apache Tomcat, all actively exploited. [...] / Also reported by: The HackersNews, Security Affairs / Primary source: Unit42 https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Security</category>
-      <category>Vulnerability</category>
-    </item>
-    <item>
       <title>China-Linked Threat Actors Weaponize New Vulnerabilities in Under a Day</title>
       <link>https://www.infosecurity-magazine.com/news/chinalinked-threat-actors/</link>
       <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/chinalinked-threat-actors/</guid>
@@ -459,15 +474,16 @@
       <category>APT</category>
     </item>
     <item>
-      <title>Hijacked Hotel Wi-Fi Pushes Fake Updates to Deliver Surveillance Malware</title>
-      <link>https://thehackernews.com/2026/08/hijacked-hotel-wi-fi-pushes-fake.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/hijacked-hotel-wi-fi-pushes-fake.html</guid>
-      <pubDate>Sat, 01 Aug 2026 06:29:05 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Malware, APT, Threat Actor / Topics: APT29, Microsoft, Malware, APT / Priority: Critical (100) / SOC: 77 / Confidence: High (81) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, APT/campaign priority, coherent attack event, primary references 3 / Summary: A fake browser update served over hijacked hotel Wi-Fi has been used to deliver CornFlake, a remote access trojan (RAT) that can capture webcam images, microphone audio, and keystrokes, Microsoft said in its latest report. Researchers track the operation as CaptiveCrunch and attribute it to Storm-2945. It assesses Storm-2945 to be an operational sub-cluster of Midnight Blizzard, also known as / Primary source: Microsoft Security Blog https://www.microsoft.com/en-us/security/blog/2026/07/31/captivecrunch-midnight-blizzard-targets-travelers-worldwide-for-malware-delivery-and-credential-theft/ / Primary source age: 1 days</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Malware</category>
-      <category>APT</category>
+      <title>Hedge fund cyberattacks tied to BlackFile-linked UNC6671 extortion group</title>
+      <link>https://www.bleepingcomputer.com/news/security/hedge-fund-cyberattacks-tied-to-blackfile-linked-unc6671-extortion-group/</link>
+      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/hedge-fund-cyberattacks-tied-to-blackfile-linked-unc6671-extortion-group/</guid>
+      <pubDate>Thu, 06 Aug 2026 20:07:24 GMT</pubDate>
+      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Ransomware, Threat Actor, APT / Topics: UNC6671, Ransomware, APT / Priority: Critical (100) / SOC: 71 / Confidence: High (78) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN critical sector, APT/campaign priority, coherent attack event, target and impact context, critical sector, primary references 2 / Summary: A recent wave of cyberattacks targeting hedge funds, private-equity firms, and other financial organizations has been linked to UNC6671, an extortion group reportedly associated with the BlackFile threat actors. [...] / Primary source: reuters.com https://www.reuters.com/legal/government/major-wall-street-hedge-funds-targeted-attempted-cyberattacks-bloomberg-news-2026-08-05/ / Primary source age: 1 days</description>
+      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
+      <category>Security</category>
+      <category>Ransomware</category>
       <category>Threat Actor</category>
+      <category>APT</category>
     </item>
     <item>
       <title>AI Recommendation Poisoning: How "Ask AI" Buttons Silently Alter LLM Memory</title>
@@ -482,30 +498,61 @@
       <category>AI Security</category>
     </item>
     <item>
-      <title>Hedge fund cyberattacks tied to BlackFile-linked UNC6671 extortion group</title>
-      <link>https://www.bleepingcomputer.com/news/security/hedge-fund-cyberattacks-tied-to-blackfile-linked-unc6671-extortion-group/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/hedge-fund-cyberattacks-tied-to-blackfile-linked-unc6671-extortion-group/</guid>
-      <pubDate>Thu, 06 Aug 2026 20:07:24 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Ransomware, Threat Actor, APT / Topics: UNC6671, Ransomware, APT / Priority: Critical (98) / SOC: 69 / Confidence: High (72) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN critical sector, APT/campaign priority, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: A recent wave of cyberattacks targeting hedge funds, private-equity firms, and other financial organizations has been linked to UNC6671, an extortion group reportedly associated with the BlackFile threat actors. [...] / Primary source: bloomberg.com https://www.bloomberg.com/news/articles/2026-08-05/major-hedge-funds-targeted-in-wave-of-attempted-cyberattacks / Primary source age: 1 days</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
+      <title>Updoc Data Breach Exposes Patient Contact Information Following Third-Party Security Incident</title>
+      <link>https://thecyberexpress.com/updoc-data-breach/</link>
+      <guid isPermaLink="true">https://thecyberexpress.com/updoc-data-breach/</guid>
+      <pubDate>Fri, 07 Aug 2026 07:51:57 GMT</pubDate>
+      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Security, Threat Intel, Vulnerability, Data Breach, Network / Topics: Network Edge, Vulnerability, Data Breach / Priority: Critical (98) / SOC: 88 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, EN critical sector, campaign priority, coherent attack event, target and impact context, uncertain reporting, critical sector, primary references 1 / Summary: The Updoc data breach has raised fresh concerns about cybersecurity in Australia's healthcare sector after the telehealth provider confirmed that an unauthorized third party may have accessed customer contact information through an external system. The data breach at Updoc, disclosed on August 7, stemmed from a brief security incident involving a third-party platform that supports the company's operations. While the Updoc cyberattack did not expose medical or financial records, it is the latest cyber incident affecting Australia's healthcare sector. Updoc Data Breach Traced to Third-Party Plat / Primary source: Cyble https://cyble.com/knowledge-hub/what-is-cybersecurity/</description>
+      <source url="https://thecyberexpress.com/">The Cyber Express</source>
       <category>Security</category>
-      <category>Ransomware</category>
-      <category>Threat Actor</category>
-      <category>APT</category>
+      <category>Threat Intel</category>
+      <category>Vulnerability</category>
+      <category>Data Breach</category>
+      <category>Network</category>
     </item>
     <item>
-      <title>INC Ransomware Emerges as Dominant Actor Exploiting SonicWall SMA 1000 Flaws</title>
-      <link>https://thehackernews.com/2026/08/inc-ransomware-emerges-as-dominant.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/inc-ransomware-emerges-as-dominant.html</guid>
-      <pubDate>Mon, 03 Aug 2026 16:15:13 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Ransomware, Threat Actor, Data Breach, Mobile, Network / Topics: Network Edge, Ransomware, Vulnerability, Data Breach / Priority: Critical (97) / SOC: 86 / Confidence: High (78) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, coherent attack event, detection evidence context, primary references 2 / Summary: The INC Ransomware operation has emerged as the "dominant threat actor" exploiting the recently disclosed security flaws in SonicWall Secure Mobile Access (SMA) 1000 series VPN appliances. In a report published over the weekend, Resecurity said it observed the INC Ransomware accelerating its activity since the beginning of August 2026, listing multiple victims on its data leak site. Per / Primary source: ransomware.live https://ransomware.live/group/incransom</description>
+      <title>Hackers Impersonate IT Support to Breach Leading Financial Companies</title>
+      <link>https://securityaffairs.com/196800/security/hackers-impersonate-it-support-to-breach-leading-financial-companies.html</link>
+      <guid isPermaLink="true">https://securityaffairs.com/196800/security/hackers-impersonate-it-support-to-breach-leading-financial-companies.html</guid>
+      <pubDate>Fri, 07 Aug 2026 15:50:50 GMT</pubDate>
+      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Security, Threat Intel, Identity / Topics: Identity / Priority: Critical (98) / SOC: 86 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: Hackers used fake IT help desks to steal MFA credentials, targeting over 200 firms, including major financial companies. A hacking campaign operating under names including Redact, Pink, Falcon, and Helix has built credential-stealing websites targeting employees at Blackstone, Bridgewater Associates, Apollo Global Management, Bain Capital, KKR, TPG, CME Group, Clearlake Capital, and Moody’s, among dozens […] / Primary source: securityaffairs.co http://securityaffairs.co/wordpress/</description>
+      <source url="https://securityaffairs.com/">Security Affairs</source>
+      <category>Security</category>
+      <category>Threat Intel</category>
+      <category>Identity</category>
+    </item>
+    <item>
+      <title>Microsoft 365 AitM Phishing Hijacks Accounts to Collect Payroll and Finance Emails</title>
+      <link>https://thehackernews.com/2026/08/microsoft-365-aitm-phishing-hijacks.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/microsoft-365-aitm-phishing-hijacks.html</guid>
+      <pubDate>Fri, 07 Aug 2026 10:38:27 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Phishing / Topics: Microsoft, Phishing / Priority: Critical (98) / SOC: 86 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: Cybersecurity researchers have called attention to an active "widespread email-driven phishing campaign" that employs adversary-in-the-middle (AitM) techniques to take control of Microsoft 365 accounts with an aim to identify key personnel involved in financial workflows and gather related email. "The campaign uses residential proxies to disguise malicious sign-ins as ordinary consumer traffic, / Primary source: ArcticWolf https://arcticwolf.com/resources/blog/payroll-pirates-strange-new-tides-in-business-email-compromise/</description>
       <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Vulnerability</category>
-      <category>Ransomware</category>
-      <category>Threat Actor</category>
-      <category>Data Breach</category>
-      <category>Mobile</category>
+      <category>Phishing</category>
+    </item>
+    <item>
+      <title>In Other News: AI Slop Limits Apple Bounties, North Carolina Port Attacks, Hackers Target Wall Street</title>
+      <link>https://www.securityweek.com/in-other-news-ai-slop-limits-apple-bounties-north-carolina-port-attacks-hackers-target-wall-street/</link>
+      <guid isPermaLink="true">https://www.securityweek.com/in-other-news-ai-slop-limits-apple-bounties-north-carolina-port-attacks-hackers-target-wall-street/</guid>
+      <pubDate>Fri, 07 Aug 2026 14:26:42 GMT</pubDate>
+      <description>Source: SecurityWeek / Source attributes: United States / News / Secondary / Categories: Threat Intel, Malware, Phishing, Supply Chain, AI Security, Network / Topics: Apple/iOS, Network Edge, Supply Chain, Malware, Phishing, AI Security / Priority: Critical (98) / SOC: 84 / Confidence: High (81) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 3 / Summary: Noteworthy stories that might have slipped under the radar: ban on Chinese data center tech, QuickFox VPN supply chain attack, IEH Corporation mailbox breached via phishing. The post In Other News: AI Slop Limits Apple Bounties, North Carolina Port Attacks, Hackers Target Wall Street appeared first on SecurityWeek . / Primary source: SOCRadar Blog https://socradar.io/blog/doublecup-clickfix-loader-devicemanager-rats/</description>
+      <source url="https://www.securityweek.com/">SecurityWeek</source>
+      <category>Threat Intel</category>
+      <category>Malware</category>
+      <category>Phishing</category>
+      <category>Supply Chain</category>
+      <category>AI Security</category>
       <category>Network</category>
+    </item>
+    <item>
+      <title>Ransomware Surges in July After Q2 Lull</title>
+      <link>https://www.infosecurity-magazine.com/news/ransomware-surges-july-q2-lull/</link>
+      <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/ransomware-surges-july-q2-lull/</guid>
+      <pubDate>Fri, 07 Aug 2026 08:20:00 GMT</pubDate>
+      <description>Source: Infosecurity Magazine / Source attributes: United Kingdom / News / Secondary / Categories: Threat Intel, Ransomware / Topics: Ransomware / Priority: Critical (97) / SOC: 86 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: Finance, technology and healthcare sectors were particularly heavily targeted in July, according to Comparitech / Primary source: comparitech.com https://www.comparitech.com/news/ransomware-roundup-july-2026/</description>
+      <source url="https://www.infosecurity-magazine.com/">Infosecurity Magazine</source>
+      <category>Threat Intel</category>
+      <category>Ransomware</category>
     </item>
     <item>
       <title>Keyv and friends compromised in active Shai-Hulud supply chain attack</title>
@@ -525,25 +572,48 @@
       <link>https://www.schneier.com/blog/archives/2026/08/more-on-the-openai-agents-attack-on-hugging-face.html</link>
       <guid isPermaLink="true">https://www.schneier.com/blog/archives/2026/08/more-on-the-openai-agents-attack-on-hugging-face.html</guid>
       <pubDate>Mon, 03 Aug 2026 17:02:46 GMT</pubDate>
-      <description>Source: Schneier on Security / Source attributes: United States / Research / Primary / Categories: AI Security, Vulnerability, Threat Intel, Detection, Incident Response / Topics: AI Security, Vulnerability / Priority: Critical (95) / SOC: 82 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, indicator context, primary references 1 / Summary: Hugging Face has published a detailed timeline of the attack. From the summary: The agent was running an internal OpenAI cyber-capability evaluation based on the ExploitGym benchmark, which tasks an AI agent with finding and exploiting software vulnerabilities. OpenAI ran this on its own infrastructure, and the ExploitGym maintainers and their infrastructure had no involvement in the deployment or operation of that evaluation environment. As far as we were able to infer, across the course of being evaluated on this benchmark, the agent inferred that Hugging Face may host that benchmark’s model / Primary source: Schneier on Security https://www.schneier.com/blog/archives/2026/08/more-on-the-openai-agents-attack-on-hugging-face.html / Primary source age: 0 days</description>
+      <description>Source: Schneier on Security / Source attributes: United States / Research / Primary / Categories: Vulnerability, AI Security, Threat Intel, Detection, Incident Response / Topics: Vulnerability, AI Security / Priority: Critical (95) / SOC: 82 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, indicator context, primary references 1 / Summary: Hugging Face has published a detailed timeline of the attack. From the summary: The agent was running an internal OpenAI cyber-capability evaluation based on the ExploitGym benchmark, which tasks an AI agent with finding and exploiting software vulnerabilities. OpenAI ran this on its own infrastructure, and the ExploitGym maintainers and their infrastructure had no involvement in the deployment or operation of that evaluation environment. As far as we were able to infer, across the course of being evaluated on this benchmark, the agent inferred that Hugging Face may host that benchmark’s model / Primary source: Schneier on Security https://www.schneier.com/blog/archives/2026/08/more-on-the-openai-agents-attack-on-hugging-face.html / Primary source age: 0 days</description>
       <source url="https://www.schneier.com/">Schneier on Security</source>
-      <category>AI Security</category>
       <category>Vulnerability</category>
+      <category>AI Security</category>
       <category>Threat Intel</category>
       <category>Detection</category>
       <category>Incident Response</category>
+    </item>
+    <item>
+      <title>Malware Can Abuse Windows Hello for Business Keys for Persistent Entra ID Access</title>
+      <link>https://thehackernews.com/2026/08/malware-can-abuse-windows-hello-for.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/malware-can-abuse-windows-hello-for.html</guid>
+      <pubDate>Fri, 07 Aug 2026 08:52:11 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Malware, Cloud, Identity, Endpoint / Topics: Microsoft, Malware, Cloud, Identity / Priority: Critical (95) / SOC: 79 / Confidence: High (81) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 3 / Summary: Entra ID researcher Dirk-jan Mollema demonstrated that malware already running in a signed-in Windows session can silently use the victim's Windows Hello for Business key to authenticate to Microsoft Entra ID. The attacker can then establish longer-term cloud access, register a device it controls, obtain a Primary Refresh Token (PRT), and add further authentication methods where tenant policies / Primary source: Microsoft Japan Security Team https://msrc.microsoft.com/update-guide/en-us/</description>
+      <source url="https://thehackernews.com/">The HackersNews</source>
+      <category>Malware</category>
+      <category>Cloud</category>
+      <category>Identity</category>
+      <category>Endpoint</category>
     </item>
     <item>
       <title>Almost Half of Malware Samples Communicate Direct to IP</title>
       <link>https://unit42.paloaltonetworks.com/malware-bypass-dns-direct-to-ip/</link>
       <guid isPermaLink="true">https://unit42.paloaltonetworks.com/malware-bypass-dns-direct-to-ip/</guid>
       <pubDate>Tue, 04 Aug 2026 12:50:53 GMT</pubDate>
-      <description>Source: Unit42 / Source attributes: United States / Research / Primary / Categories: Malware, Threat Intel, Ransomware, Data Breach / Topics: Ransomware, Malware, Data Breach / Priority: Critical (94) / SOC: 100 / Confidence: High (98) / Focus: incident / breach (rank 3) / Reference count: 1 / Reasons: focus: incident / breach, EN attack activity, EN IOC/detection/hunting, JA attack activity, IOC 17, indicator context, primary references 1 / Summary: Nearly half of C2 malware bypasses DNS by connecting directly to IP addresses. Zero trust IP enforcement secures networks against these threats. The post Almost Half of Malware Samples Communicate Direct to IP appeared first on Unit 42 . / Primary source: Unit42 https://unit42.paloaltonetworks.com/malware-bypass-dns-direct-to-ip/ / Primary source age: 0 days</description>
+      <description>Source: Unit42 / Source attributes: United States / Research / Primary / Categories: Threat Intel, Malware, Ransomware, Data Breach / Topics: Ransomware, Malware, Data Breach / Priority: Critical (94) / SOC: 100 / Confidence: High (98) / Focus: incident / breach (rank 3) / Reference count: 1 / Reasons: focus: incident / breach, EN attack activity, EN IOC/detection/hunting, JA attack activity, IOC 17, indicator context, primary references 1 / Summary: Nearly half of C2 malware bypasses DNS by connecting directly to IP addresses. Zero trust IP enforcement secures networks against these threats. The post Almost Half of Malware Samples Communicate Direct to IP appeared first on Unit 42 . / Primary source: Unit42 https://unit42.paloaltonetworks.com/malware-bypass-dns-direct-to-ip/ / Primary source age: 0 days</description>
       <source url="https://unit42.paloaltonetworks.com/">Unit42</source>
-      <category>Malware</category>
       <category>Threat Intel</category>
+      <category>Malware</category>
       <category>Ransomware</category>
       <category>Data Breach</category>
+    </item>
+    <item>
+      <title>TeamPCP Linked To Redis Attacks Dating Back To 2020 And Later Supply Chain Campaign</title>
+      <link>https://thehackernews.com/2026/08/teampcp-linked-to-redis-attacks-dating.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/teampcp-linked-to-redis-attacks-dating.html</guid>
+      <pubDate>Fri, 07 Aug 2026 06:50:05 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Malware, Threat Actor, Supply Chain / Topics: Supply Chain, Malware / Priority: Critical (94) / SOC: 89 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, coherent attack event, indicator context, primary references 1 / Summary: A new analysis has uncovered that the threat actor tracked as TeamPCP has been active on the cybercrime scene as far back as 2020, indicating the group has been compromising internet-facing infrastructure for years before training their sights on the software supply chain. "The connection is supported by overlapping domains, malware deployment paths, staging techniques, backend infrastructure, / Primary source: oligo.security https://www.oligo.security/blog/new-intelligence-links-teampcp-to-shadowray-2-0-and-traces-activity-back-to-2020</description>
+      <source url="https://thehackernews.com/">The HackersNews</source>
+      <category>Malware</category>
+      <category>Threat Actor</category>
+      <category>Supply Chain</category>
     </item>
     <item>
       <title>Swiss government SharePoint breach compromised 200 accounts</title>
@@ -554,6 +624,26 @@
       <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
       <category>Security</category>
       <category>Vulnerability</category>
+    </item>
+    <item>
+      <title>3.8 Million Impacted by Unlimited Technology Systems Data Breach</title>
+      <link>https://www.securityweek.com/3-8-million-impacted-by-unlimited-technology-systems-data-breach/</link>
+      <guid isPermaLink="true">https://www.securityweek.com/3-8-million-impacted-by-unlimited-technology-systems-data-breach/</guid>
+      <pubDate>Fri, 07 Aug 2026 07:22:05 GMT</pubDate>
+      <description>Source: SecurityWeek / Source attributes: United States / News / Secondary / Categories: Threat Intel, Data Breach / Topics: Data Breach / Priority: Critical (92) / SOC: 78 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: Hackers stole personal, medical, and health insurance information from a company’s data center. The post 3.8 Million Impacted by Unlimited Technology Systems Data Breach appeared first on SecurityWeek . / Primary source: ocrportal.hhs.gov https://ocrportal.hhs.gov/ocr/breach/breach_report_hip.jsf</description>
+      <source url="https://www.securityweek.com/">SecurityWeek</source>
+      <category>Threat Intel</category>
+      <category>Data Breach</category>
+    </item>
+    <item>
+      <title>CISA Adds Exploited N-able N-central Flaw to KEV After Customer Compromises</title>
+      <link>https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html</guid>
+      <pubDate>Tue, 04 Aug 2026 07:00:13 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit / Topics: Vulnerability, Exploit / Priority: Critical (92) / SOC: 70 / Confidence: High (75) / Focus: active exploitation (rank 4) / Reference count: 2 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, target and impact context, vulnerability exploitation context, indicator context, reported by 2 sources, primary references 3 / Summary: The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a high-severity security flaw impacting N-able N-central to its Known Exploited Vulnerabilities (KEV) catalog following reports of active exploitation in the wild. The vulnerability, tracked as CVE-2026-18577 (CVSS score: 8.2), is a case of incomplete patching for CVE-2026-18556 (CVSS score: 8.2) that allows / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/08/03/cisa-adds-one-known-exploited-vulnerability-catalog / Primary source age: 1 days</description>
+      <source url="https://thehackernews.com/">The HackersNews</source>
+      <category>Vulnerability</category>
+      <category>Exploit</category>
     </item>
     <item>
       <title>The Future of Agentic Defense is Contextual</title>
@@ -580,6 +670,21 @@
       <category>Endpoint</category>
     </item>
     <item>
+      <title>Rapid7 Analysis: Unauthenticated Remote Code Execution in JetBrains TeamCity (CVE-2026-63077)</title>
+      <link>https://www.rapid7.com/blog/post/ra-unauthenticated-rce-in-jetbrains-teamcity-cve-2026-63077</link>
+      <guid isPermaLink="true">https://www.rapid7.com/blog/post/ra-unauthenticated-rce-in-jetbrains-teamcity-cve-2026-63077</guid>
+      <pubDate>Fri, 07 Aug 2026 14:32:47 GMT</pubDate>
+      <description>Source: Rapid7 / Source attributes: United States / Vendor / Primary / Categories: Threat Intel, Research, Vulnerability, Exploit, Patch, Supply Chain, Application Security / Topics: CVE-2026-63077, Supply Chain, Vulnerability, Exploit / Priority: Critical (91) / SOC: 70 / Confidence: High (100) / Focus: active exploitation (rank 4) / Reference count: 2 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, EN detection/analysis, active exploitation priority, target and impact context, vulnerability exploitation context, reported by 2 sources, primary references 1 / Summary: Overview On July 27, 2026, JetBrains published a security advisory for CVE-2026-63077 , a critical unsafe deserialization vulnerability affecting JetBrains TeamCity . An attacker who can reach a TeamCity server over HTTP or HTTPS can exploit the agent polling protocol without credentials and execute operating system commands with the privileges of the TeamCity server process. JetBrains reported no known active exploitation when it disclosed the vulnerability. However, on August 5, 2026, CISA added CVE-2026-63077 to its Known Exploited Vulnerabilities (KEV) catalog, confirming exploitation in t / Also reported by: The HackersNews / Primary source: Rapid7 https://www.rapid7.com/blog/post/ra-unauthenticated-rce-in-jetbrains-teamcity-cve-2026-63077 / Primary source age: 0 days</description>
+      <source url="https://www.rapid7.com/blog/">Rapid7</source>
+      <category>Threat Intel</category>
+      <category>Research</category>
+      <category>Vulnerability</category>
+      <category>Exploit</category>
+      <category>Patch</category>
+      <category>Supply Chain</category>
+      <category>Application Security</category>
+    </item>
+    <item>
       <title>AI-enabled email accounts could become the ultimate insider threat</title>
       <link>https://blog.barracuda.com/2026/08/04/ai-enabled-email-accounts-insider-threat</link>
       <guid isPermaLink="true">https://blog.barracuda.com/2026/08/04/ai-enabled-email-accounts-insider-threat</guid>
@@ -590,17 +695,6 @@
       <category>Phishing</category>
       <category>AI Security</category>
       <category>Detection</category>
-    </item>
-    <item>
-      <title>Phishing Campaigns Targeting AI Solutions Providers, (Sat, Aug 1st)</title>
-      <link>https://isc.sans.edu/diary/rss/33206</link>
-      <guid isPermaLink="true">https://isc.sans.edu/diary/rss/33206</guid>
-      <pubDate>Sat, 01 Aug 2026 07:22:32 GMT</pubDate>
-      <description>Source: SANS ISC / Source attributes: Global / Research / Primary / Categories: Threat Intel, Phishing, AI Security / Topics: Phishing, AI Security / Priority: Critical (90) / SOC: 75 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: Most phishing campaigns rely on the fact that the victim is afraid to loose "something": money, access to information, ... Many brands have been impersonated by campaigns but I spotted some phishing emails that focus on AI services like ChatGPT. / Primary source: SANS ISC https://isc.sans.edu/diary/rss/33206 / Primary source age: 0 days</description>
-      <source url="https://isc.sans.edu/">SANS ISC</source>
-      <category>Threat Intel</category>
-      <category>Phishing</category>
-      <category>AI Security</category>
     </item>
     <item>
       <title>The Assets You Don’t Know You Own: Attack Surface Sprawl Is a Discovery Problem, Not a Tooling Problem</title>
@@ -657,25 +751,14 @@
       <category>Cloud</category>
     </item>
     <item>
-      <title>CISA Adds Exploited N-able N-central Flaw to KEV After Customer Compromises</title>
-      <link>https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html</guid>
-      <pubDate>Tue, 04 Aug 2026 07:00:13 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit / Topics: Vulnerability, Exploit / Priority: Critical (88) / SOC: 68 / Confidence: High (73) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, target and impact context, vulnerability exploitation context, indicator context, primary references 3 / Summary: The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a high-severity security flaw impacting N-able N-central to its Known Exploited Vulnerabilities (KEV) catalog following reports of active exploitation in the wild. The vulnerability, tracked as CVE-2026-18577 (CVSS score: 8.2), is a case of incomplete patching for CVE-2026-18556 (CVSS score: 8.2) that allows / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/08/03/cisa-adds-one-known-exploited-vulnerability-catalog / Primary source age: 1 days</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Vulnerability</category>
-      <category>Exploit</category>
-    </item>
-    <item>
-      <title>ClickFix attack pushes macOS infostealer for crypto theft attacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/clickfix-attack-pushes-macos-infostealer-for-crypto-theft-attacks/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/clickfix-attack-pushes-macos-infostealer-for-crypto-theft-attacks/</guid>
-      <pubDate>Thu, 06 Aug 2026 22:37:17 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Malware, Endpoint, Cryptocurrency / Topics: Apple/iOS, Malware / Priority: Critical (86) / SOC: 78 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: A Go-based malware delivered in ClickFix attacks targeting macOS users is stealing cryptocurrency assets, browser-stored passwords, Apple Keychain data, and cached credentials. [...] / Primary source: huntress https://www.huntress.com/blog/mac-crypto-draining-malware</description>
+      <title>Real emails, hijacked payments: Two H1 2026 attack chains</title>
+      <link>https://www.bleepingcomputer.com/news/security/real-emails-hijacked-payments-two-h1-2026-attack-chains/</link>
+      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/real-emails-hijacked-payments-two-h1-2026-attack-chains/</guid>
+      <pubDate>Fri, 07 Aug 2026 14:00:10 GMT</pubDate>
+      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Malware, Cryptocurrency / Topics: Malware / Priority: Critical (88) / SOC: 81 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: Gen's H1 2026 Threat Report examines two separate attack chains. One used compromised business inboxes and browser manipulation in a banking-malware campaign, while the other used clipboard hijacking to redirect cryptocurrency payments. [...] / Primary source: Gendigital https://www.gendigital.com/blog/insights/reports/threat-report-h1-2026</description>
       <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
       <category>Security</category>
       <category>Malware</category>
-      <category>Endpoint</category>
       <category>Cryptocurrency</category>
     </item>
     <item>
@@ -689,18 +772,6 @@
       <category>Exploit</category>
       <category>Endpoint</category>
       <category>Application Security</category>
-    </item>
-    <item>
-      <title>Chinese Hacker Uses DeepSeek AI to Orchestrate Vulnerability Exploits</title>
-      <link>https://www.infosecurity-magazine.com/news/chinese-hacker-deepseek-ai/</link>
-      <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/chinese-hacker-deepseek-ai/</guid>
-      <pubDate>Fri, 31 Jul 2026 15:00:00 GMT</pubDate>
-      <description>Source: Infosecurity Magazine / Source attributes: United Kingdom / News / Secondary / Categories: Threat Intel, Vulnerability, Threat Actor, AI Security / Topics: Vulnerability, AI Security / Priority: Critical (85) / SOC: 64 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN Japan/Asia relevance, campaign priority, coherent attack event, target and impact context, Japan related, primary references 1 / Summary: A Chinese-speaking threat actor has been using DeepSeek’s AI models to orchestrate cyber-attacks targeting Asian organizations / Primary source: Unit42 https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/</description>
-      <source url="https://www.infosecurity-magazine.com/">Infosecurity Magazine</source>
-      <category>Threat Intel</category>
-      <category>Vulnerability</category>
-      <category>Threat Actor</category>
-      <category>AI Security</category>
     </item>
     <item>
       <title>DOUBLECUP Uses ClickFix and Cached PNGs to Deliver CountLoader and DeviceManager RAT</title>
@@ -740,20 +811,6 @@
       <source url="https://www.infosecurity-magazine.com/">Infosecurity Magazine</source>
       <category>Threat Intel</category>
       <category>Ransomware</category>
-    </item>
-    <item>
-      <title>Anthropic's Fever Dream: Claude's package that stole real keys</title>
-      <link>https://www.aikido.dev/blog/anthropic-rogue-agents-package-stole-keys</link>
-      <guid isPermaLink="true">https://www.aikido.dev/blog/anthropic-rogue-agents-package-stole-keys</guid>
-      <pubDate>Fri, 31 Jul 2026 16:10:00 GMT</pubDate>
-      <description>Source: Aikido Security Research / Source attributes: Belgium / Research / Primary / Categories: Supply Chain, Application Security, Threat Intel, Vulnerability, Malware, AI Security / Topics: Supply Chain, Vulnerability, Malware, AI Security / Priority: Critical (83) / SOC: 67 / Confidence: High (95) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, primary references 1 / Summary: Anthropic disclosed an agent that pushed real malware to PyPI. We think we found the package, and every mistake in it points back to the AI. Category: Vulnerabilities &amp; Threats / Primary source: Aikido Security Research https://www.aikido.dev/blog/anthropic-rogue-agents-package-stole-keys / Primary source age: 0 days</description>
-      <source url="https://www.aikido.dev/blog">Aikido Security Research</source>
-      <category>Supply Chain</category>
-      <category>Application Security</category>
-      <category>Threat Intel</category>
-      <category>Vulnerability</category>
-      <category>Malware</category>
-      <category>AI Security</category>
     </item>
     <item>
       <title>Smoke#Screen RMM Takeover Gambit Exposes Threat Actor Playbook</title>
@@ -800,16 +857,6 @@
       <category>Threat Actor</category>
     </item>
     <item>
-      <title>SMOKE#SCREEN Campaign Abuses ScreenConnect to Give Attackers Remote Control Access</title>
-      <link>https://securityaffairs.com/196637/uncategorized/smokescreen-campaign-abuses-screenconnect-to-give-attackers-remote-control-access.html</link>
-      <guid isPermaLink="true">https://securityaffairs.com/196637/uncategorized/smokescreen-campaign-abuses-screenconnect-to-give-attackers-remote-control-access.html</guid>
-      <pubDate>Wed, 05 Aug 2026 05:52:28 GMT</pubDate>
-      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Threat Intel, Malware / Topics: Malware / Priority: High (77) / SOC: 62 / Confidence: High (74) / Focus: attack campaign / intrusion (rank 5) / Reference count: 2 / Reasons: focus: attack campaign / intrusion, EN detection/analysis, campaign priority, coherent attack event, target and impact context, reported by 2 sources, primary references 1 / Summary: SMOKE#SCREEN uses fake Zoom updates to install ScreenConnect RMM, giving attackers persistent remote access while bypassing defenses. Securonix Threat Research has been tracking an active multi-wave campaign they’ve named SMOKE#SCREEN, in which unknown attackers use rotating social engineering lures, fake Zoom updates, Adobe software notices, business document reviews, system maintenance utilities, to silently install ConnectWise […] / Also reported by: The HackersNews / Primary source: securonix.com https://www.securonix.com/blog/smoke-screen-screenconnect-rmm-abuse-cloudflare-tunnels/</description>
-      <source url="https://securityaffairs.com/">Security Affairs</source>
-      <category>Threat Intel</category>
-      <category>Malware</category>
-    </item>
-    <item>
       <title>OpenAI Tightens AI Evaluation Safeguards After Testing Incidents</title>
       <link>https://thecyberexpress.com/openai-models-access-internet/</link>
       <guid isPermaLink="true">https://thecyberexpress.com/openai-models-access-internet/</guid>
@@ -834,27 +881,12 @@
       <category>Vulnerability</category>
     </item>
     <item>
-      <title>Chinese Threat Actor Uses Leaked DarkSword Kit to Deploy GHOSTBLADE on iOS</title>
-      <link>https://thehackernews.com/2026/08/chinese-threat-actor-uses-leaked.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/chinese-threat-actor-uses-leaked.html</guid>
-      <pubDate>Mon, 03 Aug 2026 10:49:06 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Exploit, Threat Actor, Cloud, Mobile / Topics: Apple/iOS, Cloud Security, Exploit, Cloud / Priority: High (74) / SOC: 61 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN detection/analysis, campaign priority, coherent attack event, detection evidence context, primary references 1 / Summary: An unknown Chinese-speaking threat actor has been observed running a campaign targeting Apple iOS devices by leveraging a publicly leaked version of the DarkSword exploit kit. Attack surface management platform Censys said it identified the threat actor running more than 100 web properties, most of which are fake Amazon Web Services (AWS) sign-in pages on a domain that also hosts the exploit / Primary source: censys.com https://censys.com/blog/darkswords-panel-sprawl/</description>
+      <title>Fake Adobe and Zoom Updates Install ScreenConnect for Persistent Remote Access</title>
+      <link>https://thehackernews.com/2026/08/fake-adobe-and-zoom-updates-install.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/fake-adobe-and-zoom-updates-install.html</guid>
+      <pubDate>Tue, 04 Aug 2026 13:11:22 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Priority: High (75) / SOC: 55 / Confidence: High (78) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, target and impact context, detection evidence context, primary references 2 / Summary: Cybersecurity researchers have disclosed details of an active, multi-wave campaign that employs social engineering lures themed around Adobe and Zoom software updates, business document reviews, and system maintenance utilities to stealthily deploy Remote Monitoring and Management (RMM) programs like ConnectWise ScreenConnect. The campaign has been codenamed SMOKE#SCREEN by Securonix Threat / Primary source: Bitdefender Labs https://www.bitdefender.com/en-us/blog/labs/fake-xeno-roblox-discord-executor</description>
       <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Exploit</category>
-      <category>Threat Actor</category>
-      <category>Cloud</category>
-      <category>Mobile</category>
-    </item>
-    <item>
-      <title>Belarusian cybercriminal behind Ransom Cartel gets 16-year prison sentence</title>
-      <link>https://therecord.media/belarus-hacker-ransomware-sentenced</link>
-      <guid isPermaLink="true">https://therecord.media/belarus-hacker-ransomware-sentenced</guid>
-      <pubDate>Thu, 06 Aug 2026 13:15:00 GMT</pubDate>
-      <description>Source: The Record / Source attributes: United States / News / Secondary / Categories: Malware, Threat Intel, Ransomware / Topics: Ransomware, Malware / Priority: High (74) / SOC: 53 / Confidence: High (70) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, primary references 3 / Summary: A Belarusian national active in the cybercriminal world for decades was sentenced to 16 years in U.S. prison for running the Ransom Cartel ransomware operation. / Primary source: justice.gov https://www.justice.gov/opa/media/1363391/dl?inline</description>
-      <source url="https://therecord.media/">The Record</source>
-      <category>Malware</category>
-      <category>Threat Intel</category>
-      <category>Ransomware</category>
     </item>
     <item>
       <title>Ransom Cartel Creator Gets 16 Years in Prison for Operating Ransomware-as-a-Service</title>
@@ -864,6 +896,18 @@
       <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Ransomware / Topics: Ransomware / Priority: High (74) / SOC: 53 / Confidence: High (74) / Focus: attack campaign / intrusion (rank 5) / Reference count: 2 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, reported by 2 sources, primary references 2 / Summary: A federal judge in Alexandria, Virginia, sentenced Maksim Silnikau to 16 years in prison on August 5 for creating and running Ransom Cartel, the ransomware-as-a-service operation he stood up in 2021. Between 2021 and 2023, Ransom Cartel conspirators attacked at least 18 companies, including firms in California, New York and Nebraska, and others abroad, according to the Justice Department. / Also reported by: Bleeping Computer / Primary source: Unit42 https://unit42.paloaltonetworks.com/ransom-cartel-ransomware/</description>
       <source url="https://thehackernews.com/">The HackersNews</source>
       <category>Ransomware</category>
+    </item>
+    <item>
+      <title>200 accounts compromised in Swiss government’s Microsoft SharePoint breach</title>
+      <link>https://www.helpnetsecurity.com/2026/08/07/swiss-government-microsoft-sharepoint-vulnerabilities/</link>
+      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/08/07/swiss-government-microsoft-sharepoint-vulnerabilities/</guid>
+      <pubDate>Fri, 07 Aug 2026 12:29:26 GMT</pubDate>
+      <description>Source: Help Net Security / Source attributes: Croatia / News / Secondary / Categories: Threat Intel, Vulnerability, Data Breach, Incident Response / Topics: Microsoft, Vulnerability, Data Breach / Priority: High (73) / SOC: 80 / Confidence: Medium (46) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary source not found / Summary: Hackers exploited vulnerabilities in Microsoft SharePoint servers belonging to Switzerland’s Federal Office of Information Technology, Systems and Telecommunication (BIT), compromising the login credentials of around 200 accounts. On July 28, BIT’s security specialists noticed unusual activity on the SharePoint servers. Once the intrusion was confirmed, BIT blocked internet access to the platform and closed the vulnerabilities being exploited. Three days later, on July 31, security specialists discovered “that the login credentials for several accounts had … More → The post 200 accounts compro</description>
+      <source url="https://www.helpnetsecurity.com/">Help Net Security</source>
+      <category>Threat Intel</category>
+      <category>Vulnerability</category>
+      <category>Data Breach</category>
+      <category>Incident Response</category>
     </item>
     <item>
       <title>Understanding calendar invite phishing: How attackers abuse .ics files and how to defend against it</title>
@@ -888,28 +932,14 @@
       <category>Cloud</category>
     </item>
     <item>
-      <title>How Fidelis Deception Turns Your Attack Surface into a Defensive Advantage</title>
-      <link>https://fidelissecurity.com/threatgeek/deception/reduce-attack-surface-with-deception/</link>
-      <guid isPermaLink="true">https://fidelissecurity.com/threatgeek/deception/reduce-attack-surface-with-deception/</guid>
-      <pubDate>Fri, 31 Jul 2026 11:45:21 GMT</pubDate>
-      <description>Source: Fidelis Security / Source attributes: United States / Vendor / Primary / Categories: Threat Intel, Detection, Cloud, Network / Topics: Cloud / Priority: High (70) / SOC: 61 / Confidence: High (93) / Focus: incident / breach (rank 3) / Reference count: 1 / Reasons: focus: incident / breach, EN attack activity, EN detection/analysis, EN critical sector, detection evidence context, critical sector, primary references 1 / Summary: Discover why traditional security fails to stop attackers inside your network and how Fidelis Deception accelerates breach detection by exposing threats earlier protecting your critical assets with proactive defense. The post How Fidelis Deception Turns Your Attack Surface into a Defensive Advantage appeared first on Fidelis Security . / Primary source: Fidelis Security https://fidelissecurity.com/threatgeek/deception/reduce-attack-surface-with-deception/ / Primary source age: 0 days</description>
-      <source url="https://fidelissecurity.com/blog/">Fidelis Security</source>
+      <title>Critical flaws allow hackers to exploit zero-touch provisioning process in TP-Link Omada</title>
+      <link>https://www.cybersecuritydive.com/news/critical-flaws-allow-hackers-to-exploit-zero-touch-provisioning-process-in/827306/</link>
+      <guid isPermaLink="true">https://www.cybersecuritydive.com/news/critical-flaws-allow-hackers-to-exploit-zero-touch-provisioning-process-in/827306/</guid>
+      <pubDate>Fri, 07 Aug 2026 10:17:22 GMT</pubDate>
+      <description>Source: Cybersecurity Dive / Source attributes: United States / News / Secondary / Categories: Threat Intel, Exploit / Topics: Exploit / Priority: High (71) / SOC: 48 / Confidence: High (76) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, target and impact context, primary references 3 / Summary: Attacks can cause widespread damage to trusted devices and data. / Primary source: forescout.com https://www.forescout.com/blog/new-tp-link-router-vulnerabilities-exploiting-zero-touch-provisioning/</description>
+      <source url="https://www.cybersecuritydive.com/">Cybersecurity Dive</source>
       <category>Threat Intel</category>
-      <category>Detection</category>
-      <category>Cloud</category>
-      <category>Network</category>
-    </item>
-    <item>
-      <title>This month in security with Tony Anscombe – July 2026 edition</title>
-      <link>https://www.welivesecurity.com/en/videos/month-security-tony-anscombe-july-2026/</link>
-      <guid isPermaLink="true">https://www.welivesecurity.com/en/videos/month-security-tony-anscombe-july-2026/</guid>
-      <pubDate>Fri, 31 Jul 2026 14:14:15 GMT</pubDate>
-      <description>Source: Eset Research / Source attributes: Slovakia / Vendor / Primary / Categories: Threat Intel, Ransomware, Supply Chain, AI Security / Topics: Ransomware, Supply Chain, AI Security / Priority: High (70) / SOC: 49 / Confidence: High (96) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, primary references 1 / Summary: OpenAI models going rogue, the first documented agentic ransomware operation, and an emergent AI-driven supply chain threat made for a packed July roundup / Primary source: Eset Research https://www.welivesecurity.com/en/videos/month-security-tony-anscombe-july-2026/ / Primary source age: 0 days</description>
-      <source url="https://www.welivesecurity.com/en/eset-research/">Eset Research</source>
-      <category>Threat Intel</category>
-      <category>Ransomware</category>
-      <category>Supply Chain</category>
-      <category>AI Security</category>
+      <category>Exploit</category>
     </item>
     <item>
       <title>Over 250 ClickFix Domains Use Browser Fingerprinting to Hide macOS Malware Lures</title>
@@ -923,15 +953,16 @@
       <category>Endpoint</category>
     </item>
     <item>
-      <title>CISA Flags TeamCity CVE-2026-63077 RCE Flaw Under Active Exploitation in the Wild</title>
-      <link>https://thehackernews.com/2026/08/cisa-flags-teamcity-cve-2026-63077-rce.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/cisa-flags-teamcity-cve-2026-63077-rce.html</guid>
-      <pubDate>Thu, 06 Aug 2026 06:51:43 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Patch / Topics: CVE-2026-63077, Vulnerability, Exploit / Priority: High (68) / SOC: 51 / Confidence: Medium (64) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, target and impact context, vulnerability exploitation context, primary references 1 / Summary: A newly patched security flaw impacting on-premise versions of JetBrains TeamCity has come under active exploitation in the wild, according to the U.S. Cybersecurity and Infrastructure Security Agency (CISA). The vulnerability in question is CVE-2026-63077 (CVSS score: 9.8), a case of deserialization of untrusted data that could allow an unauthenticated attacker with access to a TeamCity server / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/08/05/cisa-adds-one-known-exploited-vulnerability-catalog / Primary source age: 1 days</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Vulnerability</category>
+      <title>Inside the Modern SOC: The Identity Front Door</title>
+      <link>https://unit42.paloaltonetworks.com/soc-identity-front-door/</link>
+      <guid isPermaLink="true">https://unit42.paloaltonetworks.com/soc-identity-front-door/</guid>
+      <pubDate>Fri, 07 Aug 2026 23:00:01 GMT</pubDate>
+      <description>Source: Unit42 / Source attributes: United States / Research / Primary / Categories: AI Security, Exploit, Identity, Incident Response / Topics: AI Security, Exploit, Identity / Priority: High (68) / SOC: 44 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, primary references 1 / Summary: Identity-based attacks drive 90% of incidents. Learn how modern attackers exploit identities and what SOC leaders can do to respond. The post Inside the Modern SOC: The Identity Front Door appeared first on Unit 42 . / Primary source: Unit42 https://unit42.paloaltonetworks.com/soc-identity-front-door/ / Primary source age: 0 days</description>
+      <source url="https://unit42.paloaltonetworks.com/">Unit42</source>
+      <category>AI Security</category>
       <category>Exploit</category>
-      <category>Patch</category>
+      <category>Identity</category>
+      <category>Incident Response</category>
     </item>
     <item>
       <title>After the Minnesota Water System Cyberattacks: Why Every Count of Exposed Rockwell PLCs Differs</title>
@@ -958,14 +989,23 @@
       <category>Network</category>
     </item>
     <item>
+      <title>Levi Strauss &amp; Co. says hackers stole corporate data in cyberattack</title>
+      <link>https://www.bleepingcomputer.com/news/security/levi-strauss-and-co-says-hackers-stole-corporate-data-in-cyberattack/</link>
+      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/levi-strauss-and-co-says-hackers-stole-corporate-data-in-cyberattack/</guid>
+      <pubDate>Fri, 07 Aug 2026 15:48:20 GMT</pubDate>
+      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security / Priority: High (66) / SOC: 52 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: Levi Strauss &amp; Co. (Levi's) says that hackers used social engineering on three of its employees to gain access to and steal corporate data stored on their machines. [...] / Primary source: sec.gov http://www.sec.gov/Archives/edgar/data/94845/000199937126017264/levi-8k_080726.htm</description>
+      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
+      <category>Security</category>
+    </item>
+    <item>
       <title>Token Jacking: Cybercriminals Could Be Stealing Your AI Resources</title>
       <link>https://unit42.paloaltonetworks.com/ai-token-jacking/</link>
       <guid isPermaLink="true">https://unit42.paloaltonetworks.com/ai-token-jacking/</guid>
       <pubDate>Thu, 06 Aug 2026 10:00:49 GMT</pubDate>
-      <description>Source: Unit42 / Source attributes: United States / Research / Primary / Categories: Malware, Threat Intel, Supply Chain, AI Security, Application Security / Topics: Network Edge, Supply Chain, Malware, AI Security / Priority: High (66) / SOC: 41 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, uncertain reporting, primary references 1 / Summary: Discover how attackers hijack AI tokens to fuel gray market transfer stations by stealing developer API keys. The post Token Jacking: Cybercriminals Could Be Stealing Your AI Resources appeared first on Unit 42 . / Primary source: Unit42 https://unit42.paloaltonetworks.com/ai-token-jacking/ / Primary source age: 0 days</description>
+      <description>Source: Unit42 / Source attributes: United States / Research / Primary / Categories: Threat Intel, Malware, Supply Chain, AI Security, Application Security / Topics: Network Edge, Supply Chain, Malware, AI Security / Priority: High (66) / SOC: 41 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, uncertain reporting, primary references 1 / Summary: Discover how attackers hijack AI tokens to fuel gray market transfer stations by stealing developer API keys. The post Token Jacking: Cybercriminals Could Be Stealing Your AI Resources appeared first on Unit 42 . / Primary source: Unit42 https://unit42.paloaltonetworks.com/ai-token-jacking/ / Primary source age: 0 days</description>
       <source url="https://unit42.paloaltonetworks.com/">Unit42</source>
-      <category>Malware</category>
       <category>Threat Intel</category>
+      <category>Malware</category>
       <category>Supply Chain</category>
       <category>AI Security</category>
       <category>Application Security</category>
@@ -990,15 +1030,6 @@
       <category>Threat Intel</category>
     </item>
     <item>
-      <title>N-able Says Attackers Take Over N-central Servers After Initial Fix Proves Incomplete</title>
-      <link>https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html</guid>
-      <pubDate>Mon, 03 Aug 2026 06:41:46 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability / Topics: Vulnerability / Priority: High (62) / SOC: 44 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: N-able said attackers exploited an authentication bypass in N-central to gain remote administrative access and reach the customer systems managed through those servers. Its first fix was incomplete. CVE-2026-18577 affects N-central builds prior to 2026.3.1.7. N-able shipped build 2026.3.1.7 on August 2 as the first unaffected version. N-central is the remote monitoring and management platform / Primary source: huntress https://www.huntress.com/blog/n-able-vulnerability-exploitation</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Vulnerability</category>
-    </item>
-    <item>
       <title>Paperclip AI Flaws Let Unauthenticated Attackers Run Commands</title>
       <link>https://www.infosecurity-magazine.com/news/paperclip-ai-vulnerabilities-rce/</link>
       <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/paperclip-ai-vulnerabilities-rce/</guid>
@@ -1008,16 +1039,6 @@
       <category>Threat Intel</category>
       <category>Vulnerability</category>
       <category>AI Security</category>
-    </item>
-    <item>
-      <title>OT security coalition urges Congress, CISA to enact reforms amid water sector hacks</title>
-      <link>https://www.cybersecuritydive.com/news/ot-security-coalition-congress-cisa-reforms-water/826791/</link>
-      <guid isPermaLink="true">https://www.cybersecuritydive.com/news/ot-security-coalition-congress-cisa-reforms-water/826791/</guid>
-      <pubDate>Mon, 03 Aug 2026 15:32:00 GMT</pubDate>
-      <description>Source: Cybersecurity Dive / Source attributes: United States / News / Secondary / Categories: Threat Intel, ICS/OT / Topics: Operational Technology, ICS/OT / Priority: High (60) / SOC: 44 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: Iran-nexus hackers are suspected in a broad campaign targeting drinking and wastewater sites in at least seven U.S. states. / Primary source: congress.gov https://www.congress.gov/crs-product/IF12959</description>
-      <source url="https://www.cybersecuritydive.com/">Cybersecurity Dive</source>
-      <category>Threat Intel</category>
-      <category>ICS/OT</category>
     </item>
     <item>
       <title>ChainDrop supply chain compromise: Anatomy of a self-propagating worm</title>
@@ -1032,16 +1053,6 @@
       <category>Detection</category>
     </item>
     <item>
-      <title>Hackers Start Exploiting Recent JetBrains TeamCity Vulnerability</title>
-      <link>https://www.securityweek.com/hackers-start-exploiting-recent-jetbrains-teamcity-vulnerability/</link>
-      <guid isPermaLink="true">https://www.securityweek.com/hackers-start-exploiting-recent-jetbrains-teamcity-vulnerability/</guid>
-      <pubDate>Thu, 06 Aug 2026 06:37:44 GMT</pubDate>
-      <description>Source: SecurityWeek / Source attributes: United States / News / Secondary / Categories: Vulnerability, Threat Intel / Topics: Vulnerability / Priority: Medium (59) / SOC: 41 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, primary references 1 / Summary: Tracked as CVE-2026-63077, the critical bug can be exploited without authentication for remote code execution. The post Hackers Start Exploiting Recent JetBrains TeamCity Vulnerability appeared first on SecurityWeek . / Primary source: CISA https://www.cisa.gov/known-exploited-vulnerabilities-catalog</description>
-      <source url="https://www.securityweek.com/">SecurityWeek</source>
-      <category>Vulnerability</category>
-      <category>Threat Intel</category>
-    </item>
-    <item>
       <title>Major Cyber Attacks in July 2026: US and EU Organizations Hit by Phishing, RATs, and Stealers</title>
       <link>https://any.run/cybersecurity-blog/major-cyber-attacks-july-2026/</link>
       <guid isPermaLink="true">https://any.run/cybersecurity-blog/major-cyber-attacks-july-2026/</guid>
@@ -1053,6 +1064,16 @@
       <category>Threat Intel</category>
       <category>Phishing</category>
       <category>Cloud</category>
+    </item>
+    <item>
+      <title>Coast Guard says it is monitoring cyberattack that disrupted North Carolina’s ports</title>
+      <link>https://cyberscoop.com/north-carolina-ports-cyberattack-coast-guard/</link>
+      <guid isPermaLink="true">https://cyberscoop.com/north-carolina-ports-cyberattack-coast-guard/</guid>
+      <pubDate>Fri, 07 Aug 2026 14:24:49 GMT</pubDate>
+      <description>Source: CyberScoop / Source attributes: United States / News / Secondary / Categories: Security, Threat Intel / Priority: Medium (58) / SOC: 41 / Confidence: Medium (66) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, primary references 1 / Summary: The cyberattack hit gate systems at all three North Carolina ports, as officials continue investigating the breach and its effects on operations. The post Coast Guard says it is monitoring cyberattack that disrupted North Carolina’s ports appeared first on CyberScoop . / Primary source: wect.com https://www.wect.com/2026/08/06/nc-ports-operating-manually-after-cyberattack-disrupts-statewide-systems/ / Primary source age: 1 days</description>
+      <source url="https://cyberscoop.com/">CyberScoop</source>
+      <category>Security</category>
+      <category>Threat Intel</category>
     </item>
     <item>
       <title>QuickFox Supply Chain Attack Used to Deploy FDMTP Implant</title>
@@ -1078,27 +1099,18 @@
       <category>Supply Chain</category>
     </item>
     <item>
-      <title>Brown Health Medical Group-MA Data Breach Exposes Information of 311,000 Individuals</title>
-      <link>https://securityaffairs.com/196681/uncategorized/brown-health-medical-group-ma-data-breach-exposes-information-of-311000-individuals.html</link>
-      <guid isPermaLink="true">https://securityaffairs.com/196681/uncategorized/brown-health-medical-group-ma-data-breach-exposes-information-of-311000-individuals.html</guid>
-      <pubDate>Wed, 05 Aug 2026 16:27:17 GMT</pubDate>
-      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Threat Intel, Data Breach / Topics: Data Breach / Priority: Medium (53) / SOC: 40 / Confidence: Medium (64) / Focus: incident / breach (rank 3) / Reference count: 1 / Reasons: focus: incident / breach, EN attack activity, EN critical sector, critical sector, primary references 2 / Summary: Brown Health Medical Group-MA breach exposed personal, medical, and financial data of over 311,000 individuals after hackers accessed its servers. Brown Health Medical Group-MA data breach exposed personal, medical, and financial data of over 311,000 individuals after hackers accessed its servers. The healthcare group identified a data security breach involving a legacy file server on […] / Primary source: mass.gov https://www.mass.gov/doc/2026-1151-lifespan-physician-group-of-massachusetts-inc-dba-brown-health-medical-group-ma/download</description>
-      <source url="https://securityaffairs.com/">Security Affairs</source>
+      <title>FirewallFalcon Manager: Supply-Chain Backdoors in Underground VPN Infrastructure</title>
+      <link>https://flare.io/learn/resources/blog/firewallfalcon-manager-supply-chain-backdoor</link>
+      <guid isPermaLink="true">https://flare.io/learn/resources/blog/firewallfalcon-manager-supply-chain-backdoor</guid>
+      <pubDate>Fri, 07 Aug 2026 22:00:03 GMT</pubDate>
+      <description>Source: Flare Threat Intelligence / Source attributes: Global / Research / Primary / Categories: Threat Intel, Data Breach, Malware, Identity, Endpoint, Network / Topics: Linux, Network Edge, Data Breach, Malware, Identity / Priority: Medium (52) / SOC: 41 / Confidence: High (100) / Focus: incident / breach (rank 3) / Reference count: 1 / Reasons: focus: incident / breach, IOC 12, target and impact context, indicator context, primary references 1 / Summary: By Assaf Morag, Cybersecurity Researcher What if the tool you use to run your criminal infrastructure is itself criminal infrastructure, and you are the target? FirewallFalcon Manager is presented as a free open-source Linux server management tool for VPN and proxy services. But, beneath the well-polished GitHub repo and feature-rich shell menus lies a multi-layered […] The post FirewallFalcon Manager: Supply-Chain Backdoors in Underground VPN Infrastructure appeared first on Flare | Identity First Threat Intelligence | Unmatched Visibility into Cybercrime . / Primary source: Flare Threat Intelligence https://flare.io/learn/resources/blog/firewallfalcon-manager-supply-chain-backdoor / Primary source age: 0 days</description>
+      <source url="https://flare.io/">Flare Threat Intelligence</source>
       <category>Threat Intel</category>
       <category>Data Breach</category>
-    </item>
-    <item>
-      <title>The Hugging Face Incident: A CISO Wake-Up Call for the Agentic Era</title>
-      <link>https://www.catonetworks.com/blog/hugging-face-incident-a-ciso-wake-up-call-for-agentic-era/</link>
-      <guid isPermaLink="true">https://www.catonetworks.com/blog/hugging-face-incident-a-ciso-wake-up-call-for-agentic-era/</guid>
-      <pubDate>Fri, 31 Jul 2026 07:26:57 GMT</pubDate>
-      <description>Source: Cato Networks / Source attributes: Global / Vendor / Primary / Categories: Network, Threat Intel, Identity, AI Security, Incident Response / Topics: Identity, AI Security / Priority: Medium (51) / SOC: 41 / Confidence: High (98) / Focus: incident / breach (rank 3) / Reference count: 1 / Reasons: focus: incident / breach, EN attack activity, target and impact context, primary references 1 / Summary: Earlier this month, Hugging Face, an AI and machine learning platform company, revealed that an autonomous AI system had breached part of its production environment. The intrusion began in the platform’s dataset-processing environment and eventually involved higher-level access, credential exposure, and movement into internal clusters. For CISOs, the significance is not limited to one company... The post The Hugging Face Incident: A CISO Wake-Up Call for the Agentic Era appeared first on Cato Networks . / Primary source: Cato Networks https://www.catonetworks.com/blog/hugging-face-incident-a-ciso-wake-up-call-for-agentic-era/ / Primary source age: 0 days</description>
-      <source url="https://www.catonetworks.com/blog/">Cato Networks</source>
-      <category>Network</category>
-      <category>Threat Intel</category>
+      <category>Malware</category>
       <category>Identity</category>
-      <category>AI Security</category>
-      <category>Incident Response</category>
+      <category>Endpoint</category>
+      <category>Network</category>
     </item>
     <item>
       <title>エージェント型AIを乗っ取る 第3回：AIエージェントを守るには</title>
@@ -1126,18 +1138,6 @@
       <category>Network</category>
     </item>
     <item>
-      <title>COLDCARD security audit phishing attack installs remote access tool</title>
-      <link>https://www.bleepingcomputer.com/news/security/coldcard-security-audit-phishing-attack-installs-remote-access-tool/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/coldcard-security-audit-phishing-attack-installs-remote-access-tool/</guid>
-      <pubDate>Wed, 05 Aug 2026 17:49:41 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Vulnerability, Phishing, Cryptocurrency / Topics: Vulnerability, Phishing / Priority: Medium (48) / SOC: 55 / Confidence: Low (41) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary source not found / Summary: A phishing campaign is exploiting fears surrounding the recently disclosed COLDCARD wallet vulnerability and suspected $88.6 million Bitcoin theft to trick users into installing ScreenConnect remote access software. [...]</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Security</category>
-      <category>Vulnerability</category>
-      <category>Phishing</category>
-      <category>Cryptocurrency</category>
-    </item>
-    <item>
       <title>Don't Revoke That Token Yet: Inside the keyv/cacheable npm Worm, (Wed, Aug 5th)</title>
       <link>https://isc.sans.edu/diary/rss/33218</link>
       <guid isPermaLink="true">https://isc.sans.edu/diary/rss/33218</guid>
@@ -1149,16 +1149,15 @@
       <category>Cloud</category>
     </item>
     <item>
-      <title>How AI-powered phishing killed blocklists for good</title>
-      <link>https://www.bleepingcomputer.com/news/security/how-ai-powered-phishing-killed-blocklists-for-good/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/how-ai-powered-phishing-killed-blocklists-for-good/</guid>
-      <pubDate>Wed, 05 Aug 2026 14:01:11 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Phishing, Threat Intel, AI Security, Detection / Topics: Phishing, AI Security / Priority: Low (24) / SOC: 37 / Confidence: Medium (53) / Focus: IOC / detection evidence (rank 2) / Reference count: 1 / Reasons: focus: IOC / detection evidence, EN detection/analysis, EN critical sector, IOC 1, linked IOC evidence, detection evidence context, indicator context, critical sector, primary references 1, IOC/detection-only priority cap, old primary source (156d) / Summary: AI is helping attackers create disposable phishing infrastructure and rapidly evolving toolkits that blocklists cannot track fast enough. Push Security explains why browser-level, technique-based detection offers a more durable defense than relying on domains, signatures, and other known-bad indicators. [...] / Primary source: Microsoft Security Blog https://www.microsoft.com/en-us/security/blog/2026/03/02/oauth-redirection-abuse-enables-phishing-malware-delivery/ / Primary source age: 156 days / Primary source warning: Primary source appears old (156 days)</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Security</category>
-      <category>Phishing</category>
+      <title>Living off the coding agent: Two tales of tunnels and LaunchAgents</title>
+      <link>https://www.elastic.co/security-labs/coding-agent-launchagent-tunnel-detection</link>
+      <guid isPermaLink="true">https://www.elastic.co/security-labs/coding-agent-launchagent-tunnel-detection</guid>
+      <pubDate>Fri, 07 Aug 2026 23:59:59 GMT</pubDate>
+      <description>Source: Elastic / Source attributes: United States / Research / Primary / Categories: Threat Intel, Malware, Endpoint, Detection / Topics: Malware / Priority: Medium (43) / SOC: 43 / Confidence: High (100) / Focus: IOC / detection evidence (rank 2) / Reference count: 1 / Reasons: focus: IOC / detection evidence, EN attack activity, IOC 70, linked IOC evidence, primary references 1, IOC/detection-only priority cap / Summary: Agent-parented reverse tunnels and LaunchAgents can expose a local admin app to the internet. Endpoint still needs to treat that as high severity even when the activity looks like vibe-coded ops, not confirmed malware. / Primary source: Elastic https://www.elastic.co/security-labs/coding-agent-launchagent-tunnel-detection / Primary source age: 0 days</description>
+      <source url="https://www.elastic.co/security-labs">Elastic</source>
       <category>Threat Intel</category>
-      <category>AI Security</category>
+      <category>Malware</category>
+      <category>Endpoint</category>
       <category>Detection</category>
     </item>
   </channel>
