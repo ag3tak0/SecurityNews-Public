@@ -3,11 +3,27 @@
   <channel>
     <title>SOC Intelligence Digest</title>
     <link>https://ag3tak0.github.io/SecurityNews-Public</link>
-    <description>Seven-day operational threat intelligence and IOC reporting for SOC review. Coverage window: 2026/08/15 10:51 - 2026/08/22 10:51 JST. Article dates: 2026/08/17 - 2026/08/22 JST.</description>
+    <description>Seven-day operational threat intelligence and IOC reporting for SOC review. Coverage window: 2026/08/16 11:00 - 2026/08/23 11:00 JST. Article dates: 2026/08/17 - 2026/08/23 JST.</description>
     <language>ja</language>
-    <lastBuildDate>Sat, 22 Aug 2026 01:51:31 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 02:00:56 GMT</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://ag3tak0.github.io/SecurityNews-Public/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ビルド時に不正コードが実行されるRustパッケージの改ざんについてまとめてみた</title>
+      <link>https://piyolog.hatenadiary.jp/entry/2026/08/23/033006</link>
+      <guid isPermaLink="true">https://piyolog.hatenadiary.jp/entry/2026/08/23/033006</guid>
+      <pubDate>Sat, 22 Aug 2026 18:30:06 GMT</pubDate>
+      <description>Source: piyolog / Source attributes: Japan / Vendor / Primary / Categories: Vulnerability, Patch, Threat Actor, Threat Intel, Supply Chain, Endpoint, Incident Response, Application Security / Topics: Apple/iOS, Linux, Microsoft, Supply Chain, Vulnerability / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, JA attack activity, JA IOC/detection/hunting, JA detection/analysis, JA targeted/APT/state-backed, JA Japan/Asia relevance, APT/campaign priority, coherent attack event, target and impact context, detection evidence context, indicator context, Japan related, primary references 1 / Summary: Rustのパッケージレジストリcrates.ioで、広く使われている3つのクレートが改ざんされ、依存関係に追加されたタイポスクワットパッケージのビルドスクリプトを通じて、ビルドしただけでペイロードが実行される事案が2026年8月20日に発生しました。Rustプロジェクトと複数のセキュリティ企業が、手口の詳細や影響範囲を相次いで公表しています。ここでは関連する情報をまとめます。 広く使われる3クレートが改ざん 改ざんされたのは、arrayref、internment、append-only-vecの3クレートで、いずれも同一のメンテナのアカウントが公開していた。arrayrefは配列の参照を扱う小さなユーティリティクレートで、10年の公開履歴の中で通常の依存関係を一度も持たなかったが、2026年8月20日公開の0.3.10で初めてproc-macro1への依存が追加された(出典: 1, 6, 11)。internmentとappend-only-vecも同じアカウントが持つクレートで、同様に新しいバージョン(internment 0.8.7、append-only-vec 0.1.9)でproc-macro1への依存が追加された(出典: 1, 3, 4)。 The Hacker Newsが2026年8月21日にcrates.ioのAPIを自ら照会したところ、arrayrefの累計ダウ / Primary source: piyolog https://piyolog.hatenadiary.jp/entry/2026/08/23/033006 / Primary source age: 0 days</description>
+      <source url="https://piyolog.hatenadiary.jp/">piyolog</source>
+      <category>Vulnerability</category>
+      <category>Patch</category>
+      <category>Threat Actor</category>
+      <category>Threat Intel</category>
+      <category>Supply Chain</category>
+      <category>Endpoint</category>
+      <category>Incident Response</category>
+      <category>Application Security</category>
+    </item>
     <item>
       <title>Microsoft Says CVSS 10.0 Entra ID Code Execution Flaw Was Exploited Before Server-Side Fix</title>
       <link>https://thecyberexpress.com/microsoft-entra-id-cve-2026-69836-exploited/</link>
@@ -239,10 +255,10 @@
       <link>https://any.run/cybersecurity-blog/mirage2fa-phishing-targets-us-companies/</link>
       <guid isPermaLink="true">https://any.run/cybersecurity-blog/mirage2fa-phishing-targets-us-companies/</guid>
       <pubDate>Tue, 18 Aug 2026 09:28:12 GMT</pubDate>
-      <description>Source: ANY.RUN / Source attributes: United Arab Emirates / Vendor / Primary / Categories: Malware, Security, Threat Intel, Phishing / Topics: Microsoft, Malware, Phishing / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, IOC 126, linked IOC evidence, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: Mirage2FA is an active phishing-as-a-service toolkit built to steal Microsoft 365 credentials and authenticated sessions through Adversary-in-the-Middle (AiTM) attacks. ANY.RUN research shows that 63.7% of identified victims are in the US, with Technologies, Manufacturing, and Education among the most targeted industries. The operation has generated thousands of compromise events between 2024 and 2026, including stolen […] The post Mirage2FA Hijacks Companies’ Microsoft 365 Sessions, with Over 4K Victims in the US appeared first on ANY.RUN's Cybersecurity Blog . / Primary source: ANY.RUN https://any.run/cybersecurity-blog/mirage2fa-phishing-targets-us-companies/ / Primary source age: 0 days</description>
+      <description>Source: ANY.RUN / Source attributes: United Arab Emirates / Vendor / Primary / Categories: Security, Malware, Threat Intel, Phishing / Topics: Microsoft, Malware, Phishing / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, IOC 126, linked IOC evidence, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: Mirage2FA is an active phishing-as-a-service toolkit built to steal Microsoft 365 credentials and authenticated sessions through Adversary-in-the-Middle (AiTM) attacks. ANY.RUN research shows that 63.7% of identified victims are in the US, with Technologies, Manufacturing, and Education among the most targeted industries. The operation has generated thousands of compromise events between 2024 and 2026, including stolen […] The post Mirage2FA Hijacks Companies’ Microsoft 365 Sessions, with Over 4K Victims in the US appeared first on ANY.RUN's Cybersecurity Blog . / Primary source: ANY.RUN https://any.run/cybersecurity-blog/mirage2fa-phishing-targets-us-companies/ / Primary source age: 0 days</description>
       <source url="https://any.run/cybersecurity-blog/">ANY.RUN</source>
-      <category>Malware</category>
       <category>Security</category>
+      <category>Malware</category>
       <category>Threat Intel</category>
       <category>Phishing</category>
     </item>
@@ -342,20 +358,6 @@
       <category>Application Security</category>
     </item>
     <item>
-      <title>Suspected China-Nexus Actor Exploits VMware vCenter Flaw, Deploys Babuk-Derived Ransomware</title>
-      <link>https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html</guid>
-      <pubDate>Mon, 17 Aug 2026 07:36:19 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Patch, Ransomware, APT, Threat Actor / Topics: Ransomware, VMware, Vulnerability, Exploit, APT / Priority: Critical (100) / SOC: 100 / Confidence: High (72) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, EN active exploit/PoC/zero-day, EN targeted/APT/state-backed, JA targeted/APT/state-backed, APT/campaign priority, coherent attack event, target and impact context, vulnerability exploitation context, primary references 1 / Summary: Cybersecurity researchers have attributed the exploitation of a newly patched security flaw in Broadcom VMware vCenter to a suspected China-nexus advanced persistent threat (APT). The attacks involve the exploitation of CVE-2026-59310 (CVSS score: 9.8), a severe directory-traversal vulnerability in the VMware vCenter server that could be weaponized by a malicious actor to execute arbitrary code / Primary source: medium.com https://medium.com/@quirso_de/global-exploitation-of-cve-2026-59310-by-suspected-chinese-nexus-apt-related-cve-2026-59309-443a79e1466d</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Vulnerability</category>
-      <category>Exploit</category>
-      <category>Patch</category>
-      <category>Ransomware</category>
-      <category>APT</category>
-      <category>Threat Actor</category>
-    </item>
-    <item>
       <title>信頼されたソフトウェアを悪用する手口：フィッシング、検索、RMM連鎖にまたがるScreenConnectの悪用</title>
       <link>https://www.trendmicro.com/ja_jp/research/26/h/screenconnect-abuse.html</link>
       <guid isPermaLink="true">https://www.trendmicro.com/ja_jp/research/26/h/screenconnect-abuse.html</guid>
@@ -391,17 +393,6 @@
       <category>AI Security</category>
     </item>
     <item>
-      <title>Hackers Target Zimbra Servers in Active Exploitation Campaign</title>
-      <link>https://www.securityweek.com/hackers-target-zimbra-servers-in-active-exploitation-campaign/</link>
-      <guid isPermaLink="true">https://www.securityweek.com/hackers-target-zimbra-servers-in-active-exploitation-campaign/</guid>
-      <pubDate>Thu, 20 Aug 2026 14:50:49 GMT</pubDate>
-      <description>Source: SecurityWeek / Source attributes: United States / News / Secondary / Categories: Vulnerability, Threat Intel, Exploit / Topics: Vulnerability, Exploit / Priority: Critical (100) / SOC: 95 / Confidence: High (83) / Focus: attack campaign / intrusion (rank 5) / Reference count: 2 / Reasons: focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, EN detection/analysis, campaign priority, coherent attack event, detection evidence context, vulnerability exploitation context, reported by 2 sources, primary references 3 / Summary: Exploitation of the Zimbra Collaboration vulnerability CVE-2026-73570 has been observed by Poland’s CERT Polska. The post Hackers Target Zimbra Servers in Active Exploitation Campaign appeared first on SecurityWeek . / Also reported by: Security Affairs / Primary source: CISA https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search=zimbra&amp;field_date_added_wrapper=all&amp;field_cve=&amp;sort_by=field_date_added&amp;items_per_page=20&amp;url=</description>
-      <source url="https://www.securityweek.com/">SecurityWeek</source>
-      <category>Vulnerability</category>
-      <category>Threat Intel</category>
-      <category>Exploit</category>
-    </item>
-    <item>
       <title>Identity Abuse Through Trusted Communication Channels</title>
       <link>https://unit42.paloaltonetworks.com/communication-channel-identity-risks/</link>
       <guid isPermaLink="true">https://unit42.paloaltonetworks.com/communication-channel-identity-risks/</guid>
@@ -422,6 +413,18 @@
       <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Identity / Topics: Identity / Priority: Critical (100) / SOC: 92 / Confidence: High (89) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, detection evidence context, compound vulnerability exploit impact detection context, primary references 3 / Summary: Cybersecurity researchers at Hunt.io have disclosed details of a campaign that they say compromised more than 14,530 Dahua devices between June 17 and July 22, 2026, using credential attacks, two authentication-bypass flaws, and a peer-to-peer (P2P) relay technique. The activity, codenamed Operation CameraSwarm, was reconstructed from a 407 MB exposed working directory containing 2,616 files / Primary source: CISA https://www.cisa.gov/known-exploited-vulnerabilities-catalog</description>
       <source url="https://thehackernews.com/">The HackersNews</source>
       <category>Identity</category>
+    </item>
+    <item>
+      <title>FTP Banners: The New Dead Drop Resolver Delivering Novel RATs</title>
+      <link>https://socradar.io/blog/ftp-banners-new-dead-drop-resolver-rats/</link>
+      <guid isPermaLink="true">https://socradar.io/blog/ftp-banners-new-dead-drop-resolver-rats/</guid>
+      <pubDate>Fri, 21 Aug 2026 10:30:40 GMT</pubDate>
+      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Threat Actor / Priority: Critical (100) / SOC: 89 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, JA attack activity, campaign priority, coherent attack event, indicator context, primary references 1 / Summary: FTP Banners: The New Dead Drop Resolver Delivering Novel RATs STRU found threat actors using FTP banners as Dead Drop Resolvers - legitimate services or protocols abused to host C2 addresses and commands, so the stager n / Primary source: SOCRadar Blog https://socradar.io/blog/ftp-banners-new-dead-drop-resolver-rats/ / Primary source age: 0 days</description>
+      <source url="https://socradar.io/blog/">SOCRadar Blog</source>
+      <category>Threat Intel</category>
+      <category>Research</category>
+      <category>IOC</category>
+      <category>Threat Actor</category>
     </item>
     <item>
       <title>Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads</title>
@@ -445,24 +448,24 @@
       <category>Cryptocurrency</category>
     </item>
     <item>
-      <title>GitLab Warns of Active Exploitation of Critical GraphQL Flaw</title>
-      <link>https://securityaffairs.com/197622/uncategorized/gitlab-warns-of-active-exploitation-of-critical-graphql-flaw.html</link>
-      <guid isPermaLink="true">https://securityaffairs.com/197622/uncategorized/gitlab-warns-of-active-exploitation-of-critical-graphql-flaw.html</guid>
-      <pubDate>Fri, 21 Aug 2026 09:49:02 GMT</pubDate>
-      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Threat Intel, Vulnerability, Exploit, Patch / Topics: Vulnerability, Exploit / Priority: Critical (100) / SOC: 80 / Confidence: High (74) / Focus: attack campaign / intrusion (rank 5) / Reference count: 2 / Reasons: focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, target and impact context, vulnerability exploitation context, reported by 2 sources, primary references 1 / Summary: GitLab flaw CVE-2026-19478 is now under active exploitation, allowing unauthenticated attackers to modify or delete public projects. WatchTowr researchers warn of active exploitation of critical GitLab flaw CVE-2026-19478 (CVSS score of 9.4). This week, GitLab pushed out an emergency patch to address this flaw, which could let an attacker with zero credentials remotely modify or […] / Also reported by: The HackersNews / Primary source: docs.gitlab.com https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-2-4-released/</description>
-      <source url="https://securityaffairs.com/">Security Affairs</source>
-      <category>Threat Intel</category>
+      <title>Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution</title>
+      <link>https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html</guid>
+      <pubDate>Thu, 20 Aug 2026 13:24:28 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Patch / Topics: Vulnerability, Exploit / Priority: Critical (100) / SOC: 81 / Confidence: High (83) / Focus: attack campaign / intrusion (rank 5) / Reference count: 2 / Reasons: focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, target and impact context, vulnerability exploitation context, reported by 2 sources, primary references 3 / Summary: A now-patched security flaw impacting Zimbra Collaboration (ZCS) has come under active exploitation in the wild, according to the Polish Computer Emergency Response Team (CERT Polska). The vulnerability in question is CVE-2026-73570 (CVSS score: 8.9), which refers to a case of command injection that can lead to remote code execution. "A remote code execution vulnerability exists in Zimbra / Also reported by: Security Affairs / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/08/21/cisa-adds-one-known-exploited-vulnerability-catalog / Primary source age: -1 days</description>
+      <source url="https://thehackernews.com/">The HackersNews</source>
       <category>Vulnerability</category>
       <category>Exploit</category>
       <category>Patch</category>
     </item>
     <item>
-      <title>Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution</title>
-      <link>https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html</guid>
-      <pubDate>Thu, 20 Aug 2026 13:24:28 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Patch / Topics: Vulnerability, Exploit / Priority: Critical (100) / SOC: 77 / Confidence: High (78) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, target and impact context, vulnerability exploitation context, primary references 2 / Summary: A now-patched security flaw impacting Zimbra Collaboration (ZCS) has come under active exploitation in the wild, according to the Polish Computer Emergency Response Team (CERT Polska). The vulnerability in question is CVE-2026-73570 (CVSS score: 8.9), which refers to a case of command injection that can lead to remote code execution. "A remote code execution vulnerability exists in Zimbra / Primary source: moje.cert.pl https://moje.cert.pl/komunikaty/2026/145/aktywnie-wykorzystywana-podatnosc-w-zimbra-collaboration-suite/</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
+      <title>GitLab Warns of Active Exploitation of Critical GraphQL Flaw</title>
+      <link>https://securityaffairs.com/197622/hacking/gitlab-warns-of-active-exploitation-of-critical-graphql-flaw.html</link>
+      <guid isPermaLink="true">https://securityaffairs.com/197622/hacking/gitlab-warns-of-active-exploitation-of-critical-graphql-flaw.html</guid>
+      <pubDate>Fri, 21 Aug 2026 09:49:02 GMT</pubDate>
+      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Threat Intel, Vulnerability, Exploit, Patch / Topics: Vulnerability, Exploit / Priority: Critical (100) / SOC: 80 / Confidence: High (74) / Focus: attack campaign / intrusion (rank 5) / Reference count: 2 / Reasons: focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, target and impact context, vulnerability exploitation context, reported by 2 sources, primary references 1 / Summary: GitLab flaw CVE-2026-19478 is now under active exploitation, allowing unauthenticated attackers to modify or delete public projects. WatchTowr researchers warn of active exploitation of critical GitLab flaw CVE-2026-19478 (CVSS score of 9.4). This week, GitLab pushed out an emergency patch to address this flaw, which could let an attacker with zero credentials remotely modify or […] / Also reported by: The HackersNews / Primary source: docs.gitlab.com https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-2-4-released/</description>
+      <source url="https://securityaffairs.com/">Security Affairs</source>
+      <category>Threat Intel</category>
       <category>Vulnerability</category>
       <category>Exploit</category>
       <category>Patch</category>
@@ -548,6 +551,18 @@
       <category>Endpoint</category>
     </item>
     <item>
+      <title>U.S. CISA adds Zimbra Collaboration Suite (ZCS) flaw to its Known Exploited Vulnerabilities catalog</title>
+      <link>https://securityaffairs.com/197693/security/u-s-cisa-adds-zimbra-collaboration-suite-zcs-flaw-to-its-known-exploited-vulnerabilities-catalog.html</link>
+      <guid isPermaLink="true">https://securityaffairs.com/197693/security/u-s-cisa-adds-zimbra-collaboration-suite-zcs-flaw-to-its-known-exploited-vulnerabilities-catalog.html</guid>
+      <pubDate>Sat, 22 Aug 2026 07:17:49 GMT</pubDate>
+      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Security, Threat Intel, Vulnerability, Threat Actor / Topics: Vulnerability / Priority: Critical (97) / SOC: 68 / Confidence: High (81) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, campaign priority, vulnerability exploitation context, indicator context, primary references 3 / Summary: U.S. Cybersecurity and Infrastructure Security Agency (CISA) adds Zimbra Collaboration Suite (ZCS) flaw to its Known Exploited Vulnerabilities catalog. The U.S. Cybersecurity and Infrastructure Security Agency (CISA) added the Zimbra Collaboration Suite (ZCS) flaw CVE-2026-73570 to its Known Exploited Vulnerabilities (KEV) catalog. CERT Polska, Poland’s national computer emergency response team, confirmed this week that threat actors […] / Primary source: moje.cert.pl https://moje.cert.pl/komunikaty/2026/145/aktywnie-wykorzystywana-podatnosc-w-zimbra-collaboration-suite/</description>
+      <source url="https://securityaffairs.com/">Security Affairs</source>
+      <category>Security</category>
+      <category>Threat Intel</category>
+      <category>Vulnerability</category>
+      <category>Threat Actor</category>
+    </item>
+    <item>
       <title>Ransom Busters Claims It Hacked Ransomware Servers, Asks Victims for Up to $60,000</title>
       <link>https://thehackernews.com/2026/08/ransom-busters-claims-it-hacked.html</link>
       <guid isPermaLink="true">https://thehackernews.com/2026/08/ransom-busters-claims-it-hacked.html</guid>
@@ -566,17 +581,6 @@
       <source url="https://www.malwarebytes.com/blog">Malwarebytes</source>
       <category>Vulnerability</category>
       <category>Cryptocurrency</category>
-    </item>
-    <item>
-      <title>U.S. CISA adds TrueConf Server flaws to its Known Exploited Vulnerabilities catalog</title>
-      <link>https://securityaffairs.com/197602/security/u-s-cisa-adds-trueconf-server-flaws-to-its-known-exploited-vulnerabilities-catalog.html</link>
-      <guid isPermaLink="true">https://securityaffairs.com/197602/security/u-s-cisa-adds-trueconf-server-flaws-to-its-known-exploited-vulnerabilities-catalog.html</guid>
-      <pubDate>Fri, 21 Aug 2026 08:22:11 GMT</pubDate>
-      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Security, Threat Intel, Vulnerability / Topics: Vulnerability / Priority: Critical (93) / SOC: 72 / Confidence: High (74) / Focus: active exploitation (rank 4) / Reference count: 3 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, target and impact context, vulnerability exploitation context, indicator context, reported by 3 sources, primary references 2 / Summary: U.S. Cybersecurity and Infrastructure Security Agency (CISA) adds TrueConf Server flaws to its Known Exploited Vulnerabilities catalog. The U.S. Cybersecurity and Infrastructure Security Agency (CISA) added the following vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog: TrueConf Server is an on-premises video conferencing and unified communications platform developed by TrueConf. Organizations can deploy it on their […] / Also reported by: Bleeping Computer / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog / Primary source age: 1 days</description>
-      <source url="https://securityaffairs.com/">Security Affairs</source>
-      <category>Security</category>
-      <category>Threat Intel</category>
-      <category>Vulnerability</category>
     </item>
     <item>
       <title>Africa’s Cybersecurity Challenge Is Bigger Than Access to Technology</title>
@@ -627,18 +631,6 @@
       <category>Cryptocurrency</category>
     </item>
     <item>
-      <title>Manic: The Android Malware That Exfiltrates Data Even When the Phone Is Offline</title>
-      <link>https://securityaffairs.com/197570/malware/manic-the-android-malware-that-exfiltrates-data-even-when-the-phone-is-offline.html</link>
-      <guid isPermaLink="true">https://securityaffairs.com/197570/malware/manic-the-android-malware-that-exfiltrates-data-even-when-the-phone-is-offline.html</guid>
-      <pubDate>Thu, 20 Aug 2026 18:03:12 GMT</pubDate>
-      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Mobile, Malware, Security, Threat Intel / Topics: Android, Malware / Priority: Critical (90) / SOC: 84 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, detection evidence context, primary references 1 / Summary: Manic Android malware combines banking fraud and spyware, using a Bluetooth relay to steal data even when devices are offline. ThreatFabric’s Mobile Threat Intelligence team has identified a new Android malware, dubbed Manic, which has been active in the wild since at least February 2026. The researchers state that the malware is still under development […] / Primary source: threatfabric.com https://www.threatfabric.com/blogs/manic-blend-between-banking-malware-and-spyware</description>
-      <source url="https://securityaffairs.com/">Security Affairs</source>
-      <category>Mobile</category>
-      <category>Malware</category>
-      <category>Security</category>
-      <category>Threat Intel</category>
-    </item>
-    <item>
       <title>Def Con Attendees Targeted by Persistent Phishing Campaign</title>
       <link>https://www.infosecurity-magazine.com/news/def-con-attendees-persistent/</link>
       <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/def-con-attendees-persistent/</guid>
@@ -669,6 +661,17 @@
       <category>Malware</category>
     </item>
     <item>
+      <title>U.S. CISA adds TrueConf Server flaws to its Known Exploited Vulnerabilities catalog</title>
+      <link>https://securityaffairs.com/197602/security/u-s-cisa-adds-trueconf-server-flaws-to-its-known-exploited-vulnerabilities-catalog.html</link>
+      <guid isPermaLink="true">https://securityaffairs.com/197602/security/u-s-cisa-adds-trueconf-server-flaws-to-its-known-exploited-vulnerabilities-catalog.html</guid>
+      <pubDate>Fri, 21 Aug 2026 08:22:11 GMT</pubDate>
+      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Security, Threat Intel, Vulnerability / Topics: Vulnerability / Priority: Critical (89) / SOC: 70 / Confidence: High (72) / Focus: active exploitation (rank 4) / Reference count: 2 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, target and impact context, vulnerability exploitation context, indicator context, reported by 2 sources, primary references 2 / Summary: U.S. Cybersecurity and Infrastructure Security Agency (CISA) adds TrueConf Server flaws to its Known Exploited Vulnerabilities catalog. The U.S. Cybersecurity and Infrastructure Security Agency (CISA) added the following vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog: TrueConf Server is an on-premises video conferencing and unified communications platform developed by TrueConf. Organizations can deploy it on their […] / Also reported by: Bleeping Computer / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog / Primary source age: 1 days</description>
+      <source url="https://securityaffairs.com/">Security Affairs</source>
+      <category>Security</category>
+      <category>Threat Intel</category>
+      <category>Vulnerability</category>
+    </item>
+    <item>
       <title>Android Car Malware Spreads Through Built-In Updaters for Ad Fraud, Proxy Botnet</title>
       <link>https://thehackernews.com/2026/08/android-car-malware-spreads-through.html</link>
       <guid isPermaLink="true">https://thehackernews.com/2026/08/android-car-malware-spreads-through.html</guid>
@@ -688,18 +691,6 @@
       <category>Security</category>
       <category>Malware</category>
       <category>Phishing</category>
-    </item>
-    <item>
-      <title>New Manic Android malware can exfiltrate data through nearby devices</title>
-      <link>https://www.bleepingcomputer.com/news/security/new-manic-android-malware-can-exfiltrate-data-through-nearby-devices/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/new-manic-android-malware-can-exfiltrate-data-through-nearby-devices/</guid>
-      <pubDate>Thu, 20 Aug 2026 10:02:02 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Mobile, Security, Malware, Data Breach / Topics: Android, Malware, Data Breach / Priority: Critical (85) / SOC: 78 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: A new Android malware named Manic targeting users in multiple European countries has a fallback data exfiltration mechanism that uses nearby infected devices. [...] / Primary source: threatfabric.com https://www.threatfabric.com/blogs/manic-blend-between-banking-malware-and-spyware</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Mobile</category>
-      <category>Security</category>
-      <category>Malware</category>
-      <category>Data Breach</category>
     </item>
     <item>
       <title>Silent 'TwinLoot' Cyber Threat Operates Entirely From Microsoft's Cloud</title>
@@ -754,6 +745,17 @@
       <category>Ransomware</category>
     </item>
     <item>
+      <title>Hackers infect Android car head units with proxy botnet malware</title>
+      <link>https://www.bleepingcomputer.com/news/security/hackers-infect-android-car-head-units-with-proxy-botnet-malware/</link>
+      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/hackers-infect-android-car-head-units-with-proxy-botnet-malware/</guid>
+      <pubDate>Sat, 22 Aug 2026 14:14:24 GMT</pubDate>
+      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Malware, Mobile / Topics: Android, Malware / Priority: Critical (82) / SOC: 73 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, primary references 1 / Summary: A supply-chain attack targeting Android-based car head units is using a legitimate device-update app to spread malware that enlists compromised devices in a proxy botnet or uses them for ad fraud. [...] / Primary source: Securelist https://securelist.com/android-head-unit-malware/121106/</description>
+      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
+      <category>Security</category>
+      <category>Malware</category>
+      <category>Mobile</category>
+    </item>
+    <item>
       <title>Over 500 Critical Infrastructure Organizations Hit by Medusa Ransomware</title>
       <link>https://www.infosecurity-magazine.com/news/critical-infrastructure-medusa/</link>
       <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/critical-infrastructure-medusa/</guid>
@@ -774,6 +776,17 @@
       <category>AI Security</category>
     </item>
     <item>
+      <title>脆弱性管理は「資産管理」で決まる時代へ～フロンティアAI時代の脆弱性管理（2）</title>
+      <link>https://www.lac.co.jp/lacwatch/service/20260817_004961.html</link>
+      <guid isPermaLink="true">https://www.lac.co.jp/lacwatch/service/20260817_004961.html</guid>
+      <pubDate>Mon, 17 Aug 2026 06:00:00 GMT</pubDate>
+      <description>Source: LAC / Source attributes: Japan / Vendor / Primary / Categories: Vulnerability, Exploit, AI Security / Topics: Vulnerability, Exploit, AI Security / Priority: Critical (81) / SOC: 51 / Confidence: High (96) / Focus: active exploitation (rank 4) / Reference count: 2 / Reasons: focus: active exploitation, JA active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, Japan source, reported by 2 sources, primary references 1 / Summary: 脆弱性をAIによって短期間で発見・悪用されることを前提とした管理体制への転換が求められます。今回は、「資産の把握・管理」を取り上げ、なぜAI時代の脆弱性対策の出発点となるのかを解説します。 / Also reported by: Sploitus / Primary source: LAC https://www.lac.co.jp/lacwatch/service/20260817_004961.html / Primary source age: 0 days</description>
+      <source url="https://www.lac.co.jp/lacwatch">LAC</source>
+      <category>Vulnerability</category>
+      <category>Exploit</category>
+      <category>AI Security</category>
+    </item>
+    <item>
       <title>CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE</title>
       <link>https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html</link>
       <guid isPermaLink="true">https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html</guid>
@@ -783,6 +796,19 @@
       <category>Vulnerability</category>
       <category>Exploit</category>
       <category>AI Security</category>
+    </item>
+    <item>
+      <title>Malware Hijacks Android Car Head Units</title>
+      <link>https://securityaffairs.com/197700/hacking/malware-hijacks-android-car-head-units.html</link>
+      <guid isPermaLink="true">https://securityaffairs.com/197700/hacking/malware-hijacks-android-car-head-units.html</guid>
+      <pubDate>Sat, 22 Aug 2026 08:55:18 GMT</pubDate>
+      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Security, Threat Intel, Malware, Mobile, Network / Topics: Android, Malware / Priority: High (78) / SOC: 67 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, primary references 1 / Summary: Malware is abusing car infotainment updates to install proxy software, turning Android head units into nodes for the BADBOX network. Kaspersky researchers found something in June 2026 that made them stop and look twice: an Android app with no interface at all, installed like any ordinary app but making zero effort to disguise itself as […] / Primary source: Securelist https://securelist.com/android-head-unit-malware/121106/</description>
+      <source url="https://securityaffairs.com/">Security Affairs</source>
+      <category>Security</category>
+      <category>Threat Intel</category>
+      <category>Malware</category>
+      <category>Mobile</category>
+      <category>Network</category>
     </item>
     <item>
       <title>Connecting the Dots: Securing the Overlooked Corners of the Software Development Lifecycle (SDLC) Supply Chain</title>
@@ -835,17 +861,6 @@
       <source url="https://gblogs.cisco.com/jp/category/security/research/">Cisco Threat Research</source>
       <category>Threat Intel</category>
       <category>Phishing</category>
-    </item>
-    <item>
-      <title>脆弱性管理は「資産管理」で決まる時代へ～フロンティアAI時代の脆弱性管理（2）</title>
-      <link>https://www.lac.co.jp/lacwatch/service/20260817_004961.html</link>
-      <guid isPermaLink="true">https://www.lac.co.jp/lacwatch/service/20260817_004961.html</guid>
-      <pubDate>Mon, 17 Aug 2026 06:00:00 GMT</pubDate>
-      <description>Source: LAC / Source attributes: Japan / Vendor / Primary / Categories: Vulnerability, Exploit, AI Security / Topics: Vulnerability, Exploit, AI Security / Priority: High (77) / SOC: 49 / Confidence: High (94) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, JA active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, Japan source, primary references 1 / Summary: 脆弱性をAIによって短期間で発見・悪用されることを前提とした管理体制への転換が求められます。今回は、「資産の把握・管理」を取り上げ、なぜAI時代の脆弱性対策の出発点となるのかを解説します。 / Primary source: LAC https://www.lac.co.jp/lacwatch/service/20260817_004961.html / Primary source age: 0 days</description>
-      <source url="https://www.lac.co.jp/lacwatch">LAC</source>
-      <category>Vulnerability</category>
-      <category>Exploit</category>
-      <category>AI Security</category>
     </item>
     <item>
       <title>Rust Supply Chain Attack Linked to North Korean Hackers</title>
@@ -978,16 +993,29 @@
       <category>Mobile</category>
     </item>
     <item>
-      <title>CISA warns of hackers exploiting critical MLflow vulnerability</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/</guid>
-      <pubDate>Thu, 20 Aug 2026 11:06:14 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Vulnerability, Threat Actor, AI Security / Topics: Vulnerability, AI Security / Priority: High (68) / SOC: 45 / Confidence: High (78) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, indicator context, primary references 2 / Summary: The Cybersecurity and Infrastructure Security Agency (CISA) warned federal agencies that threat actors are now exploiting a critical vulnerability in the MLflow open-source AI engineering platform. [...] / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/08/19/cisa-adds-one-known-exploited-vulnerability-catalog / Primary source age: 1 days</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Security</category>
+      <title>CVE-2026-73570: Zimbra RCE Exploited</title>
+      <link>https://socradar.io/blog/cve-2026-73570-zimbra-rce/</link>
+      <guid isPermaLink="true">https://socradar.io/blog/cve-2026-73570-zimbra-rce/</guid>
+      <pubDate>Fri, 21 Aug 2026 14:44:56 GMT</pubDate>
+      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Vulnerability / Topics: CVE-2026-73570, Vulnerability / Priority: High (68) / SOC: 43 / Confidence: High (92) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, primary references 1 / Summary: CVE-2026-73570: Zimbra RCE Exploited Zimbra Collaboration Suite (ZCS) faces an actively exploited command-injection vulnerability, identified as CVE-2026-73570 . This flaw affects the suite's SNMP notification processing / Primary source: SOCRadar Blog https://socradar.io/blog/cve-2026-73570-zimbra-rce/ / Primary source age: 0 days</description>
+      <source url="https://socradar.io/blog/">SOCRadar Blog</source>
+      <category>Threat Intel</category>
+      <category>Research</category>
+      <category>IOC</category>
       <category>Vulnerability</category>
-      <category>Threat Actor</category>
-      <category>AI Security</category>
+    </item>
+    <item>
+      <title>Windows IKE CVE-2026-33824 Added to CISA KEV</title>
+      <link>https://socradar.io/blog/windows-ike-cve-2026-33824-cisa-kev/</link>
+      <guid isPermaLink="true">https://socradar.io/blog/windows-ike-cve-2026-33824-cisa-kev/</guid>
+      <pubDate>Thu, 20 Aug 2026 13:18:01 GMT</pubDate>
+      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Vulnerability, Endpoint / Topics: CVE-2026-33824, Microsoft, Vulnerability / Priority: High (68) / SOC: 43 / Confidence: High (92) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, primary references 1 / Summary: Windows IKE CVE-2026-33824 Added to CISA KEV Windows IKE CVE-2026-33824 is now in CISA’s Known Exploited Vulnerabilities catalog, giving defenders a short deadline to verify patching and exposure. CISA added the Windows / Primary source: SOCRadar Blog https://socradar.io/blog/windows-ike-cve-2026-33824-cisa-kev/ / Primary source age: 0 days</description>
+      <source url="https://socradar.io/blog/">SOCRadar Blog</source>
+      <category>Threat Intel</category>
+      <category>Research</category>
+      <category>IOC</category>
+      <category>Vulnerability</category>
+      <category>Endpoint</category>
     </item>
     <item>
       <title>Critical Microsoft Entra ID vulnerability exploited in the wild (CVE-2026-69836)</title>
