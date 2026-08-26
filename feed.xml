@@ -3,11 +3,121 @@
   <channel>
     <title>SOC Intelligence Digest</title>
     <link>https://ag3tak0.github.io/SecurityNews-Public</link>
-    <description>Seven-day operational threat intelligence and IOC reporting for SOC review. Coverage window: 2026/08/18 10:53 - 2026/08/25 10:53 JST. Article dates: 2026/08/18 - 2026/08/25 JST.</description>
+    <description>Seven-day operational threat intelligence and IOC reporting for SOC review. Coverage window: 2026/08/19 10:59 - 2026/08/26 10:59 JST. Article dates: 2026/08/19 - 2026/08/26 JST.</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 25 Aug 2026 01:53:22 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 01:59:50 GMT</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://ag3tak0.github.io/SecurityNews-Public/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>実在するセキュリティ担当者を装った電話がかかってくる攻撃についてまとめてみた</title>
+      <link>https://piyolog.hatenadiary.jp/entry/2026/08/26/090522</link>
+      <guid isPermaLink="true">https://piyolog.hatenadiary.jp/entry/2026/08/26/090522</guid>
+      <pubDate>Wed, 26 Aug 2026 00:05:22 GMT</pubDate>
+      <description>Source: piyolog / Source attributes: Japan / Vendor / Primary / Categories: Ransomware, Phishing, Threat Actor, Threat Intel, Identity, Detection, Incident Response / Topics: Ransomware, Phishing, Identity / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, JA attack activity, JA detection/analysis, campaign priority, IOC 1, coherent attack event, target and impact context, detection evidence context, Japan source, primary references 1 / Summary: 2026年8月23日、セキュリティ運用の監視や脅威検知を手掛ける米ReliaQuestは、自社従業員を標的にしたソーシャルエンジニアリング攻撃を受けたことを公表しました。攻撃者は同社を装う偽のログインページと電話による誘導で従業員1名の認証情報を取得しましたが、業務システムへの到達は防がれたとしています。同日、ShinyHuntersの恐喝サイトに同社が掲載されたことも報じられています。ここでは関連する情報をまとめます。 偽ドメインと電話で従業員を誘導 ReliaQuestの公表によると、攻撃者は2026年8月22日、同社を装う類似ドメインを登録し、CDNの背後に偽のシングルサインオン(SSO)ページを設置した(出典: 1)。このドメイン名について、報道は独自の情報源から「reliaquest[.]claims」であると特定しており、ShinyHuntersを名乗る相手も取材に対し同じドメイン名を述べている(出典: 4, 6)。 攻撃者は続けて複数のReliaQuest従業員に電話をかけ、その都度、実在するセキュリティ担当者の氏名を名乗って偽ページへ誘導しようとした(出典: 1, 4)。このうち1名がパスワードを入力し、スマートフォンに届いたプッシュ通知を承認してしまい、攻撃者は同社のアイデンティティ基盤のダッシュボードへの閲覧のみのセッションを取得した(出典: 1)。同社によれば / Primary source: piyolog https://piyolog.hatenadiary.jp/entry/2026/08/26/090522 / Primary source age: 0 days</description>
+      <source url="https://piyolog.hatenadiary.jp/">piyolog</source>
+      <category>Ransomware</category>
+      <category>Phishing</category>
+      <category>Threat Actor</category>
+      <category>Threat Intel</category>
+      <category>Identity</category>
+      <category>Detection</category>
+      <category>Incident Response</category>
+    </item>
+    <item>
+      <title>E4del and PINHOLE RATs Turn FTP Banners Into Dead Drops for Malware Commands</title>
+      <link>https://thehackernews.com/2026/08/e4del-and-pinhole-rats-turn-ftp-banners.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/e4del-and-pinhole-rats-turn-ftp-banners.html</guid>
+      <pubDate>Tue, 25 Aug 2026 11:33:44 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Malware, Threat Actor, Network / Topics: Malware / Priority: Critical (100) / SOC: 100 / Confidence: High (78) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, JA attack activity, campaign priority, coherent attack event, target and impact context, indicator context, primary references 2 / Summary: Cybersecurity researchers are calling attention to a new campaign that employs FTP banners as dead drop resolvers (DDRs) to deliver two previously unreported remote access trojans (RATs) tracked as E4del and PINHOLE. While threat actors are known to abuse legitimate services to point to additional command-and-control (C2) infrastructure and blend in with regular network traffic, the development / Primary source: SOCRadar Blog https://socradar.io/blog/ftp-banners-new-dead-drop-resolver-rats/</description>
+      <source url="https://thehackernews.com/">The HackersNews</source>
+      <category>Malware</category>
+      <category>Threat Actor</category>
+      <category>Network</category>
+    </item>
+    <item>
+      <title>The State of AI-Enabled Malware August 2026: From Brand Abuse to Agentic Execution</title>
+      <link>https://unit42.paloaltonetworks.com/ai-enabled-malware-analysis/</link>
+      <guid isPermaLink="true">https://unit42.paloaltonetworks.com/ai-enabled-malware-analysis/</guid>
+      <pubDate>Tue, 25 Aug 2026 10:00:57 GMT</pubDate>
+      <description>Source: Unit42 / Source attributes: United States / Research / Primary / Categories: Threat Intel, Malware, Ransomware, AI Security, Endpoint, Detection / Topics: Ransomware, Malware, AI Security / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, IOC 46, linked IOC evidence, coherent attack event, target and impact context, detection evidence context, primary references 1 / Summary: Explore Unit 42 research on AI-enabled malware. Learn how existing behavioral detection and endpoint analytics stop AI-authored code before execution. The post The State of AI-Enabled Malware August 2026: From Brand Abuse to Agentic Execution appeared first on Unit 42 . / Primary source: Unit42 https://unit42.paloaltonetworks.com/ai-enabled-malware-analysis/ / Primary source age: 0 days</description>
+      <source url="https://unit42.paloaltonetworks.com/">Unit42</source>
+      <category>Threat Intel</category>
+      <category>Malware</category>
+      <category>Ransomware</category>
+      <category>AI Security</category>
+      <category>Endpoint</category>
+      <category>Detection</category>
+    </item>
+    <item>
+      <title>From ‘High/Medium/Low’ to Dollars: Making Cyber Risk Legible to Your CFO</title>
+      <link>https://cyble.com/blog/financial-exposure-cyber-risk-quantification/</link>
+      <guid isPermaLink="true">https://cyble.com/blog/financial-exposure-cyber-risk-quantification/</guid>
+      <pubDate>Tue, 25 Aug 2026 09:45:39 GMT</pubDate>
+      <description>Source: Cyble / Source attributes: Singapore / Vendor / Primary / Categories: Ransomware, Security, Threat Intel, Vulnerability, Exploit, Zero-Day, Malware, Phishing, Cloud, Identity, Data Breach, AI Security, Network, Detection, Incident Response / Topics: Microsoft, Network Edge, Ransomware, Web Application, Vulnerability, Exploit, Zero-Day, Malware, Phishing, Cloud, Identity, Data Breach / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN active exploit/PoC/zero-day, EN detection/analysis, EN Japan/Asia relevance, EN critical sector, campaign priority, coherent attack event, target and impact context, detection evidence context, indicator context, Japan related, critical sector, primary references 1 / Summary: For years, cybersecurity teams have communicated risk through labels such as “High,” “Medium,” and “Low.” Those ratings can help security teams prioritize vulnerabilities, but they often leave CFOs with a more important question unanswered: What does the risk actually mean for the business financially? That question has become harder to ignore as the threat landscape accelerates. Cyble’s 2025 threat predictions , published as the year unfolded, provide a useful illustration. More than 80% of the threats Cyble forecast—including AI-driven ransomware and complex supply-chain attacks—materialized / Primary source: Cyble https://cyble.com/blog/financial-exposure-cyber-risk-quantification/ / Primary source age: 0 days</description>
+      <source url="https://cyble.com/blog/category/threat-actor/">Cyble</source>
+      <category>Ransomware</category>
+      <category>Security</category>
+      <category>Threat Intel</category>
+      <category>Vulnerability</category>
+      <category>Exploit</category>
+      <category>Zero-Day</category>
+      <category>Malware</category>
+      <category>Phishing</category>
+      <category>Cloud</category>
+      <category>Identity</category>
+      <category>Data Breach</category>
+      <category>AI Security</category>
+      <category>Network</category>
+      <category>Detection</category>
+      <category>Incident Response</category>
+    </item>
+    <item>
+      <title>Fake Minecraft Sites Are Still Spreading WeedHack After C2 Takedown</title>
+      <link>https://securityaffairs.com/197784/malware/fake-minecraft-sites-are-still-spreading-weedhack-after-c2-takedown.html</link>
+      <guid isPermaLink="true">https://securityaffairs.com/197784/malware/fake-minecraft-sites-are-still-spreading-weedhack-after-c2-takedown.html</guid>
+      <pubDate>Tue, 25 Aug 2026 07:15:46 GMT</pubDate>
+      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Malware, Security, Threat Intel / Topics: Malware / Priority: Critical (100) / SOC: 100 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, JA attack activity, campaign priority, coherent attack event, indicator context, primary references 1 / Summary: WeedHack Minecraft Malware Survives C2 Takedown: Fake Client Sites Still Active, SEO Poisoning Puts Malicious Downloads at the Top of Google McAfee Labs published a follow-up report on the WeedHack Malware-as-a-Service campaign this week, documenting ten active malicious sites and multiple file-hosting accounts that are still spreading the infostealer despite a disruption to its command-and-control […] / Primary source: mcafee.com https://www.mcafee.com/blogs/other-blogs/mcafee-labs/weedhack-minecraft-malware-fake-gaming-websites-seo-poisoning/</description>
+      <source url="https://securityaffairs.com/">Security Affairs</source>
+      <category>Malware</category>
+      <category>Security</category>
+      <category>Threat Intel</category>
+    </item>
+    <item>
+      <title>US Treasury Launches Major Campaign to Disrupt Iran’s Global Networks</title>
+      <link>https://thecyberexpress.com/operation-economic-outcast-targets-iran/</link>
+      <guid isPermaLink="true">https://thecyberexpress.com/operation-economic-outcast-targets-iran/</guid>
+      <pubDate>Tue, 25 Aug 2026 06:44:09 GMT</pubDate>
+      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Threat Intel, Network, Cryptocurrency, APT, Threat Actor / Topics: Network Edge, APT / Priority: Critical (100) / SOC: 100 / Confidence: High (73) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, EN targeted/APT/state-backed, EN Japan/Asia relevance, EN critical sector, APT/campaign priority, coherent attack event, target and impact context, uncertain reporting, Japan related, critical sector, primary references 2 / Summary: The U.S. Department of the Treasury has launched Operation Economic Outcast, a whole-of-government campaign aimed at disrupting the economic networks and revenue channels supporting the Iranian regime and the Islamic Revolutionary Guard Corps (IRGC). The initiative expands Iran sanctions across digital assets, technology, gold, aviation and shipping, while targeting nearly 60 entities, individuals and vessels across multiple jurisdictions. Treasury said the campaign follows direction from President Trump and is intended to systematically target financial channels used for oil smuggling, sancti / Primary source: Cyble https://cyble.com/general/</description>
+      <source url="https://thecyberexpress.com/">The Cyber Express</source>
+      <category>Threat Intel</category>
+      <category>Network</category>
+      <category>Cryptocurrency</category>
+      <category>APT</category>
+      <category>Threat Actor</category>
+    </item>
+    <item>
+      <title>Actively Exploited Oracle WebLogic Flaw Lets Unauthenticated Attackers Access Critical Data</title>
+      <link>https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html</guid>
+      <pubDate>Tue, 25 Aug 2026 06:12:35 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Network / Topics: Vulnerability, Exploit / Priority: Critical (100) / SOC: 100 / Confidence: High (84) / Focus: attack campaign / intrusion (rank 5) / Reference count: 3 / Reasons: focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, target and impact context, vulnerability exploitation context, compound vulnerability exploit impact detection context, indicator context, reported by 3 sources, primary references 1 / Summary: The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a maximum-severity security flaw impacting Oracle HTTP Server and Oracle WebLogic Server to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerability, tracked as CVE-2026-21962 (CVSS score: 10.0), allows an unauthenticated attacker with network access via HTTP to / Also reported by: Security Affairs / Primary source: CISA https://www.cisa.gov/known-exploited-vulnerabilities-catalog</description>
+      <source url="https://thehackernews.com/">The HackersNews</source>
+      <category>Vulnerability</category>
+      <category>Exploit</category>
+      <category>Network</category>
+    </item>
+    <item>
+      <title>他人の通話履歴やSMS記録を確認できると謳う新たなAndroid詐欺アプリ「CallPhantom」の手口</title>
+      <link>https://eset-info.canon-its.jp/malware_info/special/detail/260825.html</link>
+      <guid isPermaLink="true">https://eset-info.canon-its.jp/malware_info/special/detail/260825.html</guid>
+      <pubDate>Mon, 24 Aug 2026 15:00:00 GMT</pubDate>
+      <description>Source: Canon MJ ESET Security / Source attributes: Japan / Research / Primary / Categories: Threat Intel, Malware, Data Breach, Mobile / Topics: Android, Malware, Data Breach / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN Japan/Asia relevance, EN critical sector, JA detection/analysis, JA Japan/Asia relevance, campaign priority, IOC 10, linked IOC evidence, coherent attack event, uncertain reporting, Japan related, critical sector, primary references 1 / Summary: ESET社は、Google Play上で公開されていた、任意の電話番号の通話履歴やSMS記録を確認できると謳い、ユーザーを課金へ誘導する詐欺アプリ「CallPhantom」を発見しました。その手口と対処法について解説します。 本記事はESET Japanが提供する「ESETブログ」に掲載された「通話履歴は偽物、支払いは本物：CallPhantomがAndroidユーザーを騙す手口」を再編集したものです。 今日、あらゆる用途のアプリが存在しますが、「特定の電話番号の通話履歴を調べる」というのは、そのあらゆる用途には含まれていません。しかし、その事実を何百万人ものAndroidユーザーが知ったのは、アプリに定期購入料金を支払った後のことでした。 ESET社がその虚偽の主張に基づいて「CallPhantom」と命名したこれらの不正なアプリは、あらゆる電話番号の通話履歴、SMS記録、さらにはWhatsAppの通話ログへのアクセスを提供すると謳っています。この機能を利用しようとするユーザーには料金の支払いが求められますが、引き換えに提供されるのはランダムに生成されたデータだけです。 ESET社の調査により、Google Playストア上で28個の同様の詐欺アプリが確認されました。これらの累計ダウンロード数は730万回を超えています。ESET社はApp Defense Allianceパートナ / Primary source: Canon MJ ESET Security https://eset-info.canon-its.jp/malware_info/special/detail/260825.html / Primary source age: 0 days</description>
+      <source url="https://eset-info.canon-its.jp/malware_info/">Canon MJ ESET Security</source>
+      <category>Threat Intel</category>
+      <category>Malware</category>
+      <category>Data Breach</category>
+      <category>Mobile</category>
+    </item>
     <item>
       <title>Operation QUICSILVER Targets Myanmar Government and IT with QUICAgent Backdoor</title>
       <link>https://thehackernews.com/2026/08/operation-quicsilver-targets-myanmar.html</link>
@@ -24,7 +134,7 @@
       <link>https://thecyberexpress.com/microsoft-reverses-exploitation-cve-2026-69836/</link>
       <guid isPermaLink="true">https://thecyberexpress.com/microsoft-reverses-exploitation-cve-2026-69836/</guid>
       <pubDate>Mon, 24 Aug 2026 07:33:16 GMT</pubDate>
-      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Threat Intel, Vulnerability, Exploit, Patch, Cloud, Identity, Network, Incident Response, APT, Threat Actor / Topics: CVE-2026-69836, Active Directory, Cloud Security, Microsoft, Network Edge, Vulnerability, Exploit, Cloud, Identity, APT / Priority: Critical (100) / SOC: 100 / Confidence: High (93) / Focus: APT / targeted campaign (rank 6) / Reference count: 2 / Reasons: focus: APT / targeted campaign, EN attack activity, EN active exploit/PoC/zero-day, EN detection/analysis, APT/campaign priority, target and impact context, vulnerability exploitation context, compound vulnerability exploit impact detection context, reported by 2 sources, primary references 2 / Summary: Microsoft disclosed and fixed a maximum-severity remote code execution vulnerability in Entra ID, its cloud identity platform, on August 20, then quietly reversed the advisory's exploitation status a day later - leaving enterprise defenders without a clear account of whether the flaw was ever used in attacks. The vulnerability, tracked as CVE-2026-69836, carries a CVSS score of 10.0, the highest possible rating. It stems from unsafe deserialization of untrusted data, a class of defect catalogued as CWE-502, in which an application reconstructs objects from attacker-supplied input without valid / Also reported by: Help Net Security / Primary source: Microsoft Japan Security Team https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69836</description>
+      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Threat Intel, Vulnerability, Exploit, Patch, Cloud, Identity, Network, Incident Response, APT, Threat Actor / Topics: CVE-2026-69836, Active Directory, Cloud Security, Microsoft, Network Edge, Vulnerability, Exploit, Cloud, Identity, APT / Priority: Critical (100) / SOC: 100 / Confidence: High (91) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, EN active exploit/PoC/zero-day, EN detection/analysis, APT/campaign priority, target and impact context, vulnerability exploitation context, compound vulnerability exploit impact detection context, primary references 2 / Summary: Microsoft disclosed and fixed a maximum-severity remote code execution vulnerability in Entra ID, its cloud identity platform, on August 20, then quietly reversed the advisory's exploitation status a day later - leaving enterprise defenders without a clear account of whether the flaw was ever used in attacks. The vulnerability, tracked as CVE-2026-69836, carries a CVSS score of 10.0, the highest possible rating. It stems from unsafe deserialization of untrusted data, a class of defect catalogued as CWE-502, in which an application reconstructs objects from attacker-supplied input without valid / Primary source: Microsoft Japan Security Team https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69836</description>
       <source url="https://thecyberexpress.com/">The Cyber Express</source>
       <category>Threat Intel</category>
       <category>Vulnerability</category>
@@ -101,6 +211,24 @@
       <category>Endpoint</category>
       <category>Network</category>
       <category>Detection</category>
+    </item>
+    <item>
+      <title>A Tale of Two SOCs: Insights From Two Red Team Assessments</title>
+      <link>https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a</link>
+      <guid isPermaLink="true">https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a</guid>
+      <pubDate>Thu, 20 Aug 2026 16:32:14 GMT</pubDate>
+      <description>Source: CISA / Source attributes: Global / Government / Primary / Categories: Threat Intel, Vulnerability, Patch, Threat Actor, Cloud, ICS/OT, AI Security, Network, Detection, Incident Response / Topics: Operational Technology, Vulnerability, Cloud, ICS/OT, AI Security / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN IOC/detection/hunting, EN detection/analysis, EN critical sector, JA IOC/detection/hunting, campaign priority, target and impact context, detection evidence context, indicator context, critical sector, primary references 1 / Summary: Advisory at a Glance Title A Tale of Two SOCs: Insights From Two Red Team Assessments Original Publication August 25, 2026 Executive Summary The Cybersecurity and Infrastructure Security Agency (CISA) conducted simultaneous red team assessments at two organizations and observed different defensive outcomes. In both environments, the red team achieved full domain compromise and accessed sensitive business systems (SBSs) and cloud resources. Organization A failed to detect or contain the activity, but Organization B rapidly identified initial compromise attempts, isolated affected systems, and f / Primary source: CISA https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a / Primary source age: 0 days</description>
+      <source url="https://www.cisa.gov/news-events/cybersecurity-advisories">CISA</source>
+      <category>Threat Intel</category>
+      <category>Vulnerability</category>
+      <category>Patch</category>
+      <category>Threat Actor</category>
+      <category>Cloud</category>
+      <category>ICS/OT</category>
+      <category>AI Security</category>
+      <category>Network</category>
+      <category>Detection</category>
+      <category>Incident Response</category>
     </item>
     <item>
       <title>Going with the Flow(s): Distinct Clusters Target Individuals of Interest to Russia</title>
@@ -230,80 +358,14 @@
       <category>Threat Actor</category>
     </item>
     <item>
-      <title>Staying Ahead of Adversarial AI Through Agentic Source Code Review</title>
-      <link>https://cloud.google.com/blog/topics/threat-intelligence/staying-ahead-of-adversarial-ai-through-agentic-source-code-review/</link>
-      <guid isPermaLink="true">https://cloud.google.com/blog/topics/threat-intelligence/staying-ahead-of-adversarial-ai-through-agentic-source-code-review/</guid>
-      <pubDate>Tue, 18 Aug 2026 14:00:00 GMT</pubDate>
-      <description>Source: Google Cloud Threat Intelligence / Source attributes: United States / Research / Primary / Categories: Threat Intel, Vulnerability, Exploit, Patch, Ransomware, Cloud, AI Security, Incident Response, Application Security / Topics: Ransomware, Web Application, Vulnerability, Exploit, Cloud, AI Security / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: Written by: Alex Tselevich, Michael Maturi Introduction Adversarial misuse of AI has increased the risk of data theft and extortion events, because when proprietary source code is exposed, defenders must scramble to identify and patch vulnerabilities while attackers deploy machine-speed AI tools against them. By structuring the analysis process, enforcing skeptical validation steps, and injecting domain-specific human expertise directly into the pipeline, we’ve achieved a leap in efficacy. Combining AI models with a deeply structured, human expert-driven orchestration layer to tip the scales s / Primary source: Google Cloud Threat Intelligence https://cloud.google.com/blog/topics/threat-intelligence/staying-ahead-of-adversarial-ai-through-agentic-source-code-review/ / Primary source age: 0 days</description>
-      <source url="https://cloud.google.com/blog/">Google Cloud Threat Intelligence</source>
-      <category>Threat Intel</category>
-      <category>Vulnerability</category>
-      <category>Exploit</category>
-      <category>Patch</category>
-      <category>Ransomware</category>
-      <category>Cloud</category>
-      <category>AI Security</category>
-      <category>Incident Response</category>
-      <category>Application Security</category>
-    </item>
-    <item>
-      <title>New Report: AI threats are here. Why Q2 2026 signals the end of traditional patch cycles</title>
-      <link>https://www.rapid7.com/blog/post/tr-new-report-ai-threats-q2-2026-ends-traditional-patch-cycles</link>
-      <guid isPermaLink="true">https://www.rapid7.com/blog/post/tr-new-report-ai-threats-q2-2026-ends-traditional-patch-cycles</guid>
-      <pubDate>Tue, 18 Aug 2026 12:49:46 GMT</pubDate>
-      <description>Source: Rapid7 / Source attributes: United States / Vendor / Primary / Categories: Research, Ransomware, Threat Intel, Vulnerability, Exploit, Patch, Phishing, APT, ICS/OT, AI Security, Incident Response, Threat Actor / Topics: Microsoft, Operational Technology, Ransomware, Vulnerability, Exploit, Phishing, APT, ICS/OT, AI Security / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, EN detection/analysis, EN targeted/APT/state-backed, EN critical sector, JA targeted/APT/state-backed, APT/campaign priority, coherent attack event, target and impact context, detection evidence context, indicator context, critical sector, primary references 1 / Summary: You can’t patch everything. So what do you fix first? Findings in Q2 2026 have changed traditional answers. The latest Quarterly Threat Landscape Report from Rapid7 Labs shows vulnerability disclosures still surging while attackers use automation and AI-assisted tooling to compress the time between disclosure and exploitation. The gap that patch cycles were built to fill is closing. Speed and volume are overwhelming security teams that have relied on traditional patch cycles and reactive programs. Success going forward can’t be about patching as much as possible - it has to be about understand / Primary source: Rapid7 https://www.rapid7.com/blog/post/tr-new-report-ai-threats-q2-2026-ends-traditional-patch-cycles / Primary source age: 0 days</description>
-      <source url="https://www.rapid7.com/blog/">Rapid7</source>
-      <category>Research</category>
-      <category>Ransomware</category>
-      <category>Threat Intel</category>
-      <category>Vulnerability</category>
-      <category>Exploit</category>
-      <category>Patch</category>
-      <category>Phishing</category>
-      <category>APT</category>
-      <category>ICS/OT</category>
-      <category>AI Security</category>
-      <category>Incident Response</category>
-      <category>Threat Actor</category>
-    </item>
-    <item>
-      <title>Mirage2FA Hijacks Companies’ Microsoft 365 Sessions, with Over 4K Victims in the US</title>
-      <link>https://any.run/cybersecurity-blog/mirage2fa-phishing-targets-us-companies/</link>
-      <guid isPermaLink="true">https://any.run/cybersecurity-blog/mirage2fa-phishing-targets-us-companies/</guid>
-      <pubDate>Tue, 18 Aug 2026 09:28:12 GMT</pubDate>
-      <description>Source: ANY.RUN / Source attributes: United Arab Emirates / Vendor / Primary / Categories: Security, Malware, Threat Intel, Phishing / Topics: Microsoft, Malware, Phishing / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, IOC 136, linked IOC evidence, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: Mirage2FA is an active phishing-as-a-service toolkit built to steal Microsoft 365 credentials and authenticated sessions through Adversary-in-the-Middle (AiTM) attacks. ANY.RUN research shows that 63.7% of identified victims are in the US, with Technologies, Manufacturing, and Education among the most targeted industries. The operation has generated thousands of compromise events between 2024 and 2026, including stolen […] The post Mirage2FA Hijacks Companies’ Microsoft 365 Sessions, with Over 4K Victims in the US appeared first on ANY.RUN's Cybersecurity Blog . / Primary source: ANY.RUN https://any.run/cybersecurity-blog/mirage2fa-phishing-targets-us-companies/ / Primary source age: 0 days</description>
-      <source url="https://any.run/cybersecurity-blog/">ANY.RUN</source>
-      <category>Security</category>
+      <title>Post-DEF CON Phishing Uses Malicious Google Doc to Deliver Malware</title>
+      <link>https://www.huntress.com/blog/defcon-phishing-google-doc-malware</link>
+      <guid isPermaLink="true">https://www.huntress.com/blog/defcon-phishing-google-doc-malware</guid>
+      <pubDate>Wed, 19 Aug 2026 13:00:00 GMT</pubDate>
+      <description>Source: huntress / Source attributes: Global / Vendor / Primary / Categories: Malware, Phishing / Topics: Malware, Phishing / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, IOC 26, linked IOC evidence, coherent attack event, target and impact context, detection evidence context, primary references 1 / Summary: Huntress researcher uncovers post-Black Hat &amp; DEF CON phishing campaign using X DMs &amp; malicious documents to deliver AMOS, NetSupport RAT, and other malware. / Primary source: huntress https://www.huntress.com/blog/defcon-phishing-google-doc-malware / Primary source age: 0 days</description>
+      <source url="https://www.huntress.com/blog/">huntress</source>
       <category>Malware</category>
-      <category>Threat Intel</category>
       <category>Phishing</category>
-    </item>
-    <item>
-      <title>期限切れドメインのドロップキャッチを悪用した攻撃インフラの調査についてまとめてみた</title>
-      <link>https://piyolog.hatenadiary.jp/entry/2026/08/18/145716</link>
-      <guid isPermaLink="true">https://piyolog.hatenadiary.jp/entry/2026/08/18/145716</guid>
-      <pubDate>Tue, 18 Aug 2026 05:57:16 GMT</pubDate>
-      <description>Source: piyolog / Source attributes: Japan / Vendor / Primary / Categories: Exploit, Patch, Malware, Threat Actor, Threat Intel, Data Breach, Endpoint, Incident Response / Topics: Microsoft, Exploit, Malware, Data Breach / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, JA attack activity, JA detection/analysis, JA Japan/Asia relevance, JA critical sector, campaign priority, coherent attack event, target and impact context, detection evidence context, indicator context, Japan related, critical sector, primary references 1 / Summary: Infoblox Threat Intelは2026年8月13日、期限切れドメインの再登録(ドロップキャッチ)を悪用した攻撃インフラに関する3部作のレポートを公開しました。 *1 ここでは関連する情報をまとめます。 調査の概要 Infobloxの観測によれば、2026年上半期において、gTLDのみでも1日平均5万400件、これに一部のccTLDを加えると1日約6万5000件のドロップキャッチドメインを検出したとしており、これは観測対象の新規登録全体の約2割に相当する。年初以降のgTLDに限って集計すると、ドロップキャッチドメインの約92%が上位15TLDに集中していたという(出典: 1)。 同社は、集計対象を過去に登録されたことがあり新しい作成日で再び現れたドメインに限っていること、削除前に所有者が移った場合は作成日が変わらないため対象に含まれないこと、多くのccTLDのレジストリが作成日を公開していないことを挙げ、ドロップキャッチの計数はそもそもデータの入手可能性の問題だとしている(出典: 1)。 Infobloxは、こうして1日あたり約5万件が再登録されるドメインについて、その後どう使われたか判別できなかったものが多いとしている。WHOISのプライバシー保護やレジストラ移管が示す意味の多義性が理由といい、買い手には実際にドメインを使う者のほか、資産価値を見込むドメイン投資家、悪 / Primary source: piyolog https://piyolog.hatenadiary.jp/entry/2026/08/18/145716 / Primary source age: 0 days</description>
-      <source url="https://piyolog.hatenadiary.jp/">piyolog</source>
-      <category>Exploit</category>
-      <category>Patch</category>
-      <category>Malware</category>
-      <category>Threat Actor</category>
-      <category>Threat Intel</category>
-      <category>Data Breach</category>
-      <category>Endpoint</category>
-      <category>Incident Response</category>
-    </item>
-    <item>
-      <title>678,000 People Hit in French Tax Authority Data Breach</title>
-      <link>https://thecyberexpress.com/dgfip-cyberattack-exposes-data/</link>
-      <guid isPermaLink="true">https://thecyberexpress.com/dgfip-cyberattack-exposes-data/</guid>
-      <pubDate>Tue, 18 Aug 2026 06:57:50 GMT</pubDate>
-      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Threat Intel, Data Breach, Network / Topics: Network Edge, Data Breach / Priority: Critical (100) / SOC: 99 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, target and impact context, detection evidence context, critical sector, primary references 1 / Summary: A DGFiP cyberattack has exposed sensitive tax and cadastral information after attackers allegedly used stolen credentials to access systems belonging to France's Directorate General of Public Finances. The French Public Finances Directorate said investigations found that data linked to 678,000 individuals and professionals had been consulted and extracted during intrusions in June and July 2026. The DGFiP cyberattack incidents were identified after a malicious actor claimed illegitimate access to the French tax authority's information system on August 12 and 13. DGFiP said the intrusions invol / Primary source: Cyble https://cyble.com/knowledge-hub/what-is-a-data-breach/</description>
-      <source url="https://thecyberexpress.com/">The Cyber Express</source>
-      <category>Threat Intel</category>
-      <category>Data Breach</category>
-      <category>Network</category>
     </item>
     <item>
       <title>WordlistLoader Delivers Amatera via ClickFix, SynkLoader Phishes Windows Passwords</title>
@@ -331,6 +393,18 @@
       <category>Incident Response</category>
     </item>
     <item>
+      <title>When AI Becomes the Lure: A Fake Gemini Installer Delivers Vidar</title>
+      <link>https://www.darktrace.com/blog/when-ai-becomes-the-lure-a-fake-gemini-installer-delivers-vidar</link>
+      <guid isPermaLink="true">https://www.darktrace.com/blog/when-ai-becomes-the-lure-a-fake-gemini-installer-delivers-vidar</guid>
+      <pubDate>Sun, 23 Aug 2026 13:46:00 GMT</pubDate>
+      <description>Source: Darktrace / Source attributes: United Kingdom / Research / Primary / Categories: Threat Intel, Detection, Malware, AI Security / Topics: Malware, AI Security / Priority: Critical (100) / SOC: 95 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, IOC 5, coherent attack event, detection evidence context, primary references 1 / Summary: Attackers are turning growing interest in AI into a new malware lure, disguising Vidar as a Google Gemini installer hosted through a trusted platform. Explore how Darktrace uncovered the campaign and detected the threat through behavioral anomalies. / Primary source: Darktrace https://www.darktrace.com/blog/when-ai-becomes-the-lure-a-fake-gemini-installer-delivers-vidar / Primary source age: 0 days</description>
+      <source url="https://www.darktrace.com/blog">Darktrace</source>
+      <category>Threat Intel</category>
+      <category>Detection</category>
+      <category>Malware</category>
+      <category>AI Security</category>
+    </item>
+    <item>
       <title>Tracking PavinLoader across ClickFix and fake download campaigns</title>
       <link>https://www.malwarebytes.com/blog/threat-intel/2026/08/tracking-pavinloader-across-clickfix-and-fake-download-campaigns</link>
       <guid isPermaLink="true">https://www.malwarebytes.com/blog/threat-intel/2026/08/tracking-pavinloader-across-clickfix-and-fake-download-campaigns</guid>
@@ -345,10 +419,10 @@
       <link>https://unit42.paloaltonetworks.com/communication-channel-identity-risks/</link>
       <guid isPermaLink="true">https://unit42.paloaltonetworks.com/communication-channel-identity-risks/</guid>
       <pubDate>Thu, 20 Aug 2026 10:00:25 GMT</pubDate>
-      <description>Source: Unit42 / Source attributes: United States / Research / Primary / Categories: Malware, Threat Intel, Exploit, Phishing, Identity / Topics: Malware, Exploit, Phishing, Identity / Priority: Critical (100) / SOC: 93 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, IOC 1, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: Unit 42 details how attackers exploit enterprise collaboration tools for identity phishing and credential theft. Discover key defense strategies. The post Identity Abuse Through Trusted Communication Channels appeared first on Unit 42 . / Primary source: Unit42 https://unit42.paloaltonetworks.com/communication-channel-identity-risks/ / Primary source age: 0 days</description>
+      <description>Source: Unit42 / Source attributes: United States / Research / Primary / Categories: Threat Intel, Malware, Exploit, Phishing, Identity / Topics: Malware, Exploit, Phishing, Identity / Priority: Critical (100) / SOC: 93 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, IOC 1, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: Unit 42 details how attackers exploit enterprise collaboration tools for identity phishing and credential theft. Discover key defense strategies. The post Identity Abuse Through Trusted Communication Channels appeared first on Unit 42 . / Primary source: Unit42 https://unit42.paloaltonetworks.com/communication-channel-identity-risks/ / Primary source age: 0 days</description>
       <source url="https://unit42.paloaltonetworks.com/">Unit42</source>
-      <category>Malware</category>
       <category>Threat Intel</category>
+      <category>Malware</category>
       <category>Exploit</category>
       <category>Phishing</category>
       <category>Identity</category>
@@ -385,28 +459,6 @@
       <category>Supply Chain</category>
     </item>
     <item>
-      <title>16 Typosquatted RubyGems Packages Steal Browser Credentials and Crypto Wallets</title>
-      <link>https://thehackernews.com/2026/08/16-typosquatted-rubygems-packages-steal.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/16-typosquatted-rubygems-packages-steal.html</guid>
-      <pubDate>Tue, 18 Aug 2026 11:20:00 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Malware, Endpoint, Cryptocurrency / Topics: Microsoft, Malware / Priority: Critical (100) / SOC: 87 / Confidence: High (81) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, coherent attack event, target and impact context, primary references 3 / Summary: Cybersecurity researchers have flagged a new typosquatting campaign targeting RubyGems users with a Windows-based information stealer. OpenSourceMalware, which discovered the activity on August 15, 2026, is tracking the threat under the moniker StubMaker. The complete list of packages published as part of the campaign is below - ubnuler ubnlder ri18nr reaker rakier orakw joxn / Primary source: rubygems.org https://rubygems.org/profiles/mod8rz41mje</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Malware</category>
-      <category>Endpoint</category>
-      <category>Cryptocurrency</category>
-    </item>
-    <item>
-      <title>Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution</title>
-      <link>https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html</guid>
-      <pubDate>Thu, 20 Aug 2026 13:24:28 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Patch / Topics: Vulnerability, Exploit / Priority: Critical (100) / SOC: 79 / Confidence: High (81) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, target and impact context, vulnerability exploitation context, primary references 3 / Summary: A now-patched security flaw impacting Zimbra Collaboration (ZCS) has come under active exploitation in the wild, according to the Polish Computer Emergency Response Team (CERT Polska). The vulnerability in question is CVE-2026-73570 (CVSS score: 8.9), which refers to a case of command injection that can lead to remote code execution. "A remote code execution vulnerability exists in Zimbra / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/08/21/cisa-adds-one-known-exploited-vulnerability-catalog / Primary source age: -1 days</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Vulnerability</category>
-      <category>Exploit</category>
-      <category>Patch</category>
-    </item>
-    <item>
       <title>SilkParasite Threatens Central Asian Orgs With Flurry of RATs</title>
       <link>https://www.darkreading.com/threat-intelligence/silkparasite-central-asian-orgs-flurry-rats</link>
       <guid isPermaLink="true">https://www.darkreading.com/threat-intelligence/silkparasite-central-asian-orgs-flurry-rats</guid>
@@ -427,16 +479,6 @@
       <source url="https://thehackernews.com/">The HackersNews</source>
       <category>Exploit</category>
       <category>Endpoint</category>
-    </item>
-    <item>
-      <title>Thousands of Hacked WordPress Sites, One Operation: Unmasking StopAndProtect</title>
-      <link>https://research.checkpoint.com/2026/thousands-of-hacked-wordpress-sites-one-operation-unmasking-stopandprotect/</link>
-      <guid isPermaLink="true">https://research.checkpoint.com/2026/thousands-of-hacked-wordpress-sites-one-operation-unmasking-stopandprotect/</guid>
-      <pubDate>Tue, 18 Aug 2026 13:05:44 GMT</pubDate>
-      <description>Source: CheckPoint / Source attributes: Israel / Research / Primary / Categories: Threat Intel, Ransomware / Topics: Ransomware / Priority: Critical (99) / SOC: 88 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, IOC 10, target and impact context, indicator context, primary references 1 / Summary: Research by: Jaromír Hořejší (@JaromirHorejsi) Key points Introduction We first noticed a ransomware family called StopAndProtect in the middle of May 2026. Further analysis of the infrastructure reveals that the infection chain starts with a ClickFix social-engineering technique, which prompts victims to execute a PowerShell command. This leads to two stages of additional downloaders and […] The post Thousands of Hacked WordPress Sites, One Operation: Unmasking StopAndProtect appeared first on Check Point Research . / Primary source: CheckPoint https://research.checkpoint.com/2026/thousands-of-hacked-wordpress-sites-one-operation-unmasking-stopandprotect/ / Primary source age: 0 days</description>
-      <source url="https://research.checkpoint.com/">CheckPoint</source>
-      <category>Threat Intel</category>
-      <category>Ransomware</category>
     </item>
     <item>
       <title>Foul Language: WordlistLoader Disguises Malware as Ordinary Text</title>
@@ -473,46 +515,37 @@
       <category>Data Breach</category>
     </item>
     <item>
-      <title>CISA orders urgent patching of actively exploited Zimbra flaw</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-orders-urgent-patching-of-actively-exploited-zimbra-flaw/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/cisa-orders-urgent-patching-of-actively-exploited-zimbra-flaw/</guid>
-      <pubDate>Mon, 24 Aug 2026 10:45:12 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Vulnerability, Patch / Topics: Vulnerability / Priority: Critical (96) / SOC: 74 / Confidence: High (70) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, EN critical sector, active exploitation priority, target and impact context, vulnerability exploitation context, indicator context, critical sector, primary references 2 / Summary: The Cybersecurity and Infrastructure Security Agency (CISA) has ordered U.S. government agencies to patch an actively exploited vulnerability in Zimbra Collaboration Suite (ZCS) within three days. [...] / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/08/21/cisa-adds-one-known-exploited-vulnerability-catalog / Primary source age: 3 days</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
+      <title>A Single Canadian Tax Lure Spread into a 46-Country, US-First RMM Campaign</title>
+      <link>https://any.run/cybersecurity-blog/us-campaign-malware-analysis/</link>
+      <guid isPermaLink="true">https://any.run/cybersecurity-blog/us-campaign-malware-analysis/</guid>
+      <pubDate>Tue, 25 Aug 2026 10:40:19 GMT</pubDate>
+      <description>Source: ANY.RUN / Source attributes: United Arab Emirates / Vendor / Primary / Categories: Security, Malware, Threat Intel / Topics: Malware / Priority: Critical (97) / SOC: 85 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN detection/analysis, campaign priority, IOC 59, linked IOC evidence, coherent attack event, detection evidence context, primary references 1 / Summary: As ANY.RUN analysis shows, a campaign that initially appears to target Canadians with fake Canada Revenue Agency (CRA) T4 tax documents is actually part of a much broader remote-access campaign spanning 46 countries, with 45% of observed activity associated with the United States. The attackers impersonate trusted organizations and document types to trick victims into […] The post A Single Canadian Tax Lure Spread into a 46-Country, US-First RMM Campaign appeared first on ANY.RUN's Cybersecurity Blog . / Primary source: ANY.RUN https://any.run/cybersecurity-blog/us-campaign-malware-analysis/ / Primary source age: 0 days</description>
+      <source url="https://any.run/cybersecurity-blog/">ANY.RUN</source>
       <category>Security</category>
-      <category>Vulnerability</category>
-      <category>Patch</category>
-    </item>
-    <item>
-      <title>Ransom Busters Claims It Hacked Ransomware Servers, Asks Victims for Up to $60,000</title>
-      <link>https://thehackernews.com/2026/08/ransom-busters-claims-it-hacked.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/ransom-busters-claims-it-hacked.html</guid>
-      <pubDate>Tue, 18 Aug 2026 16:58:16 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Ransomware, Data Breach / Topics: Ransomware, Data Breach / Priority: Critical (95) / SOC: 79 / Confidence: High (81) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 3 / Summary: A ransomware affiliate calling itself Ransom Busters has been spotted proactively sending emails to victim organizations and claims to delete stolen data from ransomware groups' servers in exchange for a fee ranging from $20,000 to $60,000. "In these messages, the third-party offers to help the victim recover from ransomware attack. This immediately stands out as anomalous," GuidePoint Research / Primary source: Bitdefender Labs https://www.bitdefender.com/en-us/blog/businessinsights/bitdefender-threat-debrief-august-2026</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Ransomware</category>
-      <category>Data Breach</category>
-    </item>
-    <item>
-      <title>Android car head units infected with proxy botnet malware through built-in software updaters</title>
-      <link>https://www.helpnetsecurity.com/2026/08/24/android-malware-car-head-unit-badbox/</link>
-      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/08/24/android-malware-car-head-unit-badbox/</guid>
-      <pubDate>Mon, 24 Aug 2026 09:51:16 GMT</pubDate>
-      <description>Source: Help Net Security / Source attributes: Croatia / News / Secondary / Categories: Threat Intel, Malware, Mobile / Topics: Android, Malware / Priority: Critical (94) / SOC: 88 / Confidence: High (77) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: A newly discovered Android malware, distributed through the built-in updaters in affected Android-based car head units, turns infected devices into ad-fraud tools and nodes in a proxy botnet, Kaspersky has found. According to the researchers, it’s the first documented case of malware found on a car head unit with an infection chain specific to that type of device. “It’s worth noting that head units often include SIM card slots and can connect to the internet, … More → The post Android car head units infected with proxy botnet malware through built-in software updaters appeared first on Help Ne / Primary source: Securelist https://securelist.com/android-head-unit-malware/121106/</description>
-      <source url="https://www.helpnetsecurity.com/">Help Net Security</source>
-      <category>Threat Intel</category>
       <category>Malware</category>
-      <category>Mobile</category>
+      <category>Threat Intel</category>
     </item>
     <item>
-      <title>Personal Information Exposed in Apollo Global Data Breach</title>
-      <link>https://www.securityweek.com/personal-information-exposed-in-apollo-global-data-breach/</link>
-      <guid isPermaLink="true">https://www.securityweek.com/personal-information-exposed-in-apollo-global-data-breach/</guid>
-      <pubDate>Mon, 24 Aug 2026 10:08:42 GMT</pubDate>
-      <description>Source: SecurityWeek / Source attributes: United States / News / Secondary / Categories: Threat Intel, Data Breach / Topics: Data Breach / Priority: Critical (92) / SOC: 78 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: The private equity firm appears to have been targeted as part of a campaign focusing on major financial companies. The post Personal Information Exposed in Apollo Global Data Breach appeared first on SecurityWeek . / Primary source: aol.com https://www.aol.com/articles/exclusive-hackers-targeted-us-private-170234000.html</description>
-      <source url="https://www.securityweek.com/">SecurityWeek</source>
+      <title>24 npm Packages Abuse unpkg Mirrors to Host Fake Cloudflare CAPTCHA Pages</title>
+      <link>https://thehackernews.com/2026/08/24-npm-packages-abuse-unpkg-mirrors-to.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/24-npm-packages-abuse-unpkg-mirrors-to.html</guid>
+      <pubDate>Tue, 25 Aug 2026 11:52:43 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Malware, Phishing, Threat Actor, Supply Chain / Topics: Supply Chain, Malware, Phishing / Priority: Critical (92) / SOC: 87 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, indicator context, primary references 1 / Summary: Cybersecurity researchers have disclosed details of a new campaign that uses a cluster of 24 npm packages as free phishing infrastructure for redirecting to ClickFix-style fake CAPTCHA pages. "While the malware is simply a single HTML page inside the npm package, and while downloading it wouldn't do harm, the threat actor’s use of npm isn't to infect developers who install it, but to use the / Primary source: ox.security https://www.ox.security/blog/research-clickfix-phishing-npm-packages/</description>
+      <source url="https://thehackernews.com/">The HackersNews</source>
+      <category>Malware</category>
+      <category>Phishing</category>
+      <category>Threat Actor</category>
+      <category>Supply Chain</category>
+    </item>
+    <item>
+      <title>ReliaQuest Rejects Compromise Claims After ShinyHunters Incident</title>
+      <link>https://www.infosecurity-magazine.com/news/reliaquest-not-compromised-by/</link>
+      <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/reliaquest-not-compromised-by/</guid>
+      <pubDate>Tue, 25 Aug 2026 09:30:00 GMT</pubDate>
+      <description>Source: Infosecurity Magazine / Source attributes: United Kingdom / News / Secondary / Categories: Threat Intel, Threat Actor / Priority: Critical (92) / SOC: 81 / Confidence: High (73) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, detection evidence context, primary references 2 / Summary: ReliaQuest has detailed a social engineering attack linked to ShinyHunters, denying reports that the threat actor successfully compromised its systems / Primary source: ReliaQuest https://reliaquest.com/blog/threat-spotlight-social-engineering-attempt-against-reliaquest-what-we-found/</description>
+      <source url="https://www.infosecurity-magazine.com/">Infosecurity Magazine</source>
       <category>Threat Intel</category>
-      <category>Data Breach</category>
+      <category>Threat Actor</category>
     </item>
     <item>
       <title>24 billion stolen credentials. The lesson? The browser is cybercrime's favorite endpoint.</title>
@@ -528,17 +561,6 @@
       <category>Detection</category>
     </item>
     <item>
-      <title>Fake AI, real malware: Attackers impersonating AI brands</title>
-      <link>https://www.sophos.com/en-us/blog/fake-ai-real-malware-attackers-impersonating-ai-brands</link>
-      <guid isPermaLink="true">https://www.sophos.com/en-us/blog/fake-ai-real-malware-attackers-impersonating-ai-brands</guid>
-      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
-      <description>Source: Sophos / Source attributes: United Kingdom / Vendor / Primary / Categories: Threat Intel, Malware, AI Security / Topics: Malware, AI Security / Priority: Critical (92) / SOC: 78 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: &lt;p&gt;A year of MDR casework shows attackers repeatedly exploiting demand for AI tools&lt;/p&gt; Categories: Threat Research Tags: AI, malvertising, infostealer, Sophos X-Ops / Primary source: Sophos https://www.sophos.com/en-us/blog/fake-ai-real-malware-attackers-impersonating-ai-brands / Primary source age: 0 days</description>
-      <source url="https://news.sophos.com/en-us/category/threat-research/">Sophos</source>
-      <category>Threat Intel</category>
-      <category>Malware</category>
-      <category>AI Security</category>
-    </item>
-    <item>
       <title>ToxicPanda 2.0 and GoldDigger Expand Android Banking Attacks with On-Device Fraud</title>
       <link>https://thehackernews.com/2026/08/toxicpanda-20-and-golddigger-expand.html</link>
       <guid isPermaLink="true">https://thehackernews.com/2026/08/toxicpanda-20-and-golddigger-expand.html</guid>
@@ -548,6 +570,27 @@
       <category>Malware</category>
       <category>Mobile</category>
       <category>Cryptocurrency</category>
+    </item>
+    <item>
+      <title>Employee benefits platform Paylogix says hackers stole financial and health data</title>
+      <link>https://therecord.media/paylogix-cyberattack-akira-ransomware</link>
+      <guid isPermaLink="true">https://therecord.media/paylogix-cyberattack-akira-ransomware</guid>
+      <pubDate>Tue, 25 Aug 2026 18:45:00 GMT</pubDate>
+      <description>Source: The Record / Source attributes: United States / News / Secondary / Categories: Threat Intel, Ransomware / Topics: Ransomware / Priority: Critical (91) / SOC: 67 / Confidence: High (76) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary references 3 / Summary: The benefits management firm Paylogix told regulators that hackers stole sensitive information on tens of thousands of people from its systems. / Primary source: Recorded Future https://www.recordedfuture.com/research/purpledelta-fraudulent-employment-operations</description>
+      <source url="https://therecord.media/">The Record</source>
+      <category>Threat Intel</category>
+      <category>Ransomware</category>
+    </item>
+    <item>
+      <title>Leak sites: a field guide</title>
+      <link>https://blog.barracuda.com/2026/08/25/leak-sites-a-field-guide</link>
+      <guid isPermaLink="true">https://blog.barracuda.com/2026/08/25/leak-sites-a-field-guide</guid>
+      <pubDate>Tue, 25 Aug 2026 14:06:53 GMT</pubDate>
+      <description>Source: Barracuda Labs / Source attributes: United States / Vendor / Primary / Categories: Threat Intel, Ransomware, Data Breach / Topics: Ransomware, Data Breach / Priority: Critical (90) / SOC: 75 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: Ransomware leak sites have become a prominent feature of modern cyber extortion campaigns, publishing claims about breached organizations and stolen data. This article explains how leak sites work and how to use them to assess risk, monitor threat activity and make better-informed security decisions. / Primary source: Barracuda Labs https://blog.barracuda.com/2026/08/25/leak-sites-a-field-guide / Primary source age: 0 days</description>
+      <source url="https://blog.barracuda.com/">Barracuda Labs</source>
+      <category>Threat Intel</category>
+      <category>Ransomware</category>
+      <category>Data Breach</category>
     </item>
     <item>
       <title>Def Con Attendees Targeted by Persistent Phishing Campaign</title>
@@ -579,39 +622,6 @@
       <category>Mobile</category>
     </item>
     <item>
-      <title>Hackers infect Android car head units with proxy botnet malware</title>
-      <link>https://www.bleepingcomputer.com/news/security/hackers-infect-android-car-head-units-with-proxy-botnet-malware/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/hackers-infect-android-car-head-units-with-proxy-botnet-malware/</guid>
-      <pubDate>Sat, 22 Aug 2026 14:14:24 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Malware, Mobile / Topics: Android, Malware / Priority: Critical (86) / SOC: 75 / Confidence: High (74) / Focus: attack campaign / intrusion (rank 5) / Reference count: 2 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, reported by 2 sources, primary references 1 / Summary: A supply-chain attack targeting Android-based car head units is using a legitimate device-update app to spread malware that enlists compromised devices in a proxy botnet or uses them for ad fraud. [...] / Also reported by: The Record / Primary source: Securelist https://securelist.com/android-head-unit-malware/121106/</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Security</category>
-      <category>Malware</category>
-      <category>Mobile</category>
-    </item>
-    <item>
-      <title>New SynkLoader malware pushed in Microsoft Teams phishing campaign</title>
-      <link>https://www.bleepingcomputer.com/news/security/new-synkloader-malware-pushed-in-microsoft-teams-phishing-campaign/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/new-synkloader-malware-pushed-in-microsoft-teams-phishing-campaign/</guid>
-      <pubDate>Fri, 21 Aug 2026 18:01:30 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Malware, Phishing / Topics: Microsoft, Malware, Phishing / Priority: Critical (85) / SOC: 78 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: A previously unknown malware family dubbed SynkLoader is being distributed in Microsoft Teams phishing campaigns to steal credentials via a fake lock screen. [...] / Primary source: expel.com https://expel.com/blog/synkloader-when-you-throw-in-everything-but-the-kitchen-sink/</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Security</category>
-      <category>Malware</category>
-      <category>Phishing</category>
-    </item>
-    <item>
-      <title>Silent 'TwinLoot' Cyber Threat Operates Entirely From Microsoft's Cloud</title>
-      <link>https://www.darkreading.com/cloud-security/silent-twinloot-threat-operates-microsoft-cloud</link>
-      <guid isPermaLink="true">https://www.darkreading.com/cloud-security/silent-twinloot-threat-operates-microsoft-cloud</guid>
-      <pubDate>Tue, 18 Aug 2026 13:00:00 GMT</pubDate>
-      <description>Source: Dark Reading / Source attributes: United States / News / Secondary / Categories: Threat Intel, Malware, Cloud / Topics: Microsoft, Malware, Cloud / Priority: Critical (85) / SOC: 78 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: The Python-based malware framework takes living-off-the-land tactics to a new heights of stealth, with a modular implant that steals credentials and achieves persistence. / Primary source: Praetorian https://www.praetorian.com/blog/corrupting-the-hive-mind-persistence-through-forgotten-windows-internals/</description>
-      <source url="https://www.darkreading.com/">Dark Reading</source>
-      <category>Threat Intel</category>
-      <category>Malware</category>
-      <category>Cloud</category>
-    </item>
-    <item>
       <title>ReliaQuest confirms failed data-theft attack after ShinyHunters breach</title>
       <link>https://www.bleepingcomputer.com/news/security/reliaquest-confirms-failed-data-theft-attack-after-shinyhunters-breach/</link>
       <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/reliaquest-confirms-failed-data-theft-attack-after-shinyhunters-breach/</guid>
@@ -621,13 +631,13 @@
       <category>Security</category>
     </item>
     <item>
-      <title>DOJ charges 17 people in Iran-backed hacking campaign against US</title>
-      <link>https://www.cybersecuritydive.com/news/doj-charges-17-iran-hacking-campaign-us-university/828212/</link>
-      <guid isPermaLink="true">https://www.cybersecuritydive.com/news/doj-charges-17-iran-hacking-campaign-us-university/828212/</guid>
-      <pubDate>Tue, 18 Aug 2026 21:09:00 GMT</pubDate>
-      <description>Source: Cybersecurity Dive / Source attributes: United States / News / Secondary / Categories: Threat Intel / Priority: Critical (85) / SOC: 59 / Confidence: High (76) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary references 3 / Summary: Officials allege an IRGC-linked organization was behind a coordinated effort to steal research from American universities, companies and government agencies. / Primary source: Sophos https://www.sophos.com/en-us/blog/cobalt-dickens-goes-back-to-school-again</description>
-      <source url="https://www.cybersecuritydive.com/">Cybersecurity Dive</source>
-      <category>Threat Intel</category>
+      <title>Mirage2FA Surge Hits 4,500 US and EU Companies, Abusing Microsoft 365 Login Flows</title>
+      <link>https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html</guid>
+      <pubDate>Tue, 25 Aug 2026 11:56:15 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Phishing / Topics: Microsoft, Phishing / Priority: Critical (84) / SOC: 75 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: Thousands of companies have been affected by the Mirage2FA campaign from 2024 to 2026. The commercial phishing-as-a-service toolkit targets Microsoft 365 accounts by abusing legitimate login flows and bypassing two-factor authentication. According to ANY.RUN research, 48% of targeted email addresses were potentially compromised. Most of the affected companies are US-based. Mirage2FA Campaign / Primary source: ANY.RUN https://any.run/</description>
+      <source url="https://thehackernews.com/">The HackersNews</source>
+      <category>Phishing</category>
     </item>
     <item>
       <title>Fake Codex Download Uses Google Sites to Deliver macOS Malware</title>
@@ -641,14 +651,26 @@
       <category>Endpoint</category>
     </item>
     <item>
-      <title>Ransomware disproportionately targets medium-sized firms, straining customer relationships</title>
-      <link>https://www.cybersecuritydive.com/news/ransomware-mid-market-firms-black-kite/828257/</link>
-      <guid isPermaLink="true">https://www.cybersecuritydive.com/news/ransomware-mid-market-firms-black-kite/828257/</guid>
-      <pubDate>Wed, 19 Aug 2026 14:44:57 GMT</pubDate>
-      <description>Source: Cybersecurity Dive / Source attributes: United States / News / Secondary / Categories: Threat Intel, Ransomware / Topics: Ransomware / Priority: Critical (83) / SOC: 75 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: These companies often have the hardest time balancing their roles as suppliers and customers, according to the risk management firm Black Kite. / Primary source: blackkite.com https://blackkite.com/reports/2026-mid-market-report</description>
-      <source url="https://www.cybersecuritydive.com/">Cybersecurity Dive</source>
+      <title>Australia Warns of Active Exploitation of Critical TeamCity Server Flaw</title>
+      <link>https://www.infosecurity-magazine.com/news/australia-exploitation-teamcity/</link>
+      <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/australia-exploitation-teamcity/</guid>
+      <pubDate>Tue, 25 Aug 2026 11:00:00 GMT</pubDate>
+      <description>Source: Infosecurity Magazine / Source attributes: United Kingdom / News / Secondary / Categories: Threat Intel, Exploit, Patch / Topics: Exploit / Priority: Critical (83) / SOC: 65 / Confidence: Medium (59) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, EN critical sector, active exploitation priority, target and impact context, vulnerability exploitation context, critical sector, primary references 1 / Summary: Australian officials are urging TeamCity customers to patch an actively exploited critical flaw, which follows a similar warning from the US government / Primary source: nvd.nist.gov https://nvd.nist.gov/vuln/detail/CVE-2026-63077</description>
+      <source url="https://www.infosecurity-magazine.com/">Infosecurity Magazine</source>
       <category>Threat Intel</category>
-      <category>Ransomware</category>
+      <category>Exploit</category>
+      <category>Patch</category>
+    </item>
+    <item>
+      <title>Fake Minecraft Clients Deliver WeedHack Malware Despite Infrastructure Takedown</title>
+      <link>https://www.infosecurity-magazine.com/news/fake-minecraft-weedhack-malware/</link>
+      <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/fake-minecraft-weedhack-malware/</guid>
+      <pubDate>Tue, 25 Aug 2026 10:30:00 GMT</pubDate>
+      <description>Source: Infosecurity Magazine / Source attributes: United Kingdom / News / Secondary / Categories: Threat Intel, Malware, Threat Actor / Topics: Malware / Priority: Critical (82) / SOC: 74 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, indicator context, primary references 1 / Summary: A threat actor keeps spreading the WeedHack malware to Minecraft players despite its original infrastructure taken down in July / Primary source: mcafee.com https://www.mcafee.com/blogs/other-blogs/mcafee-labs/weedhack-minecraft-malware-fake-gaming-websites-seo-poisoning/</description>
+      <source url="https://www.infosecurity-magazine.com/">Infosecurity Magazine</source>
+      <category>Threat Intel</category>
+      <category>Malware</category>
+      <category>Threat Actor</category>
     </item>
     <item>
       <title>Over 500 Critical Infrastructure Organizations Hit by Medusa Ransomware</title>
@@ -659,6 +681,17 @@
       <source url="https://www.infosecurity-magazine.com/">Infosecurity Magazine</source>
       <category>Threat Intel</category>
       <category>Ransomware</category>
+    </item>
+    <item>
+      <title>Hackers breached over 270 Zimbra servers in ongoing attacks</title>
+      <link>https://www.bleepingcomputer.com/news/security/hackers-breached-over-270-zimbra-servers-in-ongoing-attacks/</link>
+      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/hackers-breached-over-270-zimbra-servers-in-ongoing-attacks/</guid>
+      <pubDate>Tue, 25 Aug 2026 12:04:02 GMT</pubDate>
+      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Vulnerability, Threat Actor / Topics: Vulnerability / Priority: Critical (82) / SOC: 63 / Confidence: High (76) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, primary references 3 / Summary: Threat actors have already compromised over 270 Zimbra instances in remote code execution attacks targeting a high-severity Zimbra Collaboration Suite (ZCS) vulnerability. [...] / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/08/21/cisa-adds-one-known-exploited-vulnerability-catalog / Primary source age: 4 days</description>
+      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
+      <category>Security</category>
+      <category>Vulnerability</category>
+      <category>Threat Actor</category>
     </item>
     <item>
       <title>AI-backed campaign targeting vulnerable Siemens S7 devices, CISA and FBI warn</title>
@@ -682,30 +715,6 @@
       <category>Ransomware</category>
     </item>
     <item>
-      <title>CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE</title>
-      <link>https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html</guid>
-      <pubDate>Tue, 18 Aug 2026 06:34:20 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, AI Security / Topics: Vulnerability, Exploit, AI Security / Priority: High (79) / SOC: 67 / Confidence: Medium (64) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, target and impact context, vulnerability exploitation context, indicator context, primary references 1 / Summary: The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a critical flaw impacting Ray to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. Ray is an open-source, Python-native distributed computing framework designed to scale artificial intelligence and machine learning workloads. As of writing, the GitHub project has more than / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/08/17/cisa-adds-one-known-exploited-vulnerability-catalog / Primary source age: 1 days</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Vulnerability</category>
-      <category>Exploit</category>
-      <category>AI Security</category>
-    </item>
-    <item>
-      <title>Malware Hijacks Android Car Head Units</title>
-      <link>https://securityaffairs.com/197700/hacking/malware-hijacks-android-car-head-units.html</link>
-      <guid isPermaLink="true">https://securityaffairs.com/197700/hacking/malware-hijacks-android-car-head-units.html</guid>
-      <pubDate>Sat, 22 Aug 2026 08:55:18 GMT</pubDate>
-      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Security, Threat Intel, Malware, Mobile, Network / Topics: Android, Malware / Priority: High (78) / SOC: 67 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, primary references 1 / Summary: Malware is abusing car infotainment updates to install proxy software, turning Android head units into nodes for the BADBOX network. Kaspersky researchers found something in June 2026 that made them stop and look twice: an Android app with no interface at all, installed like any ordinary app but making zero effort to disguise itself as […] / Primary source: Securelist https://securelist.com/android-head-unit-malware/121106/</description>
-      <source url="https://securityaffairs.com/">Security Affairs</source>
-      <category>Security</category>
-      <category>Threat Intel</category>
-      <category>Malware</category>
-      <category>Mobile</category>
-      <category>Network</category>
-    </item>
-    <item>
       <title>Connecting the Dots: Securing the Overlooked Corners of the Software Development Lifecycle (SDLC) Supply Chain</title>
       <link>https://unit42.paloaltonetworks.com/sdlc-supply-chain/</link>
       <guid isPermaLink="true">https://unit42.paloaltonetworks.com/sdlc-supply-chain/</guid>
@@ -726,28 +735,6 @@
       <category>Detection</category>
     </item>
     <item>
-      <title>ToxicPanda Android malware uses VPN permissions to block Google Play</title>
-      <link>https://www.bleepingcomputer.com/news/security/toxicpanda-android-malware-uses-vpn-permissions-to-block-google-play/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/toxicpanda-android-malware-uses-vpn-permissions-to-block-google-play/</guid>
-      <pubDate>Sun, 23 Aug 2026 14:23:46 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Mobile, Security, Malware, Network / Topics: Android, Network Edge, Malware / Priority: High (77) / SOC: 67 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, primary references 1 / Summary: The ToxicPanda Android malware has evolved with new malicious functionality, expanding its targeting to 349 applications and adding support for 167 remote commands. [...] / Primary source: zimperium.com https://zimperium.com/blog/the-toxicpanda-never-sleeps-toxicpanda-2.0-prepares-its-next-strike-on-mobile</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Mobile</category>
-      <category>Security</category>
-      <category>Malware</category>
-      <category>Network</category>
-    </item>
-    <item>
-      <title>Three-quarters of Ransomware Attacks Target Mid-Market Firms</title>
-      <link>https://www.infosecurity-magazine.com/news/threequarters-ransomware-attacks/</link>
-      <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/threequarters-ransomware-attacks/</guid>
-      <pubDate>Tue, 18 Aug 2026 10:00:00 GMT</pubDate>
-      <description>Source: Infosecurity Magazine / Source attributes: United Kingdom / News / Secondary / Categories: Threat Intel, Ransomware / Topics: Ransomware / Priority: High (77) / SOC: 67 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, primary references 1 / Summary: Black Kite finds mid-market is the sweet spot for ransomware as manufacturers are most likely to be hit / Primary source: blackkite.com https://blackkite.com/reports/2026-mid-market-report</description>
-      <source url="https://www.infosecurity-magazine.com/">Infosecurity Magazine</source>
-      <category>Threat Intel</category>
-      <category>Ransomware</category>
-    </item>
-    <item>
       <title>独立系機関がテストで確認 – Secure Email Threat Defense の E メールセキュリティがもたらす強力な効果</title>
       <link>https://gblogs.cisco.com/jp/2026/08/independent-testing-confirms-secure-email-threat-defenses-email-security-strength/</link>
       <guid isPermaLink="true">https://gblogs.cisco.com/jp/2026/08/independent-testing-confirms-secure-email-threat-defenses-email-security-strength/</guid>
@@ -756,41 +743,6 @@
       <source url="https://gblogs.cisco.com/jp/category/security/research/">Cisco Threat Research</source>
       <category>Threat Intel</category>
       <category>Phishing</category>
-    </item>
-    <item>
-      <title>China-Linked Hacker Shows AI Capabilities in APAC Attack</title>
-      <link>https://www.darkreading.com/cyberattacks-data-breaches/china-linked-hacker-ai-capabilities-apac-attack</link>
-      <guid isPermaLink="true">https://www.darkreading.com/cyberattacks-data-breaches/china-linked-hacker-ai-capabilities-apac-attack</guid>
-      <pubDate>Wed, 19 Aug 2026 01:00:00 GMT</pubDate>
-      <description>Source: Dark Reading / Source attributes: United States / News / Secondary / Categories: Threat Intel, APT, AI Security, Threat Actor / Topics: APT, AI Security / Priority: High (74) / SOC: 82 / Confidence: Low (35) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, EN targeted/APT/state-backed, EN Japan/Asia relevance, EN critical sector, APT/campaign priority, target and impact context, Japan related, critical sector, primary source not found / Summary: In the first purported "near-autonomous" attack on a nation-state, a Chinese-language operator used a complex AI framework to target and compromise government agencies, likely in Taiwan.</description>
-      <source url="https://www.darkreading.com/">Dark Reading</source>
-      <category>Threat Intel</category>
-      <category>APT</category>
-      <category>AI Security</category>
-      <category>Threat Actor</category>
-    </item>
-    <item>
-      <title>South Korean startup platform breach exposes key management failures</title>
-      <link>https://www.bleepingcomputer.com/news/security/south-korean-startup-platform-breach-exposes-key-management-failures/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/south-korean-startup-platform-breach-exposes-key-management-failures/</guid>
-      <pubDate>Mon, 24 Aug 2026 14:00:10 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Application Security, APT, Threat Actor / Topics: APT / Priority: High (74) / SOC: 75 / Confidence: Low (35) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, EN targeted/APT/state-backed, EN Japan/Asia relevance, EN critical sector, APT/campaign priority, Japan related, critical sector, primary source not found / Summary: A breach at South Korea's government-backed startup platform exposed encrypted personal data after an encryption key was included in an API. Penta Security explains why encryption keys must be securely managed and kept separate from the data they protect. [...]</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Security</category>
-      <category>Application Security</category>
-      <category>APT</category>
-      <category>Threat Actor</category>
-    </item>
-    <item>
-      <title>Critical macOS, SharePoint, vCenter, and Microsoft IKE Flaws Under Active Exploitation</title>
-      <link>https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html</guid>
-      <pubDate>Wed, 19 Aug 2026 11:01:48 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Endpoint / Topics: Apple/iOS, Microsoft, VMware, Vulnerability, Exploit / Priority: High (74) / SOC: 59 / Confidence: Medium (64) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, indicator context, primary references 1 / Summary: The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added four critical vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog, stating they are being exploited in the wild. The shortcomings added to the KEV catalog are listed below - CVE-2026-65400 (CVSS score: 9.8) - An improper authentication vulnerability impacting Apple macOS that could allow an / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog / Primary source age: 1 days</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Vulnerability</category>
-      <category>Exploit</category>
-      <category>Endpoint</category>
     </item>
     <item>
       <title>ICS Operators Warned of AI-Driven Attacks on Siemens PLCs</title>
@@ -806,6 +758,43 @@
       <category>AI Security</category>
     </item>
     <item>
+      <title>What Is Account Takeover Fraud? A Comprehensive Guide | Huntress</title>
+      <link>https://www.huntress.com/blog/account-takeover-what-it-is-and-how-to-protect-against-it</link>
+      <guid isPermaLink="true">https://www.huntress.com/blog/account-takeover-what-it-is-and-how-to-protect-against-it</guid>
+      <pubDate>Fri, 21 Aug 2026 18:00:00 GMT</pubDate>
+      <description>Source: huntress / Source attributes: Global / Vendor / Primary / Priority: High (74) / SOC: 53 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, target and impact context, detection evidence context, primary references 1 / Summary: Account takeover (ATO) fraud happens when attackers steal login credentials to access accounts. Learn how to detect and prevent account takeover fraud. / Primary source: huntress https://www.huntress.com/blog/account-takeover-what-it-is-and-how-to-protect-against-it / Primary source age: 0 days</description>
+      <source url="https://www.huntress.com/blog/">huntress</source>
+    </item>
+    <item>
+      <title>Fake OpenAI Codex download tricks macOS users into installing malware</title>
+      <link>https://www.helpnetsecurity.com/2026/08/25/fake-openai-codex-download-macos-users/</link>
+      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/08/25/fake-openai-codex-download-macos-users/</guid>
+      <pubDate>Tue, 25 Aug 2026 12:40:44 GMT</pubDate>
+      <description>Source: Help Net Security / Source attributes: Croatia / News / Secondary / Categories: Threat Intel, Malware, Endpoint / Topics: Apple/iOS, Malware / Priority: High (73) / SOC: 60 / Confidence: High (71) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, target and impact context, primary references 1 / Summary: A malware campaign using a sponsored search ad and a fake OpenAI Codex download page to trick macOS users into pasting a malicious command into Terminal has been uncovered by Cato Networks. It’s a variation of ClickFix, a popular social engineering technique that persuades victims to execute the infection step themselves rather than opening a malicious file. The attack starts with a sponsored search result for queries such as “codex macos download.” The ad appears … More → The post Fake OpenAI Codex download tricks macOS users into installing malware appeared first on Help Net Security . / Primary source: Cato Networks https://www.catonetworks.com/blog/cato-ctrl-when-trust-becomes-payload-in-fake-codex-clickfix-campaign/</description>
+      <source url="https://www.helpnetsecurity.com/">Help Net Security</source>
+      <category>Threat Intel</category>
+      <category>Malware</category>
+      <category>Endpoint</category>
+    </item>
+    <item>
+      <title>公衆Wi-Fi、どう付き合う？旅行・出張や災害時に知っておきたい安全な使い方</title>
+      <link>https://www.lac.co.jp/lacwatch/alert/20260825_004963.html</link>
+      <guid isPermaLink="true">https://www.lac.co.jp/lacwatch/alert/20260825_004963.html</guid>
+      <pubDate>Tue, 25 Aug 2026 06:00:00 GMT</pubDate>
+      <description>Source: LAC / Source attributes: Japan / Vendor / Primary / Categories: Threat Intel / Priority: High (73) / SOC: 47 / Confidence: High (96) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, JA attack activity, campaign priority, Japan source, primary references 1 / Summary: 旅先におけるホテルや空港、会議施設のWi-Fi、いわゆる「公衆Wi-Fi」と呼ばれるものの使用について、2026年7月末に新たに確認された攻撃キャンペーンを含めたいくつかの事例を基に、「一度立ち止まってみる」ことを念頭に置いた安全な使い方を提言します。 / Primary source: LAC https://www.lac.co.jp/lacwatch/alert/20260825_004963.html / Primary source age: 0 days</description>
+      <source url="https://www.lac.co.jp/lacwatch">LAC</source>
+      <category>Threat Intel</category>
+    </item>
+    <item>
+      <title>RMM Abuse: How Attackers Exploit Remote Access Tools | Huntress</title>
+      <link>https://www.huntress.com/blog/rmm-abuse-trusted-tools-untrusted-hands</link>
+      <guid isPermaLink="true">https://www.huntress.com/blog/rmm-abuse-trusted-tools-untrusted-hands</guid>
+      <pubDate>Fri, 21 Aug 2026 17:00:00 GMT</pubDate>
+      <description>Source: huntress / Source attributes: Global / Vendor / Primary / Categories: Exploit / Topics: Exploit / Priority: High (72) / SOC: 50 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, detection evidence context, primary references 1 / Summary: RMM abuse jumped 277% &amp; now shows up nearly 40% of Huntress investigations. See how attackers exploit trusted remote access tools, and how to stop it. / Primary source: huntress https://www.huntress.com/blog/rmm-abuse-trusted-tools-untrusted-hands / Primary source age: 0 days</description>
+      <source url="https://www.huntress.com/blog/">huntress</source>
+      <category>Exploit</category>
+    </item>
+    <item>
       <title>Elementor Pro Flaw Could Let Unauthenticated Attackers Upload PHP and Execute Code</title>
       <link>https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html</link>
       <guid isPermaLink="true">https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html</guid>
@@ -815,57 +804,11 @@
       <category>Vulnerability</category>
     </item>
     <item>
-      <title>Cyberattack Hits Ukraine Agency Ahead of Major Asset Tender</title>
-      <link>https://thecyberexpress.com/arma-cyberattack-hits-ukraine-ara/</link>
-      <guid isPermaLink="true">https://thecyberexpress.com/arma-cyberattack-hits-ukraine-ara/</guid>
-      <pubDate>Wed, 19 Aug 2026 05:33:17 GMT</pubDate>
-      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Threat Intel, Network / Topics: Network Edge / Priority: High (72) / SOC: 42 / Confidence: High (70) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN critical sector, campaign priority, detection evidence context, critical sector, primary references 3 / Summary: A suspected ARMA cyberattack has targeted Ukraine's Asset Recovery and Management Agency as it prepares to select a manager for assets linked to IDS Ukraine. ARMA said its servers experienced unauthorized interference ahead of the August 22 deadline for applications, prompting an investigation into whether the incident was part of a broader effort to disrupt its operations. The Asset Recovery and Management Agency, known as ARMA, manages assets seized by Ukrainian authorities, including assets linked to sanctioned Russian individuals and alleged collaborators with Moscow. ARMA Cyberattack Rais / Primary source: Cyble https://cyble.com/knowledge-hub/what-is-a-cyber-attack/</description>
-      <source url="https://thecyberexpress.com/">The Cyber Express</source>
-      <category>Threat Intel</category>
-      <category>Network</category>
-    </item>
-    <item>
-      <title>Critical GitLab Flaw Lets Hackers Alter or Delete Public Projects</title>
-      <link>https://thecyberexpress.com/gitlab-patches-cve-2026-19478/</link>
-      <guid isPermaLink="true">https://thecyberexpress.com/gitlab-patches-cve-2026-19478/</guid>
-      <pubDate>Wed, 19 Aug 2026 07:36:35 GMT</pubDate>
-      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Vulnerability, Threat Intel, Exploit, Patch, Network / Topics: Network Edge, Vulnerability, Exploit / Priority: High (69) / SOC: 51 / Confidence: Medium (69) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, target and impact context, vulnerability exploitation context, primary references 1 / Summary: GitLab has patched two security flaws, including CVE-2026-19478, a critical code injection vulnerability that could allow unauthenticated attackers to remotely modify or delete public projects and user data. The disclosure adds to the growing list of GitLab vulnerabilities requiring prompt attention from organizations running self-managed instances. GitLab has released versions 19.2.4, 19.1.6, 19.0.8 and 18.11.11 for Community Edition (CE) and Enterprise Edition (EE). The company described the releases as containing important bug and security fixes and strongly recommended that affected self-m / Primary source: Cyble https://cyble.com/exploit/</description>
-      <source url="https://thecyberexpress.com/">The Cyber Express</source>
-      <category>Vulnerability</category>
-      <category>Threat Intel</category>
-      <category>Exploit</category>
-      <category>Patch</category>
-      <category>Network</category>
-    </item>
-    <item>
-      <title>US sanctions Iranian cyber actors as UK discloses power plant attack</title>
-      <link>https://therecord.media/iran-cyberattacks-us-uk</link>
-      <guid isPermaLink="true">https://therecord.media/iran-cyberattacks-us-uk</guid>
-      <pubDate>Mon, 24 Aug 2026 23:00:00 GMT</pubDate>
-      <description>Source: The Record / Source attributes: United States / News / Secondary / Categories: Threat Intel, Incident Response / Priority: High (68) / SOC: 57 / Confidence: Medium (67) / Focus: incident / breach (rank 3) / Reference count: 1 / Reasons: focus: incident / breach, EN attack activity, EN critical sector, indicator context, critical sector, primary references 3 / Summary: The U.S. sanctioned several Iranian nationals for cyberattacks on critical infrastructure just days after reports emerged of a cyber intrusion on a small power plant in the United Kingdom. / Primary source: Recorded Future https://www.recordedfuture.com/research/malware-crypting-services-threat-actors</description>
-      <source url="https://therecord.media/">The Record</source>
-      <category>Threat Intel</category>
-      <category>Incident Response</category>
-    </item>
-    <item>
-      <title>Attackers Exploit MLflow SSRF Flaw to Steal Cloud Credentials and Secrets</title>
-      <link>https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html</guid>
-      <pubDate>Tue, 18 Aug 2026 17:44:05 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Cloud, ICS/OT, AI Security / Topics: Operational Technology, Vulnerability, Exploit, Cloud, ICS/OT, AI Security / Priority: High (68) / SOC: 46 / Confidence: High (78) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, target and impact context, primary references 2 / Summary: Two critical vulnerabilities impacting MLflow, an open-source artificial intelligence (AI) platform, and FUXA, an open-source, web-based SCADA / HMI software built for operational technology (OT) and industrial automation, are witnessing malicious scanning and exploitation efforts. According to independent reports from watchTowr and VulnCheck, the vulnerabilities in question are as follows - / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/08/19/cisa-adds-one-known-exploited-vulnerability-catalog / Primary source age: -1 days</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Vulnerability</category>
-      <category>Exploit</category>
-      <category>Cloud</category>
-      <category>ICS/OT</category>
-      <category>AI Security</category>
-    </item>
-    <item>
       <title>CVE-2026-73570: Zimbra RCE Exploited</title>
       <link>https://socradar.io/blog/cve-2026-73570-zimbra-rce/</link>
       <guid isPermaLink="true">https://socradar.io/blog/cve-2026-73570-zimbra-rce/</guid>
       <pubDate>Fri, 21 Aug 2026 14:44:56 GMT</pubDate>
-      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Vulnerability / Topics: CVE-2026-73570, Vulnerability / Priority: High (68) / SOC: 43 / Confidence: High (92) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, primary references 1 / Summary: CVE-2026-73570: Zimbra RCE Exploited Zimbra Collaboration Suite (ZCS) faces an actively exploited command-injection vulnerability, identified as CVE-2026-73570 . This flaw affects the suite's SNMP notification processing / Primary source: SOCRadar Blog https://socradar.io/blog/cve-2026-73570-zimbra-rce/ / Primary source age: 0 days</description>
+      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Vulnerability / Topics: CVE-2026-73570, Vulnerability / Priority: High (72) / SOC: 45 / Confidence: High (94) / Focus: active exploitation (rank 4) / Reference count: 2 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, reported by 2 sources, primary references 1 / Summary: CVE-2026-73570: Zimbra RCE Exploited Zimbra Collaboration Suite (ZCS) faces an actively exploited command-injection vulnerability, identified as CVE-2026-73570 . This flaw affects the suite's SNMP notification processing / Also reported by: Help Net Security / Primary source: SOCRadar Blog https://socradar.io/blog/cve-2026-73570-zimbra-rce/ / Primary source age: 0 days</description>
       <source url="https://socradar.io/blog/">SOCRadar Blog</source>
       <category>Threat Intel</category>
       <category>Research</category>
@@ -873,17 +816,74 @@
       <category>Vulnerability</category>
     </item>
     <item>
-      <title>Windows IKE CVE-2026-33824 Added to CISA KEV</title>
-      <link>https://socradar.io/blog/windows-ike-cve-2026-33824-cisa-kev/</link>
-      <guid isPermaLink="true">https://socradar.io/blog/windows-ike-cve-2026-33824-cisa-kev/</guid>
-      <pubDate>Thu, 20 Aug 2026 13:18:01 GMT</pubDate>
-      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Vulnerability, Endpoint / Topics: CVE-2026-33824, Microsoft, Vulnerability / Priority: High (68) / SOC: 43 / Confidence: High (92) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, primary references 1 / Summary: Windows IKE CVE-2026-33824 Added to CISA KEV Windows IKE CVE-2026-33824 is now in CISA’s Known Exploited Vulnerabilities catalog, giving defenders a short deadline to verify patching and exposure. CISA added the Windows / Primary source: SOCRadar Blog https://socradar.io/blog/windows-ike-cve-2026-33824-cisa-kev/ / Primary source age: 0 days</description>
-      <source url="https://socradar.io/blog/">SOCRadar Blog</source>
+      <title>Two CVSS 9.8 Auth Bypasses in miniOrange SAML WordPress Plugin Were Exploited Before Any Database Even Listed the Paid Editions as Vulnerable</title>
+      <link>https://securityaffairs.com/197815/security/two-cvss-9-8-auth-bypasses-in-miniorange-saml-wordpress-plugin-were-exploited-before-any-database-even-listed-the-paid-editions-as-vulnerable.html</link>
+      <guid isPermaLink="true">https://securityaffairs.com/197815/security/two-cvss-9-8-auth-bypasses-in-miniorange-saml-wordpress-plugin-were-exploited-before-any-database-even-listed-the-paid-editions-as-vulnerable.html</guid>
+      <pubDate>Tue, 25 Aug 2026 16:43:53 GMT</pubDate>
+      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Security, Threat Intel, Vulnerability, Exploit, Patch, Identity / Topics: Vulnerability, Exploit, Identity / Priority: High (68) / SOC: 51 / Confidence: Medium (64) / Focus: active exploitation (rank 4) / Reference count: 1 / Reasons: focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, target and impact context, vulnerability exploitation context, primary references 1 / Summary: Two CVSS 9.8 miniOrange SAML WordPress plugin auth bypasses were exploited while paid editions never appeared in any vulnerability database. Manual patch required. Two critical authentication bypass vulnerabilities in the miniOrange SAML 2.0 Single Sign On WordPress plugin, both rated CVSS 9.8, are under active exploitation. Both CVE-2026-61979 and CVE-2026-15981 allow an unauthenticated attacker to […] / Primary source: patchstack.com https://patchstack.com/articles/one-slug-seven-editions-the-miniorange-saml-sso-bug-that-let-anyone-log-in-as-your-wordpress-admin/</description>
+      <source url="https://securityaffairs.com/">Security Affairs</source>
+      <category>Security</category>
       <category>Threat Intel</category>
-      <category>Research</category>
-      <category>IOC</category>
       <category>Vulnerability</category>
-      <category>Endpoint</category>
+      <category>Exploit</category>
+      <category>Patch</category>
+      <category>Identity</category>
+    </item>
+    <item>
+      <title>Fake Recruiter Scams Target Corporate Credentials on Mobile</title>
+      <link>https://www.infosecurity-magazine.com/news/fake-recruiter-scams-corporate/</link>
+      <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/fake-recruiter-scams-corporate/</guid>
+      <pubDate>Tue, 25 Aug 2026 13:00:00 GMT</pubDate>
+      <description>Source: Infosecurity Magazine / Source attributes: United Kingdom / News / Secondary / Categories: Threat Intel, Phishing, Mobile / Topics: Phishing / Priority: High (66) / SOC: 52 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: RecruitTrap campaigns use mobile-optimized phishing pages to target enterprise credentials / Primary source: zimperium.com https://zimperium.com/blog/extended-rapid-response-zimperium-identifies-recruittrap-recruit-scams-are-targeting-enterprise-credentials-on-mobile</description>
+      <source url="https://www.infosecurity-magazine.com/">Infosecurity Magazine</source>
+      <category>Threat Intel</category>
+      <category>Phishing</category>
+      <category>Mobile</category>
+    </item>
+    <item>
+      <title>Norway ’s Digital Government Infrastructure Hit by a new DDoS Attack</title>
+      <link>https://securityaffairs.com/197826/cyber-warfare-2/norway-s-digital-government-infrastructure-hit-by-a-new-ddos-attack.html</link>
+      <guid isPermaLink="true">https://securityaffairs.com/197826/cyber-warfare-2/norway-s-digital-government-infrastructure-hit-by-a-new-ddos-attack.html</guid>
+      <pubDate>Tue, 25 Aug 2026 17:51:55 GMT</pubDate>
+      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: DDoS, Security, Threat Intel / Priority: High (62) / SOC: 53 / Confidence: Medium (64) / Focus: incident / breach (rank 3) / Reference count: 1 / Reasons: focus: incident / breach, EN attack activity, EN critical sector, target and impact context, indicator context, critical sector, primary references 2 / Summary: Norway ’s shared government infrastructure suffered a third DDoS attack, disrupting digital services but showing no signs of data compromise. Norway ‘s shared digital government infrastructure has been hit by another distributed denial-of-service (DDoS) attack that disrupted services used by citizens, businesses and public agencies. The incident began at 03:38 CEST on Monday, August 24, […] / Primary source: kommunikasjon.ntb.no https://kommunikasjon.ntb.no/pressemelding/19037504/digdir-stabiliserer-losningene-etter-dataangrep?lang=no</description>
+      <source url="https://securityaffairs.com/">Security Affairs</source>
+      <category>DDoS</category>
+      <category>Security</category>
+      <category>Threat Intel</category>
+    </item>
+    <item>
+      <title>Attackers Target miniOrange SAML Flaws That Can Grant WordPress Admin Access</title>
+      <link>https://thehackernews.com/2026/08/attackers-target-miniorange-saml-flaws.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/attackers-target-miniorange-saml-flaws.html</guid>
+      <pubDate>Tue, 25 Aug 2026 08:34:07 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Identity / Topics: Vulnerability, Exploit, Identity / Priority: High (62) / SOC: 44 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: Bad actors are attempting to exploit two severe unauthenticated authentication bypasses in the Xecurify miniOrange SAML 2.0 Single Sign On plugin that make it possible for an attacker to sign in as any WordPress user, including administrators. The vulnerabilities, as disclosed by Patchstack, are listed below - CVE-2026-61979 (CVSS score: 8.1) - An unauthenticated privilege escalation / Primary source: patchstack.com https://patchstack.com/articles/one-slug-seven-editions-the-miniorange-saml-sso-bug-that-let-anyone-log-in-as-your-wordpress-admin/</description>
+      <source url="https://thehackernews.com/">The HackersNews</source>
+      <category>Vulnerability</category>
+      <category>Exploit</category>
+      <category>Identity</category>
+    </item>
+    <item>
+      <title>Hackers abuse npm mirrors to host phishing redirect pages</title>
+      <link>https://www.bleepingcomputer.com/news/security/hackers-abuse-npm-mirrors-to-host-phishing-redirect-pages/</link>
+      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/hackers-abuse-npm-mirrors-to-host-phishing-redirect-pages/</guid>
+      <pubDate>Tue, 25 Aug 2026 21:39:01 GMT</pubDate>
+      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Phishing, Threat Actor, Supply Chain / Topics: Supply Chain, Phishing / Priority: High (60) / SOC: 44 / Confidence: Medium (67) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, campaign priority, coherent attack event, primary references 1 / Summary: Threat actors are abusing npm and its mirrors to host malicious HTML pages that impersonate Cloudflare CAPTCHAs to redirect visitors to attacker-controlled websites. [...] / Primary source: intelfusions.com https://www.intelfusions.com/news/china-airlines-npm-fake-cloudflare-clickfix-phishing</description>
+      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
+      <category>Security</category>
+      <category>Phishing</category>
+      <category>Threat Actor</category>
+      <category>Supply Chain</category>
+    </item>
+    <item>
+      <title>Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution</title>
+      <link>https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html</guid>
+      <pubDate>Thu, 20 Aug 2026 13:24:28 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Patch / Topics: Vulnerability, Exploit / Priority: Medium (58) / SOC: 55 / Confidence: Low (41) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, target and impact context, vulnerability exploitation context, primary source not found / Summary: A now-patched security flaw impacting Zimbra Collaboration (ZCS) has come under active exploitation in the wild, according to the Polish Computer Emergency Response Team (CERT Polska). The vulnerability in question is CVE-2026-73570 (CVSS score: 8.9), which refers to a case of command injection that can lead to remote code execution. "A remote code execution vulnerability exists in Zimbra</description>
+      <source url="https://thehackernews.com/">The HackersNews</source>
+      <category>Vulnerability</category>
+      <category>Exploit</category>
+      <category>Patch</category>
     </item>
     <item>
       <title>What is EvilTokens?: The PhaaS Platform That Tells Attackers What to Do After They Get In</title>
@@ -931,17 +931,6 @@
       <category>Data Breach</category>
     </item>
     <item>
-      <title>Hunting MacSync Stealer infrastructure through behavioral pivots</title>
-      <link>https://www.microsoft.com/en-us/security/blog/2026/08/18/hunting-macsync-stealer-infrastructure-through-behavioral-pivots/</link>
-      <guid isPermaLink="true">https://www.microsoft.com/en-us/security/blog/2026/08/18/hunting-macsync-stealer-infrastructure-through-behavioral-pivots/</guid>
-      <pubDate>Tue, 18 Aug 2026 17:08:28 GMT</pubDate>
-      <description>Source: Microsoft Security Blog / Source attributes: United States / Vendor / Primary / Categories: Threat Intel, Malware, Detection / Topics: Microsoft, Malware / Priority: Medium (52) / SOC: 44 / Confidence: High (93) / Focus: background / low operational value (rank 0) / Reference count: 1 / Reasons: focus: background / low operational value, EN attack activity, EN detection/analysis, detection evidence context, indicator context, primary references 1 / Summary: MacSync Stealer rapidly rotates domains to evade detection, but its behavior remains consistent. Learn how Microsoft uncovered 30+ related domains using durable hunting pivots. The post Hunting MacSync Stealer infrastructure through behavioral pivots appeared first on Microsoft Security Blog . / Primary source: Microsoft Security Blog https://www.microsoft.com/en-us/security/blog/2026/08/18/hunting-macsync-stealer-infrastructure-through-behavioral-pivots/ / Primary source age: 0 days</description>
-      <source url="https://www.microsoft.com/en-us/security/blog/">Microsoft Security Blog</source>
-      <category>Threat Intel</category>
-      <category>Malware</category>
-      <category>Detection</category>
-    </item>
-    <item>
       <title>講談社、最大3812件の個人情報流出 社員がフィッシングメールに騙される 2026/8/3  (ITmedia) - ニュース</title>
       <link>https://www.antiphishing.jp/news/entry/itmedia_20260819.html</link>
       <guid isPermaLink="true">https://www.antiphishing.jp/news/entry/itmedia_20260819.html</guid>
@@ -953,16 +942,52 @@
       <category>Data Breach</category>
     </item>
     <item>
+      <title>Hospital operator Nutex Health says data stolen in cyberattack</title>
+      <link>https://www.bleepingcomputer.com/news/security/hospital-operator-nutex-health-says-data-stolen-in-cyberattack/</link>
+      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/hospital-operator-nutex-health-says-data-stolen-in-cyberattack/</guid>
+      <pubDate>Tue, 25 Aug 2026 14:44:16 GMT</pubDate>
+      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Data Breach / Topics: Data Breach / Priority: Medium (51) / SOC: 46 / Confidence: Medium (53) / Focus: incident / breach (rank 3) / Reference count: 1 / Reasons: focus: incident / breach, EN attack activity, EN critical sector, target and impact context, critical sector, primary references 1 / Summary: Healthcare and services provider Nutex is investigating a data breach incident where an unauthorized third party exfiltrated information from company servers. [...] / Primary source: sec.gov https://www.sec.gov/ix?doc=/Archives/edgar/data/0001479681/000162828026058606/nutx-20260824.htm / Primary source age: 1 days</description>
+      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
+      <category>Security</category>
+      <category>Data Breach</category>
+    </item>
+    <item>
+      <title>The cybercrime supply chain has five stages, each with a price</title>
+      <link>https://www.helpnetsecurity.com/2026/08/25/cybercrime-supply-chain-video/</link>
+      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/08/25/cybercrime-supply-chain-video/</guid>
+      <pubDate>Tue, 25 Aug 2026 05:00:15 GMT</pubDate>
+      <description>Source: Help Net Security / Source attributes: Croatia / News / Secondary / Categories: Security, Threat Intel, Malware, Ransomware, Supply Chain, Incident Response / Topics: Ransomware, Supply Chain, Malware / Priority: Medium (49) / SOC: 56 / Confidence: Medium (46) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, primary source not found / Summary: In this Help Net Security video, Chris Nyhuis, CEO at Vigilant, explains why the picture of a lone ransomware attacker is about 15 years out of date. He walks through the cybercrime supply chain and the five businesses inside it: harvesters who run infostealer malware, brokers who verify and resell access, ransomware-as-a-service operators who build the toolkit, affiliates who run the intrusion, and launderers who move the proceeds. Nyhuis covers what each stage costs, from … More → The post The cybercrime supply chain has five stages, each with a price appeared first on Help Net Security .</description>
+      <source url="https://www.helpnetsecurity.com/">Help Net Security</source>
+      <category>Security</category>
+      <category>Threat Intel</category>
+      <category>Malware</category>
+      <category>Ransomware</category>
+      <category>Supply Chain</category>
+      <category>Incident Response</category>
+    </item>
+    <item>
       <title>Cybercriminals Turn GTA VI Leaks Into Malware Bait</title>
       <link>https://securityaffairs.com/197772/malware/cybercriminals-turn-gta-vi-leaks-into-malware-bait.html</link>
       <guid isPermaLink="true">https://securityaffairs.com/197772/malware/cybercriminals-turn-gta-vi-leaks-into-malware-bait.html</guid>
       <pubDate>Mon, 24 Aug 2026 17:27:10 GMT</pubDate>
-      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Security, Data Breach, Malware, Threat Intel / Topics: Data Breach, Malware / Priority: Medium (48) / SOC: 42 / Confidence: Medium (64) / Focus: incident / breach (rank 3) / Reference count: 1 / Reasons: focus: incident / breach, EN attack activity, indicator context, primary references 2 / Summary: A fake 113GB GTA VI build is packed with malware, using massive empty files to hide a tiny malicious payload. GTA VI hype has reached the point where people are volunteering to infect their own computers just to check if a leak is real. Someone on X asked their followers to “take one for the […] / Primary source: ign.com https://www.ign.com/articles/malware-disguised-as-leaked-gta-6-copies-are-popping-up-on-piracy-sites</description>
+      <description>Source: Security Affairs / Source attributes: Italy / News / Secondary / Categories: Malware, Data Breach, Security, Threat Intel / Topics: Malware, Data Breach / Priority: Medium (48) / SOC: 42 / Confidence: Medium (64) / Focus: incident / breach (rank 3) / Reference count: 1 / Reasons: focus: incident / breach, EN attack activity, indicator context, primary references 2 / Summary: A fake 113GB GTA VI build is packed with malware, using massive empty files to hide a tiny malicious payload. GTA VI hype has reached the point where people are volunteering to infect their own computers just to check if a leak is real. Someone on X asked their followers to “take one for the […] / Primary source: ign.com https://www.ign.com/articles/malware-disguised-as-leaked-gta-6-copies-are-popping-up-on-piracy-sites</description>
       <source url="https://securityaffairs.com/">Security Affairs</source>
-      <category>Security</category>
-      <category>Data Breach</category>
       <category>Malware</category>
+      <category>Data Breach</category>
+      <category>Security</category>
       <category>Threat Intel</category>
+    </item>
+    <item>
+      <title>Testing a Prompt injection Attack Against an Enterprise AI Agent</title>
+      <link>https://www.darktrace.com/blog/testing-a-prompt-injection-attack-against-an-enterprise-ai-agent</link>
+      <guid isPermaLink="true">https://www.darktrace.com/blog/testing-a-prompt-injection-attack-against-an-enterprise-ai-agent</guid>
+      <pubDate>Mon, 24 Aug 2026 13:50:00 GMT</pubDate>
+      <description>Source: Darktrace / Source attributes: United Kingdom / Research / Primary / Categories: Threat Intel, Detection, Malware, AI Security / Topics: Malware, AI Security / Priority: Medium (44) / SOC: 47 / Confidence: High (91) / Focus: IOC / detection evidence (rank 2) / Reference count: 1 / Reasons: focus: IOC / detection evidence, EN attack activity, IOC 6, detection evidence context, indicator context, primary references 1, IOC/detection-only priority cap / Summary: This blog shows how Darktrace’s behavioral approach to email security was able to detect a prompt injection attack that contained no malware malicious links, or sender reputation indicators. / Primary source: Darktrace https://www.darktrace.com/blog/testing-a-prompt-injection-attack-against-an-enterprise-ai-agent / Primary source age: 0 days</description>
+      <source url="https://www.darktrace.com/blog">Darktrace</source>
+      <category>Threat Intel</category>
+      <category>Detection</category>
+      <category>Malware</category>
+      <category>AI Security</category>
     </item>
     <item>
       <title>Rust Supply Chain Attack on arrayref: Significant Overlap with DPRK Campaigns</title>
