@@ -134,18 +134,18 @@
     </div>
     
       <div class="coverage" aria-label="Publication coverage">
-        <span>Collection window <b>2026/10/07 13:51 - 2026/10/14 13:51 JST</b></span>
-        <span>Article dates <b>2026/10/07 - 2026/10/14 JST</b></span>
+        <span>Collection window <b>2026/10/08 13:36 - 2026/10/15 13:36 JST</b></span>
+        <span>Article dates <b>2026/10/08 - 2026/10/15 JST</b></span>
         <span>Retention <b>Last 7 days</b></span>
-        <span>Generated <b>2026/10/14 13:51 JST</b></span>
-        <span>Published items <b>125</b></span>
+        <span>Generated <b>2026/10/15 13:36 JST</b></span>
+        <span>Published items <b>127</b></span>
       </div>
     
     <section class="metrics" aria-label="Threat metrics">
       <div class="metric"><b>74</b><span>Critical</span></div>
-      <div class="metric"><b>39</b><span>High priority</span></div>
-      <div class="metric"><b>20</b><span>With IOC evidence</span></div>
-      <div class="metric"><b>18</b><span>Japan / Asia relevant</span></div>
+      <div class="metric"><b>43</b><span>High priority</span></div>
+      <div class="metric"><b>21</b><span>With IOC evidence</span></div>
+      <div class="metric"><b>22</b><span>Japan / Asia relevant</span></div>
       <div class="metric"><b>161</b><span>Valid sources</span></div>
     </section>
   </header>
@@ -154,7 +154,7 @@
     <section class="toolbar" aria-label="Threat filters">
       <div class="workspace-head">
         <div class="workspace-status">
-          <span class="result-count" id="resultCount">125 intelligence items</span>
+          <span class="result-count" id="resultCount">127 intelligence items</span>
         </div>
         <button class="clear-button" id="clearFilters" type="button">Reset filters</button>
       </div>
@@ -168,7 +168,8 @@
         <input id="search" type="search" placeholder="Search actor, malware, CVE, source…">
         <select id="priorityFilter"><option value="">All priorities</option><option>Critical</option><option>High</option><option>Medium</option><option>Low</option></select>
         <select id="confidenceFilter"><option value="">All confidence</option><option>High</option><option>Medium</option><option>Low</option></select>
-        <select id="typeFilter"><option value="">All source types</option><option value="News">News</option>
+        <select id="typeFilter"><option value="">All source types</option><option value="CERT">CERT</option>
+<option value="News">News</option>
 <option value="Research">Research</option>
 <option value="Vendor">Vendor</option></select>
         <select id="sortOrder"><option value="priority">Sort: Priority</option><option value="focus">Sort: Campaign/APT focus</option><option value="newest">Sort: Newest</option><option value="confidence">Sort: Confidence</option><option value="soc">Sort: SOC value</option></select>
@@ -176,6 +177,190 @@
     </section>
 
     <section class="article-grid" id="articles">
+            <article class="threat-card priority-critical"
+              data-source="Zscaler"
+              data-country="United States"
+              data-type="Research"
+              data-topics="Web Application, Vulnerability, Exploit, Identity, Data Breach, AI Security"
+              data-priority="Critical"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW"
+              data-priority-score="100"
+              data-soc-score="100"
+              data-confidence-score="100"
+              data-focus-rank="5"
+              data-date="1792020022">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Critical</span>
+                    <time>2026/10/15</time>
+                  </div>
+                  <a class="source" href="https://www.zscaler.com/blogs/security-research">Zscaler</a>
+                </div>
+                <h2><a href="https://www.zscaler.com/blogs/security-research/threat-actor-abuses-agentic-ai-pentesting-framework-target-south-korean" target="_blank" rel="noopener noreferrer">Threat Actor Abuses Agentic AI Pentesting Framework to Target South Korean Financial Institutions</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>100</b>Priority</span>
+                  <span><b>100</b>SOC value</span>
+                  <span><b>100</b>Confidence</span>
+                  <span><b>60</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Threat Actor</span><span class="tag">Identity</span><span class="topic">Web Application</span><span class="topic">Vulnerability</span><span class="topic">Exploit</span><span class="topic">Identity</span><span class="topic">Data Breach</span><span class="topic">AI Security</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN attack activity, EN active exploit/PoC/zero-day, EN detection/analysis, EN critical sector, campaign priority, coherent attack event, target and impact context, detection evidence context, compound vulnerability exploit impact detection context, indicator context, critical sector, primary references 1</span>
+                  <span>United States · Research · Primary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://www.zscaler.com/blogs/security-research/threat-actor-abuses-agentic-ai-pentesting-framework-target-south-korean">Primary source · Zscaler</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-critical"
+              data-source="Cyble"
+              data-country="Singapore"
+              data-type="Vendor"
+              data-topics="Apple/iOS, Cisco, Linux, Microsoft, Operational Technology, Ransomware, Web Application, Vulnerability, Exploit, Malware, Phishing, Identity"
+              data-priority="Critical"
+              data-confidence="High"
+              data-japan="Regional"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW Japan/Asia"
+              data-priority-score="100"
+              data-soc-score="100"
+              data-confidence-score="100"
+              data-focus-rank="5"
+              data-date="1791985002">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Critical</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://cyble.com/blog/category/threat-actor/">Cyble</a>
+                </div>
+                <h2><a href="https://cyble.com/blog/weekly-vulnerability-report-langflow-n8n-ics-flaws/" target="_blank" rel="noopener noreferrer">The Week in Vulnerabilities: Toptech, Lantronix, Langflow, and CISA Malcolm Flaws</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>100</b>Priority</span>
+                  <span><b>100</b>SOC value</span>
+                  <span><b>100</b>Confidence</span>
+                  <span><b>58</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Vulnerability</span><span class="tag">Threat Intel</span><span class="tag">Exploit</span><span class="tag">Malware</span><span class="tag">Ransomware</span><span class="topic">Apple/iOS</span><span class="topic">Cisco</span><span class="topic">Linux</span><span class="topic">Microsoft</span><span class="topic">Operational Technology</span><span class="topic">Ransomware</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, coherent attack event, target and impact context, detection evidence context, indicator context, primary references 1</span>
+                  <span>Singapore · Vendor · Primary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://cyble.com/blog/weekly-vulnerability-report-langflow-n8n-ics-flaws/">Primary source · Cyble</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-critical"
+              data-source="Trail of Bits"
+              data-country="Global"
+              data-type="Research"
+              data-topics="Supply Chain, Malware, Cloud"
+              data-priority="Critical"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="yes"
+              data-apt="no"
+              data-search-tags="Action NOW IOC"
+              data-priority-score="100"
+              data-soc-score="100"
+              data-confidence-score="100"
+              data-focus-rank="5"
+              data-date="1791975600">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Critical</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://blog.trailofbits.com/">Trail of Bits</a>
+                </div>
+                <h2><a href="https://blog.trailofbits.com/2026/10/14/package-managers-have-an-integrity-problem/" target="_blank" rel="noopener noreferrer">Package managers have an integrity problem</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>100</b>Priority</span>
+                  <span><b>100</b>SOC value</span>
+                  <span><b>100</b>Confidence</span>
+                  <span><b>28</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  <a class="indicator" href="iocs.html">IOC 3 · SHA256</a>
+                </div>
+                <div class="labels"><span class="tag">Research</span><span class="tag">Application Security</span><span class="tag">Malware</span><span class="tag">Supply Chain</span><span class="tag">Cloud</span><span class="topic">Supply Chain</span><span class="topic">Malware</span><span class="topic">Cloud</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, IOC 3, linked IOC evidence, coherent attack event, target and impact context, indicator context, uncertain reporting, primary references 1</span>
+                  <span>Global · Research · Primary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://blog.trailofbits.com/2026/10/14/package-managers-have-an-integrity-problem/">Primary source · Trail of Bits</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-critical"
+              data-source="Group-IB"
+              data-country="Singapore"
+              data-type="Vendor"
+              data-topics="Microsoft, Ransomware, Malware, Identity"
+              data-priority="Critical"
+              data-confidence="High"
+              data-japan="Regional"
+              data-ioc="yes"
+              data-apt="no"
+              data-search-tags="Action NOW IOC Japan/Asia"
+              data-priority-score="100"
+              data-soc-score="100"
+              data-confidence-score="100"
+              data-focus-rank="5"
+              data-date="1791964872">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Critical</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://www.group-ib.com/blog/">Group-IB</a>
+                </div>
+                <h2><a href="https://www.group-ib.com/blog/kgb-rat-windows-fud-trojan/" target="_blank" rel="noopener noreferrer">KGB RAT: A Fully Undetectable Windows Trojan Built to Spy, Steal, and Terrorize</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>100</b>Priority</span>
+                  <span><b>100</b>SOC value</span>
+                  <span><b>100</b>Confidence</span>
+                  <span><b>35</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  <a class="indicator" href="iocs.html">IOC 18 · Domain, IPv4, SHA256, URL</a>
+                </div>
+                <div class="labels"><span class="tag">Malware</span><span class="tag">Ransomware</span><span class="tag">Identity</span><span class="tag">Endpoint</span><span class="topic">Microsoft</span><span class="topic">Ransomware</span><span class="topic">Malware</span><span class="topic">Identity</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, IOC 18, coherent attack event, target and impact context, detection evidence context, primary references 1</span>
+                  <span>Singapore · Vendor · Primary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://www.group-ib.com/blog/kgb-rat-windows-fud-trojan/">Primary source · Group-IB</a></div>
+              </div>
+            </article>
+            
+
             <article class="threat-card priority-critical"
               data-source="Cybereason"
               data-country="United States"
@@ -344,13 +529,13 @@
                   <span><b>100</b>Priority</span>
                   <span><b>100</b>SOC value</span>
                   <span><b>100</b>Confidence</span>
-                  <span><b>43</b>Context</span>
+                  <span><b>35</b>Context</span>
                   <span><b>5</b>attack campaign / intrusion</span>
                   <span><b>1</b>Refs</span>
                   <span><b>1</b>Primary</span>
                   
                 </div>
-                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Data Breach</span><span class="topic">Data Breach</span></div>
+                <div class="labels"><span class="tag">Data Breach</span><span class="topic">Data Breach</span></div>
                 <div class="evidence">
                   <span>focus: attack campaign / intrusion, JA attack activity, JA IOC/detection/hunting, JA critical sector, campaign priority, coherent attack event, target and impact context, detection evidence context, Japan source, critical sector, primary references 1</span>
                   <span>Japan · Vendor · Primary</span>
@@ -778,7 +963,7 @@
               data-source="Talos"
               data-country="United States"
               data-type="Research"
-              data-topics="Cisco, APT, AI Security, Phishing"
+              data-topics="Cisco, AI Security, APT, Phishing"
               data-priority="Critical"
               data-confidence="High"
               data-japan="High"
@@ -810,150 +995,12 @@
                   <span><b>1</b>Primary</span>
                   <a class="indicator" href="iocs.html">IOC 5 · URL</a>
                 </div>
-                <div class="labels"><span class="tag">APT</span><span class="tag">AI Security</span><span class="tag">Phishing</span><span class="tag">Network</span><span class="tag">Incident Response</span><span class="topic">Cisco</span><span class="topic">APT</span><span class="topic">AI Security</span><span class="topic">Phishing</span></div>
+                <div class="labels"><span class="tag">AI Security</span><span class="tag">APT</span><span class="tag">Phishing</span><span class="tag">Network</span><span class="tag">Incident Response</span><span class="topic">Cisco</span><span class="topic">AI Security</span><span class="topic">APT</span><span class="topic">Phishing</span></div>
                 <div class="evidence">
                   <span>focus: APT / targeted campaign, EN attack activity, EN targeted/APT/state-backed, EN Japan/Asia relevance, JA targeted/APT/state-backed, APT/campaign priority, IOC 5, linked IOC evidence, coherent attack event, target and impact context, detection evidence context, Japan related, primary references 1</span>
                   <span>United States · Research · Primary</span>
                 </div>
                 <div class="card-links"><a class="primary-link" href="https://blog.talosintelligence.com/uat-11985/">Primary source · Talos</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-critical"
-              data-source="piyolog"
-              data-country="Japan"
-              data-type="Vendor"
-              data-topics="Ransomware, Data Breach"
-              data-priority="Critical"
-              data-confidence="High"
-              data-japan="High"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags="Action NOW Japan/Asia"
-              data-priority-score="100"
-              data-soc-score="100"
-              data-confidence-score="100"
-              data-focus-rank="5"
-              data-date="1791410766">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Critical</span>
-                    <time>2026/10/08</time>
-                  </div>
-                  <a class="source" href="https://piyolog.hatenadiary.jp/">piyolog</a>
-                </div>
-                <h2><a href="https://piyolog.hatenadiary.jp/entry/2026/10/08/070606" target="_blank" rel="noopener noreferrer">IDCFクラウドへのランサムウェア攻撃についてまとめてみた</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>100</b>Priority</span>
-                  <span><b>100</b>SOC value</span>
-                  <span><b>100</b>Confidence</span>
-                  <span><b>42</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Ransomware</span><span class="tag">Threat Actor</span><span class="tag">Data Breach</span><span class="topic">Ransomware</span><span class="topic">Data Breach</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, JA attack activity, JA Japan/Asia relevance, JA critical sector, campaign priority, coherent attack event, target and impact context, detection evidence context, Japan related, critical sector, primary references 1</span>
-                  <span>Japan · Vendor · Primary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://piyolog.hatenadiary.jp/entry/2026/10/08/070606">Primary source · piyolog</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-critical"
-              data-source="Rapid7"
-              data-country="United States"
-              data-type="Vendor"
-              data-topics="Vulnerability, Malware, Phishing, Cloud"
-              data-priority="Critical"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags="Action NOW"
-              data-priority-score="100"
-              data-soc-score="100"
-              data-confidence-score="100"
-              data-focus-rank="5"
-              data-date="1791369607">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Critical</span>
-                    <time>2026/10/07</time>
-                  </div>
-                  <a class="source" href="https://www.rapid7.com/blog/">Rapid7</a>
-                </div>
-                <h2><a href="https://www.rapid7.com/blog/post/it-asos-incident-attackers-using-channels-customers-trust" target="_blank" rel="noopener noreferrer">The ASOS Incident: When Attackers Use the Channels Customers Trust</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>100</b>Priority</span>
-                  <span><b>100</b>SOC value</span>
-                  <span><b>100</b>Confidence</span>
-                  <span><b>28</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Research</span><span class="tag">Vulnerability</span><span class="tag">Malware</span><span class="tag">Phishing</span><span class="topic">Vulnerability</span><span class="topic">Malware</span><span class="topic">Phishing</span><span class="topic">Cloud</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, EN IOC/detection/hunting, campaign priority, coherent attack event, target and impact context, uncertain reporting, primary references 1</span>
-                  <span>United States · Vendor · Primary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://www.rapid7.com/blog/post/it-asos-incident-attackers-using-channels-customers-trust">Primary source · Rapid7</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-critical"
-              data-source="Cofense"
-              data-country="United States"
-              data-type="Vendor"
-              data-topics="Malware"
-              data-priority="Critical"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="yes"
-              data-apt="no"
-              data-search-tags="Action NOW IOC"
-              data-priority-score="100"
-              data-soc-score="100"
-              data-confidence-score="100"
-              data-focus-rank="5"
-              data-date="1791349200">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Critical</span>
-                    <time>2026/10/07</time>
-                  </div>
-                  <a class="source" href="https://cofense.com/blog">Cofense</a>
-                </div>
-                <h2><a href="https://cofense.com/blog/from-guest-complaints-to-malware-blockchain-abuse-targets-hotels" target="_blank" rel="noopener noreferrer">From Guest Complaints to Malware: Blockchain Abuse Targets Hotels</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>100</b>Priority</span>
-                  <span><b>100</b>SOC value</span>
-                  <span><b>100</b>Confidence</span>
-                  <span><b>49</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  <a class="indicator" href="iocs.html">IOC 17 · Domain, SHA1, SHA256</a>
-                </div>
-                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="topic">Malware</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, IOC 17, coherent attack event, target and impact context, indicator context, primary references 1</span>
-                  <span>United States · Vendor · Primary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://cofense.com/blog/from-guest-complaints-to-malware-blockchain-abuse-targets-hotels">Primary source · Cofense</a></div>
               </div>
             </article>
             
@@ -1046,6 +1093,52 @@
                   <span>United States · News · Secondary</span>
                 </div>
                 <div class="card-links"><a class="primary-link" href="https://www.justice.gov/opa/pr/justice-department-and-fbi-seize-vulnerability-scanning-and-spear-phishing-tools-operated">Primary source · justice.gov</a><span class="related">Also reported by Help Net Security</span></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-critical"
+              data-source="Security Affairs"
+              data-country="Italy"
+              data-type="News"
+              data-topics="Ivanti, Network Edge, Vulnerability, Zero-Day, AI Security"
+              data-priority="Critical"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW"
+              data-priority-score="100"
+              data-soc-score="100"
+              data-confidence-score="86"
+              data-focus-rank="5"
+              data-date="1791972930">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Critical</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://securityaffairs.com/">Security Affairs</a>
+                </div>
+                <h2><a href="https://securityaffairs.com/200895/hacking/volexity-uncovers-stealthy-ivanti-vpn-attack-using-three-zero-day-vulnerabilities.html" target="_blank" rel="noopener noreferrer">Volexity Uncovers Stealthy Ivanti VPN Attack Using Three Zero-Day Vulnerabilities</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>100</b>Priority</span>
+                  <span><b>100</b>SOC value</span>
+                  <span><b>86</b>Confidence</span>
+                  <span><b>47</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>2</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Security</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Zero-Day</span><span class="tag">AI Security</span><span class="topic">Ivanti</span><span class="topic">Network Edge</span><span class="topic">Vulnerability</span><span class="topic">Zero-Day</span><span class="topic">AI Security</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN attack activity, EN active exploit/PoC/zero-day, EN detection/analysis, campaign priority, coherent attack event, target and impact context, detection evidence context, compound vulnerability exploit impact detection context, primary references 2</span>
+                  <span>Italy · News · Secondary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://www.volexity.com/blog/2026/10/13/a-series-of-unauthenticated-events-chained-exploitation-of-ivanti-connect-secure-zero-days/">Primary source · volexity</a></div>
               </div>
             </article>
             
@@ -1235,52 +1328,6 @@
             
 
             <article class="threat-card priority-critical"
-              data-source="The Cyber Express"
-              data-country="Global"
-              data-type="News"
-              data-topics="Active Directory, Fortinet, Network Edge, Ransomware, Vulnerability, Malware, Phishing, Identity, Data Breach"
-              data-priority="Critical"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="yes"
-              data-apt="no"
-              data-search-tags="Action NOW IOC"
-              data-priority-score="100"
-              data-soc-score="100"
-              data-confidence-score="79"
-              data-focus-rank="5"
-              data-date="1791357207">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Critical</span>
-                    <time>2026/10/07</time>
-                  </div>
-                  <a class="source" href="https://thecyberexpress.com/">The Cyber Express</a>
-                </div>
-                <h2><a href="https://thecyberexpress.com/fortibleed-campaign-hits-fortinet-devices/" target="_blank" rel="noopener noreferrer">86,644 Firewalls in 194 Countries Breached With Stolen Passwords</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>100</b>Priority</span>
-                  <span><b>100</b>SOC value</span>
-                  <span><b>79</b>Confidence</span>
-                  <span><b>60</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>3</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  <a class="indicator" href="iocs.html">IOC 4 · IPv4</a>
-                </div>
-                <div class="labels"><span class="tag">Vulnerability</span><span class="tag">Threat Intel</span><span class="tag">Patch</span><span class="tag">Malware</span><span class="tag">Ransomware</span><span class="topic">Active Directory</span><span class="topic">Fortinet</span><span class="topic">Network Edge</span><span class="topic">Ransomware</span><span class="topic">Vulnerability</span><span class="topic">Malware</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, EN IOC/detection/hunting, EN detection/analysis, campaign priority, IOC 4, coherent attack event, target and impact context, detection evidence context, indicator context, reported by 3 sources, primary references 1</span>
-                  <span>Global · News · Secondary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://cyble.com/knowledge-hub/what-is-ransomware/">Primary source · Cyble</a><span class="related">Also reported by The HackersNews, Help Net Security</span></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-critical"
               data-source="Bleeping Computer"
               data-country="United States"
               data-type="News"
@@ -1376,98 +1423,6 @@
               data-source="The HackersNews"
               data-country="United States"
               data-type="News"
-              data-topics="Malware, AI Security"
-              data-priority="Critical"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags="Action NOW"
-              data-priority-score="100"
-              data-soc-score="100"
-              data-confidence-score="72"
-              data-focus-rank="5"
-              data-date="1791387231">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Critical</span>
-                    <time>2026/10/08</time>
-                  </div>
-                  <a class="source" href="https://thehackernews.com/">The HackersNews</a>
-                </div>
-                <h2><a href="https://thehackernews.com/2026/10/poellm-malware-infects-3400-servers-to.html" target="_blank" rel="noopener noreferrer">PoeLLM Malware Infects 3,400+ Servers to Expand Crypto Mining Botnet</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>100</b>Priority</span>
-                  <span><b>100</b>SOC value</span>
-                  <span><b>72</b>Confidence</span>
-                  <span><b>42</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Malware</span><span class="tag">AI Security</span><span class="tag">Cryptocurrency</span><span class="topic">Malware</span><span class="topic">AI Security</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, coherent attack event, target and impact context, detection evidence context, indicator context, primary references 1</span>
-                  <span>United States · News · Secondary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://www.lumen.com/blog/en-us/canto-incognito-tracking-the-poellm-malware">Primary source · lumen.com</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-critical"
-              data-source="The Cyber Express"
-              data-country="Global"
-              data-type="News"
-              data-topics="Network Edge, Ransomware"
-              data-priority="Critical"
-              data-confidence="Medium"
-              data-japan="High"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags="Action NOW Japan/Asia"
-              data-priority-score="100"
-              data-soc-score="100"
-              data-confidence-score="67"
-              data-focus-rank="5"
-              data-date="1791351312">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Critical</span>
-                    <time>2026/10/07</time>
-                  </div>
-                  <a class="source" href="https://thecyberexpress.com/">The Cyber Express</a>
-                </div>
-                <h2><a href="https://thecyberexpress.com/osaka-metropolitan-university-cyberattack/" target="_blank" rel="noopener noreferrer">Osaka Metropolitan University Hit by Ransomware, 130,000 Records at Risk</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>100</b>Priority</span>
-                  <span><b>100</b>SOC value</span>
-                  <span><b>67</b>Confidence</span>
-                  <span><b>12</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>2</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Ransomware</span><span class="tag">Network</span><span class="topic">Network Edge</span><span class="topic">Ransomware</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, EN Japan/Asia relevance, EN critical sector, JA Japan/Asia relevance, campaign priority, target and impact context, indicator context, uncertain reporting, Japan related, critical sector, primary references 2</span>
-                  <span>Global · News · Secondary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://cyble.com/knowledge-hub/what-is-ransomware/">Primary source · Cyble</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-critical"
-              data-source="The HackersNews"
-              data-country="United States"
-              data-type="News"
               data-topics="Vulnerability, APT"
               data-priority="Critical"
               data-confidence="High"
@@ -1506,6 +1461,52 @@
                   <span>United States · News · Secondary</span>
                 </div>
                 <div class="card-links"><a class="primary-link" href="https://www.cisa.gov/news-events/news/cisa-fbi-nsa-and-international-partners-warn-china-based-cybersecurity-company-enabling-threat">Primary source · CISA</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-critical"
+              data-source="US CERT Vulnerability Notes"
+              data-country="United States"
+              data-type="CERT"
+              data-topics="Cloud Security, Vulnerability, Cloud, Identity, AI Security"
+              data-priority="Critical"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW"
+              data-priority-score="100"
+              data-soc-score="98"
+              data-confidence-score="100"
+              data-focus-rank="5"
+              data-date="1791981558">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Critical</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://www.kb.cert.org/vuls/">US CERT Vulnerability Notes</a>
+                </div>
+                <h2><a href="https://kb.cert.org/vuls/id/166125" target="_blank" rel="noopener noreferrer">VU#166125: Bisheng has authentication bypass vulnerabilities</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>100</b>Priority</span>
+                  <span><b>98</b>SOC value</span>
+                  <span><b>100</b>Confidence</span>
+                  <span><b>43</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Vulnerability</span><span class="tag">Patch</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">AI Security</span><span class="topic">Cloud Security</span><span class="topic">Vulnerability</span><span class="topic">Cloud</span><span class="topic">Identity</span><span class="topic">AI Security</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary references 1</span>
+                  <span>United States · CERT · Primary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://kb.cert.org/vuls/id/166125">Primary source · US CERT Vulnerability Notes</a></div>
               </div>
             </article>
             
@@ -1649,52 +1650,6 @@
             
 
             <article class="threat-card priority-critical"
-              data-source="The HackersNews"
-              data-country="United States"
-              data-type="News"
-              data-topics="Malware, APT"
-              data-priority="Critical"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="yes"
-              data-search-tags="Action NOW APT"
-              data-priority-score="100"
-              data-soc-score="96"
-              data-confidence-score="72"
-              data-focus-rank="6"
-              data-date="1791356274">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Critical</span>
-                    <time>2026/10/07</time>
-                  </div>
-                  <a class="source" href="https://thehackernews.com/">The HackersNews</a>
-                </div>
-                <h2><a href="https://thehackernews.com/2026/10/100-compromised-websites-use-fake.html" target="_blank" rel="noopener noreferrer">100+ Compromised Websites Use Fake Cloudflare Checks to Deliver LunexStealer</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>100</b>Priority</span>
-                  <span><b>96</b>SOC value</span>
-                  <span><b>72</b>Confidence</span>
-                  <span><b>27</b>Context</span>
-                  <span><b>6</b>APT / targeted campaign</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Malware</span><span class="tag">APT</span><span class="tag">Threat Actor</span><span class="topic">Malware</span><span class="topic">APT</span></div>
-                <div class="evidence">
-                  <span>focus: APT / targeted campaign, EN attack activity, EN detection/analysis, APT/campaign priority, coherent attack event, detection evidence context, primary references 1</span>
-                  <span>United States · News · Secondary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://cert.gov.ua/article/6319983">Primary source · cert.gov.ua</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-critical"
               data-source="piyolog"
               data-country="Japan"
               data-type="Vendor"
@@ -1787,10 +1742,56 @@
             
 
             <article class="threat-card priority-critical"
+              data-source="The HackersNews"
+              data-country="United States"
+              data-type="News"
+              data-topics="Cisco, Network Edge, Vulnerability, Malware"
+              data-priority="Critical"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW"
+              data-priority-score="100"
+              data-soc-score="91"
+              data-confidence-score="78"
+              data-focus-rank="5"
+              data-date="1792003136">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Critical</span>
+                    <time>2026/10/15</time>
+                  </div>
+                  <a class="source" href="https://thehackernews.com/">The HackersNews</a>
+                </div>
+                <h2><a href="https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html" target="_blank" rel="noopener noreferrer">Cisco Warns of Active Attacks Exploiting New Critical Secure Email Gateway Vulnerability</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>100</b>Priority</span>
+                  <span><b>91</b>SOC value</span>
+                  <span><b>78</b>Confidence</span>
+                  <span><b>40</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>2</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Vulnerability</span><span class="tag">Patch</span><span class="tag">Malware</span><span class="topic">Cisco</span><span class="topic">Network Edge</span><span class="topic">Vulnerability</span><span class="topic">Malware</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, vulnerability exploitation context, primary references 2</span>
+                  <span>United States · News · Secondary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://blogs.cisco.com/security/strengthening-the-foundation-a-predictable-customer-focused-response-to-ai-accelerated-vulnerability-discovery">Primary source · Cisco Blog Threat Research</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-critical"
               data-source="Elastic"
               data-country="United States"
               data-type="Research"
-              data-topics="Supply Chain, Malware, AI Security"
+              data-topics="Supply Chain, AI Security, Malware"
               data-priority="Critical"
               data-confidence="High"
               data-japan="None"
@@ -1822,7 +1823,7 @@
                   <span><b>1</b>Primary</span>
                   <a class="indicator" href="iocs.html">IOC 32 · Domain, SHA256, URL</a>
                 </div>
-                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span><span class="tag">Supply Chain</span><span class="topic">Supply Chain</span><span class="topic">Malware</span><span class="topic">AI Security</span></div>
+                <div class="labels"><span class="tag">AI Security</span><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Supply Chain</span><span class="topic">Supply Chain</span><span class="topic">AI Security</span><span class="topic">Malware</span></div>
                 <div class="evidence">
                   <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, IOC 32, coherent attack event, indicator context, primary references 1</span>
                   <span>United States · Research · Primary</span>
@@ -2017,6 +2018,52 @@
             
 
             <article class="threat-card priority-critical"
+              data-source="Bleeping Computer"
+              data-country="United States"
+              data-type="News"
+              data-topics="Cisco, Network Edge, Zero-Day"
+              data-priority="Critical"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW"
+              data-priority-score="100"
+              data-soc-score="82"
+              data-confidence-score="76"
+              data-focus-rank="5"
+              data-date="1791998954">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Critical</span>
+                    <time>2026/10/15</time>
+                  </div>
+                  <a class="source" href="https://www.bleepingcomputer.com/">Bleeping Computer</a>
+                </div>
+                <h2><a href="https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/" target="_blank" rel="noopener noreferrer">Cisco patches new Secure Email Gateway zero-day exploited in attacks</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>100</b>Priority</span>
+                  <span><b>82</b>SOC value</span>
+                  <span><b>76</b>Confidence</span>
+                  <span><b>40</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>3</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Security</span><span class="tag">Zero-Day</span><span class="tag">Patch</span><span class="topic">Cisco</span><span class="topic">Network Edge</span><span class="topic">Zero-Day</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, target and impact context, vulnerability exploitation context, reported by 3 sources, primary references 1</span>
+                  <span>United States · News · Secondary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search=&amp;field_date_added_wrapper=all&amp;field_cve=&amp;sort_by=field_date_added&amp;items_per_page=All&amp;url=&amp;f%5B0%5D=vendor_project%3A801">Primary source · CISA</a><span class="related">Also reported by SecurityWeek</span></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-critical"
               data-source="Infosecurity Magazine"
               data-country="United Kingdom"
               data-type="News"
@@ -2155,47 +2202,47 @@
             
 
             <article class="threat-card priority-critical"
-              data-source="Bleeping Computer"
+              data-source="Unit42"
               data-country="United States"
-              data-type="News"
-              data-topics="Ransomware"
+              data-type="Research"
+              data-topics="Fortinet, Network Edge, Malware, Vulnerability"
               data-priority="Critical"
               data-confidence="High"
               data-japan="None"
-              data-ioc="no"
+              data-ioc="yes"
               data-apt="no"
-              data-search-tags="Action NOW"
-              data-priority-score="99"
-              data-soc-score="89"
-              data-confidence-score="78"
+              data-search-tags="Action NOW IOC"
+              data-priority-score="98"
+              data-soc-score="86"
+              data-confidence-score="100"
               data-focus-rank="5"
-              data-date="1791381671">
+              data-date="1792015244">
               <div class="card-rail"></div>
               <div class="card-body">
                 <div class="card-meta">
                   <div>
                     <span class="priority-label">Critical</span>
-                    <time>2026/10/07</time>
+                    <time>2026/10/15</time>
                   </div>
-                  <a class="source" href="https://www.bleepingcomputer.com/">Bleeping Computer</a>
+                  <a class="source" href="https://unit42.paloaltonetworks.com/">Unit42</a>
                 </div>
-                <h2><a href="https://www.bleepingcomputer.com/news/security/ransomware-has-a-new-target-is-your-backup-ready/" target="_blank" rel="noopener noreferrer">Ransomware has a new target. Is your backup ready?</a></h2>
+                <h2><a href="https://unit42.paloaltonetworks.com/fortimanager-cve-2024-47575-peerstitch-malware/" target="_blank" rel="noopener noreferrer">Unit 42 Uncovers PEERSTITCH, a Stealthy FortiGate Implant</a></h2>
                 <div class="scores" aria-label="Article scores">
-                  <span><b>99</b>Priority</span>
-                  <span><b>89</b>SOC value</span>
-                  <span><b>78</b>Confidence</span>
-                  <span><b>38</b>Context</span>
+                  <span><b>98</b>Priority</span>
+                  <span><b>86</b>SOC value</span>
+                  <span><b>100</b>Confidence</span>
+                  <span><b>18</b>Context</span>
                   <span><b>5</b>attack campaign / intrusion</span>
                   <span><b>1</b>Refs</span>
-                  <span><b>2</b>Primary</span>
-                  
+                  <span><b>1</b>Primary</span>
+                  <a class="indicator" href="iocs.html">IOC 20 · IPv4, SHA256, URL</a>
                 </div>
-                <div class="labels"><span class="tag">Security</span><span class="tag">Ransomware</span><span class="topic">Ransomware</span></div>
+                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Vulnerability</span><span class="tag">Network</span><span class="tag">Incident Response</span><span class="topic">Fortinet</span><span class="topic">Network Edge</span><span class="topic">Malware</span><span class="topic">Vulnerability</span></div>
                 <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, indicator context, primary references 2</span>
-                  <span>United States · News · Secondary</span>
+                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, IOC 20, coherent attack event, primary references 1</span>
+                  <span>United States · Research · Primary</span>
                 </div>
-                <div class="card-links"><a class="primary-link" href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-291a">Primary source · CISA</a></div>
+                <div class="card-links"><a class="primary-link" href="https://unit42.paloaltonetworks.com/fortimanager-cve-2024-47575-peerstitch-malware/">Primary source · Unit42</a></div>
               </div>
             </article>
             
@@ -2293,47 +2340,47 @@
             
 
             <article class="threat-card priority-critical"
-              data-source="The HackersNews"
+              data-source="Bleeping Computer"
               data-country="United States"
               data-type="News"
-              data-topics="Supply Chain, Malware"
+              data-topics="Android, Malware"
               data-priority="Critical"
-              data-confidence="High"
+              data-confidence="Medium"
               data-japan="None"
               data-ioc="no"
               data-apt="no"
               data-search-tags="Action NOW"
               data-priority-score="97"
               data-soc-score="86"
-              data-confidence-score="78"
+              data-confidence-score="67"
               data-focus-rank="5"
-              data-date="1791395000">
+              data-date="1791978080">
               <div class="card-rail"></div>
               <div class="card-body">
                 <div class="card-meta">
                   <div>
                     <span class="priority-label">Critical</span>
-                    <time>2026/10/08</time>
+                    <time>2026/10/14</time>
                   </div>
-                  <a class="source" href="https://thehackernews.com/">The HackersNews</a>
+                  <a class="source" href="https://www.bleepingcomputer.com/">Bleeping Computer</a>
                 </div>
-                <h2><a href="https://thehackernews.com/2026/10/eight-malicious-npm-packages-downloaded.html" target="_blank" rel="noopener noreferrer">Eight Malicious npm Packages Downloaded 40,767 Times Deliver Overlord RAT and Stealer</a></h2>
+                <h2><a href="https://www.bleepingcomputer.com/news/security/hirudo-android-malware-replaces-banking-apps-to-evade-security-checks/" target="_blank" rel="noopener noreferrer">Hirudo Android malware replaces banking apps to evade security checks</a></h2>
                 <div class="scores" aria-label="Article scores">
                   <span><b>97</b>Priority</span>
                   <span><b>86</b>SOC value</span>
-                  <span><b>78</b>Confidence</span>
+                  <span><b>67</b>Confidence</span>
                   <span><b>26</b>Context</span>
                   <span><b>5</b>attack campaign / intrusion</span>
                   <span><b>1</b>Refs</span>
-                  <span><b>2</b>Primary</span>
+                  <span><b>1</b>Primary</span>
                   
                 </div>
-                <div class="labels"><span class="tag">Malware</span><span class="tag">Threat Actor</span><span class="tag">Supply Chain</span><span class="topic">Supply Chain</span><span class="topic">Malware</span></div>
+                <div class="labels"><span class="tag">Security</span><span class="tag">Malware</span><span class="tag">Mobile</span><span class="topic">Android</span><span class="topic">Malware</span></div>
                 <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 2</span>
+                  <span>focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary references 1</span>
                   <span>United States · News · Secondary</span>
                 </div>
-                <div class="card-links"><a class="primary-link" href="https://www.cloudsek.com/blog/malfex-malicious-npm-postinstall-supply-chain-campaign">Primary source · cloudsek.com</a></div>
+                <div class="card-links"><a class="primary-link" href="https://www.threatfabric.com/blogs/hirudo-from-fake-updates-to-patched-banking-apps">Primary source · threatfabric.com</a></div>
               </div>
             </article>
             
@@ -2385,6 +2432,52 @@
             
 
             <article class="threat-card priority-critical"
+              data-source="piyolog"
+              data-country="Japan"
+              data-type="Vendor"
+              data-topics="Exploit, Data Breach, AI Security"
+              data-priority="Critical"
+              data-confidence="High"
+              data-japan="Medium"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW Japan/Asia"
+              data-priority-score="95"
+              data-soc-score="76"
+              data-confidence-score="88"
+              data-focus-rank="4"
+              data-date="1791499122">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Critical</span>
+                    <time>2026/10/09</time>
+                  </div>
+                  <a class="source" href="https://piyolog.hatenadiary.jp/">piyolog</a>
+                </div>
+                <h2><a href="https://piyolog.hatenadiary.jp/entry/2026/10/09/073842" target="_blank" rel="noopener noreferrer">デンマークのCPR登録簿への不正アクセスについてまとめてみた</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>95</b>Priority</span>
+                  <span><b>76</b>SOC value</span>
+                  <span><b>88</b>Confidence</span>
+                  <span><b>7</b>Context</span>
+                  <span><b>4</b>active exploitation</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Exploit</span><span class="tag">Data Breach</span><span class="tag">AI Security</span><span class="tag">Incident Response</span><span class="topic">Exploit</span><span class="topic">Data Breach</span><span class="topic">AI Security</span></div>
+                <div class="evidence">
+                  <span>focus: active exploitation, JA attack activity, JA active exploit/PoC/zero-day, active exploitation priority, target and impact context, uncertain reporting, Japan source, primary references 1</span>
+                  <span>Japan · Vendor · Primary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://piyolog.hatenadiary.jp/entry/2026/10/09/073842">Primary source · piyolog</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-critical"
               data-source="Tenable"
               data-country="United States"
               data-type="Vendor"
@@ -2426,52 +2519,6 @@
                   <span>United States · Vendor · Primary</span>
                 </div>
                 <div class="card-links"><a class="primary-link" href="https://www.tenable.com/blog/tenable-openai-security-vetting-open-source-ai-agents-exchange-inspector">Primary source · Tenable</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-critical"
-              data-source="SOCRadar Blog"
-              data-country="Global"
-              data-type="Research"
-              data-topics="Identity"
-              data-priority="Critical"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="yes"
-              data-apt="no"
-              data-search-tags="Action NOW IOC"
-              data-priority-score="94"
-              data-soc-score="80"
-              data-confidence-score="100"
-              data-focus-rank="5"
-              data-date="1791373882">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Critical</span>
-                    <time>2026/10/07</time>
-                  </div>
-                  <a class="source" href="https://socradar.io/blog/">SOCRadar Blog</a>
-                </div>
-                <h2><a href="https://socradar.io/blog/fortibleed-still-active-locking-organizations-out/" target="_blank" rel="noopener noreferrer">FortiBleed Is Still Active, Locking Organizations Out</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>94</b>Priority</span>
-                  <span><b>80</b>SOC value</span>
-                  <span><b>100</b>Confidence</span>
-                  <span><b>26</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  <a class="indicator" href="iocs.html">IOC 7 · IPv4</a>
-                </div>
-                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Research</span><span class="tag">IOC</span><span class="tag">Patch</span><span class="tag">Identity</span><span class="topic">Identity</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, IOC 7, coherent attack event, target and impact context, primary references 1</span>
-                  <span>Global · Research · Primary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://socradar.io/blog/fortibleed-still-active-locking-organizations-out/">Primary source · SOCRadar Blog</a></div>
               </div>
             </article>
             
@@ -2523,52 +2570,6 @@
             
 
             <article class="threat-card priority-critical"
-              data-source="Bleeping Computer"
-              data-country="United States"
-              data-type="News"
-              data-topics="Vulnerability, Exploit"
-              data-priority="Critical"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags="Action NOW"
-              data-priority-score="94"
-              data-soc-score="72"
-              data-confidence-score="74"
-              data-focus-rank="5"
-              data-date="1791377341">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Critical</span>
-                    <time>2026/10/07</time>
-                  </div>
-                  <a class="source" href="https://www.bleepingcomputer.com/">Bleeping Computer</a>
-                </div>
-                <h2><a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/" target="_blank" rel="noopener noreferrer">Hackers exploit critical Atlassian flaw after public PoC release</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>94</b>Priority</span>
-                  <span><b>72</b>SOC value</span>
-                  <span><b>74</b>Confidence</span>
-                  <span><b>18</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>2</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Security</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="topic">Vulnerability</span><span class="topic">Exploit</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, JA active exploit/PoC/zero-day, campaign priority, coherent attack event, reported by 2 sources, primary references 1</span>
-                  <span>United States · News · Secondary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/">Primary source · WatchTowr Labs</a><span class="related">Also reported by Infosecurity Magazine</span></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-critical"
               data-source="Canon MJ ESET Security"
               data-country="Japan"
               data-type="Research"
@@ -2610,52 +2611,6 @@
                   <span>Japan · Research · Primary</span>
                 </div>
                 <div class="card-links"><a class="primary-link" href="https://eset-info.canon-its.jp/malware_info/news/detail/261014.html">Primary source · Canon MJ ESET Security</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-critical"
-              data-source="The Record"
-              data-country="United States"
-              data-type="News"
-              data-topics=""
-              data-priority="Critical"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags="Action NOW"
-              data-priority-score="93"
-              data-soc-score="72"
-              data-confidence-score="78"
-              data-focus-rank="5"
-              data-date="1791397860">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Critical</span>
-                    <time>2026/10/08</time>
-                  </div>
-                  <a class="source" href="https://therecord.media/">The Record</a>
-                </div>
-                <h2><a href="https://therecord.media/arizona-courts-say-hackers-stole-info-on-over-1-million" target="_blank" rel="noopener noreferrer">Arizona courts say hackers stole info on more than 1.3 million people</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>93</b>Priority</span>
-                  <span><b>72</b>SOC value</span>
-                  <span><b>78</b>Confidence</span>
-                  <span><b>18</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>2</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Threat Intel</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, critical sector, primary references 2</span>
-                  <span>United States · News · Secondary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://www.recordedfuture.com/research/tajin-group-gurantee-marketplace">Primary source · Recorded Future</a></div>
               </div>
             </article>
             
@@ -2799,6 +2754,52 @@
             
 
             <article class="threat-card priority-critical"
+              data-source="ANY.RUN"
+              data-country="United Arab Emirates"
+              data-type="Vendor"
+              data-topics="Malware, AI Security"
+              data-priority="Critical"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="yes"
+              data-apt="no"
+              data-search-tags="Action NOW IOC"
+              data-priority-score="91"
+              data-soc-score="76"
+              data-confidence-score="100"
+              data-focus-rank="5"
+              data-date="1791969150">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Critical</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://any.run/cybersecurity-blog/">ANY.RUN</a>
+                </div>
+                <h2><a href="https://any.run/cybersecurity-blog/fake-ai-tools-us-companies/" target="_blank" rel="noopener noreferrer">Fake AI Tools Put US Companies at Risk: Inside Counterfeit Claude, ChatGPT, and Copilot</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>91</b>Priority</span>
+                  <span><b>76</b>SOC value</span>
+                  <span><b>100</b>Confidence</span>
+                  <span><b>26</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  <a class="indicator" href="iocs.html">IOC 40 · Domain, SHA256, URL</a>
+                </div>
+                <div class="labels"><span class="tag">Security</span><span class="tag">Malware</span><span class="tag">Threat Intel</span><span class="tag">AI Security</span><span class="topic">Malware</span><span class="topic">AI Security</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN detection/analysis, campaign priority, IOC 40, coherent attack event, target and impact context, primary references 1</span>
+                  <span>United Arab Emirates · Vendor · Primary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://any.run/cybersecurity-blog/fake-ai-tools-us-companies/">Primary source · ANY.RUN</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-critical"
               data-source="Malwarebytes"
               data-country="United States"
               data-type="Vendor"
@@ -2894,7 +2895,7 @@
               data-source="The HackersNews"
               data-country="United States"
               data-type="News"
-              data-topics=""
+              data-topics="Malware"
               data-priority="Critical"
               data-confidence="High"
               data-japan="None"
@@ -2905,79 +2906,33 @@
               data-soc-score="71"
               data-confidence-score="81"
               data-focus-rank="5"
-              data-date="1791398897">
+              data-date="1791999511">
               <div class="card-rail"></div>
               <div class="card-body">
                 <div class="card-meta">
                   <div>
                     <span class="priority-label">Critical</span>
-                    <time>2026/10/08</time>
+                    <time>2026/10/15</time>
                   </div>
                   <a class="source" href="https://thehackernews.com/">The HackersNews</a>
                 </div>
-                <h2><a href="https://thehackernews.com/2026/10/attackers-hijack-gh-sl-and-as.html" target="_blank" rel="noopener noreferrer">Attackers Hijack .gh, .sl, and .as Registries to Obtain Certificates for Google Domains</a></h2>
+                <h2><a href="https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html" target="_blank" rel="noopener noreferrer">Hackers Backdoor Nextcloud Servers Through Critical Flaw in Collabora’s Built-in CODE App</a></h2>
                 <div class="scores" aria-label="Article scores">
                   <span><b>89</b>Priority</span>
                   <span><b>71</b>SOC value</span>
                   <span><b>81</b>Confidence</span>
-                  <span><b>26</b>Context</span>
+                  <span><b>18</b>Context</span>
                   <span><b>5</b>attack campaign / intrusion</span>
                   <span><b>1</b>Refs</span>
                   <span><b>3</b>Primary</span>
                   
                 </div>
-                <div class="labels"></div>
+                <div class="labels"><span class="tag">Malware</span><span class="topic">Malware</span></div>
                 <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 3</span>
+                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, primary references 3</span>
                   <span>United States · News · Secondary</span>
                 </div>
-                <div class="card-links"><a class="primary-link" href="https://blog.google/security/chromes-response-to-recent-cctld-registry-hijacks/">Primary source · Google Security Blog</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-critical"
-              data-source="Rapid7"
-              data-country="United States"
-              data-type="Vendor"
-              data-topics="CVE-2026-21589, Network Edge, Web Application, Vulnerability, Exploit, Cloud"
-              data-priority="Critical"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags="Action NOW"
-              data-priority-score="89"
-              data-soc-score="66"
-              data-confidence-score="100"
-              data-focus-rank="4"
-              data-date="1791375086">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Critical</span>
-                    <time>2026/10/07</time>
-                  </div>
-                  <a class="source" href="https://www.rapid7.com/blog/">Rapid7</a>
-                </div>
-                <h2><a href="https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products" target="_blank" rel="noopener noreferrer">CVE-2026-21589: Critical unauthenticated arbitrary file access in Atlassian products</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>89</b>Priority</span>
-                  <span><b>66</b>SOC value</span>
-                  <span><b>100</b>Confidence</span>
-                  <span><b>-16</b>Context</span>
-                  <span><b>4</b>active exploitation</span>
-                  <span><b>2</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Research</span><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Patch</span><span class="topic">CVE-2026-21589</span><span class="topic">Network Edge</span><span class="topic">Web Application</span><span class="topic">Vulnerability</span><span class="topic">Exploit</span><span class="topic">Cloud</span></div>
-                <div class="evidence">
-                  <span>focus: active exploitation, EN attack activity, EN active exploit/PoC/zero-day, EN detection/analysis, JA active exploit/PoC/zero-day, active exploitation priority, target and impact context, vulnerability without attack context, reported by 2 sources, primary references 1</span>
-                  <span>United States · Vendor · Primary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products">Primary source · Rapid7</a><span class="related">Also reported by Help Net Security</span></div>
+                <div class="card-links"><a class="primary-link" href="https://github.blog/security/supply-chain-security/inside-the-advisory-database-and-what-happens-when-vulnerability-volume-breaks-records/">Primary source · GitHub Security Lab</a></div>
               </div>
             </article>
             
@@ -3029,6 +2984,98 @@
             
 
             <article class="threat-card priority-critical"
+              data-source="Security Affairs"
+              data-country="Italy"
+              data-type="News"
+              data-topics="Microsoft, Vulnerability"
+              data-priority="Critical"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW"
+              data-priority-score="88"
+              data-soc-score="64"
+              data-confidence-score="75"
+              data-focus-rank="4"
+              data-date="1792012534">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Critical</span>
+                    <time>2026/10/15</time>
+                  </div>
+                  <a class="source" href="https://securityaffairs.com/">Security Affairs</a>
+                </div>
+                <h2><a href="https://securityaffairs.com/200965/hacking/u-s-cisa-adds-microsoft-windows-shell-flaw-to-its-known-exploited-vulnerabilities-catalog.html" target="_blank" rel="noopener noreferrer">U.S. CISA adds Microsoft Windows Shell flaw to its Known Exploited Vulnerabilities catalog</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>88</b>Priority</span>
+                  <span><b>64</b>SOC value</span>
+                  <span><b>75</b>Confidence</span>
+                  <span><b>29</b>Context</span>
+                  <span><b>4</b>active exploitation</span>
+                  <span><b>2</b>Refs</span>
+                  <span><b>3</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Security</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Patch</span><span class="tag">Endpoint</span><span class="topic">Microsoft</span><span class="topic">Vulnerability</span></div>
+                <div class="evidence">
+                  <span>focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, indicator context, reported by 2 sources, primary references 3</span>
+                  <span>Italy · News · Secondary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog">Primary source · CISA</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-critical"
+              data-source="Help Net Security"
+              data-country="Croatia"
+              data-type="News"
+              data-topics="Identity"
+              data-priority="Critical"
+              data-confidence="High"
+              data-japan="High"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW Japan/Asia"
+              data-priority-score="86"
+              data-soc-score="54"
+              data-confidence-score="76"
+              data-focus-rank="5"
+              data-date="1791982849">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Critical</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://www.helpnetsecurity.com/">Help Net Security</a>
+                </div>
+                <h2><a href="https://www.helpnetsecurity.com/2026/10/14/north-korean-it-workers-laptop-farms-arrests/" target="_blank" rel="noopener noreferrer">FBI raids 40+ laptop farms helping North Korea pocket US tech salaries</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>86</b>Priority</span>
+                  <span><b>54</b>SOC value</span>
+                  <span><b>76</b>Confidence</span>
+                  <span><b>12</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>3</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Identity</span><span class="topic">Identity</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN Japan/Asia relevance, campaign priority, coherent attack event, uncertain reporting, Japan related, primary references 3</span>
+                  <span>Croatia · News · Secondary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://www.crowdstrike.com/en-us/blog/fbi-disrupts-famous-chollima-operation-with-crowdstrike-assistance">Primary source · CrowdStrike</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-critical"
               data-source="The HackersNews"
               data-country="United States"
               data-type="News"
@@ -3075,56 +3122,10 @@
             
 
             <article class="threat-card priority-critical"
-              data-source="SecurityWeek"
-              data-country="United States"
-              data-type="News"
-              data-topics="Ivanti, Network Edge, Vulnerability, Zero-Day"
-              data-priority="Critical"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags="Action NOW"
-              data-priority-score="85"
-              data-soc-score="55"
-              data-confidence-score="78"
-              data-focus-rank="5"
-              data-date="1791917023">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Critical</span>
-                    <time>2026/10/14</time>
-                  </div>
-                  <a class="source" href="https://www.securityweek.com/">SecurityWeek</a>
-                </div>
-                <h2><a href="https://www.securityweek.com/ivanti-zero-day-chain-gave-attackers-root-access-to-fully-patched-vpn/" target="_blank" rel="noopener noreferrer">Ivanti Zero-Day Chain Gave Attackers Root Access to Fully Patched VPN</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>85</b>Priority</span>
-                  <span><b>55</b>SOC value</span>
-                  <span><b>78</b>Confidence</span>
-                  <span><b>18</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>2</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Vulnerability</span><span class="tag">Zero-Day</span><span class="tag">Threat Intel</span><span class="tag">Patch</span><span class="tag">Network</span><span class="topic">Ivanti</span><span class="topic">Network Edge</span><span class="topic">Vulnerability</span><span class="topic">Zero-Day</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, primary references 2</span>
-                  <span>United States · News · Secondary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://www.volexity.com/blog/2026/10/13/a-series-of-unauthenticated-events-chained-exploitation-of-ivanti-connect-secure-zero-days/">Primary source · volexity</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-critical"
               data-source="huntress"
               data-country="Global"
               data-type="Vendor"
-              data-topics="Microsoft, Phishing"
+              data-topics="Ransomware, Identity, AI Security"
               data-priority="Critical"
               data-confidence="High"
               data-japan="None"
@@ -3135,17 +3136,17 @@
               data-soc-score="67"
               data-confidence-score="100"
               data-focus-rank="5"
-              data-date="1791378000">
+              data-date="1791993600">
               <div class="card-rail"></div>
               <div class="card-body">
                 <div class="card-meta">
                   <div>
                     <span class="priority-label">Critical</span>
-                    <time>2026/10/07</time>
+                    <time>2026/10/15</time>
                   </div>
                   <a class="source" href="https://www.huntress.com/blog/">huntress</a>
                 </div>
-                <h2><a href="https://www.huntress.com/blog/screenconnect-power-bi" target="_blank" rel="noopener noreferrer">Phishing Campaign Abuses Microsoft Power BI to Deploy Rogue RMMs</a></h2>
+                <h2><a href="https://www.huntress.com/blog/what-does-the-future-hold-for-todays-cybersecurity-leaders" target="_blank" rel="noopener noreferrer">What Cybersecurity Leaders Must Prioritize in 2027</a></h2>
                 <div class="scores" aria-label="Article scores">
                   <span><b>84</b>Priority</span>
                   <span><b>67</b>SOC value</span>
@@ -3156,12 +3157,12 @@
                   <span><b>1</b>Primary</span>
                   
                 </div>
-                <div class="labels"><span class="tag">Phishing</span><span class="topic">Microsoft</span><span class="topic">Phishing</span></div>
+                <div class="labels"><span class="tag">Ransomware</span><span class="tag">Identity</span><span class="tag">AI Security</span><span class="topic">Ransomware</span><span class="topic">Identity</span><span class="topic">AI Security</span></div>
                 <div class="evidence">
                   <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, primary references 1</span>
                   <span>Global · Vendor · Primary</span>
                 </div>
-                <div class="card-links"><a class="primary-link" href="https://www.huntress.com/blog/screenconnect-power-bi">Primary source · huntress</a></div>
+                <div class="card-links"><a class="primary-link" href="https://www.huntress.com/blog/what-does-the-future-hold-for-todays-cybersecurity-leaders">Primary source · huntress</a></div>
               </div>
             </article>
             
@@ -3213,10 +3214,10 @@
             
 
             <article class="threat-card priority-critical"
-              data-source="Security Affairs"
-              data-country="Italy"
-              data-type="News"
-              data-topics="Vulnerability"
+              data-source="Malwarebytes"
+              data-country="United States"
+              data-type="Vendor"
+              data-topics="Microsoft, Vulnerability, Zero-Day"
               data-priority="Critical"
               data-confidence="High"
               data-japan="None"
@@ -3224,36 +3225,36 @@
               data-apt="no"
               data-search-tags="Action NOW"
               data-priority-score="84"
-              data-soc-score="62"
-              data-confidence-score="73"
-              data-focus-rank="4"
-              data-date="1791710336">
+              data-soc-score="53"
+              data-confidence-score="100"
+              data-focus-rank="5"
+              data-date="1791977169">
               <div class="card-rail"></div>
               <div class="card-body">
                 <div class="card-meta">
                   <div>
                     <span class="priority-label">Critical</span>
-                    <time>2026/10/11</time>
+                    <time>2026/10/14</time>
                   </div>
-                  <a class="source" href="https://securityaffairs.com/">Security Affairs</a>
+                  <a class="source" href="https://www.malwarebytes.com/blog">Malwarebytes</a>
                 </div>
-                <h2><a href="https://securityaffairs.com/200734/security/u-s-cisa-adds-proftpd-onlyoffice-docs-strapi-apache-struts-and-isc-bind-flaws-to-its-known-exploited-vulnerabilities-catalog.html" target="_blank" rel="noopener noreferrer">U.S. CISA adds ProFTPD, ONLYOFFICE Docs, Strapi, Apache Struts, and ISC BIND flaws to its Known Exploited Vulnerabilities catalog</a></h2>
+                <h2><a href="https://www.malwarebytes.com/blog/bugs/2026/10/update-windows-record-patch-tuesday-fixes-flaw-already-under-attack" target="_blank" rel="noopener noreferrer">Update Windows: Record Patch Tuesday fixes flaw already under attack</a></h2>
                 <div class="scores" aria-label="Article scores">
                   <span><b>84</b>Priority</span>
-                  <span><b>62</b>SOC value</span>
-                  <span><b>73</b>Confidence</span>
-                  <span><b>29</b>Context</span>
-                  <span><b>4</b>active exploitation</span>
+                  <span><b>53</b>SOC value</span>
+                  <span><b>100</b>Confidence</span>
+                  <span><b>18</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
                   <span><b>1</b>Refs</span>
-                  <span><b>3</b>Primary</span>
+                  <span><b>1</b>Primary</span>
                   
                 </div>
-                <div class="labels"><span class="tag">Security</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="topic">Vulnerability</span></div>
+                <div class="labels"><span class="tag">Vulnerability</span><span class="tag">Zero-Day</span><span class="tag">Patch</span><span class="tag">Endpoint</span><span class="topic">Microsoft</span><span class="topic">Vulnerability</span><span class="topic">Zero-Day</span></div>
                 <div class="evidence">
-                  <span>focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, indicator context, primary references 3</span>
-                  <span>Italy · News · Secondary</span>
+                  <span>focus: attack campaign / intrusion, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, primary references 1</span>
+                  <span>United States · Vendor · Primary</span>
                 </div>
-                <div class="card-links"><a class="primary-link" href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">Primary source · CISA</a></div>
+                <div class="card-links"><a class="primary-link" href="https://www.malwarebytes.com/blog/bugs/2026/10/update-windows-record-patch-tuesday-fixes-flaw-already-under-attack">Primary source · Malwarebytes</a></div>
               </div>
             </article>
             
@@ -3300,6 +3301,52 @@
                   <span>United States · News · Secondary</span>
                 </div>
                 <div class="card-links"><a class="primary-link" href="https://www.rapid7.com/blog/post/etr-rapid7-mdr-team-discovers-new-sonicwall-sma1000-zero-days-being-actively-exploited-cve-2026-15409-cve-2026-15410/">Primary source · Rapid7</a><span class="related">Also reported by Security Affairs</span></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-critical"
+              data-source="Cybersecurity Dive"
+              data-country="United States"
+              data-type="News"
+              data-topics=""
+              data-priority="Critical"
+              data-confidence="Medium"
+              data-japan="High"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW Japan/Asia"
+              data-priority-score="83"
+              data-soc-score="54"
+              data-confidence-score="66"
+              data-focus-rank="5"
+              data-date="1791989167">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Critical</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://www.cybersecuritydive.com/">Cybersecurity Dive</a>
+                </div>
+                <h2><a href="https://www.cybersecuritydive.com/news/north-korea-it-worker-raids-arrests-charges/832968/" target="_blank" rel="noopener noreferrer">Feds crack down on North Korean IT-worker schemes with new raids, charges and arrests</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>83</b>Priority</span>
+                  <span><b>54</b>SOC value</span>
+                  <span><b>66</b>Confidence</span>
+                  <span><b>12</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>3</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Threat Intel</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN Japan/Asia relevance, campaign priority, coherent attack event, uncertain reporting, Japan related, primary references 3</span>
+                  <span>United States · News · Secondary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://www.ic3.gov/PSA/2026/PSA261013">Primary source · FBI IC3 Alerts</a></div>
               </div>
             </article>
             
@@ -3397,56 +3444,10 @@
             
 
             <article class="threat-card priority-critical"
-              data-source="Rapid7"
-              data-country="United States"
-              data-type="Vendor"
-              data-topics="Ransomware"
-              data-priority="Critical"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags="Action NOW"
-              data-priority-score="80"
-              data-soc-score="73"
-              data-confidence-score="98"
-              data-focus-rank="3"
-              data-date="1791401363">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Critical</span>
-                    <time>2026/10/08</time>
-                  </div>
-                  <a class="source" href="https://www.rapid7.com/blog/">Rapid7</a>
-                </div>
-                <h2><a href="https://www.rapid7.com/blog/post/it-compliance-frameworks-for-universities-drowning-in-regulatory-risk" target="_blank" rel="noopener noreferrer">Four compliance frameworks, one security team: Why fragmented university security raises regulatory risk</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>80</b>Priority</span>
-                  <span><b>73</b>SOC value</span>
-                  <span><b>98</b>Confidence</span>
-                  <span><b>8</b>Context</span>
-                  <span><b>3</b>incident / breach</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Research</span><span class="tag">Ransomware</span><span class="tag">Incident Response</span><span class="topic">Ransomware</span></div>
-                <div class="evidence">
-                  <span>focus: incident / breach, EN attack activity, EN detection/analysis, EN critical sector, target and impact context, uncertain reporting, critical sector, primary references 1</span>
-                  <span>United States · Vendor · Primary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://www.rapid7.com/blog/post/it-compliance-frameworks-for-universities-drowning-in-regulatory-risk">Primary source · Rapid7</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-critical"
-              data-source="SecurityWeek"
+              data-source="The HackersNews"
               data-country="United States"
               data-type="News"
-              data-topics="Data Breach"
+              data-topics="Ivanti, Operational Technology, Vulnerability, Exploit, ICS/OT"
               data-priority="Critical"
               data-confidence="High"
               data-japan="None"
@@ -3454,36 +3455,36 @@
               data-apt="no"
               data-search-tags="Action NOW"
               data-priority-score="80"
-              data-soc-score="70"
-              data-confidence-score="72"
-              data-focus-rank="5"
-              data-date="1791366380">
+              data-soc-score="60"
+              data-confidence-score="70"
+              data-focus-rank="4"
+              data-date="1791981042">
               <div class="card-rail"></div>
               <div class="card-body">
                 <div class="card-meta">
                   <div>
                     <span class="priority-label">Critical</span>
-                    <time>2026/10/07</time>
+                    <time>2026/10/14</time>
                   </div>
-                  <a class="source" href="https://www.securityweek.com/">SecurityWeek</a>
+                  <a class="source" href="https://thehackernews.com/">The HackersNews</a>
                 </div>
-                <h2><a href="https://www.securityweek.com/asos-confirms-cyberattack-data-breach/" target="_blank" rel="noopener noreferrer">ASOS Confirms Cyberattack, Data Breach</a></h2>
+                <h2><a href="https://thehackernews.com/2026/10/cisa-urges-immediate-ivanti-connect.html" target="_blank" rel="noopener noreferrer">CISA Urges Immediate Ivanti Connect Secure Updates as Honeypots Log 105 Exploit Attempts</a></h2>
                 <div class="scores" aria-label="Article scores">
                   <span><b>80</b>Priority</span>
-                  <span><b>70</b>SOC value</span>
-                  <span><b>72</b>Confidence</span>
-                  <span><b>26</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>60</b>SOC value</span>
+                  <span><b>70</b>Confidence</span>
+                  <span><b>29</b>Context</span>
+                  <span><b>4</b>active exploitation</span>
                   <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
+                  <span><b>2</b>Primary</span>
                   
                 </div>
-                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Data Breach</span><span class="topic">Data Breach</span></div>
+                <div class="labels"><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">ICS/OT</span><span class="topic">Ivanti</span><span class="topic">Operational Technology</span><span class="topic">Vulnerability</span><span class="topic">Exploit</span><span class="topic">ICS/OT</span></div>
                 <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 1</span>
+                  <span>focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, target and impact context, vulnerability exploitation context, indicator context, primary references 2</span>
                   <span>United States · News · Secondary</span>
                 </div>
-                <div class="card-links"><a class="primary-link" href="https://www.londonstockexchange.com/news-article/ASC/update-regarding-cyber-incident/17822931">Primary source · londonstockexchange.com</a></div>
+                <div class="card-links"><a class="primary-link" href="https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure">Primary source · CISA</a></div>
               </div>
             </article>
             
@@ -3535,21 +3536,21 @@
             
 
             <article class="threat-card priority-critical"
-              data-source="Bleeping Computer"
+              data-source="SentinelOne"
               data-country="United States"
-              data-type="News"
-              data-topics="Ivanti, Network Edge, Operational Technology, Vulnerability, Zero-Day, ICS/OT"
+              data-type="Research"
+              data-topics="Exploit"
               data-priority="Critical"
-              data-confidence="Medium"
+              data-confidence="High"
               data-japan="None"
               data-ioc="no"
               data-apt="no"
               data-search-tags="Action NOW"
               data-priority-score="80"
-              data-soc-score="58"
-              data-confidence-score="68"
-              data-focus-rank="4"
-              data-date="1791906350">
+              data-soc-score="55"
+              data-confidence-score="95"
+              data-focus-rank="5"
+              data-date="1791909650">
               <div class="card-rail"></div>
               <div class="card-body">
                 <div class="card-meta">
@@ -3557,25 +3558,25 @@
                     <span class="priority-label">Critical</span>
                     <time>2026/10/14</time>
                   </div>
-                  <a class="source" href="https://www.bleepingcomputer.com/">Bleeping Computer</a>
+                  <a class="source" href="https://www.sentinelone.com/blog/">SentinelOne</a>
                 </div>
-                <h2><a href="https://www.bleepingcomputer.com/news/security/ivanti-warns-of-connect-secure-zero-day-exploited-in-attacks/" target="_blank" rel="noopener noreferrer">Ivanti warns of Connect Secure zero-day exploited in attacks</a></h2>
+                <h2><a href="https://www.sentinelone.com/blog/bring-your-own-vulnerable-driver-the-trust-gap-attackers-operate-inside/" target="_blank" rel="noopener noreferrer">Bring Your Own Vulnerable Driver: The Trust Gap Attackers Operate Inside</a></h2>
                 <div class="scores" aria-label="Article scores">
                   <span><b>80</b>Priority</span>
-                  <span><b>58</b>SOC value</span>
-                  <span><b>68</b>Confidence</span>
-                  <span><b>22</b>Context</span>
-                  <span><b>4</b>active exploitation</span>
+                  <span><b>55</b>SOC value</span>
+                  <span><b>95</b>Confidence</span>
+                  <span><b>26</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
                   <span><b>1</b>Refs</span>
-                  <span><b>3</b>Primary</span>
+                  <span><b>1</b>Primary</span>
                   
                 </div>
-                <div class="labels"><span class="tag">Security</span><span class="tag">Vulnerability</span><span class="tag">Zero-Day</span><span class="tag">Patch</span><span class="tag">ICS/OT</span><span class="topic">Ivanti</span><span class="topic">Network Edge</span><span class="topic">Operational Technology</span><span class="topic">Vulnerability</span><span class="topic">Zero-Day</span><span class="topic">ICS/OT</span></div>
+                <div class="labels"><span class="tag">Exploit</span><span class="tag">Endpoint</span><span class="topic">Exploit</span></div>
                 <div class="evidence">
-                  <span>focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, target and impact context, vulnerability exploitation context, primary references 3</span>
-                  <span>United States · News · Secondary</span>
+                  <span>focus: attack campaign / intrusion, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary references 1</span>
+                  <span>United States · Research · Primary</span>
                 </div>
-                <div class="card-links"><a class="primary-link" href="https://www.volexity.com/blog/2026/10/13/a-series-of-unauthenticated-events-chained-exploitation-of-ivanti-connect-secure-zero-days/">Primary source · volexity</a></div>
+                <div class="card-links"><a class="primary-link" href="https://www.sentinelone.com/blog/bring-your-own-vulnerable-driver-the-trust-gap-attackers-operate-inside/">Primary source · SentinelOne</a></div>
               </div>
             </article>
             
@@ -3668,98 +3669,6 @@
                   <span>United Kingdom · News · Secondary</span>
                 </div>
                 <div class="card-links"><a class="primary-link" href="https://www.simon.ai/news/simon-data-evolves-marketing-composable-ai-agents-built-snowflake-cortex-ai">Primary source · simon.ai</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-high"
-              data-source="Bleeping Computer"
-              data-country="United States"
-              data-type="News"
-              data-topics="Exploit, Malware, AI Security"
-              data-priority="High"
-              data-confidence="Medium"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags="Action NOW"
-              data-priority-score="79"
-              data-soc-score="70"
-              data-confidence-score="67"
-              data-focus-rank="5"
-              data-date="1791385448">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">High</span>
-                    <time>2026/10/08</time>
-                  </div>
-                  <a class="source" href="https://www.bleepingcomputer.com/">Bleeping Computer</a>
-                </div>
-                <h2><a href="https://www.bleepingcomputer.com/news/security/poellm-malware-infects-exposed-ai-servers-in-cryptomining-attacks/" target="_blank" rel="noopener noreferrer">PoeLLM malware infects exposed AI servers in cryptomining attacks</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>79</b>Priority</span>
-                  <span><b>70</b>SOC value</span>
-                  <span><b>67</b>Confidence</span>
-                  <span><b>18</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Security</span><span class="tag">Exploit</span><span class="tag">Malware</span><span class="tag">AI Security</span><span class="topic">Exploit</span><span class="topic">Malware</span><span class="topic">AI Security</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, primary references 1</span>
-                  <span>United States · News · Secondary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://www.lumen.com/blog/en-us/canto-incognito-tracking-the-poellm-malware">Primary source · lumen.com</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-high"
-              data-source="CrowdStrike"
-              data-country="United States"
-              data-type="Vendor"
-              data-topics="AI Security"
-              data-priority="High"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="yes"
-              data-apt="no"
-              data-search-tags="Action NOW IOC"
-              data-priority-score="79"
-              data-soc-score="60"
-              data-confidence-score="100"
-              data-focus-rank="5"
-              data-date="1791349200">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">High</span>
-                    <time>2026/10/07</time>
-                  </div>
-                  <a class="source" href="https://www.crowdstrike.com/en-us/blog">CrowdStrike</a>
-                </div>
-                <h2><a href="https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/" target="_blank" rel="noopener noreferrer">Unknown Threat Actor Uses AI-Driven ARTEX to Target South Korean Finance</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>79</b>Priority</span>
-                  <span><b>60</b>SOC value</span>
-                  <span><b>100</b>Confidence</span>
-                  <span><b>18</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  <a class="indicator" href="iocs.html">IOC 13 · Domain, IPv4, URL</a>
-                </div>
-                <div class="labels"><span class="tag">Threat Actor</span><span class="tag">AI Security</span><span class="tag">Detection</span><span class="topic">AI Security</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, campaign priority, IOC 13, coherent attack event, primary references 1</span>
-                  <span>United States · Vendor · Primary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/">Primary source · CrowdStrike</a></div>
               </div>
             </article>
             
@@ -3903,52 +3812,6 @@
             
 
             <article class="threat-card priority-high"
-              data-source="Security Affairs"
-              data-country="Italy"
-              data-type="News"
-              data-topics="Malware"
-              data-priority="High"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags="Action NOW"
-              data-priority-score="78"
-              data-soc-score="67"
-              data-confidence-score="72"
-              data-focus-rank="5"
-              data-date="1791379337">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">High</span>
-                    <time>2026/10/07</time>
-                  </div>
-                  <a class="source" href="https://securityaffairs.com/">Security Affairs</a>
-                </div>
-                <h2><a href="https://securityaffairs.com/200537/hacking/cert-ua-fake-cloudflare-checks-deliver-lunexstealer-malware.html" target="_blank" rel="noopener noreferrer">CERT-UA: Fake Cloudflare Checks Deliver LunexStealer Malware</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>78</b>Priority</span>
-                  <span><b>67</b>SOC value</span>
-                  <span><b>72</b>Confidence</span>
-                  <span><b>18</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Security</span><span class="tag">Malware</span><span class="tag">Threat Intel</span><span class="topic">Malware</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, primary references 1</span>
-                  <span>Italy · News · Secondary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://cert.gov.ua/article/6319983">Primary source · cert.gov.ua</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-high"
               data-source="HackRead"
               data-country="Global"
               data-type="News"
@@ -4041,10 +3904,10 @@
             
 
             <article class="threat-card priority-high"
-              data-source="Security Affairs"
-              data-country="Italy"
+              data-source="Bleeping Computer"
+              data-country="United States"
               data-type="News"
-              data-topics="Vulnerability"
+              data-topics="Phishing"
               data-priority="High"
               data-confidence="High"
               data-japan="None"
@@ -4053,35 +3916,35 @@
               data-search-tags="Action NOW"
               data-priority-score="78"
               data-soc-score="56"
-              data-confidence-score="80"
+              data-confidence-score="81"
               data-focus-rank="5"
-              data-date="1791444409">
+              data-date="1791983572">
               <div class="card-rail"></div>
               <div class="card-body">
                 <div class="card-meta">
                   <div>
                     <span class="priority-label">High</span>
-                    <time>2026/10/08</time>
+                    <time>2026/10/14</time>
                   </div>
-                  <a class="source" href="https://securityaffairs.com/">Security Affairs</a>
+                  <a class="source" href="https://www.bleepingcomputer.com/">Bleeping Computer</a>
                 </div>
-                <h2><a href="https://securityaffairs.com/200591/security/atlassian-vulnerability-comes-under-attack-hours-after-details-go-public.html" target="_blank" rel="noopener noreferrer">Atlassian Vulnerability Comes Under Attack Hours After Details Go Public</a></h2>
+                <h2><a href="https://www.bleepingcomputer.com/news/security/global-takedown-hits-network-behind-1-billion-phishing-messages/" target="_blank" rel="noopener noreferrer">Global takedown hits network behind 1 billion phishing messages</a></h2>
                 <div class="scores" aria-label="Article scores">
                   <span><b>78</b>Priority</span>
                   <span><b>56</b>SOC value</span>
-                  <span><b>80</b>Confidence</span>
-                  <span><b>34</b>Context</span>
+                  <span><b>81</b>Confidence</span>
+                  <span><b>26</b>Context</span>
                   <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>2</b>Refs</span>
-                  <span><b>2</b>Primary</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>3</b>Primary</span>
                   
                 </div>
-                <div class="labels"><span class="tag">Security</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Threat Actor</span><span class="topic">Vulnerability</span></div>
+                <div class="labels"><span class="tag">Security</span><span class="tag">Phishing</span><span class="tag">Network</span><span class="topic">Phishing</span></div>
                 <div class="evidence">
-                  <span>focus: attack campaign / intrusion, campaign priority, coherent attack event, target and impact context, reported by 2 sources, primary references 2</span>
-                  <span>Italy · News · Secondary</span>
+                  <span>focus: attack campaign / intrusion, campaign priority, coherent attack event, target and impact context, primary references 3</span>
+                  <span>United States · News · Secondary</span>
                 </div>
-                <div class="card-links"><a class="primary-link" href="https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/">Primary source · WatchTowr Labs</a><span class="related">Also reported by The HackersNews</span></div>
+                <div class="card-links"><a class="primary-link" href="http://www.microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime/">Primary source · Microsoft Security Blog</a></div>
               </div>
             </article>
             
@@ -4133,6 +3996,52 @@
             
 
             <article class="threat-card priority-high"
+              data-source="CyberScoop"
+              data-country="United States"
+              data-type="News"
+              data-topics="Microsoft, AI Security, Vulnerability, Zero-Day"
+              data-priority="High"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW"
+              data-priority-score="77"
+              data-soc-score="53"
+              data-confidence-score="73"
+              data-focus-rank="4"
+              data-date="1791999731">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">High</span>
+                    <time>2026/10/15</time>
+                  </div>
+                  <a class="source" href="https://cyberscoop.com/">CyberScoop</a>
+                </div>
+                <h2><a href="https://cyberscoop.com/microsoft-patch-tuesday-october-2026/" target="_blank" rel="noopener noreferrer">Microsoft drops an actively exploited zero-day among record high of 1,413 vulnerabilities</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>77</b>Priority</span>
+                  <span><b>53</b>SOC value</span>
+                  <span><b>73</b>Confidence</span>
+                  <span><b>17</b>Context</span>
+                  <span><b>4</b>active exploitation</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>3</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">AI Security</span><span class="tag">Security</span><span class="tag">Research</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="topic">Microsoft</span><span class="topic">AI Security</span><span class="topic">Vulnerability</span><span class="topic">Zero-Day</span></div>
+                <div class="evidence">
+                  <span>focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, primary references 3</span>
+                  <span>United States · News · Secondary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://nvd.nist.gov/vuln/detail/cve-2026-96951">Primary source · nvd.nist.gov</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-high"
               data-source="Bleeping Computer"
               data-country="United States"
               data-type="News"
@@ -4174,52 +4083,6 @@
                   <span>United States · News · Secondary</span>
                 </div>
                 <div class="card-links"><a class="primary-link" href="https://www.zerodayinitiative.com/blog/2026/10/8/pwn2own-ireland-2026-day-three-results-amp-master-of-pwn">Primary source · zerodayinitiative.com</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-high"
-              data-source="The Record"
-              data-country="United States"
-              data-type="News"
-              data-topics=""
-              data-priority="High"
-              data-confidence="Medium"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags="Action NOW"
-              data-priority-score="75"
-              data-soc-score="61"
-              data-confidence-score="69"
-              data-focus-rank="5"
-              data-date="1791402600">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">High</span>
-                    <time>2026/10/08</time>
-                  </div>
-                  <a class="source" href="https://therecord.media/">The Record</a>
-                </div>
-                <h2><a href="https://therecord.media/accused-hafnium-hacker-zhang-yu-10million-reward" target="_blank" rel="noopener noreferrer">US posts $10 million reward for accused Chinese ‘Hafnium’ hacker</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>75</b>Priority</span>
-                  <span><b>61</b>SOC value</span>
-                  <span><b>69</b>Confidence</span>
-                  <span><b>18</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>2</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Threat Intel</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, reported by 2 sources, primary references 1</span>
-                  <span>United States · News · Secondary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://www.recordedfuture.com/research/tajin-group-gurantee-marketplace">Primary source · Recorded Future</a><span class="related">Also reported by Security Affairs</span></div>
               </div>
             </article>
             
@@ -4274,44 +4137,90 @@
               data-source="SecurityWeek"
               data-country="United States"
               data-type="News"
-              data-topics="Ransomware, Data Breach"
+              data-topics="Microsoft, Zero-Day, Vulnerability"
               data-priority="High"
-              data-confidence="Low"
-              data-japan="High"
+              data-confidence="High"
+              data-japan="None"
               data-ioc="no"
               data-apt="no"
-              data-search-tags="Action NOW Japan/Asia"
-              data-priority-score="74"
-              data-soc-score="78"
-              data-confidence-score="41"
-              data-focus-rank="5"
-              data-date="1791376644">
+              data-search-tags="Action NOW"
+              data-priority-score="75"
+              data-soc-score="50"
+              data-confidence-score="73"
+              data-focus-rank="4"
+              data-date="1791962172">
               <div class="card-rail"></div>
               <div class="card-body">
                 <div class="card-meta">
                   <div>
                     <span class="priority-label">High</span>
-                    <time>2026/10/07</time>
+                    <time>2026/10/14</time>
                   </div>
                   <a class="source" href="https://www.securityweek.com/">SecurityWeek</a>
                 </div>
-                <h2><a href="https://www.securityweek.com/advantest-discloses-data-breach-months-after-ransomware-attack/" target="_blank" rel="noopener noreferrer">Advantest Discloses Data Breach Months After Ransomware Attack</a></h2>
+                <h2><a href="https://www.securityweek.com/microsoft-patches-record-1413-vulnerabilities-including-exploited-windows-zero-day/" target="_blank" rel="noopener noreferrer">Microsoft Patches Record 1,413 Vulnerabilities, Including Exploited Windows Zero-Day</a></h2>
                 <div class="scores" aria-label="Article scores">
-                  <span><b>74</b>Priority</span>
-                  <span><b>78</b>SOC value</span>
-                  <span><b>41</b>Confidence</span>
-                  <span><b>26</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>75</b>Priority</span>
+                  <span><b>50</b>SOC value</span>
+                  <span><b>73</b>Confidence</span>
+                  <span><b>14</b>Context</span>
+                  <span><b>4</b>active exploitation</span>
                   <span><b>1</b>Refs</span>
-                  <span><b>0</b>Primary</span>
+                  <span><b>3</b>Primary</span>
                   
                 </div>
-                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Ransomware</span><span class="tag">Data Breach</span><span class="topic">Ransomware</span><span class="topic">Data Breach</span></div>
+                <div class="labels"><span class="tag">Zero-Day</span><span class="tag">Vulnerability</span><span class="tag">Threat Intel</span><span class="tag">Patch</span><span class="tag">Endpoint</span><span class="topic">Microsoft</span><span class="topic">Zero-Day</span><span class="topic">Vulnerability</span></div>
                 <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, EN Japan/Asia relevance, campaign priority, coherent attack event, target and impact context, Japan related, primary source not found</span>
+                  <span>focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, primary references 3</span>
                   <span>United States · News · Secondary</span>
                 </div>
-                <div class="card-links"></div>
+                <div class="card-links"><a class="primary-link" href="https://www.microsoft.com/en-us/msrc/blog/2026/10/using-risk-cohorts-to-prioritize-security-updates">Primary source · Microsoft Security Blog</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-high"
+              data-source="Security Affairs"
+              data-country="Italy"
+              data-type="News"
+              data-topics="Vulnerability"
+              data-priority="High"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW"
+              data-priority-score="74"
+              data-soc-score="54"
+              data-confidence-score="78"
+              data-focus-rank="5"
+              data-date="1791444409">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">High</span>
+                    <time>2026/10/08</time>
+                  </div>
+                  <a class="source" href="https://securityaffairs.com/">Security Affairs</a>
+                </div>
+                <h2><a href="https://securityaffairs.com/200591/security/atlassian-vulnerability-comes-under-attack-hours-after-details-go-public.html" target="_blank" rel="noopener noreferrer">Atlassian Vulnerability Comes Under Attack Hours After Details Go Public</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>74</b>Priority</span>
+                  <span><b>54</b>SOC value</span>
+                  <span><b>78</b>Confidence</span>
+                  <span><b>34</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>2</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Security</span><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="tag">Threat Actor</span><span class="topic">Vulnerability</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, campaign priority, coherent attack event, target and impact context, primary references 2</span>
+                  <span>Italy · News · Secondary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/">Primary source · WatchTowr Labs</a></div>
               </div>
             </article>
             
@@ -4363,6 +4272,52 @@
             
 
             <article class="threat-card priority-high"
+              data-source="The HackersNews"
+              data-country="United States"
+              data-type="News"
+              data-topics="Microsoft, Vulnerability, Exploit"
+              data-priority="High"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW"
+              data-priority-score="73"
+              data-soc-score="47"
+              data-confidence-score="73"
+              data-focus-rank="4"
+              data-date="1791952483">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">High</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://thehackernews.com/">The HackersNews</a>
+                </div>
+                <h2><a href="https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html" target="_blank" rel="noopener noreferrer">Microsoft Patches Record 1,413 Flaws, Including Exploited Windows Shell Bug</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>73</b>Priority</span>
+                  <span><b>47</b>SOC value</span>
+                  <span><b>73</b>Confidence</span>
+                  <span><b>14</b>Context</span>
+                  <span><b>4</b>active exploitation</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>3</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Vulnerability</span><span class="tag">Exploit</span><span class="tag">Patch</span><span class="tag">Endpoint</span><span class="topic">Microsoft</span><span class="topic">Vulnerability</span><span class="topic">Exploit</span></div>
+                <div class="evidence">
+                  <span>focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, primary references 3</span>
+                  <span>United States · News · Secondary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://msrc.microsoft.com/update-guide/releaseNote/2026-Oct">Primary source · Microsoft Japan Security Team</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-high"
               data-source="Bleeping Computer"
               data-country="United States"
               data-type="News"
@@ -4404,6 +4359,98 @@
                   <span>United States · News · Secondary</span>
                 </div>
                 <div class="card-links"></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-high"
+              data-source="Security Affairs"
+              data-country="Italy"
+              data-type="News"
+              data-topics=""
+              data-priority="High"
+              data-confidence="Medium"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW"
+              data-priority-score="72"
+              data-soc-score="61"
+              data-confidence-score="62"
+              data-focus-rank="5"
+              data-date="1791454304">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">High</span>
+                    <time>2026/10/08</time>
+                  </div>
+                  <a class="source" href="https://securityaffairs.com/">Security Affairs</a>
+                </div>
+                <h2><a href="https://securityaffairs.com/200608/intelligence/u-s-offers-10-million-reward-for-alleged-hafnium-hacker-zhang-yu.html" target="_blank" rel="noopener noreferrer">U.S. Offers $10 Million Reward for Alleged HAFNIUM Hacker Zhang Yu</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>72</b>Priority</span>
+                  <span><b>61</b>SOC value</span>
+                  <span><b>62</b>Confidence</span>
+                  <span><b>20</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Security</span><span class="tag">Threat Intel</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, uncertain reporting, primary references 1</span>
+                  <span>Italy · News · Secondary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://rewardsforjustice.net/rewards/zhang-yu-sssb/">Primary source · rewardsforjustice.net</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-high"
+              data-source="Help Net Security"
+              data-country="Croatia"
+              data-type="News"
+              data-topics=""
+              data-priority="High"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW"
+              data-priority-score="72"
+              data-soc-score="57"
+              data-confidence-score="77"
+              data-focus-rank="5"
+              data-date="1791974892">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">High</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://www.helpnetsecurity.com/">Help Net Security</a>
+                </div>
+                <h2><a href="https://www.helpnetsecurity.com/2026/10/14/tfg-london-cyberattack-phase-eight-hobbs-whistles/" target="_blank" rel="noopener noreferrer">Phase Eight, Hobbs and Whistles owner joins growing list of fashion retailers targeted by hackers</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>72</b>Priority</span>
+                  <span><b>57</b>SOC value</span>
+                  <span><b>77</b>Confidence</span>
+                  <span><b>31</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Threat Intel</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN detection/analysis, campaign priority, coherent attack event, target and impact context, primary references 1</span>
+                  <span>Croatia · News · Secondary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://us.fashionnetwork.com/news/H-m-investigates-reports-of-cyberattack,1875129.html">Primary source · us.fashionnetwork.com</a></div>
               </div>
             </article>
             
@@ -4501,47 +4548,47 @@
             
 
             <article class="threat-card priority-high"
-              data-source="Unit42"
+              data-source="Talos"
               data-country="United States"
               data-type="Research"
-              data-topics="Supply Chain, Cloud"
+              data-topics="Cisco, Malware"
               data-priority="High"
               data-confidence="High"
               data-japan="None"
-              data-ioc="no"
+              data-ioc="yes"
               data-apt="no"
-              data-search-tags="Action NOW"
-              data-priority-score="71"
-              data-soc-score="51"
-              data-confidence-score="94"
-              data-focus-rank="5"
-              data-date="1791410416">
+              data-search-tags="Action NOW IOC"
+              data-priority-score="70"
+              data-soc-score="56"
+              data-confidence-score="100"
+              data-focus-rank="3"
+              data-date="1791986400">
               <div class="card-rail"></div>
               <div class="card-body">
                 <div class="card-meta">
                   <div>
                     <span class="priority-label">High</span>
-                    <time>2026/10/08</time>
+                    <time>2026/10/14</time>
                   </div>
-                  <a class="source" href="https://unit42.paloaltonetworks.com/">Unit42</a>
+                  <a class="source" href="https://blog.talosintelligence.com/">Talos</a>
                 </div>
-                <h2><a href="https://unit42.paloaltonetworks.com/web3-cloud-supply-chain-attacks/" target="_blank" rel="noopener noreferrer">Evolution of Web3 in Cloud Supply Chain Attacks</a></h2>
+                <h2><a href="https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/" target="_blank" rel="noopener noreferrer">Break the silence: Kazakhstan-nexus UAT-6275 targets CIS government organizations</a></h2>
                 <div class="scores" aria-label="Article scores">
-                  <span><b>71</b>Priority</span>
-                  <span><b>51</b>SOC value</span>
-                  <span><b>94</b>Confidence</span>
-                  <span><b>7</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
+                  <span><b>70</b>Priority</span>
+                  <span><b>56</b>SOC value</span>
+                  <span><b>100</b>Confidence</span>
+                  <span><b>8</b>Context</span>
+                  <span><b>3</b>incident / breach</span>
+                  <span><b>2</b>Refs</span>
                   <span><b>1</b>Primary</span>
-                  
+                  <a class="indicator" href="iocs.html">IOC 159 · Domain, IPv4, MD5, SHA1, SHA256, URL</a>
                 </div>
-                <div class="labels"><span class="tag">Threat Actor</span><span class="tag">Supply Chain</span><span class="tag">Cloud</span><span class="topic">Supply Chain</span><span class="topic">Cloud</span></div>
+                <div class="labels"><span class="tag">Malware</span><span class="tag">Network</span><span class="tag">Incident Response</span><span class="topic">Cisco</span><span class="topic">Malware</span></div>
                 <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, indicator context, primary references 1</span>
+                  <span>focus: incident / breach, EN critical sector, IOC 159, linked IOC evidence, target and impact context, critical sector, reported by 2 sources, primary references 1</span>
                   <span>United States · Research · Primary</span>
                 </div>
-                <div class="card-links"><a class="primary-link" href="https://unit42.paloaltonetworks.com/web3-cloud-supply-chain-attacks/">Primary source · Unit42</a></div>
+                <div class="card-links"><a class="primary-link" href="https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/">Primary source · Talos</a><span class="related">Also reported by Recorded Future</span></div>
               </div>
             </article>
             
@@ -4588,6 +4635,52 @@
                   <span>United States · News · Secondary</span>
                 </div>
                 <div class="card-links"><a class="primary-link" href="https://www.bitdefender.com/en-us/blog/labs/midnight-mimosa-malware">Primary source · Bitdefender Labs</a><span class="related">Also reported by Vulners</span></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-high"
+              data-source="INCIBE-CERT Alerts"
+              data-country="Spain"
+              data-type="CERT"
+              data-topics="Active Directory, Cloud Security, Linux, Microsoft, Vulnerability, Cloud, Identity"
+              data-priority="High"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW"
+              data-priority-score="70"
+              data-soc-score="43"
+              data-confidence-score="100"
+              data-focus-rank="4"
+              data-date="1791965027">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">High</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos">INCIBE-CERT Alerts</a>
+                </div>
+                <h2><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-mensual-de-seguridad-de-microsoft-de-octubre-de-2026" target="_blank" rel="noopener noreferrer">Boletín mensual de seguridad de Microsoft de octubre de 2026</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>70</b>Priority</span>
+                  <span><b>43</b>SOC value</span>
+                  <span><b>100</b>Confidence</span>
+                  <span><b>14</b>Context</span>
+                  <span><b>4</b>active exploitation</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Vulnerability</span><span class="tag">Patch</span><span class="tag">Cloud</span><span class="tag">Identity</span><span class="tag">Endpoint</span><span class="topic">Active Directory</span><span class="topic">Cloud Security</span><span class="topic">Linux</span><span class="topic">Microsoft</span><span class="topic">Vulnerability</span><span class="topic">Cloud</span></div>
+                <div class="evidence">
+                  <span>focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, primary references 1</span>
+                  <span>Spain · CERT · Primary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-mensual-de-seguridad-de-microsoft-de-octubre-de-2026">Primary source · INCIBE-CERT Alerts</a></div>
               </div>
             </article>
             
@@ -4685,6 +4778,98 @@
             
 
             <article class="threat-card priority-high"
+              data-source="Barracuda Labs"
+              data-country="United States"
+              data-type="Vendor"
+              data-topics="Ransomware, Data Breach"
+              data-priority="High"
+              data-confidence="High"
+              data-japan="High"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW Japan/Asia"
+              data-priority-score="69"
+              data-soc-score="53"
+              data-confidence-score="93"
+              data-focus-rank="3"
+              data-date="1791925312">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">High</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://blog.barracuda.com/">Barracuda Labs</a>
+                </div>
+                <h2><a href="https://blog.barracuda.com/2026/10/13/21-months-100-million-one-Qilin-suspect-in-custody" target="_blank" rel="noopener noreferrer">21 months, $100 million, one Qilin suspect in custody</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>69</b>Priority</span>
+                  <span><b>53</b>SOC value</span>
+                  <span><b>93</b>Confidence</span>
+                  <span><b>0</b>Context</span>
+                  <span><b>3</b>incident / breach</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Ransomware</span><span class="tag">Data Breach</span><span class="topic">Ransomware</span><span class="topic">Data Breach</span></div>
+                <div class="evidence">
+                  <span>focus: incident / breach, EN attack activity, EN Japan/Asia relevance, Japan related, primary references 1</span>
+                  <span>United States · Vendor · Primary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://blog.barracuda.com/2026/10/13/21-months-100-million-one-Qilin-suspect-in-custody">Primary source · Barracuda Labs</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-high"
+              data-source="SecurityWeek"
+              data-country="United States"
+              data-type="News"
+              data-topics="Vulnerability"
+              data-priority="High"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW"
+              data-priority-score="68"
+              data-soc-score="46"
+              data-confidence-score="78"
+              data-focus-rank="5"
+              data-date="1791958330">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">High</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://www.securityweek.com/">SecurityWeek</a>
+                </div>
+                <h2><a href="https://www.securityweek.com/sap-patches-critical-netweaver-s-4hana-vulnerabilities/" target="_blank" rel="noopener noreferrer">SAP Patches Critical NetWeaver, S/4HANA Vulnerabilities</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>68</b>Priority</span>
+                  <span><b>46</b>SOC value</span>
+                  <span><b>78</b>Confidence</span>
+                  <span><b>26</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>2</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Vulnerability</span><span class="tag">Threat Intel</span><span class="topic">Vulnerability</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, campaign priority, coherent attack event, target and impact context, primary references 2</span>
+                  <span>United States · News · Secondary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://support.sap.com/en/my-support/knowledge-base/security-notes-news/october-2026.html">Primary source · support.sap.com</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-high"
               data-source="The HackersNews"
               data-country="United States"
               data-type="News"
@@ -4731,47 +4916,47 @@
             
 
             <article class="threat-card priority-high"
-              data-source="piyolog"
-              data-country="Japan"
-              data-type="Vendor"
-              data-topics="Exploit, AI Security"
+              data-source="Infosecurity Magazine"
+              data-country="United Kingdom"
+              data-type="News"
+              data-topics="Vulnerability"
               data-priority="High"
-              data-confidence="High"
-              data-japan="Medium"
+              data-confidence="Medium"
+              data-japan="None"
               data-ioc="no"
               data-apt="no"
-              data-search-tags="Action NOW Japan/Asia"
+              data-search-tags="Action NOW"
               data-priority-score="68"
-              data-soc-score="39"
-              data-confidence-score="88"
+              data-soc-score="45"
+              data-confidence-score="65"
               data-focus-rank="4"
-              data-date="1791499122">
+              data-date="1791453900">
               <div class="card-rail"></div>
               <div class="card-body">
                 <div class="card-meta">
                   <div>
                     <span class="priority-label">High</span>
-                    <time>2026/10/09</time>
+                    <time>2026/10/08</time>
                   </div>
-                  <a class="source" href="https://piyolog.hatenadiary.jp/">piyolog</a>
+                  <a class="source" href="https://www.infosecurity-magazine.com/">Infosecurity Magazine</a>
                 </div>
-                <h2><a href="https://piyolog.hatenadiary.jp/entry/2026/10/09/073842" target="_blank" rel="noopener noreferrer">デンマークのCPR登録簿への不正アクセスについてまとめてみた</a></h2>
+                <h2><a href="https://www.infosecurity-magazine.com/news/critical-vulnerability-atlassian/" target="_blank" rel="noopener noreferrer">Critical Flaw in Multiple Atlassian Products Exploited in the Wild</a></h2>
                 <div class="scores" aria-label="Article scores">
                   <span><b>68</b>Priority</span>
-                  <span><b>39</b>SOC value</span>
-                  <span><b>88</b>Confidence</span>
-                  <span><b>-19</b>Context</span>
+                  <span><b>45</b>SOC value</span>
+                  <span><b>65</b>Confidence</span>
+                  <span><b>14</b>Context</span>
                   <span><b>4</b>active exploitation</span>
                   <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
+                  <span><b>2</b>Primary</span>
                   
                 </div>
-                <div class="labels"><span class="tag">Exploit</span><span class="tag">AI Security</span><span class="topic">Exploit</span><span class="topic">AI Security</span></div>
+                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Vulnerability</span><span class="topic">Vulnerability</span></div>
                 <div class="evidence">
-                  <span>focus: active exploitation, JA attack activity, JA active exploit/PoC/zero-day, active exploitation priority, target and impact context, marketing context, uncertain reporting, Japan source, primary references 1</span>
-                  <span>Japan · Vendor · Primary</span>
+                  <span>focus: active exploitation, EN active exploit/PoC/zero-day, active exploitation priority, vulnerability exploitation context, primary references 2</span>
+                  <span>United Kingdom · News · Secondary</span>
                 </div>
-                <div class="card-links"><a class="primary-link" href="https://piyolog.hatenadiary.jp/entry/2026/10/09/073842">Primary source · piyolog</a></div>
+                <div class="card-links"><a class="primary-link" href="https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/">Primary source · WatchTowr Labs</a></div>
               </div>
             </article>
             
@@ -5007,52 +5192,6 @@
             
 
             <article class="threat-card priority-high"
-              data-source="Help Net Security"
-              data-country="Croatia"
-              data-type="News"
-              data-topics="Operational Technology, Ransomware, ICS/OT"
-              data-priority="High"
-              data-confidence="Medium"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags="Action NOW"
-              data-priority-score="63"
-              data-soc-score="66"
-              data-confidence-score="46"
-              data-focus-rank="5"
-              data-date="1791432014">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">High</span>
-                    <time>2026/10/08</time>
-                  </div>
-                  <a class="source" href="https://www.helpnetsecurity.com/">Help Net Security</a>
-                </div>
-                <h2><a href="https://www.helpnetsecurity.com/2026/10/08/forescout-healthcare-quantum-readiness-report/" target="_blank" rel="noopener noreferrer">Medical devices patients rely on most are least prepared for quantum attacks</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>63</b>Priority</span>
-                  <span><b>66</b>SOC value</span>
-                  <span><b>46</b>Confidence</span>
-                  <span><b>26</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>0</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Security</span><span class="tag">Threat Intel</span><span class="tag">Ransomware</span><span class="tag">Threat Actor</span><span class="tag">ICS/OT</span><span class="topic">Operational Technology</span><span class="topic">Ransomware</span><span class="topic">ICS/OT</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary source not found</span>
-                  <span>Croatia · News · Secondary</span>
-                </div>
-                <div class="card-links"></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-high"
               data-source="Infosecurity Magazine"
               data-country="United Kingdom"
               data-type="News"
@@ -5094,6 +5233,52 @@
                   <span>United Kingdom · News · Secondary</span>
                 </div>
                 <div class="card-links"><a class="primary-link" href="https://www.comparitech.com/news/ransomware-roundup-q3-2026-stats-on-attacks-ransoms-and-active-gangs/">Primary source · comparitech.com</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-high"
+              data-source="piyolog"
+              data-country="Japan"
+              data-type="Vendor"
+              data-topics="Data Breach"
+              data-priority="High"
+              data-confidence="High"
+              data-japan="Medium"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Action NOW Japan/Asia"
+              data-priority-score="62"
+              data-soc-score="45"
+              data-confidence-score="88"
+              data-focus-rank="3"
+              data-date="1792014985">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">High</span>
+                    <time>2026/10/15</time>
+                  </div>
+                  <a class="source" href="https://piyolog.hatenadiary.jp/">piyolog</a>
+                </div>
+                <h2><a href="https://piyolog.hatenadiary.jp/entry/2026/10/15/065625" target="_blank" rel="noopener noreferrer">産婦人科向けシステム「アットリンク」への不正アクセスについてまとめてみた</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>62</b>Priority</span>
+                  <span><b>45</b>SOC value</span>
+                  <span><b>88</b>Confidence</span>
+                  <span><b>1</b>Context</span>
+                  <span><b>3</b>incident / breach</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Data Breach</span><span class="topic">Data Breach</span></div>
+                <div class="evidence">
+                  <span>focus: incident / breach, JA attack activity, JA critical sector, target and impact context, uncertain reporting, Japan source, critical sector, primary references 1</span>
+                  <span>Japan · Vendor · Primary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://piyolog.hatenadiary.jp/entry/2026/10/15/065625">Primary source · piyolog</a></div>
               </div>
             </article>
             
@@ -5272,7 +5457,7 @@
                   <span><b>1</b>Primary</span>
                   
                 </div>
-                <div class="labels"><span class="tag">Malware</span><span class="tag">Security</span><span class="tag">Threat Intel</span><span class="tag">Phishing</span><span class="tag">Supply Chain</span><span class="topic">Microsoft</span><span class="topic">Supply Chain</span><span class="topic">Malware</span><span class="topic">Phishing</span></div>
+                <div class="labels"><span class="tag">Security</span><span class="tag">Malware</span><span class="tag">Threat Intel</span><span class="tag">Phishing</span><span class="tag">Supply Chain</span><span class="topic">Microsoft</span><span class="topic">Supply Chain</span><span class="topic">Malware</span><span class="topic">Phishing</span></div>
                 <div class="evidence">
                   <span>focus: attack campaign / intrusion, campaign priority, coherent attack event, primary references 1</span>
                   <span>Global · News · Secondary</span>
@@ -5375,6 +5560,144 @@
             
 
             <article class="threat-card priority-medium"
+              data-source="huntress"
+              data-country="Global"
+              data-type="Vendor"
+              data-topics="Phishing, Identity"
+              data-priority="Medium"
+              data-confidence="High"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags=""
+              data-priority-score="57"
+              data-soc-score="52"
+              data-confidence-score="88"
+              data-focus-rank="3"
+              data-date="1791993600">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Medium</span>
+                    <time>2026/10/15</time>
+                  </div>
+                  <a class="source" href="https://www.huntress.com/blog/">huntress</a>
+                </div>
+                <h2><a href="https://www.huntress.com/blog/what-is-business-email-compromise-bec" target="_blank" rel="noopener noreferrer">Business Email Compromise (BEC) Attacks: How to Stop Them</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>57</b>Priority</span>
+                  <span><b>52</b>SOC value</span>
+                  <span><b>88</b>Confidence</span>
+                  <span><b>8</b>Context</span>
+                  <span><b>3</b>incident / breach</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>1</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Phishing</span><span class="tag">Identity</span><span class="tag">Detection</span><span class="topic">Phishing</span><span class="topic">Identity</span></div>
+                <div class="evidence">
+                  <span>focus: incident / breach, EN attack activity, EN detection/analysis, target and impact context, primary references 1</span>
+                  <span>Global · Vendor · Primary</span>
+                </div>
+                <div class="card-links"><a class="primary-link" href="https://www.huntress.com/blog/what-is-business-email-compromise-bec">Primary source · huntress</a></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-medium"
+              data-source="CyberScoop"
+              data-country="United States"
+              data-type="News"
+              data-topics="Microsoft, Phishing"
+              data-priority="Medium"
+              data-confidence="Low"
+              data-japan="High"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags="Japan/Asia"
+              data-priority-score="55"
+              data-soc-score="52"
+              data-confidence-score="41"
+              data-focus-rank="5"
+              data-date="1791982800">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Medium</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://cyberscoop.com/">CyberScoop</a>
+                </div>
+                <h2><a href="https://cyberscoop.com/microsoft-disrupts-chinese-language-phishing-kit-ecosystem/" target="_blank" rel="noopener noreferrer">Microsoft and partners disrupt vast Chinese-language phishing kit ecosystem</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>55</b>Priority</span>
+                  <span><b>52</b>SOC value</span>
+                  <span><b>41</b>Confidence</span>
+                  <span><b>26</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>0</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Security</span><span class="tag">Research</span><span class="tag">Threat Intel</span><span class="tag">Phishing</span><span class="topic">Microsoft</span><span class="topic">Phishing</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN Japan/Asia relevance, campaign priority, coherent attack event, target and impact context, Japan related, primary source not found</span>
+                  <span>United States · News · Secondary</span>
+                </div>
+                <div class="card-links"></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-medium"
+              data-source="Infosecurity Magazine"
+              data-country="United Kingdom"
+              data-type="News"
+              data-topics="Malware"
+              data-priority="Medium"
+              data-confidence="Low"
+              data-japan="None"
+              data-ioc="no"
+              data-apt="no"
+              data-search-tags=""
+              data-priority-score="52"
+              data-soc-score="62"
+              data-confidence-score="36"
+              data-focus-rank="5"
+              data-date="1791986400">
+              <div class="card-rail"></div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <div>
+                    <span class="priority-label">Medium</span>
+                    <time>2026/10/14</time>
+                  </div>
+                  <a class="source" href="https://www.infosecurity-magazine.com/">Infosecurity Magazine</a>
+                </div>
+                <h2><a href="https://www.infosecurity-magazine.com/news/romulus-malware-clickfix-deliver/" target="_blank" rel="noopener noreferrer">ROMULUS Malware Server Leverages ClickFix to Deliver Multiple Payloads</a></h2>
+                <div class="scores" aria-label="Article scores">
+                  <span><b>52</b>Priority</span>
+                  <span><b>62</b>SOC value</span>
+                  <span><b>36</b>Confidence</span>
+                  <span><b>33</b>Context</span>
+                  <span><b>5</b>attack campaign / intrusion</span>
+                  <span><b>1</b>Refs</span>
+                  <span><b>0</b>Primary</span>
+                  
+                </div>
+                <div class="labels"><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="topic">Malware</span></div>
+                <div class="evidence">
+                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, indicator context, primary source not found</span>
+                  <span>United Kingdom · News · Secondary</span>
+                </div>
+                <div class="card-links"></div>
+              </div>
+            </article>
+            
+
+            <article class="threat-card priority-medium"
               data-source="Security Affairs"
               data-country="Italy"
               data-type="News"
@@ -5467,93 +5790,47 @@
             
 
             <article class="threat-card priority-medium"
-              data-source="CyberScoop"
-              data-country="United States"
-              data-type="News"
-              data-topics="AI Security, Malware"
-              data-priority="Medium"
-              data-confidence="Low"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags=""
-              data-priority-score="51"
-              data-soc-score="60"
-              data-confidence-score="41"
-              data-focus-rank="5"
-              data-date="1791385200">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Medium</span>
-                    <time>2026/10/08</time>
-                  </div>
-                  <a class="source" href="https://cyberscoop.com/">CyberScoop</a>
-                </div>
-                <h2><a href="https://cyberscoop.com/poellm-malware-botnet-poem-lumen-black-lotus-labs/" target="_blank" rel="noopener noreferrer">PoeLLM malware has assembled a sweeping botnet, taking technical cues from a poem</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>51</b>Priority</span>
-                  <span><b>60</b>SOC value</span>
-                  <span><b>41</b>Confidence</span>
-                  <span><b>25</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>0</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">AI Security</span><span class="tag">Research</span><span class="tag">Security</span><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="topic">AI Security</span><span class="topic">Malware</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, indicator context, primary source not found</span>
-                  <span>United States · News · Secondary</span>
-                </div>
-                <div class="card-links"></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-medium"
               data-source="Palo Alto Security Operations"
               data-country="United States"
               data-type="Vendor"
-              data-topics="Apple/iOS, Microsoft, Supply Chain, AI Security, Cloud"
+              data-topics="Supply Chain, Malware"
               data-priority="Medium"
               data-confidence="High"
               data-japan="None"
-              data-ioc="no"
+              data-ioc="yes"
               data-apt="no"
-              data-search-tags=""
-              data-priority-score="49"
-              data-soc-score="40"
-              data-confidence-score="93"
+              data-search-tags="IOC"
+              data-priority-score="50"
+              data-soc-score="39"
+              data-confidence-score="100"
               data-focus-rank="3"
-              data-date="1791378020">
+              data-date="1791538767">
               <div class="card-rail"></div>
               <div class="card-body">
                 <div class="card-meta">
                   <div>
                     <span class="priority-label">Medium</span>
-                    <time>2026/10/07</time>
+                    <time>2026/10/09</time>
                   </div>
                   <a class="source" href="https://www.paloaltonetworks.com/blog/security-operations/">Palo Alto Security Operations</a>
                 </div>
-                <h2><a href="https://www.paloaltonetworks.com/blog/security-operations/cortex-aes-extends-code-package-visibility-to-go/" target="_blank" rel="noopener noreferrer">Cortex AES Extends Code Package Visibility to Go</a></h2>
+                <h2><a href="https://www.paloaltonetworks.com/blog/security-operations/glassworm-goes-native-rust-loader-vscode-openvsx/" target="_blank" rel="noopener noreferrer">Supply Chain Under Siege: GlassWorm’s Native Rust Loaders Target VS Code</a></h2>
                 <div class="scores" aria-label="Article scores">
-                  <span><b>49</b>Priority</span>
-                  <span><b>40</b>SOC value</span>
-                  <span><b>93</b>Confidence</span>
-                  <span><b>7</b>Context</span>
+                  <span><b>50</b>Priority</span>
+                  <span><b>39</b>SOC value</span>
+                  <span><b>100</b>Confidence</span>
+                  <span><b>8</b>Context</span>
                   <span><b>3</b>incident / breach</span>
                   <span><b>1</b>Refs</span>
                   <span><b>1</b>Primary</span>
-                  
+                  <a class="indicator" href="iocs.html">IOC 13 · Domain, IPv4, SHA256</a>
                 </div>
-                <div class="labels"><span class="tag">Security</span><span class="tag">AI Security</span><span class="tag">Detection</span><span class="tag">Incident Response</span><span class="tag">Threat Intel</span><span class="topic">Apple/iOS</span><span class="topic">Microsoft</span><span class="topic">Supply Chain</span><span class="topic">AI Security</span><span class="topic">Cloud</span></div>
+                <div class="labels"><span class="tag">Detection</span><span class="tag">Incident Response</span><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">Supply Chain</span><span class="topic">Supply Chain</span><span class="topic">Malware</span></div>
                 <div class="evidence">
-                  <span>focus: incident / breach, EN attack activity, indicator context, primary references 1</span>
+                  <span>focus: incident / breach, IOC 13, linked IOC evidence, target and impact context, primary references 1</span>
                   <span>United States · Vendor · Primary</span>
                 </div>
-                <div class="card-links"><a class="primary-link" href="https://www.paloaltonetworks.com/blog/security-operations/cortex-aes-extends-code-package-visibility-to-go/">Primary source · Palo Alto Security Operations</a></div>
+                <div class="card-links"><a class="primary-link" href="https://www.paloaltonetworks.com/blog/security-operations/glassworm-goes-native-rust-loader-vscode-openvsx/">Primary source · Palo Alto Security Operations</a></div>
               </div>
             </article>
             
@@ -5605,98 +5882,6 @@
             
 
             <article class="threat-card priority-medium"
-              data-source="Gendigital"
-              data-country="Global"
-              data-type="Vendor"
-              data-topics="Malware, AI Security"
-              data-priority="Medium"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="yes"
-              data-apt="no"
-              data-search-tags="IOC"
-              data-priority-score="48"
-              data-soc-score="51"
-              data-confidence-score="98"
-              data-focus-rank="2"
-              data-date="1791417600">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Medium</span>
-                    <time>2026/10/08</time>
-                  </div>
-                  <a class="source" href="https://www.gendigital.com/blog/insights/research">Gendigital</a>
-                </div>
-                <h2><a href="https://www.gendigital.com/blog/insights/research/warden-stealer-rust-infostealer-analysis" target="_blank" rel="noopener noreferrer">Warden Stealer: The Rapid Rise of an Infostealer with an Appetite for AI Agent Data</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>48</b>Priority</span>
-                  <span><b>51</b>SOC value</span>
-                  <span><b>98</b>Confidence</span>
-                  <span><b>8</b>Context</span>
-                  <span><b>2</b>IOC / detection evidence</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  <a class="indicator" href="iocs.html">IOC 231 · Domain, SHA256</a>
-                </div>
-                <div class="labels"><span class="tag">Research</span><span class="tag">Threat Intel</span><span class="tag">Malware</span><span class="tag">AI Security</span><span class="topic">Malware</span><span class="topic">AI Security</span></div>
-                <div class="evidence">
-                  <span>focus: IOC / detection evidence, EN attack activity, IOC 231, linked IOC evidence, target and impact context, primary references 1, IOC/detection-only priority cap</span>
-                  <span>Global · Vendor · Primary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://www.gendigital.com/blog/insights/research/warden-stealer-rust-infostealer-analysis">Primary source · Gendigital</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-medium"
-              data-source="Bleeping Computer"
-              data-country="United States"
-              data-type="News"
-              data-topics="Ransomware"
-              data-priority="Medium"
-              data-confidence="Low"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags=""
-              data-priority-score="47"
-              data-soc-score="55"
-              data-confidence-score="36"
-              data-focus-rank="5"
-              data-date="1791368872">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Medium</span>
-                    <time>2026/10/07</time>
-                  </div>
-                  <a class="source" href="https://www.bleepingcomputer.com/">Bleeping Computer</a>
-                </div>
-                <h2><a href="https://www.bleepingcomputer.com/news/security/advantest-confirms-personal-information-stolen-in-ransomware-attack/" target="_blank" rel="noopener noreferrer">Advantest confirms personal information stolen in ransomware attack</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>47</b>Priority</span>
-                  <span><b>55</b>SOC value</span>
-                  <span><b>36</b>Confidence</span>
-                  <span><b>26</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>0</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Security</span><span class="tag">Ransomware</span><span class="topic">Ransomware</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary source not found</span>
-                  <span>United States · News · Secondary</span>
-                </div>
-                <div class="card-links"></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-medium"
               data-source="The Cyber Express"
               data-country="Global"
               data-type="News"
@@ -5743,52 +5928,6 @@
             
 
             <article class="threat-card priority-medium"
-              data-source="Splunk Security"
-              data-country="United States"
-              data-type="Research"
-              data-topics="AI Security"
-              data-priority="Medium"
-              data-confidence="High"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags=""
-              data-priority-score="45"
-              data-soc-score="38"
-              data-confidence-score="81"
-              data-focus-rank="0"
-              data-date="1791417600">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Medium</span>
-                    <time>2026/10/08</time>
-                  </div>
-                  <a class="source" href="https://www.splunk.com/en_us/blog/security.html">Splunk Security</a>
-                </div>
-                <h2><a href="https://www.splunk.com/en_us/blog/security/conf26-agentic-soc-decode-first-html.html" target="_blank" rel="noopener noreferrer">Decode First, Panic Later: A Tier 3 Analyst&#x27;s Case for Staying in the Loop | Splunk</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>45</b>Priority</span>
-                  <span><b>38</b>SOC value</span>
-                  <span><b>81</b>Confidence</span>
-                  <span><b>0</b>Context</span>
-                  <span><b>0</b>background / low operational value</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>1</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Security</span><span class="tag">Detection</span><span class="tag">Threat Intel</span><span class="tag">AI Security</span><span class="topic">AI Security</span></div>
-                <div class="evidence">
-                  <span>focus: background / low operational value, EN attack activity, JA attack activity, primary references 1</span>
-                  <span>United States · Research · Primary</span>
-                </div>
-                <div class="card-links"><a class="primary-link" href="https://www.splunk.com/en_us/blog/security/conf26-agentic-soc-decode-first-html.html">Primary source · Splunk Security</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-medium"
               data-source="Krebs on Security"
               data-country="United States"
               data-type="News"
@@ -5830,52 +5969,6 @@
                   <span>United States · News · Secondary</span>
                 </div>
                 <div class="card-links"><a class="primary-link" href="https://netdiligence.com/conferences/cyber-risk-summit-philadelphia-2026/speakers">Primary source · netdiligence.com</a></div>
-              </div>
-            </article>
-            
-
-            <article class="threat-card priority-medium"
-              data-source="Security Affairs"
-              data-country="Italy"
-              data-type="News"
-              data-topics="Fortinet, Identity"
-              data-priority="Medium"
-              data-confidence="Low"
-              data-japan="None"
-              data-ioc="no"
-              data-apt="no"
-              data-search-tags=""
-              data-priority-score="42"
-              data-soc-score="47"
-              data-confidence-score="41"
-              data-focus-rank="5"
-              data-date="1791380979">
-              <div class="card-rail"></div>
-              <div class="card-body">
-                <div class="card-meta">
-                  <div>
-                    <span class="priority-label">Medium</span>
-                    <time>2026/10/07</time>
-                  </div>
-                  <a class="source" href="https://securityaffairs.com/">Security Affairs</a>
-                </div>
-                <h2><a href="https://securityaffairs.com/200558/cyber-crime/fortibleed-hit-86000-firewalls-by-exploiting-something-nobody-can-patch-away.html" target="_blank" rel="noopener noreferrer">FortiBleed hit 86,000 firewalls by exploiting something nobody can patch away</a></h2>
-                <div class="scores" aria-label="Article scores">
-                  <span><b>42</b>Priority</span>
-                  <span><b>47</b>SOC value</span>
-                  <span><b>41</b>Confidence</span>
-                  <span><b>26</b>Context</span>
-                  <span><b>5</b>attack campaign / intrusion</span>
-                  <span><b>1</b>Refs</span>
-                  <span><b>0</b>Primary</span>
-                  
-                </div>
-                <div class="labels"><span class="tag">Security</span><span class="tag">Threat Intel</span><span class="tag">Patch</span><span class="tag">Identity</span><span class="topic">Fortinet</span><span class="topic">Identity</span></div>
-                <div class="evidence">
-                  <span>focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary source not found</span>
-                  <span>Italy · News · Secondary</span>
-                </div>
-                <div class="card-links"></div>
               </div>
             </article>
             
