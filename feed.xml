@@ -3,11 +3,44 @@
   <channel>
     <title>SOC Intelligence Digest</title>
     <link>https://ag3tak0.github.io/SecurityNews-Public</link>
-    <description>Seven-day operational threat intelligence and IOC reporting for SOC review. Coverage window: 2026/11/01 14:59 - 2026/11/08 14:59 JST. Article dates: 2026/11/01 - 2026/11/07 JST.</description>
+    <description>Seven-day operational threat intelligence and IOC reporting for SOC review. Coverage window: 2026/11/02 15:23 - 2026/11/09 15:23 JST. Article dates: 2026/11/02 - 2026/11/09 JST.</description>
     <language>ja</language>
-    <lastBuildDate>Sun, 08 Nov 2026 05:59:49 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 06:23:14 GMT</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://ag3tak0.github.io/SecurityNews-Public/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>盗んだ情報をAIに査定させるインフォスティーラー「VOLTA」についてまとめてみた</title>
+      <link>https://piyolog.hatenadiary.jp/entry/2026/11/09/144357</link>
+      <guid isPermaLink="true">https://piyolog.hatenadiary.jp/entry/2026/11/09/144357</guid>
+      <pubDate>Mon, 09 Nov 2026 05:43:57 GMT</pubDate>
+      <description>Source: piyolog / Source attributes: Japan / Vendor / Primary / Categories: AI Security, Malware, Threat Actor, Threat Intel, Supply Chain, Identity, Endpoint, Detection, Incident Response, Application Security, APT / Topics: APT28, Apple/iOS, Cisco, Linux, Microsoft, Supply Chain, AI Security, Malware, Identity, APT / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN IOC/detection/hunting, EN detection/analysis, JA attack activity, JA IOC/detection/hunting, JA detection/analysis, JA critical sector, APT/campaign priority, IOC 2, coherent attack event, target and impact context, detection evidence context, indicator context, Japan source, critical sector, primary references 1 / Summary: 2026年10月31日、Cisco Talosは、盗んだ情報をLLMに査定させるフェーズを持つWindows向けインフォスティーラー「VOLTA」の解析結果を公表しました。ここでは関連する情報をまとめます。 VOLTAとは何か VOLTAは、Windows(x86-64)向けのインフォスティーラー。窃取のあとに被害者をLLMに評価させるフェーズが備わっている。TalosはVOLTAを「成熟したスティーラー」と評価している。バイナリから復元された名前は「VOLTA-AUTODOXER」(出典: 1, 2)。 VOLTAの動作は次のフェーズで進む(出典: 1, 2)。 端末から認証情報、セッション、暗号資産ウォレットなどを窃取する 盗んだトークンやセッションで外部のサービスに問い合わせ、住所などを補強する 束ねた情報をOpenRouter経由でLLMに送り、被害者の換金価値の査定を作らせる LLMが拒否すると、次のモデルに切り替える 窃取した情報と査定結果をTelegramで攻撃者に最大3つのフェーズで送出しうる 本体を自己削除する 認証情報とウォレットを幅広く窃取 窃取の対象の主なものは次のとおり(出典: 1, 2)。 Chromium系ブラウザのパスワード、Cookie、保存カード Firefox、Thunderbird、Outlook Slackのワークスペース、SteamとBa / Primary source: piyolog https://piyolog.hatenadiary.jp/entry/2026/11/09/144357 / Primary source age: 0 days</description>
+      <source url="https://piyolog.hatenadiary.jp/">piyolog</source>
+      <category>AI Security</category>
+      <category>Malware</category>
+      <category>Threat Actor</category>
+      <category>Threat Intel</category>
+      <category>Supply Chain</category>
+      <category>Identity</category>
+      <category>Endpoint</category>
+      <category>Detection</category>
+      <category>Incident Response</category>
+      <category>Application Security</category>
+      <category>APT</category>
+    </item>
+    <item>
+      <title>ドコモオンラインショップとMy docomoへの不正アクセスについてまとめてみた</title>
+      <link>https://piyolog.hatenadiary.jp/entry/2026/11/09/090504</link>
+      <guid isPermaLink="true">https://piyolog.hatenadiary.jp/entry/2026/11/09/090504</guid>
+      <pubDate>Mon, 09 Nov 2026 00:05:04 GMT</pubDate>
+      <description>Source: piyolog / Source attributes: Japan / Vendor / Primary / Categories: Vulnerability, Exploit, Threat Actor, Data Breach, AI Security, Application Security / Topics: Vulnerability, Exploit, Data Breach, AI Security / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 3 / Reasons: focus: attack campaign / intrusion, EN Japan/Asia relevance, JA attack activity, JA IOC/detection/hunting, JA detection/analysis, JA Japan/Asia relevance, JA critical sector, campaign priority, coherent attack event, target and impact context, uncertain reporting, Japan related, critical sector, reported by 3 sources, primary references 1 / Summary: 2026年11月5日、ドコモは、ドコモオンラインショップとMy docomoへの不正アクセスで顧客情報が流出したことを確認したと公表しました。ここでは関連する情報をまとめます。 経路遮断と一時再開の後に再停止 ドコモオンラインショップとMy docomoでは、2026年11月4日10時30分頃にアラートを検知して対応を始め、攻撃経路を遮断してMy docomoを一時再開した。同日23時台に不正アクセスの可能性を把握し、5日1時5分頃にMy docomoを再び停止し、ドコモオンラインショップも停止して、2時10分に顧客情報の流出を確認した。 4日は7時頃から、検知の閾値に達しない動きが少しずつ始まっていたと後のログ解析で判明し、ドコモは7時まで遡って通信を分析した(出典: 7, 8)。10時30分頃に監視システムが大量アクセスによる異常なシステム負荷のアラートを検知し、負荷対策と攻撃への対応を開始(出典: 7, 8, 9, 10)。14時30分に海外IPアドレスからのアクセスを遮断したが効果がなく、国内を含む特定のIPアドレスを順次遮断した(出典: 7, 8, 9, 10)。16時20分にMy docomoをメンテナンスモードに切り替え(出典: 8, 9, 10)、18時10分に特定の攻撃経路を遮断した(出典: 7, 8, 9)。ドコモの説明では、流出が止まったのはこの時点(出典:  / Also reported by: 警察庁 / Primary source: piyolog https://piyolog.hatenadiary.jp/entry/2026/11/09/090504 / Primary source age: 0 days</description>
+      <source url="https://piyolog.hatenadiary.jp/">piyolog</source>
+      <category>Vulnerability</category>
+      <category>Exploit</category>
+      <category>Threat Actor</category>
+      <category>Data Breach</category>
+      <category>AI Security</category>
+      <category>Application Security</category>
+    </item>
     <item>
       <title>In Other News: Trezor Implant, LLMJacking Bills Hit $1M, SAP Flaws Weaponized Within Days</title>
       <link>https://www.securityweek.com/in-other-news-trezor-implant-llmjacking-bills-hit-1m-sap-flaws-weaponized-within-days/</link>
@@ -100,11 +133,11 @@
       <link>https://securelist.com/storm-2603-fileless-toolshell-attack/121467/</link>
       <guid isPermaLink="true">https://securelist.com/storm-2603-fileless-toolshell-attack/121467/</guid>
       <pubDate>Thu, 05 Nov 2026 10:00:11 GMT</pubDate>
-      <description>Source: Securelist / Source attributes: Russia / Research / Primary / Categories: Vulnerability, Ransomware, Security, Exploit, Malware, Endpoint, APT, Threat Actor / Topics: STORM-2603, Microsoft, Ransomware, Vulnerability, Exploit, Malware, APT / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, EN critical sector, APT/campaign priority, IOC 19, linked IOC evidence, coherent attack event, target and impact context, detection evidence context, critical sector, primary references 1 / Summary: Kaspersky researchers analyze a complex fileless cyberattack by Storm-2603 involving ToolShell exploitation and subsequent runtime subversion, and discuss how to detect such intrusions. / Primary source: Securelist https://securelist.com/storm-2603-fileless-toolshell-attack/121467/ / Primary source age: 0 days</description>
+      <description>Source: Securelist / Source attributes: Russia / Research / Primary / Categories: Security, Vulnerability, Ransomware, Exploit, Malware, Endpoint, APT, Threat Actor / Topics: STORM-2603, Microsoft, Ransomware, Vulnerability, Exploit, Malware, APT / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, EN critical sector, APT/campaign priority, IOC 19, linked IOC evidence, coherent attack event, target and impact context, detection evidence context, critical sector, primary references 1 / Summary: Kaspersky researchers analyze a complex fileless cyberattack by Storm-2603 involving ToolShell exploitation and subsequent runtime subversion, and discuss how to detect such intrusions. / Primary source: Securelist https://securelist.com/storm-2603-fileless-toolshell-attack/121467/ / Primary source age: 0 days</description>
       <source url="https://securelist.com/">Securelist</source>
+      <category>Security</category>
       <category>Vulnerability</category>
       <category>Ransomware</category>
-      <category>Security</category>
       <category>Exploit</category>
       <category>Malware</category>
       <category>Endpoint</category>
@@ -174,7 +207,7 @@
       <link>https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html</link>
       <guid isPermaLink="true">https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html</guid>
       <pubDate>Thu, 05 Nov 2026 05:17:04 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Patch, Malware / Topics: Apple/iOS, Vulnerability, Exploit, Malware / Priority: Critical (100) / SOC: 100 / Confidence: High (84) / Focus: attack campaign / intrusion (rank 5) / Reference count: 4 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, target and impact context, vulnerability exploitation context, indicator context, reported by 4 sources, primary references 2 / Summary: The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a medium-severity security flaw impacting multiple Apple operating systems to its Known Exploited Vulnerabilities (KEV) catalog, following reports of active exploitation. The vulnerability in question is CVE-2024-27834 (CVSS score: 5.5), a case of improper authentication that could allow an attacker with / Also reported by: Security Affairs / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/11/04/cisa-adds-one-known-exploited-vulnerability-catalog / Primary source age: 1 days</description>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Vulnerability, Exploit, Patch, Malware / Topics: Apple/iOS, Vulnerability, Exploit, Malware / Priority: Critical (100) / SOC: 100 / Confidence: High (86) / Focus: attack campaign / intrusion (rank 5) / Reference count: 5 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN active exploit/PoC/zero-day, campaign priority, coherent attack event, target and impact context, vulnerability exploitation context, indicator context, reported by 5 sources, primary references 2 / Summary: The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a medium-severity security flaw impacting multiple Apple operating systems to its Known Exploited Vulnerabilities (KEV) catalog, following reports of active exploitation. The vulnerability in question is CVE-2024-27834 (CVSS score: 5.5), a case of improper authentication that could allow an attacker with / Also reported by: Security Affairs / Primary source: CISA https://www.cisa.gov/news-events/alerts/2026/11/04/cisa-adds-one-known-exploited-vulnerability-catalog / Primary source age: 1 days</description>
       <source url="https://thehackernews.com/">The HackersNews</source>
       <category>Vulnerability</category>
       <category>Exploit</category>
@@ -203,7 +236,7 @@
       <link>https://news.drweb.com/show/?i=15311&amp;lng=en&amp;c=5</link>
       <guid isPermaLink="true">https://news.drweb.com/show/?i=15311&amp;lng=en&amp;c=5</guid>
       <pubDate>Thu, 05 Nov 2026 04:00:00 GMT</pubDate>
-      <description>Source: Dr.Web / Source attributes: Russia / Vendor / Primary / Categories: Malware, Threat Actor, Supply Chain, Endpoint, Detection, Cryptocurrency / Topics: Microsoft, Supply Chain, Malware / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, IOC 44, linked IOC evidence, coherent attack event, target and impact context, indicator context, primary references 1 / Summary: Infected GitHub repositories drew the attention of Doctor Web’s security researchers. They discovered malware in Microsoft Visual Studio projects. Malicious code was found in the .suo , .csproj files, as well as in Python and Go source code files. The application Microsoft.exe contains the last phase payload. The trojan uses a number of devious techniques for circumventing multi-layered security systems and deploy a backdoor, clipper and a data theft trojan. The attackers behind these compromised development projects target blockchain game enthusiasts and (most intriguingly) …information secur / Primary source: Dr.Web https://news.drweb.com/show/?i=15311&amp;lng=en&amp;c=5 / Primary source age: 0 days</description>
+      <description>Source: Dr.Web / Source attributes: Russia / Vendor / Primary / Categories: Malware, Threat Actor, Supply Chain, Endpoint, Detection, Cryptocurrency / Topics: Microsoft, Supply Chain, Malware / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN detection/analysis, campaign priority, IOC 5, coherent attack event, target and impact context, indicator context, primary references 1 / Summary: Infected GitHub repositories drew the attention of Doctor Web’s security researchers. They discovered malware in Microsoft Visual Studio projects. Malicious code was found in the .suo , .csproj files, as well as in Python and Go source code files. The application Microsoft.exe contains the last phase payload. The trojan uses a number of devious techniques for circumventing multi-layered security systems and deploy a backdoor, clipper and a data theft trojan. The attackers behind these compromised development projects target blockchain game enthusiasts and (most intriguingly) …information secur / Primary source: Dr.Web https://news.drweb.com/show/?i=15311&amp;lng=en&amp;c=5 / Primary source age: 0 days</description>
       <source url="https://news.drweb.com/">Dr.Web</source>
       <category>Malware</category>
       <category>Threat Actor</category>
@@ -228,7 +261,7 @@
       <link>https://piyolog.hatenadiary.jp/entry/2026/11/05/015717</link>
       <guid isPermaLink="true">https://piyolog.hatenadiary.jp/entry/2026/11/05/015717</guid>
       <pubDate>Wed, 04 Nov 2026 16:57:17 GMT</pubDate>
-      <description>Source: piyolog / Source attributes: Japan / Vendor / Primary / Categories: Vulnerability, Exploit, Data Breach, Application Security / Topics: Vulnerability, Exploit, Data Breach / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 3 / Reasons: focus: attack campaign / intrusion, JA attack activity, JA active exploit/PoC/zero-day, JA Japan/Asia relevance, JA critical sector, campaign priority, coherent attack event, target and impact context, detection evidence context, vulnerability exploitation context, Japan related, critical sector, reported by 3 sources, primary references 1 / Summary: 2026年10月28日、アララは、同社が提供するメール配信サービス「アララ メッセージ」で不正アクセスがあり、メールアドレスが外部へ流出したと公表しました。ここでは関連する情報をまとめます。 2つのクラウド環境への不正アクセス アララ メッセージでは、当該サービスのクラウド環境(環境A)と、別のクラウド上にある環境Bの2つから、メールアドレスが持ち出された。10月27日8時36分に第三者による偵察とみられるアクセスがあり、共用環境への不正ログインと持ち出しは10月28日。アララは、攻撃元の共通性などから、一連の不正アクセスを、10月29日の第1報で公表した不正アクセス(共用環境)を行った第三者によるものとみている(出典: 4, 10)。 原因について、アララは第1報でシステムの一部の環境におけるWebサーバーの脆弱性を第三者に悪用されたものとし(出典: 3)、第2報で当該脆弱性に加えてシステム環境における問題も関係していたと更新した。侵入の開始時期と経路は調査中としている(出典: 4)。 *1 配信機能の悪用による不審メール送信 10月28日3時59分頃、アララ メッセージで不正利用が始まり、クレジットカード会社を装った不審メールが送信された。送信元は news@arara.com、件名は「利用内容確認のご依頼」「ご利用明細確認のご依頼」等。送信先は第三者が外部から持ち込んだメール / Also reported by: 警察庁 / Primary source: piyolog https://piyolog.hatenadiary.jp/entry/2026/11/05/015717 / Primary source age: 0 days</description>
+      <description>Source: piyolog / Source attributes: Japan / Vendor / Primary / Categories: Vulnerability, Exploit, Data Breach, Application Security / Topics: Vulnerability, Exploit, Data Breach / Priority: Critical (100) / SOC: 100 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, JA attack activity, JA active exploit/PoC/zero-day, JA Japan/Asia relevance, JA critical sector, campaign priority, coherent attack event, target and impact context, detection evidence context, vulnerability exploitation context, Japan related, critical sector, primary references 1 / Summary: 2026年10月28日、アララは、同社が提供するメール配信サービス「アララ メッセージ」で不正アクセスがあり、メールアドレスが外部へ流出したと公表しました。ここでは関連する情報をまとめます。 2つのクラウド環境への不正アクセス アララ メッセージでは、当該サービスのクラウド環境(環境A)と、別のクラウド上にある環境Bの2つから、メールアドレスが持ち出された。10月27日8時36分に第三者による偵察とみられるアクセスがあり、共用環境への不正ログインと持ち出しは10月28日。アララは、攻撃元の共通性などから、一連の不正アクセスを、10月29日の第1報で公表した不正アクセス(共用環境)を行った第三者によるものとみている(出典: 4, 10)。 原因について、アララは第1報でシステムの一部の環境におけるWebサーバーの脆弱性を第三者に悪用されたものとし(出典: 3)、第2報で当該脆弱性に加えてシステム環境における問題も関係していたと更新した。侵入の開始時期と経路は調査中としている(出典: 4)。 *1 配信機能の悪用による不審メール送信 10月28日3時59分頃、アララ メッセージで不正利用が始まり、クレジットカード会社を装った不審メールが送信された。送信元は news@arara.com、件名は「利用内容確認のご依頼」「ご利用明細確認のご依頼」等。送信先は第三者が外部から持ち込んだメール / Primary source: piyolog https://piyolog.hatenadiary.jp/entry/2026/11/05/015717 / Primary source age: 0 days</description>
       <source url="https://piyolog.hatenadiary.jp/">piyolog</source>
       <category>Vulnerability</category>
       <category>Exploit</category>
@@ -438,16 +471,6 @@
       <category>Detection</category>
     </item>
     <item>
-      <title>NetamLoader Malware Targets Government Windows 10 Systems in Asia via .NET Injection</title>
-      <link>https://thehackernews.com/2026/11/netamloader-malware-targets-government.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/11/netamloader-malware-targets-government.html</guid>
-      <pubDate>Sun, 01 Nov 2026 07:02:58 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Malware, Endpoint / Topics: Microsoft, Malware / Priority: Critical (100) / SOC: 100 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN Japan/Asia relevance, EN critical sector, campaign priority, coherent attack event, target and impact context, Japan related, critical sector, primary references 1 / Summary: Cybersecurity researchers have disclosed details of what has been described as a "highly sophisticated infection chain" targeting government organizations in Asia. The activity, detailed by Kaspersky this week, targeted a custom Windows 10 build used exclusively by government entities in Asia and involves the deployment of a previously undocumented .NET assembly-loading framework codenamed / Primary source: Securelist https://securelist.com/netamloader/121676/</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Malware</category>
-      <category>Endpoint</category>
-    </item>
-    <item>
       <title>How Cortex AES Protects Against Compromised Claude Code Extensions</title>
       <link>https://www.paloaltonetworks.com/blog/security-operations/how-cortex-aes-protects-against-compromised-claude-code-extensions/</link>
       <guid isPermaLink="true">https://www.paloaltonetworks.com/blog/security-operations/how-cortex-aes-protects-against-compromised-claude-code-extensions/</guid>
@@ -542,18 +565,6 @@
       <category>APT</category>
     </item>
     <item>
-      <title>New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value</title>
-      <link>https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html</guid>
-      <pubDate>Mon, 02 Nov 2026 05:51:07 GMT</pubDate>
-      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Malware, Data Breach, AI Security, Endpoint / Topics: Microsoft, Malware, Data Breach, AI Security / Priority: Critical (100) / SOC: 95 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: Cybersecurity researchers have discovered a new Windows infostealer malware called VOLTA-AUTODOXER (aka VOLTA) that makes use of a large language model (LLM) to rank a victim's stolen data by their monetization value. Like other typical stealer families, VOLTA is equipped to harvest passwords and cookies from Chromium-based web browsers; data from Outlook profiles and Slack workspaces; / Primary source: Talos https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/</description>
-      <source url="https://thehackernews.com/">The HackersNews</source>
-      <category>Malware</category>
-      <category>Data Breach</category>
-      <category>AI Security</category>
-      <category>Endpoint</category>
-    </item>
-    <item>
       <title>Fake security tools on GitHub push backdoors and infostealers</title>
       <link>https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/</link>
       <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/</guid>
@@ -562,19 +573,6 @@
       <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
       <category>Security</category>
       <category>Malware</category>
-    </item>
-    <item>
-      <title>Ransomware gang talked AI agents into doing much of its dirty work</title>
-      <link>https://www.helpnetsecurity.com/2026/11/02/aur0ra-ransomware-ai-agents/</link>
-      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/11/02/aur0ra-ransomware-ai-agents/</guid>
-      <pubDate>Mon, 02 Nov 2026 05:00:46 GMT</pubDate>
-      <description>Source: Help Net Security / Source attributes: Croatia / News / Secondary / Categories: AI Security, Threat Intel, Ransomware, Network, Incident Response / Topics: Network Edge, Ransomware, AI Security / Priority: Critical (100) / SOC: 91 / Confidence: High (96) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, IOC 13, linked IOC evidence, coherent attack event, primary references 1 / Summary: The group behind the Aur0ra ransomware has been using AI agents to move through victim networks, collect credentials and work its way up to domain administrator access, according to Sophos. AI-assisted intrusion workflow (Source: Sophos) The company, which tracks the group as GOLD OGRE, recovered artifacts from the Cursor AI coding assistant in late August that show the attackers handing the agents VPN logins, proxy access, targets and objectives. The agents then mapped the network … More → The post Ransomware gang talked AI agents into doing much of its dirty work appeared first on Help Net S / Primary source: Sophos https://www.sophos.com/en-us/blog/ai-used-in-aur0ra-ransomware-testing-and-execution</description>
-      <source url="https://www.helpnetsecurity.com/">Help Net Security</source>
-      <category>AI Security</category>
-      <category>Threat Intel</category>
-      <category>Ransomware</category>
-      <category>Network</category>
-      <category>Incident Response</category>
     </item>
     <item>
       <title>NCSC Chief Warns of Imminent AI Ransomware Threat to UK Critical Infrastructure</title>
@@ -650,19 +648,6 @@
       <category>DDoS</category>
       <category>Network</category>
       <category>Detection</category>
-    </item>
-    <item>
-      <title>Russia and Ukraine Emergency Apps Hacked With Fake Threat Alerts</title>
-      <link>https://thecyberexpress.com/emergency-alert-app-cyberattacks-hit-russia/</link>
-      <guid isPermaLink="true">https://thecyberexpress.com/emergency-alert-app-cyberattacks-hit-russia/</guid>
-      <pubDate>Mon, 02 Nov 2026 06:12:09 GMT</pubDate>
-      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Threat Intel, APT, Mobile, Network, Threat Actor / Topics: Network Edge, APT / Priority: Critical (100) / SOC: 84 / Confidence: Medium (67) / Focus: APT / targeted campaign (rank 6) / Reference count: 1 / Reasons: focus: APT / targeted campaign, EN attack activity, EN targeted/APT/state-backed, EN critical sector, APT/campaign priority, target and impact context, uncertain reporting, critical sector, primary references 2 / Summary: Emergency alert app cyberattacks in Russia and Ukraine triggered a series of false warnings, including alerts about air raids, radiation threats, chemical attacks and alleged nuclear strikes. Ukrainian authorities said their air raid warning application had been affected, while Russian officials reported a separate attack on their emergency alert app hours later. The incidents raised concerns about the reliability of digital public warning systems during an ongoing conflict. According to BBC live reporting , Ukraine's air raid app issued false red-level air raid warnings nationwide. Some resid / Primary source: bbc.com https://www.bbc.com/news/live/cm4g1yjxv38gt</description>
-      <source url="https://thecyberexpress.com/">The Cyber Express</source>
-      <category>Threat Intel</category>
-      <category>APT</category>
-      <category>Mobile</category>
-      <category>Network</category>
-      <category>Threat Actor</category>
     </item>
     <item>
       <title>CISA flags WordPress RCE flaw as actively exploited in attacks</title>
@@ -792,6 +777,19 @@
       <category>Malware</category>
       <category>Detection</category>
       <category>Ransomware</category>
+    </item>
+    <item>
+      <title>An average of 8 minutes is all hackers need to log in with stolen credentials</title>
+      <link>https://www.helpnetsecurity.com/2026/11/09/elastic-businesses-remote-access-attacks-report/</link>
+      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/11/09/elastic-businesses-remote-access-attacks-report/</guid>
+      <pubDate>Mon, 09 Nov 2026 05:00:39 GMT</pubDate>
+      <description>Source: Help Net Security / Source attributes: Croatia / News / Secondary / Categories: Security, AI Security, Threat Intel, Malware, Phishing / Topics: AI Security, Malware, Phishing / Priority: Critical (93) / SOC: 86 / Confidence: High (77) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, target and impact context, primary references 1 / Summary: Attackers used stolen credentials to log in an average of eight minutes after infection across 27 confirmed infostealer cases, according to a report from Elastic Security Threat Command. Researchers also documented misuse of AI applications to execute commands and digitally signed remote monitoring tools to maintain access. “An agent that holds credentials and can reach the internet is a new attack surface, whether it’s misconfigured or abused. When an attacker is behind it, its activity … More → The post An average of 8 minutes is all hackers need to log in with stolen credentials appeared fi / Primary source: Elastic https://www.elastic.co/security-labs/reports/threats-etc-report-november-2026-trouble-with-trust</description>
+      <source url="https://www.helpnetsecurity.com/">Help Net Security</source>
+      <category>Security</category>
+      <category>AI Security</category>
+      <category>Threat Intel</category>
+      <category>Malware</category>
+      <category>Phishing</category>
     </item>
     <item>
       <title>Vercel ties login sessions to devices, rolls out AI security reviews in public beta</title>
@@ -1138,16 +1136,13 @@
       <category>Threat Intel</category>
     </item>
     <item>
-      <title>FBI Blames North Korea for $6B Binance Hack as Recovery Hits 95%</title>
-      <link>https://thecyberexpress.com/binance-hack-fbi-links-theft-to-north-korea/</link>
-      <guid isPermaLink="true">https://thecyberexpress.com/binance-hack-fbi-links-theft-to-north-korea/</guid>
-      <pubDate>Mon, 02 Nov 2026 05:46:30 GMT</pubDate>
-      <description>Source: The Cyber Express / Source attributes: Global / News / Secondary / Categories: Threat Intel, Patch, Data Breach, Network, Cryptocurrency / Topics: Network Edge, Data Breach / Priority: High (79) / SOC: 61 / Confidence: Medium (69) / Focus: incident / breach (rank 3) / Reference count: 1 / Reasons: focus: incident / breach, EN detection/analysis, EN Japan/Asia relevance, EN critical sector, target and impact context, indicator context, Japan related, critical sector, primary references 2 / Summary: The Binance hack involving more than $6 billion in virtual assets has been attributed to North Korea by the US Federal Bureau of Investigation (FBI), while the cryptocurrency exchange has begun preparing to restore withdrawals in phases and reported that approximately 95% of the affected amount has been covered. The incident, which Binance says occurred around October 29, 2026, has prompted security reviews, efforts to trace stolen assets, and cooperation between law enforcement and industry partners. The FBI refers to the North Korean activity associated with the theft as “TraderTraitor.” In  / Primary source: fbi.gov https://www.fbi.gov/investigate/cyber/alerts/2026/north-korea-responsible-for-6-billion-binance-attack</description>
-      <source url="https://thecyberexpress.com/">The Cyber Express</source>
-      <category>Threat Intel</category>
-      <category>Patch</category>
-      <category>Data Breach</category>
-      <category>Network</category>
+      <title>Hackers pull off $133 million French bank heist via service provider</title>
+      <link>https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/</link>
+      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/</guid>
+      <pubDate>Sat, 07 Nov 2026 15:25:35 GMT</pubDate>
+      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Cryptocurrency / Priority: High (79) / SOC: 57 / Confidence: High (74) / Focus: attack campaign / intrusion (rank 5) / Reference count: 2 / Reasons: focus: attack campaign / intrusion, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, reported by 2 sources, primary references 1 / Summary: French cooperative bank Crédit Mutuel Arkéa was targeted in a cyberattack that enabled fraudulent transactions of up to $133 million, forcing it to respond by suspending certain systems.v [...] / Also reported by: Security Affairs / Primary source: t.me https://t.me/investigations/374</description>
+      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
+      <category>Security</category>
       <category>Cryptocurrency</category>
     </item>
     <item>
@@ -1240,16 +1235,25 @@
       <category>AI Security</category>
     </item>
     <item>
-      <title>Alpine Linux rebuilds GitLab after attempted RCE attack</title>
-      <link>https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/</guid>
-      <pubDate>Sun, 01 Nov 2026 15:11:21 GMT</pubDate>
-      <description>Source: Bleeping Computer / Source attributes: United States / News / Secondary / Categories: Security, Vulnerability, Exploit, Endpoint / Topics: Linux, Vulnerability, Exploit / Priority: High (77) / SOC: 66 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN attack activity, campaign priority, coherent attack event, indicator context, primary references 1 / Summary: Hackers attempted to exploit a critical GitLab vulnerability in Alpine Linux's development infrastructure on October 20-21, prompting the open-source project to rebuild its GitLab server and reset all passwords over concerns of a possible compromise. [...] / Primary source: nvd.nist.gov https://nvd.nist.gov/vuln/detail/cve-2026-97229</description>
-      <source url="https://www.bleepingcomputer.com/">Bleeping Computer</source>
-      <category>Security</category>
-      <category>Vulnerability</category>
-      <category>Exploit</category>
-      <category>Endpoint</category>
+      <title>Refrigeration Cyberattacks Draw FBI and CISA Warning</title>
+      <link>https://socradar.io/blog/refrigeration-cyberattack-fbi-cisa-warning/</link>
+      <guid isPermaLink="true">https://socradar.io/blog/refrigeration-cyberattack-fbi-cisa-warning/</guid>
+      <pubDate>Fri, 06 Nov 2026 10:56:58 GMT</pubDate>
+      <description>Source: SOCRadar Blog / Source attributes: Global / Research / Primary / Categories: Threat Intel, Research, IOC, Threat Actor / Priority: High (76) / SOC: 47 / Confidence: High (100) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN critical sector, campaign priority, coherent attack event, critical sector, primary references 1 / Summary: Five U.S. federal agencies have issued a joint warning about refrigeration cyberattacks, saying threat actors are targeting refrigeration controllers and electronic temperature controllers in retail grocery and cold storage facilities. The fact sheet, released on November 5, 2026, by CISA, the FBI, HHS, USDA and the Department of Transportation, says attackers can remotely alter settings […] / Primary source: SOCRadar Blog https://socradar.io/blog/refrigeration-cyberattack-fbi-cisa-warning/ / Primary source age: 0 days</description>
+      <source url="https://socradar.io/blog/">SOCRadar Blog</source>
+      <category>Threat Intel</category>
+      <category>Research</category>
+      <category>IOC</category>
+      <category>Threat Actor</category>
+    </item>
+    <item>
+      <title>5 Active Cyber Threats That Put US Enterprises at Risk in October 2026</title>
+      <link>https://thehackernews.com/2026/11/5-active-cyber-threats-that-put-us.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/11/5-active-cyber-threats-that-put-us.html</guid>
+      <pubDate>Thu, 05 Nov 2026 10:06:19 GMT</pubDate>
+      <description>Source: The HackersNews / Source attributes: United States / News / Secondary / Categories: Data Breach / Topics: Data Breach / Priority: High (75) / SOC: 55 / Confidence: High (72) / Focus: attack campaign / intrusion (rank 5) / Reference count: 1 / Reasons: focus: attack campaign / intrusion, EN critical sector, campaign priority, coherent attack event, target and impact context, critical sector, primary references 1 / Summary: October 2026 brought another wave of cyber threats targeting US businesses, with attackers exploiting trusted platforms, legitimate authentication processes, and everyday business workflows. For enterprises, these campaigns raise the stakes beyond individual security incidents, increasing the risk of financial losses, data breaches, and costly operational disruption. Below, we examine five / Primary source: ANY.RUN https://any.run/enterprise/</description>
+      <source url="https://thehackernews.com/">The HackersNews</source>
+      <category>Data Breach</category>
     </item>
   </channel>
 </rss>
